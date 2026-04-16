@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>埕中大小事 — 2026 鹽夏不夜埕</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    :root{
+      --primary:#330609;--secondary:#C0546C;--bg:#F2D9D0;
+      --gold:#F2BE5C;--peach:#F2A488;--blue:#5B7BA6;
+      --pink:#F27E93;--red:#CB5661;--lavender:#C7A4C3;
+      --gray:#CFC9CC;--rose:#E9ABAB;--white:#FFFFFF;
+    }
+    html{scroll-behavior:smooth;}
+    body{font-family:'Noto Sans TC',sans-serif;background:var(--bg);color:var(--primary);overflow-x:hidden;}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:14px 48px;background:rgba(51,6,9,.93);backdrop-filter:blur(12px);border-bottom:1px solid rgba(242,190,92,.18);}
+    .nav-logo a{display:block;}.nav-logo img{height:36px;filter:invert(1);mix-blend-mode:screen;}
+    .nav-links{display:flex;gap:36px;list-style:none;}
+    .nav-links a{color:var(--rose);text-decoration:none;font-size:13px;letter-spacing:.14em;transition:color .2s;}
+    .nav-links a:hover,.nav-active{color:var(--gold)!important;}
+    .nav-active{border-bottom:1px solid var(--gold);padding-bottom:2px;}
+    @media(max-width:900px){nav{padding:12px 20px;}.nav-links{display:none;}}
+
+    /* PAGE HERO */
+    .page-hero{background:var(--secondary);padding:160px 48px 80px;text-align:center;position:relative;overflow:hidden;}
+    .page-hero-bg{position:absolute;inset:0;background:url('./點綴物/可愛的草叢.png')bottom/cover no-repeat;opacity:.15;pointer-events:none;}
+    .page-hero-inner{position:relative;z-index:2;}
+    .page-eyebrow{font-size:11px;letter-spacing:.5em;color:rgba(255,255,255,.6);margin-bottom:12px;}
+    .page-title{font-family:'Noto Serif TC',serif;font-size:clamp(48px,7vw,88px);font-weight:900;color:var(--white);line-height:1;}
+    .page-sub{margin-top:14px;font-size:15px;color:rgba(255,255,255,.7);letter-spacing:.15em;}
+    .hero-mascots{display:flex;justify-content:center;gap:32px;margin-top:40px;}
+    .hero-mascots img{width:80px;animation:floatA 3.5s ease-in-out infinite;}
+    .hero-mascots img:nth-child(2){animation-delay:.5s;}
+    .hero-mascots img:nth-child(3){animation-delay:1s;}
+
+    /* TAB NAV */
+    .tab-nav{background:var(--primary);position:sticky;top:65px;z-index:100;display:flex;justify-content:center;gap:0;border-bottom:2px solid rgba(242,190,92,.2);}
+    .tab-btn{padding:18px 48px;background:none;border:none;color:var(--gray);font-family:'Noto Serif TC',serif;font-size:16px;font-weight:700;cursor:pointer;transition:color .2s,background .2s;letter-spacing:.08em;position:relative;}
+    .tab-btn::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transition:transform .3s;}
+    .tab-btn:hover{color:var(--rose);}
+    .tab-btn.active{color:var(--gold);}
+    .tab-btn.active::after{transform:scaleX(1);}
+    @media(max-width:600px){.tab-btn{padding:14px 20px;font-size:14px;}}
+
+    /* TAB CONTENT */
+    .tab-panel{display:none;animation:fadeUp .5s ease;}
+    .tab-panel.active{display:block;}
+
+    /* SECTION BASE */
+    .section-label{font-size:11px;letter-spacing:.45em;color:var(--gold);margin-bottom:12px;text-transform:uppercase;}
+    .section-title{font-family:'Noto Serif TC',serif;font-size:clamp(32px,4vw,52px);font-weight:900;line-height:1.15;margin-bottom:24px;}
+
+    /* STORY CARDS */
+    .stories-section{padding:80px 48px;max-width:1080px;margin:0 auto;}
+    .story-card{display:grid;grid-template-columns:1fr 2fr;gap:48px;align-items:start;padding:48px 0;border-bottom:1px solid rgba(51,6,9,.12);}
+    .story-card:last-child{border-bottom:none;}
+    .story-card:nth-child(even){grid-template-columns:2fr 1fr;}
+    .story-card:nth-child(even) .story-img{order:2;}
+    .story-img{border-radius:20px;overflow:hidden;background:var(--white);display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;}
+    .story-img img{width:100%;height:100%;object-fit:contain;padding:20px;}
+    .story-meta{display:flex;gap:12px;align-items:center;margin-bottom:14px;flex-wrap:wrap;}
+    .story-tag{background:var(--secondary);color:var(--white);font-size:11px;padding:4px 12px;border-radius:50px;letter-spacing:.08em;}
+    .story-time{font-size:12px;color:var(--secondary);letter-spacing:.08em;}
+    .story-title{font-family:'Noto Serif TC',serif;font-size:24px;font-weight:700;margin-bottom:12px;}
+    .story-body{font-size:15px;line-height:2.1;color:#555;}
+    .story-location{margin-top:14px;font-size:13px;color:var(--blue);letter-spacing:.05em;}
+    .story-location::before{content:'📍 ';}
+    @media(max-width:700px){.story-card,.story-card:nth-child(even){grid-template-columns:1fr;}.story-card:nth-child(even) .story-img{order:0;}}
+
+    /* OBSERVER CARD */
+    .observer-section{padding:80px 48px;max-width:1080px;margin:0 auto;}
+    .observer-intro{font-size:16px;line-height:2.1;color:#555;max-width:700px;margin-bottom:56px;}
+    .observer-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;}
+    .observer-card{background:var(--white);border-radius:20px;padding:36px 28px;transition:transform .3s,box-shadow .3s;}
+    .observer-card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(51,6,9,.1);}
+    .observer-card:nth-child(1){background:var(--secondary);color:var(--white);}
+    .observer-icon{font-size:36px;margin-bottom:16px;}
+    .observer-time{font-size:12px;color:var(--secondary);letter-spacing:.1em;margin-bottom:8px;}
+    .observer-card:nth-child(1) .observer-time{color:rgba(255,255,255,.7);}
+    .observer-title{font-family:'Noto Serif TC',serif;font-size:22px;font-weight:700;margin-bottom:12px;}
+    .observer-body{font-size:14px;line-height:2;opacity:.8;}
+    .observer-loc{margin-top:14px;font-size:12px;opacity:.65;letter-spacing:.05em;}
+    @media(max-width:700px){.observer-grid{grid-template-columns:1fr;}}
+
+    /* TRAVEL CARDS */
+    .travel-section{padding:80px 48px;max-width:1080px;margin:0 auto;}
+    .travel-intro{font-size:16px;line-height:2.1;color:#555;max-width:700px;margin-bottom:56px;}
+    .travel-list{display:flex;flex-direction:column;gap:24px;}
+    .travel-item{background:var(--white);border-radius:16px;padding:32px 36px;display:flex;gap:28px;align-items:flex-start;transition:transform .3s,box-shadow .3s;}
+    .travel-item:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(51,6,9,.08);}
+    .travel-num{font-family:'Noto Serif TC',serif;font-size:40px;font-weight:900;color:var(--gold);line-height:1;flex-shrink:0;min-width:48px;}
+    .travel-content{}
+    .travel-title{font-family:'Noto Serif TC',serif;font-size:22px;font-weight:700;margin-bottom:8px;}
+    .travel-time{font-size:12px;color:var(--secondary);letter-spacing:.1em;margin-bottom:10px;}
+    .travel-body{font-size:14px;line-height:2;color:#555;}
+    .travel-loc{margin-top:10px;font-size:13px;color:var(--blue);}
+
+    /* FOOTER */
+    .footer-pre{background:var(--secondary);padding:72px 48px;text-align:center;color:var(--white);}
+    .footer-pre-title{font-family:'Noto Serif TC',serif;font-size:clamp(22px,3vw,38px);font-weight:900;margin-bottom:14px;}
+    .footer-pre-sub{font-size:14px;opacity:.8;margin-bottom:24px;}
+    .footer-pre-btn{display:inline-block;padding:12px 44px;background:var(--gold);color:var(--primary);text-decoration:none;font-weight:900;font-size:14px;border-radius:50px;transition:transform .2s;}
+    .footer-pre-btn:hover{transform:translateY(-3px);}
+    .footer-city-band{background:var(--bg);line-height:0;}
+    .footer-city-band img{width:100%;display:block;}
+    .footer-bottom{background:var(--primary);color:var(--white);padding:40px 48px 28px;display:flex;flex-direction:column;align-items:center;gap:16px;}
+    .footer-logo img{height:34px;filter:invert(1);mix-blend-mode:screen;}
+    .footer-social{display:flex;gap:22px;}
+    .footer-social a{color:var(--gold);text-decoration:none;font-size:13px;letter-spacing:.1em;}
+    .footer-copy{font-size:12px;color:var(--gray);}
+
+    @keyframes floatA{0%,100%{transform:translateY(0) rotate(-3deg);}50%{transform:translateY(-16px) rotate(3deg);}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+    .reveal{opacity:0;}.reveal.visible{animation:fadeUp .6s ease forwards;}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><a href="./index.html"><img src="./鹽夏logo們-20260416T013432Z-3-001/鹽夏logo們/資產%202.png" alt="鹽夏不夜埕"></a></div>
+  <ul class="nav-links">
+    <li><a href="./index.html">首頁</a></li>
+    <li><a href="./hanabomb.html">花轟</a></li>
+    <li><a href="./stories.html" class="nav-active">埕中大小事</a></li>
+    <li><a href="./archive.html">往年回顧</a></li>
+    <li><a href="./ruiyi.html">瑞儀專區</a></li>
+    <li><a href="./about.html">關於我們</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-inner">
+    <div class="page-eyebrow">2026 YANHSIA NIGHT × 埕中大小事</div>
+    <div class="page-title">埕中大小事</div>
+    <div class="page-sub">小埕故事・小埕觀察家・小埕遊記</div>
+    <div class="hero-mascots">
+      <img src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%2096.png" alt="">
+      <img src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%20105.png" alt="">
+      <img src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%20111.png" alt="">
+    </div>
+  </div>
+</section>
+
+<!-- TAB NAV -->
+<div class="tab-nav">
+  <button class="tab-btn active" data-tab="story">小埕故事</button>
+  <button class="tab-btn" data-tab="observer">小埕觀察家</button>
+  <button class="tab-btn" data-tab="travel">小埕遊記</button>
+</div>
+
+<!-- ── 小埕故事 ── -->
+<div id="tab-story" class="tab-panel active" style="background:var(--bg);">
+  <div class="stories-section">
+    <div class="section-label">STORIES 小埕故事</div>
+    <h2 class="section-title">在鹽埕發生的<br>每一個故事</h2>
+
+    <div class="story-card reveal">
+      <div class="story-img">
+        <img src="./點綴物/花轟.png" alt="情緒花程街遊線">
+      </div>
+      <div class="story-content">
+        <div class="story-meta">
+          <span class="story-tag">街區體驗</span>
+          <span class="story-time">5/16 – 5/17　17:00 – 21:00</span>
+        </div>
+        <div class="story-title">情緒花程街遊線</div>
+        <div class="story-body">沿著新樂街的花程路線漫步，感受每個角落藏著的情緒能量。這條由策展團隊精心規劃的街區路線，帶你用全新的眼光重新認識鹽埕，在花香與裝置藝術之間，找到屬於你的那朵花。</div>
+        <div class="story-location">新樂街綠廊全線</div>
+      </div>
+    </div>
+
+    <div class="story-card reveal">
+      <div class="story-img">
+        <img src="./點綴物/孤挺花.png" alt="花轟精緻新">
+      </div>
+      <div class="story-content">
+        <div class="story-meta">
+          <span class="story-tag">鹽夏專屬</span>
+          <span class="story-time">5/16 – 5/17　17:00 – 21:00</span>
+        </div>
+        <div class="story-title">花轟精緻新</div>
+        <div class="story-body">以最精緻的視角重新詮釋這個夏夜的花轟體驗。精選在地職人品牌與藝術創作者共同策劃的限定展演，在新樂街的每個轉角，都有一個等待你發現的驚喜故事。</div>
+        <div class="story-location">新樂街綠廊指定攤位</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── 小埕觀察家 ── -->
+<div id="tab-observer" class="tab-panel" style="background:var(--bg);">
+  <div class="observer-section">
+    <div class="section-label">OBSERVER 小埕觀察家</div>
+    <h2 class="section-title">停下來，觀察<br>正在發生的事</h2>
+    <p class="observer-intro reveal">鹽埕每天都在發生各種大小事。小埕觀察家邀請你放慢腳步，用好奇的眼睛觀察這個街區正在經歷的一切——花朵、人群、情緒、記憶。</p>
+    <div class="observer-grid">
+      <div class="observer-card reveal">
+        <div class="observer-icon">🌸</div>
+        <div class="observer-time">5/17（日）　17:00 – 18:30</div>
+        <div class="observer-title">你！先生有什麼</div>
+        <div class="observer-body">一場輕鬆的街頭互動展演，邀請路過的你停下來和我們的「先生」說說話。關於情緒、關於夏天、關於此刻的鹽埕，每一個回答都是這座城市最真實的聲音。</div>
+        <div class="observer-loc">📍 大智路口新樂街口</div>
+      </div>
+      <div class="observer-card reveal" style="animation-delay:.1s">
+        <div class="observer-icon">🌺</div>
+        <div class="observer-time">5/16 – 5/23　全天開放</div>
+        <div class="observer-title">你！花兒在說什麼？</div>
+        <div class="observer-body">每一朵花都有話說。透過互動裝置，讓街上的花兒成為你情緒的出口——把說不出口的話、藏在心裡的感受，交給這朵花，讓它替你說出來。</div>
+        <div class="observer-loc">📍 新樂街綠廊裝置藝術區</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── 小埕遊記 ── -->
+<div id="tab-travel" class="tab-panel" style="background:var(--bg);">
+  <div class="travel-section">
+    <div class="section-label">TRAVEL DIARY 小埕遊記</div>
+    <h2 class="section-title">在鹽埕漫遊<br>留下你的足跡</h2>
+    <p class="travel-intro reveal">把新樂街當成你的遊樂場。從餐桌到街道，從市集到裝置，每一個停留都是值得記錄的遊記片段。</p>
+    <div class="travel-list">
+      <div class="travel-item reveal">
+        <div class="travel-num">01</div>
+        <div class="travel-content">
+          <div class="travel-title">花轟友善餐桌</div>
+          <div class="travel-time">5/16 – 5/23　17:00 – 21:00　（消費折扣優惠）</div>
+          <div class="travel-body">花轟期間，新樂街周邊特約餐廳與攤商提供專屬折扣優惠。出示花轟活動集章或打卡截圖，即可享有友善用餐優惠，讓你邊逛街邊吃好料，飽飽感受鹽埕的夏夜滋味。</div>
+          <div class="travel-loc">📍 新樂街綠廊周邊特約店家</div>
+        </div>
+      </div>
+      <div class="travel-item reveal">
+        <div class="travel-num">02</div>
+        <div class="travel-content">
+          <div class="travel-title">使手機裡 AI：散步路</div>
+          <div class="travel-time">5/16 – 5/23　17:00 – 21:00</div>
+          <div class="travel-body">拿起你的手機，讓 AI 成為你的鹽埕導遊！透過專屬 QR Code 啟動 AI 散步路服務，根據你當下的情緒狀態，AI 將為你推薦最適合的街區路線、裝置藝術作品與市集攤位，讓每次散步都是獨一無二的花轟體驗。</div>
+          <div class="travel-loc">📍 服務台掃碼啟動</div>
+        </div>
+      </div>
+      <div class="travel-item reveal">
+        <div class="travel-num">03</div>
+        <div class="travel-content">
+          <div class="travel-title">表演活動 × 邀演特別場</div>
+          <div class="travel-time">5/23（六）　整個街區 / 中央公園商圈</div>
+          <div class="travel-body">花轟最終日，表演能量不停歇！除了新樂街的閉幕演出，花轟也受邀前往高雄市中央公園商圈進行特別場演出，把花轟的精神帶向更大的城市舞台。</div>
+          <div class="travel-loc">📍 新樂街綠廊 + 高雄市中央公園商圈</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-pre">
+    <div class="footer-pre-title">更多花轟體驗<br>等你來發現</div>
+    <div class="footer-pre-sub">5/16—5/23 新樂街綠廊　每日 17:00–21:00</div>
+    <a href="./hanabomb.html" class="footer-pre-btn">回到花轟 →</a>
+  </div>
+  <div class="footer-city-band"><img src="./點綴物/可愛的街區.png" alt=""></div>
+  <div class="footer-bottom">
+    <div class="footer-logo"><img src="./鹽夏logo們-20260416T013432Z-3-001/鹽夏logo們/資產%202.png" alt="鹽夏不夜埕"></div>
+    <div class="footer-social"><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">LINE 官方帳號</a></div>
+    <div class="footer-copy">© 2026 鹽夏不夜埕 All Rights Reserved</div>
+  </div>
+</footer>
+
+<script>
+  // Tabs
+  document.querySelectorAll('.tab-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-'+btn.dataset.tab).classList.add('active');
+      // re-trigger reveals in new tab
+      setTimeout(()=>triggerReveals(),50);
+    });
+  });
+  // Scroll reveal
+  function triggerReveals(){
+    const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target);}}),{threshold:.08});
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el=>obs.observe(el));
+  }
+  triggerReveals();
+</script>
+</body>
+</html>

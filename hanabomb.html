@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>花轟 — 2026 鹽夏不夜埕</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    :root{
+      --primary:#330609;--secondary:#C0546C;--bg:#F2D9D0;
+      --gold:#F2BE5C;--peach:#F2A488;--blue:#5B7BA6;
+      --pink:#F27E93;--red:#CB5661;--lavender:#C7A4C3;
+      --gray:#CFC9CC;--rose:#E9ABAB;--white:#FFFFFF;
+    }
+    html{scroll-behavior:smooth;}
+    body{font-family:'Noto Sans TC',sans-serif;background:var(--bg);color:var(--primary);overflow-x:hidden;}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:14px 48px;background:rgba(51,6,9,.93);backdrop-filter:blur(12px);border-bottom:1px solid rgba(242,190,92,.18);}
+    .nav-logo a{display:block;}.nav-logo img{height:36px;filter:invert(1);mix-blend-mode:screen;}
+    .nav-links{display:flex;gap:36px;list-style:none;}
+    .nav-links a{color:var(--rose);text-decoration:none;font-size:13px;letter-spacing:.14em;transition:color .2s;}
+    .nav-links a:hover,.nav-active{color:var(--gold)!important;}
+    .nav-active{border-bottom:1px solid var(--gold);padding-bottom:2px;}
+    @media(max-width:900px){nav{padding:12px 20px;}.nav-links{display:none;}}
+
+    /* HERO */
+    .page-hero{background:var(--primary);padding:160px 48px 80px;text-align:center;position:relative;overflow:hidden;}
+    .page-hero-bg{position:absolute;inset:0;background:url('./點綴物/背景.png')center/cover no-repeat;opacity:.3;mix-blend-mode:screen;}
+    .page-hero-overlay{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 40%,rgba(192,84,108,.2) 0%,rgba(51,6,9,.8) 70%);}
+    .page-hero-inner{position:relative;z-index:2;}
+    .page-eyebrow{font-size:11px;letter-spacing:.5em;color:var(--gold);margin-bottom:16px;}
+    .page-title{font-family:'Noto Serif TC',serif;font-size:clamp(48px,7vw,96px);font-weight:900;color:var(--white);line-height:1;}
+    .page-sub{margin-top:16px;font-size:15px;color:var(--rose);letter-spacing:.2em;}
+    .hero-badge{display:inline-flex;align-items:center;justify-content:center;background:var(--bg);border-radius:50%;width:160px;height:160px;margin:32px auto 0;box-shadow:0 0 0 10px rgba(242,126,147,.2),0 0 60px rgba(192,84,108,.35);}
+    .hero-badge img{width:130px;}
+
+    /* SECTIONS */
+    .section-label{font-size:11px;letter-spacing:.45em;color:var(--gold);margin-bottom:14px;text-transform:uppercase;}
+    .section-title{font-family:'Noto Serif TC',serif;font-size:clamp(36px,4.5vw,60px);font-weight:900;line-height:1.1;margin-bottom:28px;}
+
+    /* ABOUT */
+    .about{background:var(--primary);color:var(--white);padding:100px 48px;position:relative;overflow:hidden;}
+    .about-inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+    .section-body{font-size:16px;line-height:2.1;color:var(--gray);}
+    .about-badge{background:var(--bg);border-radius:50%;width:280px;height:280px;display:flex;align-items:center;justify-content:center;margin:0 auto;box-shadow:0 0 0 12px rgba(242,126,147,.15),0 0 80px rgba(192,84,108,.3);animation:pulse-ring 3s ease-in-out infinite;}
+    .about-badge img{width:220px;}
+    @media(max-width:900px){.about-inner{grid-template-columns:1fr;}}
+
+    /* CURATORIAL */
+    .curatorial{background:var(--primary);color:var(--white);padding:100px 48px;}
+    .curatorial-inner{max-width:860px;margin:0 auto;}
+    .quote-block{font-family:'Noto Serif TC',serif;font-size:17px;line-height:2.3;border-left:3px solid var(--secondary);padding-left:28px;margin-bottom:24px;}
+    .sub-text{font-size:16px;line-height:2.2;color:var(--rose);margin-bottom:24px;}
+    .note-text{font-size:14px;line-height:2;opacity:.6;margin-bottom:64px;}
+    .trio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;border-radius:20px;overflow:hidden;}
+    .trio-card{padding:44px 28px;color:var(--white);}
+    .trio-title{font-family:'Noto Serif TC',serif;font-size:28px;font-weight:900;color:var(--gold);margin-bottom:8px;}
+    .trio-en{font-size:11px;letter-spacing:.2em;opacity:.55;margin-bottom:20px;}
+    .trio-body{font-size:13px;line-height:2.1;opacity:.88;}
+    @media(max-width:700px){.trio-grid{grid-template-columns:1fr;}}
+
+    /* FEATURES */
+    .features{background:var(--bg);padding:100px 48px;}
+    .features-header{text-align:center;margin-bottom:56px;}
+    .features-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+    .feature-card{border-radius:20px;padding:40px 24px;text-align:center;background:var(--white);transition:transform .3s,box-shadow .3s;}
+    .feature-card:nth-child(2){background:var(--secondary);color:var(--white);}
+    .feature-card:nth-child(4){background:var(--primary);color:var(--white);}
+    .feature-card:hover{transform:translateY(-8px);box-shadow:0 12px 40px rgba(51,6,9,.12);}
+    .feature-mascot{width:80px;margin:0 auto 14px;display:block;}
+    .feature-num{font-family:'Noto Serif TC',serif;font-size:48px;font-weight:900;color:var(--gold);line-height:1;margin-bottom:6px;}
+    .feature-title{font-family:'Noto Serif TC',serif;font-size:20px;font-weight:700;margin-bottom:10px;}
+    .feature-desc{font-size:13px;line-height:1.9;opacity:.75;}
+    @media(max-width:900px){.features-grid{grid-template-columns:repeat(2,1fr);}}
+    @media(max-width:560px){.features-grid{grid-template-columns:1fr;}}
+
+    /* SCHEDULE */
+    .schedule{background:var(--bg);padding:100px 48px;}
+    .schedule-inner{max-width:860px;margin:0 auto;}
+    .schedule-header{text-align:center;margin-bottom:56px;}
+    .schedule-day{margin-bottom:48px;}
+    .schedule-day-label{font-family:'Noto Serif TC',serif;font-size:22px;font-weight:700;color:var(--secondary);border-bottom:2px solid var(--secondary);padding-bottom:10px;margin-bottom:18px;}
+    .schedule-row{display:flex;align-items:center;gap:24px;padding:16px 0;border-bottom:1px solid rgba(51,6,9,.1);}
+    .schedule-time{font-weight:900;font-size:15px;color:var(--primary);min-width:80px;}
+    .schedule-name{font-weight:700;font-size:16px;margin-bottom:3px;}
+    .schedule-stage{font-size:12px;letter-spacing:.12em;color:var(--secondary);}
+    @media(max-width:600px){.schedule-row{flex-wrap:wrap;gap:6px;}}
+
+    /* EVENT INFO */
+    .event-info{background:var(--primary);color:var(--white);padding:100px 48px;}
+    .event-info-inner{max-width:1080px;margin:0 auto;}
+    .info-header{text-align:center;margin-bottom:56px;}
+    .info-top{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px;}
+    .info-box{background:rgba(242,190,92,.12);border:1px solid rgba(242,190,92,.3);border-radius:14px;padding:30px 28px;}
+    .info-box-label{color:var(--gold);font-size:11px;letter-spacing:.35em;margin-bottom:10px;}
+    .info-box-value{font-family:'Noto Serif TC',serif;font-size:20px;font-weight:700;line-height:1.8;}
+    .info-box-value span{font-size:15px;font-weight:400;opacity:.75;}
+    .info-bottom{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+    .info-card{background:rgba(255,255,255,.06);border-radius:14px;padding:28px;}
+    .info-card-label{color:var(--gold);font-size:11px;letter-spacing:.35em;margin-bottom:14px;}
+    .info-list{display:flex;flex-direction:column;gap:10px;}
+    .info-list-item{display:flex;gap:10px;font-size:13px;line-height:1.8;}
+    .info-list-num{color:var(--secondary);flex-shrink:0;}
+    .info-plain{font-size:13px;line-height:2.2;opacity:.85;}
+    @media(max-width:900px){.info-top,.info-bottom{grid-template-columns:1fr;}}
+
+    /* FOOTER */
+    .footer-pre{background:var(--secondary);padding:72px 48px;text-align:center;color:var(--white);}
+    .footer-pre-title{font-family:'Noto Serif TC',serif;font-size:clamp(24px,3.5vw,42px);font-weight:900;margin-bottom:16px;}
+    .footer-pre-sub{font-size:15px;opacity:.8;margin-bottom:28px;}
+    .footer-pre-btn{display:inline-block;padding:13px 48px;background:var(--gold);color:var(--primary);text-decoration:none;font-weight:900;font-size:15px;border-radius:50px;transition:transform .2s;}
+    .footer-pre-btn:hover{transform:translateY(-3px);}
+    .footer-city-band{background:var(--bg);line-height:0;}
+    .footer-city-band img{width:100%;display:block;}
+    .footer-bottom{background:var(--primary);color:var(--white);padding:44px 48px 32px;display:flex;flex-direction:column;align-items:center;gap:18px;}
+    .footer-logo img{height:36px;filter:invert(1);mix-blend-mode:screen;}
+    .footer-social{display:flex;gap:24px;}
+    .footer-social a{color:var(--gold);text-decoration:none;font-size:13px;letter-spacing:.12em;transition:opacity .2s;}
+    .footer-social a:hover{opacity:.7;}
+    .footer-copy{font-size:12px;color:var(--gray);letter-spacing:.1em;}
+
+    /* ANIMATIONS */
+    @keyframes pulse-ring{0%,100%{box-shadow:0 0 0 10px rgba(242,126,147,.18),0 0 60px rgba(192,84,108,.35);}50%{box-shadow:0 0 0 18px rgba(242,126,147,.08),0 0 80px rgba(192,84,108,.22);}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(32px);}to{opacity:1;transform:translateY(0);}}
+    .reveal{opacity:0;}.reveal.visible{animation:fadeUp .7s ease forwards;}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><a href="./index.html"><img src="./鹽夏logo們-20260416T013432Z-3-001/鹽夏logo們/資產%202.png" alt="鹽夏不夜埕"></a></div>
+  <ul class="nav-links">
+    <li><a href="./index.html">首頁</a></li>
+    <li><a href="./hanabomb.html" class="nav-active">花轟</a></li>
+    <li><a href="./stories.html">埕中大小事</a></li>
+    <li><a href="./archive.html">往年回顧</a></li>
+    <li><a href="./ruiyi.html">瑞儀專區</a></li>
+    <li><a href="./about.html">關於我們</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-inner">
+    <div class="page-eyebrow">2026 YANHSIA NIGHT × HANABOMB</div>
+    <div class="page-title">花轟</div>
+    <div class="page-sub">以花的綻放，回應情緒的張力與流動</div>
+    <div class="hero-badge"><img src="./點綴物/花轟.png" alt="花轟"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="about-inner">
+    <div class="reveal">
+      <div class="section-label">ABOUT 關於花轟</div>
+      <h2 class="section-title" style="color:var(--white);">什麼是<br>花轟？</h2>
+      <p class="section-body">
+        夏夜裡，花朵不睡覺。<br><br>
+        花轟是一場屬於夏天的街區派對，讓每一朵花都在鹽埕的巷弄間盡情綻放。我們相信藝術就在生活裡，音樂就在街角上，而你就是這個夏天最美的風景。<br><br>
+        2026 年，鹽夏不夜埕帶著全新能量回來。開幕式、踩街遊行、裝置藝術、特色市集，用八天的時間把高雄的夏夜染得更鮮豔，更不羈，更屬於你。
+      </p>
+    </div>
+    <div class="reveal">
+      <div class="about-badge"><img src="./點綴物/花轟.png" alt="花轟"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CURATORIAL -->
+<section class="curatorial">
+  <div class="curatorial-inner">
+    <div class="section-label">CURATORIAL STATEMENT 策展論述</div>
+    <h2 class="section-title reveal" style="color:var(--white);">花の宣言</h2>
+    <div class="quote-block reveal">《花轟》以花的綻放，回應情緒的張力與流動。正如花朵終將撐開花萼、露出真實的姿態，情緒的包裝紙在拆封的瞬間被釋放與凝視，以當下最真實的樣貌綻放。</div>
+    <div class="sub-text reveal">鹽埕將化身為一座「花園」，情緒在巷弄間自然生長；觀眾在花園中自由穿梭。透過「呼吸、蔓延、共生」三大面向，體驗情緒從個體到他者，從他者到群體網絡相互影響、轉化與共存的過程。</div>
+    <div class="note-text reveal">1st《花轟》邀請觀眾進入這座花園，靠近那些正在發生的情緒。</div>
+    <div class="trio-grid reveal">
+      <div class="trio-card" style="background:var(--secondary);">
+        <div class="trio-title">呼吸</div><div class="trio-en">BREATHE</div>
+        <div class="trio-body">綻放前，個體在每一次吸吐中積累著綻放的能量。初來乍到的資訊在身體裡隱隱作祟，隨著個體微乎其微的擴張和收縮，為綻放蓄力。含苞待放的每一刻，這些自然被忽視的過程，不只是綻放的前奏，更是在觸碰內心的瞬間，覺察自我更深層的情緒。</div>
+      </div>
+      <div class="trio-card" style="background:var(--red);">
+        <div class="trio-title">蔓延</div><div class="trio-en">SPREAD</div>
+        <div class="trio-body">綻放的瞬間，花粉隨風飄散。允許情緒以最真實的樣貌綻放，肆意宣示著屬於自己的氣味、顏色、質感，表達著自我。盛開的情緒經由單向的釋放，將既有的能量於個體間傳遞與承接，在感知、轉化、擴散之中，不斷反覆。</div>
+      </div>
+      <div class="trio-card" style="background:var(--blue);">
+        <div class="trio-title">共生</div><div class="trio-en">SYMBIOSIS</div>
+        <div class="trio-body">綻放後，個體、他者與環境彼此纏繞、相互依偎，在不斷的交互與回響間，重新定義彼此存在的方式。「共生」之時，情緒與世界產生共振，在這緩緩運行的生態圈內，引領我們感知、察覺並回應生活的宏觀脈絡，重新理解自己與周遭的連結。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="features-header reveal">
+    <div class="section-label">FEATURES 四大主要活動</div>
+    <h2 class="section-title">今年花轟</h2>
+  </div>
+  <div class="features-grid">
+    <div class="feature-card reveal">
+      <img class="feature-mascot" src="./點綴物/薰衣草.png" alt="">
+      <div class="feature-num">01</div>
+      <div class="feature-title">開幕式</div>
+      <div class="feature-desc">5/16（六）17:00–19:00，主舞台。揭開 2026 鹽夏不夜埕序幕，同步頒發高雄高中生科技藝術競賽獎項，邀請觀眾一同感受盛夏慶典的到來。</div>
+    </div>
+    <div class="feature-card reveal" style="animation-delay:.08s">
+      <img class="feature-mascot" src="./點綴物/孤挺花.png" alt="">
+      <div class="feature-num">02</div>
+      <div class="feature-title">踩街遊行</div>
+      <div class="feature-desc">5/16（六）19:00–21:00，主舞台 / 整個街廊。結合高中時裝作品展與在地小學社團表演，攜手手工共創藝術，邀請大家一同花行上街！</div>
+    </div>
+    <div class="feature-card reveal" style="animation-delay:.16s">
+      <img class="feature-mascot" src="./點綴物/向日葵.png" alt="">
+      <div class="feature-num">03</div>
+      <div class="feature-title">裝置藝術</div>
+      <div class="feature-desc">5/16–5/23，每日 19:30–20:30 作品導覽，服務台出發。中山大學生、高中科技競賽與社區共創，以「呼吸・蔓延・共生」呈現情緒綻放的旅程。</div>
+    </div>
+    <div class="feature-card reveal" style="animation-delay:.24s">
+      <img class="feature-mascot" src="./點綴物/百合.png" alt="">
+      <div class="feature-num">04</div>
+      <div class="feature-title">特色市集</div>
+      <div class="feature-desc">5/16–5/23，每日 17:00–21:00，新樂街大智路口至愛文店口路段。花圃般的創意市集，飲食、手作、花香一次擁有。</div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section class="schedule">
+  <div class="schedule-inner">
+    <div class="schedule-header reveal">
+      <div class="section-label">SCHEDULE 活動時程</div>
+      <h2 class="section-title">活動排程</h2>
+    </div>
+    <div class="schedule-day reveal">
+      <div class="schedule-day-label">5/16（六）開幕式 × 踩街遊行</div>
+      <div class="schedule-row"><div class="schedule-time">17:00</div><div><div class="schedule-name">🎉 開幕式 × 高中科技藝術競賽頒獎</div><div class="schedule-stage">主舞台</div></div></div>
+      <div class="schedule-row"><div class="schedule-time">17:00</div><div><div class="schedule-name">特色市集 開市</div><div class="schedule-stage">新樂街大智路口—愛文店口</div></div></div>
+      <div class="schedule-row"><div class="schedule-time">19:00</div><div><div class="schedule-name">🌸 踩街遊行 ── 花行上街！</div><div class="schedule-stage">主舞台出發 / 新樂街全廊</div></div></div>
+      <div class="schedule-row"><div class="schedule-time">19:30</div><div><div class="schedule-name">裝置藝術 作品導覽</div><div class="schedule-stage">服務台集合出發</div></div></div>
+      <div class="schedule-row"><div class="schedule-time">21:00</div><div><div class="schedule-name">踩街收隊 / 市集收攤</div><div class="schedule-stage">新樂街綠廊</div></div></div>
+    </div>
+    <div class="schedule-day reveal">
+      <div class="schedule-day-label">5/17（日）— 5/22（五）常態展期</div>
+      <div class="schedule-row"><div class="schedule-time">17:00</div><div><div class="schedule-name">特色市集 開市</div><div class="schedule-stage">新樂街大智路口—愛文店口</div></div></div>
+      <div class="schedule-row"><div class="schedule-time">19:30</div><div><div class="schedule-name">裝置藝術 作品導覽</div><div class="schedule-stage">服務台集合出發</div></div></div>
+      <div class="schedule-row"><div class="schedule-time">21:00</div><div><div class="schedule-name">市集收攤</div><div class="schedule-stage">新樂街綠廊</div></div></div>
+    </div>
+    <div class="schedule-day reveal">
+      <div class="schedule-day-label">5/22（五）特別場 × 邀演活動</div>
+      <div class="schedule-row"><div class="schedule-time">全日</div><div><div class="schedule-name">邀演活動 × 高雄市中央公園商圈</div><div class="schedule-stage">高雄市中央公園商圈</div></div></div>
+    </div>
+    <div class="schedule-day reveal">
+      <div class="schedule-day-label">5/23（六）最終日 × 閉幕</div>
+      <div class="schedule-row"><div class="schedule-time">17:00</div><div><div class="schedule-name">特色市集 最終場</div><div class="schedule-stage">新樂街大智路口—愛文店口</div></div></div>
+      <div class="schedule-row"><div class="schedule-time">19:30</div><div><div class="schedule-name">裝置藝術 最終導覽</div><div class="schedule-stage">服務台集合出發</div></div></div>
+      <div class="schedule-row"><div class="schedule-time">21:00</div><div><div class="schedule-name">花轟閉幕 · 花朵歸巢</div><div class="schedule-stage">新樂街綠廊</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENT INFO -->
+<section class="event-info">
+  <div class="event-info-inner">
+    <div class="info-header reveal">
+      <div class="section-label">EVENT INFO 展覽資訊</div>
+      <h2 class="section-title" style="color:var(--white);">活動資訊</h2>
+    </div>
+    <div class="info-top reveal">
+      <div class="info-box">
+        <div class="info-box-label">活動時間</div>
+        <div class="info-box-value">2026 / 5.16 — 5.23<br><span>每日 17:00 – 21:00</span></div>
+      </div>
+      <div class="info-box">
+        <div class="info-box-label">活動地點</div>
+        <div class="info-box-value">新樂街綠廊<br><span>大智路 – 大成街路段</span></div>
+      </div>
+    </div>
+    <div class="info-bottom reveal">
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div class="info-card">
+          <div class="info-card-label">主辦單位</div>
+          <div class="info-list">
+            <div class="info-list-item"><span class="info-list-num">①</span>中山大學 USR「鹽埕創意街區實驗室計畫」計畫</div>
+            <div class="info-list-item"><span class="info-list-num">②</span>高教深耕「以社會設計、社會策展與跨域創新打造幸福鹽埕」計畫</div>
+            <div class="info-list-item"><span class="info-list-num">③</span>人文暨科技跨領域學士學位學程</div>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-label">共同主辦</div>
+          <div class="info-plain">鹽埕區公所</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-label">協辦單位</div>
+          <div class="info-plain">育仁里里長辦公室・光明里里長辦公室・南端里里長辦公室・沙地里里長辦公室<br>鹽埕國中・鹽埕國小・光榮國小・忠孝國小<br>揚帆主婦社</div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-card-label">贊助單位</div>
+        <div class="info-list">
+          <div class="info-list-item"><span class="info-list-num">①</span>財團法人瑞儀教育基金會</div>
+          <div class="info-list-item"><span class="info-list-num">②</span>翰品酒店 高雄</div>
+          <div class="info-list-item"><span class="info-list-num">③</span>福容大飯店 高雄</div>
+          <div class="info-list-item"><span class="info-list-num">④</span>南區社會情緒學習與教育創新中心</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-pre">
+    <div class="footer-pre-title">2026 鹽夏不夜埕 × 花轟<br>5/16—5/23 新樂街綠廊見！</div>
+    <div class="footer-pre-sub">開幕式・踩街遊行・裝置藝術・特色市集　免費入場</div>
+    <a href="./stories.html" class="footer-pre-btn">埕中大小事 →</a>
+  </div>
+  <div class="footer-city-band"><img src="./點綴物/可愛的街區.png" alt=""></div>
+  <div class="footer-bottom">
+    <div class="footer-logo"><img src="./鹽夏logo們-20260416T013432Z-3-001/鹽夏logo們/資產%202.png" alt="鹽夏不夜埕"></div>
+    <div class="footer-social"><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">LINE 官方帳號</a></div>
+    <div class="footer-copy">© 2026 鹽夏不夜埕 All Rights Reserved</div>
+  </div>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target);}}),{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

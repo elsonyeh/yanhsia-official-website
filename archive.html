@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>往年回顧 — 2026 鹽夏不夜埕</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    :root{--primary:#330609;--secondary:#C0546C;--bg:#F2D9D0;--gold:#F2BE5C;--blue:#5B7BA6;--lavender:#C7A4C3;--gray:#CFC9CC;--rose:#E9ABAB;--white:#FFFFFF;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Noto Sans TC',sans-serif;background:var(--bg);color:var(--primary);overflow-x:hidden;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:14px 48px;background:rgba(51,6,9,.93);backdrop-filter:blur(12px);border-bottom:1px solid rgba(242,190,92,.18);}
+    .nav-logo a{display:block;}.nav-logo img{height:36px;filter:invert(1);mix-blend-mode:screen;}
+    .nav-links{display:flex;gap:36px;list-style:none;}
+    .nav-links a{color:var(--rose);text-decoration:none;font-size:13px;letter-spacing:.14em;transition:color .2s;}
+    .nav-links a:hover,.nav-active{color:var(--gold)!important;}
+    .nav-active{border-bottom:1px solid var(--gold);padding-bottom:2px;}
+    @media(max-width:900px){nav{padding:12px 20px;}.nav-links{display:none;}}
+
+    .page-hero{background:var(--primary);padding:160px 48px 80px;text-align:center;position:relative;overflow:hidden;}
+    .page-hero-bg{position:absolute;inset:0;background:url('./點綴物/背景.png')center/cover;opacity:.25;mix-blend-mode:screen;}
+    .page-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(51,6,9,.6) 0%,rgba(51,6,9,.85) 100%);}
+    .page-hero-inner{position:relative;z-index:2;}
+    .page-eyebrow{font-size:11px;letter-spacing:.5em;color:var(--gold);margin-bottom:12px;}
+    .page-title{font-family:'Noto Serif TC',serif;font-size:clamp(48px,7vw,88px);font-weight:900;color:var(--white);line-height:1;}
+    .page-sub{margin-top:14px;font-size:15px;color:var(--rose);letter-spacing:.15em;}
+
+    .archive-section{padding:100px 48px;max-width:1000px;margin:0 auto;}
+    .section-label{font-size:11px;letter-spacing:.45em;color:var(--gold);margin-bottom:12px;text-transform:uppercase;}
+    .section-title{font-family:'Noto Serif TC',serif;font-size:clamp(32px,4vw,52px);font-weight:900;line-height:1.15;margin-bottom:48px;}
+    .year-list{display:flex;flex-direction:column;gap:2px;}
+    .year-item{display:flex;align-items:center;gap:0;background:var(--white);border-radius:0;overflow:hidden;transition:transform .2s;cursor:pointer;}
+    .year-item:first-child{border-radius:16px 16px 0 0;}
+    .year-item:last-child{border-radius:0 0 16px 16px;}
+    .year-item:hover{transform:translateX(8px);}
+    .year-num{font-family:'Noto Serif TC',serif;font-size:56px;font-weight:900;color:var(--white);background:var(--secondary);min-width:180px;padding:32px;text-align:center;transition:background .2s;}
+    .year-item:hover .year-num{background:var(--primary);}
+    .year-content{padding:32px 40px;flex:1;}
+    .year-title{font-family:'Noto Serif TC',serif;font-size:22px;font-weight:700;margin-bottom:8px;}
+    .year-desc{font-size:14px;line-height:1.9;color:#666;}
+    .year-coming{font-size:13px;color:var(--secondary);margin-top:10px;letter-spacing:.05em;}
+    .year-arrow{font-size:24px;color:var(--gray);padding:0 32px;flex-shrink:0;}
+
+    .footer-pre{background:var(--secondary);padding:72px 48px;text-align:center;color:var(--white);}
+    .footer-pre-title{font-family:'Noto Serif TC',serif;font-size:clamp(22px,3vw,38px);font-weight:900;margin-bottom:14px;}
+    .footer-pre-sub{font-size:14px;opacity:.8;margin-bottom:24px;}
+    .footer-pre-btn{display:inline-block;padding:12px 44px;background:var(--gold);color:var(--primary);text-decoration:none;font-weight:900;font-size:14px;border-radius:50px;transition:transform .2s;}
+    .footer-pre-btn:hover{transform:translateY(-3px);}
+    .footer-city-band{background:var(--bg);line-height:0;}
+    .footer-city-band img{width:100%;display:block;}
+    .footer-bottom{background:var(--primary);color:var(--white);padding:40px 48px 28px;display:flex;flex-direction:column;align-items:center;gap:16px;}
+    .footer-logo img{height:34px;filter:invert(1);mix-blend-mode:screen;}
+    .footer-social{display:flex;gap:22px;}
+    .footer-social a{color:var(--gold);text-decoration:none;font-size:13px;letter-spacing:.1em;}
+    .footer-copy{font-size:12px;color:var(--gray);}
+
+    @keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+    .reveal{opacity:0;}.reveal.visible{animation:fadeUp .6s ease forwards;}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><a href="./index.html"><img src="./鹽夏logo們-20260416T013432Z-3-001/鹽夏logo們/資產%202.png" alt="鹽夏不夜埕"></a></div>
+  <ul class="nav-links">
+    <li><a href="./index.html">首頁</a></li>
+    <li><a href="./hanabomb.html">花轟</a></li>
+    <li><a href="./stories.html">埕中大小事</a></li>
+    <li><a href="./archive.html" class="nav-active">往年回顧</a></li>
+    <li><a href="./ruiyi.html">瑞儀專區</a></li>
+    <li><a href="./about.html">關於我們</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-inner">
+    <div class="page-eyebrow">ARCHIVE 往年回顧</div>
+    <div class="page-title">每年的夏天<br>都是花轟</div>
+    <div class="page-sub">鹽夏不夜埕從 2018 年開始，年年盛開</div>
+  </div>
+</section>
+
+<section class="archive-section">
+  <div class="section-label">PAST EDITIONS</div>
+  <h2 class="section-title reveal">歷年花轟</h2>
+  <div class="year-list">
+    <div class="year-item reveal">
+      <div class="year-num">2025</div>
+      <div class="year-content">
+        <div class="year-title">鹽夏不夜埕 × 花轟 2025</div>
+        <div class="year-desc">上一屆的夏夜記憶，每一朵花都留下了痕跡。</div>
+        <div class="year-coming">影像紀錄 · 敬請期待</div>
+      </div>
+      <div class="year-arrow">→</div>
+    </div>
+    <div class="year-item reveal" style="animation-delay:.08s">
+      <div class="year-num">2024</div>
+      <div class="year-content">
+        <div class="year-title">鹽夏不夜埕 × 花轟 2024</div>
+        <div class="year-desc">花朵與城市的對話，在鹽埕老街持續進行。</div>
+        <div class="year-coming">影像紀錄 · 敬請期待</div>
+      </div>
+      <div class="year-arrow">→</div>
+    </div>
+    <div class="year-item reveal" style="animation-delay:.16s">
+      <div class="year-num">2023</div>
+      <div class="year-content">
+        <div class="year-title">鹽夏不夜埕 × 花轟 2023</div>
+        <div class="year-desc">那個夏天，花轟第一次讓鹽埕的巷弄爆滿了花香。</div>
+        <div class="year-coming">影像紀錄 · 敬請期待</div>
+      </div>
+      <div class="year-arrow">→</div>
+    </div>
+    <div class="year-item reveal" style="animation-delay:.24s">
+      <div class="year-num">2022</div>
+      <div class="year-content">
+        <div class="year-title">鹽夏不夜埕 2022</div>
+        <div class="year-desc">在疫情後重新開放的夏夜，鹽埕重新點燃了它的夜晚能量。</div>
+        <div class="year-coming">影像紀錄 · 敬請期待</div>
+      </div>
+      <div class="year-arrow">→</div>
+    </div>
+    <div class="year-item reveal" style="animation-delay:.32s">
+      <div class="year-num">2018</div>
+      <div class="year-content">
+        <div class="year-title">鹽夏不夜埕 首屆</div>
+        <div class="year-desc">一切的開始。2018 年，一群人決定把夏夜還給鹽埕的街道。</div>
+        <div class="year-coming">影像紀錄 · 敬請期待</div>
+      </div>
+      <div class="year-arrow">→</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-pre">
+    <div class="footer-pre-title">2026 新的夏天<br>即將到來</div>
+    <div class="footer-pre-sub">5/16—5/23 新樂街綠廊</div>
+    <a href="./index.html" class="footer-pre-btn">回到首頁 →</a>
+  </div>
+  <div class="footer-city-band"><img src="./點綴物/可愛的街區.png" alt=""></div>
+  <div class="footer-bottom">
+    <div class="footer-logo"><img src="./鹽夏logo們-20260416T013432Z-3-001/鹽夏logo們/資產%202.png" alt="鹽夏不夜埕"></div>
+    <div class="footer-social"><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">LINE 官方帳號</a></div>
+    <div class="footer-copy">© 2026 鹽夏不夜埕 All Rights Reserved</div>
+  </div>
+</footer>
+
+<script>
+  const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target);}}),{threshold:.08});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

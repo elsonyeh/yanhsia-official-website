@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026 鹽夏不夜埕 × 花轟</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary:   #330609;
+      --secondary: #C0546C;
+      --bg:        #F2D9D0;
+      --gold:      #F2BE5C;
+      --peach:     #F2A488;
+      --blue:      #5B7BA6;
+      --pink:      #F27E93;
+      --red:       #CB5661;
+      --lavender:  #C7A4C3;
+      --gray:      #CFC9CC;
+      --gold2:     #F6D083;
+      --rose:      #E9ABAB;
+      --white:     #FFFFFF;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background: var(--bg);
+      color: var(--primary);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 48px;
+      background: rgba(51,6,9,0.93);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(242,190,92,0.18);
+    }
+    .nav-logo img {
+      height: 36px;
+      filter: invert(1);
+      mix-blend-mode: screen;
+    }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a {
+      color: var(--rose); text-decoration: none;
+      font-size: 13px; letter-spacing: .14em;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-active { color: var(--gold) !important; border-bottom: 1px solid var(--gold); padding-bottom: 2px; }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative; min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+      background: var(--primary);
+      padding-top: 80px; padding-bottom: 220px;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: url('./點綴物/背景.png') center/cover no-repeat;
+      opacity: .55;
+      mix-blend-mode: screen;
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 80% 70% at 50% 40%,
+        rgba(192,84,108,.25) 0%, rgba(51,6,9,.75) 68%);
+    }
+
+    .hero-content {
+      position: relative; z-index: 10;
+      display: flex; flex-direction: column; align-items: center;
+      gap: 22px; text-align: center;
+    }
+    .hero-eyebrow {
+      font-size: 12px; letter-spacing: .5em; color: var(--gold);
+      border: 1px solid rgba(242,190,92,.35);
+      padding: 6px 20px; border-radius: 50px;
+    }
+    .hero-logos {
+      display: flex; align-items: center; gap: 48px;
+    }
+    .hero-main-logo {
+      height: 260px;
+      filter: invert(1); mix-blend-mode: screen;
+    }
+    .hero-bomb-badge {
+      background: var(--bg);
+      border-radius: 50%;
+      width: 210px; height: 210px;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 0 0 8px rgba(242,126,147,.25), 0 0 60px rgba(192,84,108,.4);
+      animation: pulse-ring 3s ease-in-out infinite;
+    }
+    .hero-bomb-badge img { width: 175px; }
+
+    .hero-tagline {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 20px; color: var(--rose); letter-spacing: .25em;
+    }
+    .hero-dates {
+      display: flex; align-items: center; gap: 14px;
+    }
+    .date-pill {
+      background: var(--gold); color: var(--primary);
+      font-weight: 900; font-size: 17px;
+      padding: 8px 22px; border-radius: 6px; letter-spacing: .05em;
+    }
+    .date-dash { color: var(--white); font-size: 20px; }
+    .hero-location {
+      font-size: 13px; letter-spacing: .22em; color: var(--gray);
+    }
+    .hero-cta {
+      margin-top: 6px;
+      display: inline-block; padding: 14px 52px;
+      background: var(--secondary); color: var(--white);
+      text-decoration: none; font-weight: 700; font-size: 15px;
+      letter-spacing: .12em; border-radius: 50px;
+      transition: background .2s, transform .2s, box-shadow .2s;
+      box-shadow: 0 4px 24px rgba(192,84,108,.4);
+    }
+    .hero-cta:hover {
+      background: var(--pink); transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(192,84,108,.5);
+    }
+
+    /* Floating mascots */
+    .mascot {
+      position: absolute; pointer-events: none; z-index: 6;
+    }
+    .m-lily    { top: 24%; left: 5%;   width: 130px; animation: floatA 3.8s ease-in-out infinite; }
+    .m-sunf    { bottom: 24%; left: 7%; width: 140px; animation: floatB 3.2s ease-in-out infinite .4s; }
+    .m-amary   { top: 28%; right: 5%;  width: 115px; animation: floatB 4s ease-in-out infinite .8s; }
+    .m-lav     { bottom: 26%; right: 8%;width: 120px; animation: floatA 3.5s ease-in-out infinite .2s; }
+    .m-blue    { top: 50%; left: 16%;  width: 90px;  animation: floatB 5s ease-in-out infinite 1s; }
+
+    /* Small deco */
+    .deco { position: absolute; pointer-events: none; z-index: 5; }
+    .d1 { top: 18%; left: 22%; width: 55px; animation: spin 7s linear infinite; }
+    .d2 { top: 22%; right: 20%; width: 45px; animation: spin 5s linear infinite reverse; }
+    .d3 { bottom: 38%; left: 27%; width: 38px; animation: floatA 4.5s ease-in-out infinite; }
+    .d4 { top: 45%; right: 18%; width: 42px; animation: floatB 6s ease-in-out infinite .5s; }
+    .d5 { top: 60%; left: 35%; width: 35px; animation: spin 9s linear infinite .3s; }
+
+    /* City at hero bottom */
+    .hero-city {
+      position: absolute; bottom: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 100%; max-width: 980px;
+      z-index: 7; pointer-events: none;
+    }
+
+    /* ── MARQUEE ── */
+    .marquee-strip {
+      background: var(--gold); color: var(--primary);
+      padding: 13px 0; overflow: hidden;
+      position: relative; z-index: 10;
+    }
+    .marquee-inner {
+      display: flex; white-space: nowrap;
+      animation: marquee 22s linear infinite;
+    }
+    .marquee-text {
+      font-weight: 900; font-size: 17px;
+      letter-spacing: .1em; padding-right: 64px;
+      flex-shrink: 0;
+    }
+
+    /* ── ABOUT ── */
+    .about {
+      background: var(--primary); color: var(--white);
+      padding: 110px 48px; position: relative; overflow: hidden;
+    }
+    .about-confetti {
+      position: absolute; inset: 0; pointer-events: none;
+      background: url('./點綴物/資產%20114.png') center/cover no-repeat;
+      opacity: .07;
+    }
+    .about-inner {
+      max-width: 1080px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 80px; align-items: center;
+      position: relative; z-index: 2;
+    }
+    .section-label {
+      font-size: 11px; letter-spacing: .45em; color: var(--gold);
+      margin-bottom: 14px; text-transform: uppercase;
+    }
+    .section-title {
+      font-family: 'Noto Serif TC', serif;
+      font-size: clamp(40px, 5vw, 68px);
+      font-weight: 900; line-height: 1.1;
+      margin-bottom: 30px;
+    }
+    .section-body {
+      font-size: 16px; line-height: 2.1; color: var(--gray);
+    }
+    .about-mascot-wrap {
+      display: flex; justify-content: center; align-items: center;
+      position: relative;
+    }
+    .about-badge {
+      background: var(--bg); border-radius: 50%;
+      width: 300px; height: 300px;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 0 0 12px rgba(242,126,147,.15),
+                  0 0 80px rgba(192,84,108,.3);
+      animation: pulse-ring 3s ease-in-out infinite;
+    }
+    .about-badge img { width: 240px; }
+    .about-deco {
+      position: absolute; pointer-events: none;
+    }
+    .ad1 { top: -30px; right: 0;   width: 70px; animation: spin 6s linear infinite; }
+    .ad2 { bottom: -20px; left: 10px; width: 60px; animation: spin 8s linear infinite reverse; }
+    .ad3 { top: 40%; right: -30px; width: 50px; animation: floatA 4s ease-in-out infinite; }
+
+    /* ── FEATURES ── */
+    .features {
+      background: var(--bg); padding: 110px 48px;
+      position: relative; overflow: hidden;
+    }
+    .features-header { text-align: center; margin-bottom: 64px; }
+    .features-grid {
+      max-width: 1080px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .feature-card {
+      border-radius: 24px; padding: 44px 28px;
+      text-align: center; position: relative; overflow: hidden;
+      transition: transform .3s, box-shadow .3s;
+      background: var(--white);
+      border: 2px solid transparent;
+    }
+    .feature-card:nth-child(2) { background: var(--secondary); color: var(--white); }
+    .feature-card:nth-child(4) { background: var(--primary); color: var(--white); }
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 16px 48px rgba(51,6,9,.14);
+    }
+    .feature-card:nth-child(2):hover, .feature-card:nth-child(4):hover {
+      box-shadow: 0 16px 48px rgba(0,0,0,.25);
+    }
+    .feature-mascot { width: 90px; margin: 0 auto 18px; display: block; }
+    .feature-num {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 52px; font-weight: 900; color: var(--gold);
+      line-height: 1; margin-bottom: 6px;
+    }
+    .feature-title {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 22px; font-weight: 700; margin-bottom: 12px;
+    }
+    .feature-desc { font-size: 14px; line-height: 1.9; opacity: .78; }
+
+    /* ── LINEUP ── */
+    .lineup {
+      background: var(--secondary); color: var(--white);
+      padding: 110px 48px; position: relative; overflow: hidden;
+    }
+    .lineup-header { text-align: center; margin-bottom: 64px; }
+    .lineup-grid {
+      max-width: 1080px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
+    }
+    .performer-card {
+      background: rgba(255,255,255,.1);
+      padding: 44px 32px; text-align: center;
+      transition: background .2s;
+    }
+    .performer-card:hover { background: rgba(255,255,255,.2); }
+    .performer-avatar {
+      width: 96px; height: 96px; border-radius: 50%;
+      background: var(--gold);
+      margin: 0 auto 18px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 42px;
+    }
+    .performer-name {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 22px; font-weight: 700; margin-bottom: 8px;
+    }
+    .performer-genre {
+      font-size: 12px; letter-spacing: .18em; opacity: .65;
+    }
+
+    /* deco strip between lineup and schedule */
+    .grass-strip {
+      position: relative; overflow: hidden;
+      height: 120px; background: var(--bg);
+    }
+    .grass-strip img {
+      position: absolute; bottom: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 100%; min-width: 900px;
+      pointer-events: none;
+    }
+
+    /* ── SCHEDULE ── */
+    .schedule {
+      background: var(--bg); padding: 110px 48px;
+    }
+    .schedule-inner { max-width: 860px; margin: 0 auto; }
+    .schedule-header { text-align: center; margin-bottom: 64px; }
+    .schedule-day { margin-bottom: 52px; }
+    .schedule-day-label {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 26px; font-weight: 700; color: var(--secondary);
+      border-bottom: 2px solid var(--secondary);
+      padding-bottom: 12px; margin-bottom: 20px;
+    }
+    .schedule-row {
+      display: flex; align-items: center; gap: 28px;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(51,6,9,.12);
+    }
+    .schedule-time {
+      font-weight: 900; font-size: 16px;
+      color: var(--primary); min-width: 90px;
+    }
+    .schedule-name { font-weight: 700; font-size: 17px; margin-bottom: 4px; }
+    .schedule-stage {
+      font-size: 12px; letter-spacing: .15em; color: var(--secondary);
+    }
+
+    /* ── LOCATION ── */
+    .location {
+      background: var(--primary); color: var(--white);
+      padding: 110px 48px; position: relative; overflow: hidden;
+    }
+    .location-inner {
+      max-width: 1080px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 80px; align-items: center;
+      position: relative; z-index: 2;
+    }
+    .location-map {
+      border-radius: 20px; overflow: hidden;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.1);
+      aspect-ratio: 4/3;
+      display: flex; align-items: flex-end;
+    }
+    .location-map img {
+      width: 100%; display: block;
+      mix-blend-mode: screen; opacity: .75;
+    }
+    .location-items { display: flex; flex-direction: column; gap: 36px; }
+    .location-item { display: flex; gap: 20px; align-items: flex-start; }
+    .loc-icon { font-size: 26px; flex-shrink: 0; margin-top: 2px; }
+    .loc-label {
+      font-size: 11px; letter-spacing: .35em; color: var(--gold);
+      margin-bottom: 6px; text-transform: uppercase;
+    }
+    .loc-value { font-size: 17px; font-weight: 700; line-height: 1.7; }
+
+    /* ── TEAM ── */
+    .team {
+      background: var(--bg); padding: 110px 48px;
+    }
+    .team-header { text-align: center; margin-bottom: 64px; }
+    .team-grid {
+      max-width: 900px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .team-card {
+      background: var(--white); border-radius: 20px;
+      padding: 40px 28px; text-align: center;
+      transition: transform .3s;
+    }
+    .team-card:hover { transform: translateY(-8px); }
+    .team-avatar {
+      width: 80px; height: 80px; border-radius: 50%;
+      margin: 0 auto 16px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 36px;
+    }
+    .team-av-1 { background: var(--peach); }
+    .team-av-2 { background: var(--lavender); }
+    .team-av-3 { background: var(--gold2); }
+    .team-name {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 20px; font-weight: 700; margin-bottom: 8px;
+    }
+    .team-role { font-size: 13px; color: var(--secondary); letter-spacing: .1em; }
+
+    /* ── FOOTER ── */
+    .footer { position: relative; overflow: hidden; }
+    .footer-pre {
+      background: var(--secondary);
+      padding: 80px 48px;
+      text-align: center;
+      color: var(--white);
+      position: relative; overflow: hidden;
+    }
+    .footer-pre-title {
+      font-family: 'Noto Serif TC', serif;
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 900; margin-bottom: 20px;
+    }
+    .footer-pre-sub {
+      font-size: 16px; opacity: .8; margin-bottom: 36px; letter-spacing: .05em;
+    }
+    .footer-pre-btn {
+      display: inline-block; padding: 14px 52px;
+      background: var(--gold); color: var(--primary);
+      text-decoration: none; font-weight: 900; font-size: 16px;
+      border-radius: 50px; letter-spacing: .08em;
+      transition: transform .2s, box-shadow .2s;
+      box-shadow: 0 4px 20px rgba(0,0,0,.2);
+    }
+    .footer-pre-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(0,0,0,.28); }
+
+    .footer-city-band {
+      background: var(--bg); padding-top: 24px;
+      overflow: hidden; line-height: 0;
+    }
+    .footer-city-band img { width: 100%; display: block; }
+
+    .footer-bottom {
+      background: var(--primary); color: var(--white);
+      padding: 48px 48px 36px;
+      display: flex; flex-direction: column; align-items: center; gap: 20px;
+    }
+    .footer-logo img {
+      height: 38px;
+      filter: invert(1); mix-blend-mode: screen;
+    }
+    .footer-social {
+      display: flex; gap: 28px;
+    }
+    .footer-social a {
+      color: var(--gold); text-decoration: none;
+      font-size: 13px; letter-spacing: .15em;
+      transition: opacity .2s;
+    }
+    .footer-social a:hover { opacity: .7; }
+    .footer-copy { font-size: 12px; color: var(--gray); letter-spacing: .1em; }
+
+    /* ── EXTRA COMPONENTS ── */
+    .feat-card { transition: transform .3s, box-shadow .3s; }
+    .feat-card:hover { transform: translateY(-8px); box-shadow: 0 16px 40px rgba(51,6,9,.12); }
+    .cta-link {
+      display: inline-block; padding: 13px 44px;
+      background: var(--secondary); color: var(--white);
+      text-decoration: none; font-weight: 700; font-size: 14px;
+      border-radius: 50px; letter-spacing: .08em;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .cta-link:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(51,6,9,.2); }
+    .play-btn {
+      width: 72px; height: 72px; border-radius: 50%;
+      background: var(--secondary);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px; cursor: pointer;
+      transition: transform .2s, background .2s;
+      margin: 0 auto;
+    }
+    .play-btn:hover { transform: scale(1.12); background: var(--red); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes floatA {
+      0%,100% { transform: translateY(0)  rotate(-4deg); }
+      50%      { transform: translateY(-22px) rotate(4deg); }
+    }
+    @keyframes floatB {
+      0%,100% { transform: translateY(0)  rotate(4deg); }
+      50%      { transform: translateY(-18px) rotate(-4deg); }
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    @keyframes marquee {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    @keyframes pulse-ring {
+      0%,100% { box-shadow: 0 0 0 10px rgba(242,126,147,.18), 0 0 60px rgba(192,84,108,.35); }
+      50%      { box-shadow: 0 0 0 18px rgba(242,126,147,.08), 0 0 80px rgba(192,84,108,.22); }
+    }
+    @keyframes fadeUp {
+      from { opacity:0; transform: translateY(36px); }
+      to   { opacity:1; transform: translateY(0); }
+    }
+    .reveal { opacity: 0; }
+    .reveal.visible { animation: fadeUp .7s ease forwards; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 12px 20px; }
+      .nav-links { display: none; }
+      .hero-logos { flex-direction: column; gap: 20px; }
+      .hero-main-logo { height: 180px; }
+      .hero-bomb-badge { width: 160px; height: 160px; }
+      .hero-bomb-badge img { width: 130px; }
+      .m-lily, .m-blue { display: none; }
+      .m-sunf { left: 1%; width: 100px; }
+      .m-amary { right: 1%; width: 90px; }
+      .m-lav { display: none; }
+      .about-inner { grid-template-columns: 1fr; }
+      .about-mascot-wrap { order: -1; }
+      .about-badge { width: 220px; height: 220px; }
+      .about-badge img { width: 175px; }
+      .features-grid { grid-template-columns: repeat(2, 1fr); }
+      .lineup-grid { grid-template-columns: 1fr 1fr; }
+      .location-inner { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: 1fr 1fr; }
+      .schedule-row { flex-wrap: wrap; gap: 8px; }
+    }
+    @media (max-width: 560px) {
+      .features-grid { grid-template-columns: 1fr; }
+      .lineup-grid { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: 1fr; }
+      .hero { padding-bottom: 160px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-logo">
+    <a href="./index.html"><img src="./鹽夏logo們-20260416T013432Z-3-001/鹽夏logo們/資產%202.png" alt="鹽夏不夜埕"></a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="./index.html" class="nav-active">首頁</a></li>
+    <li><a href="./hanabomb.html">花轟</a></li>
+    <li><a href="./stories.html">埕中大小事</a></li>
+    <li><a href="./archive.html">往年回顧</a></li>
+    <li><a href="./ruiyi.html">瑞儀專區</a></li>
+    <li><a href="./about.html">關於我們</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+
+  <!-- mascots -->
+  <img class="mascot m-lily"  src="./點綴物/百合.png"   alt="">
+  <img class="mascot m-sunf"  src="./點綴物/向日葵.png" alt="">
+  <img class="mascot m-amary" src="./點綴物/孤挺花.png" alt="">
+  <img class="mascot m-lav"   src="./點綴物/薰衣草.png" alt="">
+  <img class="mascot m-blue"  src="./點綴物/藍玫瑰.png" alt="">
+
+  <!-- small deco -->
+  <img class="deco d1" src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%20109.png" alt="">
+  <img class="deco d2" src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%20105.png" alt="">
+  <img class="deco d3" src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%20107.png" alt="">
+  <img class="deco d4" src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%20111.png" alt="">
+  <img class="deco d5" src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%20104.png" alt="">
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">2026 × 高雄新樂街綠廊 × YANHSIA NIGHT</div>
+    <div class="hero-logos">
+      <img class="hero-main-logo"
+           src="./鹽夏logo們-20260416T013432Z-3-001/鹽夏logo們/資產%201.png"
+           alt="鹽夏不夜埕">
+      <div class="hero-bomb-badge">
+        <img src="./點綴物/花轟.png" alt="花轟">
+      </div>
+    </div>
+    <div class="hero-tagline">夏夜盛開，花の祭典</div>
+    <div class="hero-dates">
+      <div class="date-pill">05.16</div>
+      <span class="date-dash">—</span>
+      <div class="date-pill">05.23</div>
+      <span class="date-dash" style="color:var(--gold);font-size:14px;letter-spacing:.1em">2026</span>
+    </div>
+    <div class="hero-location">高雄市 新樂街綠廊</div>
+    <a href="./hanabomb.html" class="hero-cta">探索花轟</a>
+  </div>
+
+  <img class="hero-city" src="./點綴物/可愛的街區.png" alt="">
+</section>
+
+<!-- ── MARQUEE ── -->
+<div class="marquee-strip">
+  <div class="marquee-inner">
+    <span class="marquee-text">2026 鹽夏不夜埕 × 花轟 ✦ 高雄新樂街綠廊 ✦ 開幕式・踩街遊行・裝置藝術・特色市集 ✦ 05.16—05.23 每日 17:00–21:00 ✦ YANHSIA NIGHT × HANABOMB ✦ 花朵不睡覺 ✦&ensp;</span>
+    <span class="marquee-text">2026 鹽夏不夜埕 × 花轟 ✦ 高雄新樂街綠廊 ✦ 開幕式・踩街遊行・裝置藝術・特色市集 ✦ 05.16—05.23 每日 17:00–21:00 ✦ YANHSIA NIGHT × HANABOMB ✦ 花朵不睡覺 ✦&ensp;</span>
+  </div>
+</div>
+
+
+<!-- ── 四大特色 ── -->
+<section id="features" style="background:var(--bg);padding:100px 48px;">
+  <div style="max-width:1080px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:60px;">
+      <div class="section-label">FEATURES</div>
+      <h2 class="section-title reveal">鹽夏四大特色｜Features</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;">
+
+      <div class="feat-card reveal" style="background:var(--white);border-radius:24px;padding:40px 24px;text-align:center;">
+        <img src="./點綴物/薰衣草.png" style="width:80px;margin:0 auto 16px;display:block;" alt="">
+        <div style="font-family:'Noto Serif TC',serif;font-size:48px;font-weight:900;color:var(--gold);line-height:1;margin-bottom:6px;">01</div>
+        <div style="font-family:'Noto Serif TC',serif;font-size:20px;font-weight:700;margin-bottom:12px;">裝置藝術</div>
+        <div style="font-size:13px;line-height:1.9;opacity:.72;">鹽埕埕區中展示一系列由中山大學「跨領域創新專選（一）」課程學生與藝術家所創作之光影裝置藝術作品，共同點亮鹽埕夜夜。</div>
+      </div>
+
+      <div class="feat-card reveal" style="background:var(--secondary);color:var(--white);border-radius:24px;padding:40px 24px;text-align:center;">
+        <img src="./點綴物/孤挺花.png" style="width:80px;margin:0 auto 16px;display:block;" alt="">
+        <div style="font-family:'Noto Serif TC',serif;font-size:48px;font-weight:900;color:var(--gold);line-height:1;margin-bottom:6px;">02</div>
+        <div style="font-family:'Noto Serif TC',serif;font-size:20px;font-weight:700;margin-bottom:12px;">表演藝術</div>
+        <div style="font-size:13px;line-height:1.9;opacity:.88;">邀請高雄在地劇團、樂團等表演團體，在街廊進行演出，沈浸在藝術表演與歷史文化交融出的鹽埕記憶。</div>
+      </div>
+
+      <div class="feat-card reveal" style="background:var(--white);border-radius:24px;padding:40px 24px;text-align:center;">
+        <img src="./點綴物/向日葵.png" style="width:80px;margin:0 auto 16px;display:block;" alt="">
+        <div style="font-family:'Noto Serif TC',serif;font-size:48px;font-weight:900;color:var(--gold);line-height:1;margin-bottom:6px;">03</div>
+        <div style="font-family:'Noto Serif TC',serif;font-size:20px;font-weight:700;margin-bottom:12px;">特色市集</div>
+        <div style="font-size:13px;line-height:1.9;opacity:.72;">在展期的跨週六，邀請高雄在地商家或是學生創業品牌，配合每年的不同主題企劃，打造出獨一無二的鹽夏特色市集。</div>
+      </div>
+
+      <div class="feat-card reveal" style="background:var(--primary);color:var(--white);border-radius:24px;padding:40px 24px;text-align:center;">
+        <img src="./點綴物/百合.png" style="width:80px;margin:0 auto 16px;display:block;" alt="">
+        <div style="font-family:'Noto Serif TC',serif;font-size:48px;font-weight:900;color:var(--gold);line-height:1;margin-bottom:6px;">04</div>
+        <div style="font-family:'Noto Serif TC',serif;font-size:20px;font-weight:700;margin-bottom:12px;">周邊活動</div>
+        <div style="font-size:13px;line-height:1.9;opacity:.88;">舉辦「前導工作坊」作為策展的暖身，與鹽埕在地企業合作推出各種「鹽夏限定活動」，活動當日則有美食、歷史等導覽。</div>
+      </div>
+
+    </div>
+    <div style="text-align:center;margin-top:48px;">
+      <a href="./hanabomb.html" class="cta-link">查看完整活動資訊 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── 共同策展人 + 影片 ── -->
+<section id="founders" style="background:var(--primary);color:var(--white);padding:100px 48px;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:url('./點綴物/資產%20114.png')center/cover;opacity:.04;pointer-events:none;"></div>
+  <div style="max-width:1080px;margin:0 auto;position:relative;z-index:2;">
+    <div style="text-align:center;margin-bottom:64px;">
+      <div class="section-label">FOUNDERS</div>
+      <h2 class="section-title reveal" style="color:var(--white);">鹽夏創始人們｜Founders</h2>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:32px;max-width:800px;margin:0 auto 80px;">
+      <div class="reveal" style="text-align:center;">
+        <div style="width:140px;height:140px;border-radius:50%;background:var(--secondary);margin:0 auto 24px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 8px rgba(192,84,108,.2),0 0 48px rgba(192,84,108,.25);">
+          <img src="./點綴物/孤挺花.png" style="width:100px;" alt="">
+        </div>
+        <div style="font-family:'Noto Serif TC',serif;font-size:26px;font-weight:900;margin-bottom:6px;">劉雯婷</div>
+        <div style="font-size:12px;letter-spacing:.18em;color:var(--gold);margin-bottom:16px;">鹽夏不夜埕 共同創辦人</div>
+        <div style="font-size:14px;line-height:2.1;color:var(--gray);">以社會設計為核心，長期深耕鹽埕街區的文化活化與社區共創，致力用藝術讓老街區重新被看見。</div>
+      </div>
+      <div class="reveal" style="text-align:center;animation-delay:.12s">
+        <div style="width:140px;height:140px;border-radius:50%;background:var(--blue);margin:0 auto 24px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 8px rgba(91,123,166,.2),0 0 48px rgba(91,123,166,.25);">
+          <img src="./點綴物/藍玫瑰.png" style="width:100px;" alt="">
+        </div>
+        <div style="font-family:'Noto Serif TC',serif;font-size:26px;font-weight:900;margin-bottom:6px;">宋世祥</div>
+        <div style="font-size:12px;letter-spacing:.18em;color:var(--gold);margin-bottom:16px;">鹽夏不夜埕 共同創辦人</div>
+        <div style="font-size:14px;line-height:2.1;color:var(--gray);">中山大學社會學系，推動地方設計與社會策展。著有《在街區走著走著》｜設計讀吧，持續以書寫記錄台灣街區的生命力。</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="text-align:center;margin-bottom:80px;">
+      <div style="display:inline-block;background:rgba(242,190,92,.12);border:1px solid rgba(242,190,92,.3);border-radius:12px;padding:18px 36px;">
+        <span style="font-family:'Noto Serif TC',serif;font-size:16px;color:var(--gold);">《在街區走著走著》｜設計讀吧</span>
+      </div>
+    </div>
+
+    <!-- 影片 -->
+    <div class="reveal" style="max-width:800px;margin:0 auto;text-align:center;">
+      <div style="font-size:11px;letter-spacing:.4em;color:var(--gold);margin-bottom:12px;">FILM</div>
+      <h3 style="font-family:'Noto Serif TC',serif;font-size:28px;font-weight:700;color:var(--white);margin-bottom:28px;">創始人介紹影片</h3>
+      <div style="position:relative;padding-bottom:56.25%;border-radius:16px;overflow:hidden;box-shadow:0 0 0 1px rgba(255,255,255,.1),0 24px 60px rgba(0,0,0,.4);">
+        <iframe
+          style="position:absolute;inset:0;width:100%;height:100%;border:none;"
+          src="https://www.youtube.com/embed/25naLda_-jo"
+          title="創始人介紹影片"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LINE CTA ── -->
+<section style="background:var(--gold);padding:80px 48px;text-align:center;">
+  <div style="max-width:600px;margin:0 auto;">
+    <div class="section-label" style="color:rgba(51,6,9,.55);">OFFICIAL LINE</div>
+    <h2 style="font-family:'Noto Serif TC',serif;font-size:clamp(24px,3.5vw,40px);font-weight:900;color:var(--primary);margin-bottom:16px;">加入【鹽夏不夜埕】<br>官方 LINE 好友</h2>
+    <p style="font-size:15px;line-height:2;color:rgba(51,6,9,.68);margin-bottom:32px;">加入 LINE 好友集點趣！提升觀展體驗，第一時間掌握花轟最新消息、活動通知與限定優惠。</p>
+    <a href="#" class="cta-link" style="background:var(--primary);color:var(--white);">加入 LINE 好友 →</a>
+  </div>
+</section>
+
+<!-- grass -->
+<div style="position:relative;overflow:hidden;height:100px;background:var(--bg);">
+  <img src="./點綴物/可愛的草叢.png" style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:100%;min-width:900px;pointer-events:none;" alt="">
+</div>
+
+
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-pre">
+    <div class="footer-pre-title">2026 鹽夏不夜埕 × 花轟<br>5/16—5/23 新樂街綠廊見！</div>
+    <div class="footer-pre-sub">煙幕式・踩街遊行・藝擂台劇・特色市集　免費入場</div>
+    <a href="./hanabomb.html" class="footer-pre-btn">了解更多 →</a>
+  </div>
+
+  <div class="footer-city-band">
+    <img src="./點綴物/可愛的街區.png" alt="">
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-logo">
+      <img src="./鹽夏logo們-20260416T013432Z-3-001/鹽夏logo們/資產%202.png" alt="鹽夏不夜埕">
+    </div>
+    <div class="footer-social">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">LINE 官方帳號</a>
+    </div>
+    <div class="footer-copy">© 2026 鹽夏不夜埕 All Rights Reserved</div>
+  </div>
+</footer>
+
+<script>
+  // Scroll-reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => obs.observe(el));
+
+  // Parallax on hero mascots (subtle)
+  const mascots = document.querySelectorAll('.mascot');
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    mascots.forEach((m, i) => {
+      const speed = (i % 2 === 0) ? 0.08 : 0.05;
+      m.style.transform = `translateY(${y * speed}px)`;
+    });
+  }, { passive: true });
+</script>
+
+</body>
+</html>

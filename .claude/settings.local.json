@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:yenhsiapuyehchen.com)",
+      "Bash(python3 *)",
+      "Bash(python patch.py)",
+      "Bash(del *)"
+    ]
+  }
+}
