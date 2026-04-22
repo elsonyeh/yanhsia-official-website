@@ -764,7 +764,8 @@
           <div class="yh-info-list-item"><span class="yh-info-list-num">①</span>財團法人瑞儀教育基金會</div>
           <div class="yh-info-list-item"><span class="yh-info-list-num">②</span>翰品酒店 高雄</div>
           <div class="yh-info-list-item"><span class="yh-info-list-num">③</span>福容大飯店 高雄</div>
-          <div class="yh-info-list-item"><span class="yh-info-list-num">④</span>南區社會情緒學習與教育創新中心</div>
+          <div class="yh-info-list-item"><span class="yh-info-list-num">④</span>台灣福興工業股份有限公司</div>
+          <div class="yh-info-list-item"><span class="yh-info-list-num">⑤</span>南區社會情緒學習與教育創新中心</div>
         </div>
       </div>
     </div>

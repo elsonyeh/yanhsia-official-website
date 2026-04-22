@@ -415,7 +415,7 @@
     <h2 class="yh-section-title" style="color:var(--white);margin-bottom:28px;">花の宣言</h2>
     <div class="yh-quote-block">《花轟》以花的綻放，回應情緒的張力與流動。正如花朵終將撐開花萼、露出真實的姿態，情緒的包裝紙在拆封的瞬間被釋放與凝視，以當下最真實的樣貌綻放。</div>
     <div class="yh-sub-text">鹽埕將化身為一座「花園」，情緒在巷弄間自然生長；觀眾在花園中自由穿梭。透過「呼吸、蔓延、共生」三大面向，體驗情緒從個體到他者，從他者到群體網絡相互影響、轉化與共存的過程。</div>
-    <div class="yh-note-text">1st《花轟》邀請觀眾進入這座花園，靠近那些正在發生的情緒。</div>
+    <div class="yh-note-text">《花轟》邀請觀眾進入這座花園，靠近那些正在發生的情緒。</div>
     <div class="yh-trio-grid">
       <div class="yh-trio-card" style="background:#C0546C;">
         <div class="yh-trio-title">呼吸</div>
@@ -561,7 +561,8 @@
           <div class="yh-info-list-item"><span class="yh-info-list-num">①</span>財團法人瑞儀教育基金會</div>
           <div class="yh-info-list-item"><span class="yh-info-list-num">②</span>翰品酒店 高雄</div>
           <div class="yh-info-list-item"><span class="yh-info-list-num">③</span>福容大飯店 高雄</div>
-          <div class="yh-info-list-item"><span class="yh-info-list-num">④</span>南區社會情緒學習與教育創新中心</div>
+          <div class="yh-info-list-item"><span class="yh-info-list-num">④</span>台灣福興工業股份有限公司</div>
+          <div class="yh-info-list-item"><span class="yh-info-list-num">⑤</span>南區社會情緒學習與教育創新中心</div>
         </div>
       </div>
     </div>
