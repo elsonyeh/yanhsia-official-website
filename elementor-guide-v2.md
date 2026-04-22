@@ -163,15 +163,22 @@
 </section>
 
 <script>
-  const _obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); _obs.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.yh-reveal').forEach(el => _obs.observe(el));
-  const _mascots = document.querySelectorAll('.yh-mascot');
-  window.addEventListener('scroll', () => {
-    const y = window.scrollY;
-    _mascots.forEach((m, i) => { m.style.transform = `translateY(${y*(i%2===0?.08:.05)}px)`; });
-  }, { passive: true });
+  (function(){
+    function _yhInit(){
+      if(window._yhDone) return; window._yhDone=true;
+      const obs = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } });
+      },{threshold:0.12});
+      document.querySelectorAll('.yh-reveal').forEach(el=>obs.observe(el));
+      const ms = document.querySelectorAll('.yh-mascot');
+      window.addEventListener('scroll',()=>{
+        const y=window.scrollY;
+        ms.forEach((m,i)=>{ m.style.transform=`translateY(${y*(i%2===0?.08:.05)}px)`; });
+      },{passive:true});
+    }
+    if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',_yhInit);
+    else _yhInit();
+  })();
 </script>
 ```
 
@@ -224,9 +231,6 @@
         <div class="yh-feat-title">周邊活動</div>
         <div class="yh-feat-desc">舉辦「前導工作坊」作為策展的暖身，與鹽埕在地企業合作推出各種「鹽夏限定活動」，活動當日則有美食、歷史等導覽。</div>
       </div>
-    </div>
-    <div style="text-align:center;margin-top:48px;">
-      <a href="/hanabomb" class="yh-cta-link">查看完整活動資訊 →</a>
     </div>
   </div>
 </section>
