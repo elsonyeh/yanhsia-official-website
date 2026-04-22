@@ -21,29 +21,24 @@
   --pink:#F27E93; --red:#CB5661; --lavender:#C7A4C3;
   --gray:#CFC9CC; --rose:#E9ABAB; --white:#FFFFFF;
 }
-.yh-hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--primary);padding:80px 24px 220px;}
-.yh-hero-bg{position:absolute;inset:0;background:url('https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E8%83%8C%E6%99%AF.png')center/cover no-repeat;opacity:.55;mix-blend-mode:screen;}
-.yh-hero-overlay{position:absolute;inset:0;background:radial-gradient(ellipse 80% 70% at 50% 40%,rgba(192,84,108,.25) 0%,rgba(51,6,9,.75) 68%);}
-.yh-hero-content{position:relative;z-index:10;display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center;}
-.yh-hero-eyebrow{font-family:'Noto Sans TC',sans-serif;font-size:12px;letter-spacing:.5em;color:var(--gold);border:1px solid rgba(242,190,92,.35);padding:6px 20px;border-radius:50px;}
-.yh-hero-logos{display:flex;align-items:center;gap:48px;flex-wrap:wrap;justify-content:center;}
-.yh-hero-main-logo{height:260px;filter:invert(1);mix-blend-mode:screen;}
-.yh-hero-bomb-badge{background:var(--bg);border-radius:50%;width:210px;height:210px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 8px rgba(242,126,147,.25),0 0 60px rgba(192,84,108,.4);animation:yh-pulse-ring 3s ease-in-out infinite;}
-.yh-hero-bomb-badge img{width:175px;}
-.yh-hero-tagline{font-family:'Noto Serif TC',serif;font-size:20px;color:var(--rose);letter-spacing:.25em;}
-.yh-hero-dates{display:flex;align-items:center;gap:14px;}
+/* ── HERO（banner 版） ── */
+.yh-hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;padding-bottom:80px;}
+.yh-hero-bg{position:absolute;inset:0;background:url('https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8Bbanner%20%E7%84%A1%E5%90%89%E7%A5%A5%E7%89%A9%E7%89%88%E6%9C%AC.jpg')center top/cover no-repeat;}
+.yh-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 0%,transparent 48%,rgba(51,6,9,.88) 100%);}
+.yh-hero-content{position:relative;z-index:10;display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center;width:100%;padding:0 24px;}
+.yh-hero-dates{display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;}
 .yh-date-pill{background:var(--gold);color:var(--primary);font-family:'Noto Sans TC',sans-serif;font-weight:900;font-size:17px;padding:8px 22px;border-radius:6px;letter-spacing:.05em;}
 .yh-date-dash{color:var(--white);font-size:20px;}
 .yh-hero-location{font-family:'Noto Sans TC',sans-serif;font-size:13px;letter-spacing:.22em;color:var(--gray);}
-.yh-hero-cta{margin-top:6px;display:inline-block;padding:14px 52px;background:var(--secondary);color:var(--white);text-decoration:none;font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:15px;letter-spacing:.12em;border-radius:50px;transition:background .2s,transform .2s;box-shadow:0 4px 24px rgba(192,84,108,.4);}
+.yh-hero-cta{display:inline-block;padding:14px 52px;background:var(--secondary);color:var(--white);text-decoration:none;font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:15px;letter-spacing:.12em;border-radius:50px;transition:background .2s,transform .2s;box-shadow:0 4px 24px rgba(192,84,108,.4);}
 .yh-hero-cta:hover{background:var(--pink);transform:translateY(-3px);}
+/* 吉祥物 — 疊在 banner 上飄浮 */
 .yh-mascot{position:absolute;pointer-events:none;z-index:6;}
-.yh-m-lily{top:24%;left:5%;width:130px;animation:yh-floatA 3.8s ease-in-out infinite;}
-.yh-m-sunf{bottom:24%;left:7%;width:140px;animation:yh-floatB 3.2s ease-in-out infinite .4s;}
-.yh-m-amary{top:28%;right:5%;width:115px;animation:yh-floatB 4s ease-in-out infinite .8s;}
-.yh-m-lav{bottom:26%;right:8%;width:120px;animation:yh-floatA 3.5s ease-in-out infinite .2s;}
-.yh-m-blue{top:50%;left:16%;width:90px;animation:yh-floatB 5s ease-in-out infinite 1s;}
-.yh-hero-city{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:980px;z-index:7;pointer-events:none;}
+.yh-m-lily {top:14%;left:7%;   width:120px;animation:yh-floatA 3.8s ease-in-out infinite;}
+.yh-m-sunf {bottom:30%;left:4%;width:155px;animation:yh-floatB 3.2s ease-in-out infinite .4s;}
+.yh-m-amary{top:10%;right:5%;  width:110px;animation:yh-floatB 4s   ease-in-out infinite .8s;}
+.yh-m-lav  {bottom:28%;right:6%;width:130px;animation:yh-floatA 3.5s ease-in-out infinite .2s;}
+.yh-m-blue {top:46%;right:17%; width:88px; animation:yh-floatB 5s   ease-in-out infinite 1s;}
 .yh-marquee-strip{background:var(--gold);color:var(--primary);padding:13px 0;overflow:hidden;}
 .yh-marquee-inner{display:flex;white-space:nowrap;animation:yh-marquee 22s linear infinite;}
 .yh-marquee-text{font-family:'Noto Sans TC',sans-serif;font-weight:900;font-size:17px;letter-spacing:.1em;padding-right:64px;flex-shrink:0;}
@@ -146,44 +141,44 @@
 @media(max-width:900px){
   .yh-features-grid{grid-template-columns:repeat(2,1fr);}
   .yh-founder-grid{grid-template-columns:1fr;}
-  .yh-hero-logos{flex-direction:column;gap:20px;}
-  .yh-hero-main-logo{height:180px;}
-  .yh-hero-bomb-badge{width:160px;height:160px;}
-  .yh-hero-bomb-badge img{width:130px;}
-  .yh-m-lily,.yh-m-blue,.yh-m-lav{display:none;}
+  .yh-m-lily,.yh-m-blue{display:none;}
+  .yh-m-sunf{width:110px;}
+  .yh-m-amary{width:85px;}
+  .yh-m-lav{width:95px;}
   .yh-trio-grid{grid-template-columns:1fr;}
   .yh-info-top,.yh-info-bottom{grid-template-columns:1fr;}
 }
-@media(max-width:560px){.yh-features-grid{grid-template-columns:1fr;}}
+@media(max-width:560px){
+  .yh-features-grid{grid-template-columns:1fr;}
+  .yh-m-sunf,.yh-m-lav{display:none;}
+  .yh-hero-content{padding:0 16px;}
+}
 </style>
 
 <section class="yh-hero">
+  <!-- Banner 背景 -->
   <div class="yh-hero-bg"></div>
+  <!-- 底部深色漸層，讓日期與按鈕清晰可見 -->
   <div class="yh-hero-overlay"></div>
-  <img class="yh-mascot yh-m-lily"  src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E7%99%BE%E5%90%88.png" alt="">
+
+  <!-- 五朵花吉祥物：疊在 banner 上飄浮 -->
+  <img class="yh-mascot yh-m-lily"  src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E7%99%BE%E5%90%88.png"   alt="">
   <img class="yh-mascot yh-m-sunf"  src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E5%90%91%E6%97%A5%E8%91%B5.png" alt="">
   <img class="yh-mascot yh-m-amary" src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E5%AD%A4%E6%8C%BA%E8%8A%B1.png" alt="">
   <img class="yh-mascot yh-m-lav"   src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E8%96%B0%E8%A1%A3%E8%8D%89.png" alt="">
-  <img class="yh-mascot yh-m-blue"  src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E8%97%8D%E7%8E%AB%E7%91%B0.png" alt="">
+  <img class="yh-mascot yh-m-blue"  src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E8%97%8D%E7%8E%AB%E7%91%B0.png"  alt="">
+
+  <!-- 底部活動資訊 + CTA -->
   <div class="yh-hero-content">
-    <div class="yh-hero-eyebrow">2026 × 高雄新樂街綠廊 × YANHSIA NIGHT</div>
-    <div class="yh-hero-logos">
-      <img class="yh-hero-main-logo" src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8Flogo%E5%80%91-20260416T013432Z-3-001/%E9%B9%BD%E5%A4%8Flogo%E5%80%91/%E8%B3%87%E7%94%A2%201.png" alt="鹽夏不夜埕">
-      <div class="yh-hero-bomb-badge">
-        <img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E8%8A%B1%E8%BD%9F.png" alt="花轟">
-      </div>
-    </div>
-    <div class="yh-hero-tagline">夏夜盛開，花の祭典</div>
     <div class="yh-hero-dates">
       <div class="yh-date-pill">05.16</div>
       <span class="yh-date-dash">—</span>
       <div class="yh-date-pill">05.23</div>
-      <span style="color:#F2BE5C;font-size:14px;letter-spacing:.1em">2026</span>
+      <span style="color:#F2BE5C;font-size:14px;letter-spacing:.1em;font-family:'Noto Sans TC',sans-serif;">2026</span>
     </div>
-    <div class="yh-hero-location">高雄市 新樂街綠廊</div>
-    <a href="/hanabomb" class="yh-hero-cta">探索花轟</a>
+    <div class="yh-hero-location">高雄市 新樂街綠廊　｜　每日 17:00–21:00</div>
+    <a href="/hanabomb" class="yh-hero-cta">探索花轟 →</a>
   </div>
-  <img class="yh-hero-city" src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E5%8F%AF%E6%84%9B%E7%9A%84%E8%A1%97%E5%8D%80.png" alt="">
 </section>
 
 <script>
