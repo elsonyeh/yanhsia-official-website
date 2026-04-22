@@ -23,19 +23,19 @@
 }
 /* ── HERO（banner + 吉祥物，無其他內容） ── */
 .yh-hero{position:relative;width:100%;padding-top:33.33%;min-height:280px;overflow:hidden;}
-.yh-hero-bg{position:absolute;inset:0;background:url('https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8Fbanner%20%E7%84%A1%E5%90%89%E7%A5%A5%E7%89%A9%E7%89%88%E6%9C%AC.jpg')center/cover no-repeat;}
+.yh-hero-bg{position:absolute;inset:0;background:url('https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8Fbanner%20%E7%84%A1%E5%90%89%E7%A5%A5%E7%89%A9%E7%89%88%E6%9C%AC.png')center/cover no-repeat;}
 /* 吉祥物 — 位置對應 banner 構圖 */
 .yh-mascot{position:absolute;pointer-events:none;z-index:6;}
-/* 左上 — 對應 banner 左側建築花飾 */
-.yh-m-lily {top:12%;left:7%;  width:14%;max-width:140px;min-width:60px;animation:yh-floatA 3.8s ease-in-out infinite;}
-/* 左下 — 大朵向日葵，左下角 */
-.yh-m-sunf {top:52%;left:4%;  width:16%;max-width:160px;min-width:70px;animation:yh-floatB 3.2s ease-in-out infinite .4s;}
-/* 右上 — 右側建築花飾 */
-.yh-m-amary{top:8%; right:6%; width:13%;max-width:130px;min-width:56px;animation:yh-floatB 4s   ease-in-out infinite .8s;}
-/* 右下 — 右下角 */
-.yh-m-lav  {top:55%;right:5%; width:14%;max-width:140px;min-width:60px;animation:yh-floatA 3.5s ease-in-out infinite .2s;}
-/* 中央偏左下 — 花轟字體旁 */
-.yh-m-blue {top:58%;left:32%; width:10%;max-width:100px;min-width:44px;animation:yh-floatB 5s   ease-in-out infinite 1s;}
+/* 孤挺花：左側建築旁下偏中 */
+.yh-m-amary{top:69%;left:18%; width:9%;max-width:130px;min-width:52px;animation:yh-floatB 4s   ease-in-out infinite .8s;}
+/* 向日葵：中央偏左上，浮在空中 */
+.yh-m-sunf {top:22%;left:25%; width:15%;max-width:150px;min-width:60px;animation:yh-floatB 3.2s ease-in-out infinite .4s;}
+/* 百合：左下方轟字旁 */
+.yh-m-lily {top:55%;left:30%; width:8%;max-width:120px;min-width:48px;animation:yh-floatA 3.8s ease-in-out infinite;}
+/* 薰衣草：右下靠中 */
+.yh-m-lav  {top:60%;right:25%;width:10%;max-width:130px;min-width:52px;animation:yh-floatA 3.5s ease-in-out infinite .2s;}
+/* 藍玫瑰：右上靠中 */
+.yh-m-blue {top:20%;right:25%;width:12%;max-width:120px;min-width:48px;animation:yh-floatB 5s   ease-in-out infinite 1s;}
 .yh-marquee-strip{background:var(--gold);color:var(--primary);padding:13px 0;overflow:hidden;}
 .yh-marquee-inner{display:flex;white-space:nowrap;animation:yh-marquee 22s linear infinite;}
 .yh-marquee-text{font-family:'Noto Sans TC',sans-serif;font-weight:900;font-size:17px;letter-spacing:.1em;padding-right:64px;flex-shrink:0;}
@@ -88,7 +88,7 @@
 .yh-grass img{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:100%;min-width:900px;pointer-events:none;}
 /* 花轟頁 */
 .yh-page-hero{background:var(--primary);padding:160px 48px 80px;text-align:center;position:relative;overflow:hidden;}
-.yh-page-hero-bg{position:absolute;inset:0;background:url('https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E8%83%8C%E6%99%AF.png')center/cover no-repeat;opacity:.3;mix-blend-mode:screen;}
+.yh-page-hero-bg{position:absolute;inset:0;background:url('https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8Fbanner%20%E7%84%A1%E5%90%89%E7%A5%A5%E7%89%A9%E7%89%88%E6%9C%AC.png')center/cover no-repeat;}
 .yh-page-hero-overlay{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 40%,rgba(192,84,108,.2) 0%,rgba(51,6,9,.8) 70%);}
 .yh-page-hero-inner{position:relative;z-index:2;}
 .yh-page-eyebrow{font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:.5em;color:var(--gold);margin-bottom:16px;}
