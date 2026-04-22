@@ -22,7 +22,9 @@
   --gray:#CFC9CC; --rose:#E9ABAB; --white:#FFFFFF;
 }
 /* ── HERO（banner + 吉祥物，無其他內容） ── */
-.yh-hero{position:relative;width:100%;padding-top:33.33%;min-height:280px;overflow:hidden;}
+.yh-hero{position:relative;width:100%;aspect-ratio:3418/1301;min-height:280px;overflow:hidden;}
+/* Elementor widget container 補丁（移除預設 padding，避免 banner 上下被截） */
+.elementor-widget-html .elementor-widget-container{padding:0!important;line-height:0;}
 .yh-hero-bg{position:absolute;inset:0;background:url('https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8Fbanner%20%E7%84%A1%E5%90%89%E7%A5%A5%E7%89%A9%E7%89%88%E6%9C%AC.png')center/cover no-repeat;}
 /* 吉祥物 — 位置對應 banner 構圖 */
 .yh-mascot{position:absolute;pointer-events:none;z-index:6;}
