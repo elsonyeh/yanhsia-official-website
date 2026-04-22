@@ -73,7 +73,7 @@
 .yh-video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:none;}
 .yh-line-cta{background:var(--gold);padding:80px 48px;text-align:center;}
 .yh-line-title{font-family:'Noto Serif TC',serif;font-size:clamp(24px,3.5vw,40px);font-weight:900;color:var(--primary);margin-bottom:16px;}
-.yh-line-sub{font-family:'Noto Sans TC',sans-serif;font-size:15px;line-height:2;color:rgba(51,6,9,.68);margin-bottom:32px;}
+.yh-line-sub{font-family:'Noto Sans TC',sans-serif;font-size:15px;line-height:2;color:rgba(51,6,9,.68);margin-bottom:32px;text-wrap:balance;}
 .yh-footer-pre{background:var(--secondary);padding:80px 48px;text-align:center;color:var(--white);}
 .yh-footer-pre-title{font-family:'Noto Serif TC',serif;font-size:clamp(28px,4vw,48px);font-weight:900;margin-bottom:20px;}
 .yh-footer-pre-sub{font-family:'Noto Sans TC',sans-serif;font-size:16px;opacity:.8;margin-bottom:36px;}
