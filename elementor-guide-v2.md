@@ -149,14 +149,15 @@
   .yh-about-grid{grid-template-columns:1fr;gap:48px;}
   .yh-about-badge{width:220px;height:220px;}
   .yh-about-badge img{width:180px;}
-  .yh-m-lily,.yh-m-blue{display:none;}
 }
 @media(max-width:560px){
   .yh-features-grid{grid-template-columns:1fr;}
   .yh-hero{min-height:0;}
   .yh-m-amary{top:52%;width:10%;min-width:0;}
   .yh-m-sunf{width:12%;min-width:0;}
+  .yh-m-lily{top:50%;width:8%;min-width:0;}
   .yh-m-lav{top:58%;width:10%;min-width:0;}
+  .yh-m-blue{width:10%;min-width:0;}
   .yh-features,.yh-founders,.yh-curatorial,.yh-schedule,.yh-event-info,.yh-line-cta{padding-left:20px!important;padding-right:20px!important;}
   .yh-page-hero{padding-left:20px!important;padding-right:20px!important;padding-top:100px!important;}
   .yh-feat-card{padding:28px 18px;}
