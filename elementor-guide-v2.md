@@ -306,7 +306,7 @@
     <div class="yh-section-label" style="color:rgba(51,6,9,.55);">OFFICIAL LINE</div>
     <h2 class="yh-line-title">加入【鹽夏不夜埕】<br>官方 LINE 好友</h2>
     <p class="yh-line-sub">加入 LINE 好友集點趣！提升觀展體驗，第一時間掌握花轟最新消息、活動通知與限定優惠。</p>
-    <a href="#" class="yh-cta-link" style="background:#330609;color:#fff;">加入 LINE 好友 →</a>
+    <a href="https://line.me/R/ti/p/@235chemh" class="yh-cta-link" style="background:#330609;color:#fff;">加入 LINE 好友 →</a>
   </div>
 </section>
 ```
@@ -333,9 +333,10 @@
       <img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8Flogo%E5%80%91-20260416T013432Z-3-001/%E9%B9%BD%E5%A4%8Flogo%E5%80%91/%E8%B3%87%E7%94%A2%202.png" alt="鹽夏不夜埕">
     </div>
     <div class="yh-footer-social">
-      <a href="#">Facebook</a>
-      <a href="#">Instagram</a>
-      <a href="#">LINE 官方帳號</a>
+      <a href="https://www.facebook.com/dontsleepinyancheng">Facebook</a>
+      <a href="https://www.instagram.com/dont_sleep_in_yancheng/">Instagram</a>
+      <a href="https://line.me/R/ti/p/@235chemh">LINE 官方帳號</a>
+      <a href="mailto:dont.sleep.in.yancheng@gmail.com">Mail</a>
     </div>
     <div class="yh-footer-copy">© 2026 鹽夏不夜埕 All Rights Reserved</div>
   </div>
@@ -583,9 +584,10 @@
       <img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8Flogo%E5%80%91-20260416T013432Z-3-001/%E9%B9%BD%E5%A4%8Flogo%E5%80%91/%E8%B3%87%E7%94%A2%202.png" alt="鹽夏不夜埕">
     </div>
     <div class="yh-footer-social">
-      <a href="#">Facebook</a>
-      <a href="#">Instagram</a>
-      <a href="#">LINE 官方帳號</a>
+      <a href="https://www.facebook.com/dontsleepinyancheng">Facebook</a>
+      <a href="https://www.instagram.com/dont_sleep_in_yancheng/">Instagram</a>
+      <a href="https://line.me/R/ti/p/@235chemh">LINE 官方帳號</a>
+      <a href="mailto:dont.sleep.in.yancheng@gmail.com">Mail</a>
     </div>
     <div class="yh-footer-copy">© 2026 鹽夏不夜埕 All Rights Reserved</div>
   </div>
