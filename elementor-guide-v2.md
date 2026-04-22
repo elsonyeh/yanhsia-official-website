@@ -154,6 +154,8 @@
 @media(max-width:560px){
   .yh-features-grid{grid-template-columns:1fr;}
   .yh-m-sunf,.yh-m-lav{display:none;}
+  .yh-hero{min-height:0;}
+  .yh-m-amary{top:52%;width:14%;min-width:0;}
   .yh-features,.yh-founders,.yh-curatorial,.yh-schedule,.yh-event-info,.yh-line-cta{padding-left:20px!important;padding-right:20px!important;}
   .yh-page-hero{padding-left:20px!important;padding-right:20px!important;padding-top:100px!important;}
   .yh-feat-card{padding:28px 18px;}
