@@ -204,28 +204,28 @@
   <div style="max-width:1080px;margin:0 auto;">
     <div style="text-align:center;margin-bottom:60px;">
       <div class="yh-section-label">FEATURES</div>
-      <h2 class="yh-section-title yh-reveal">鹽夏四大特色｜Features</h2>
+      <h2 class="yh-section-title">鹽夏四大特色｜Features</h2>
     </div>
     <div class="yh-features-grid">
-      <div class="yh-feat-card white yh-reveal">
+      <div class="yh-feat-card white">
         <img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E8%96%B0%E8%A1%A3%E8%8D%89.png" alt="">
         <div class="yh-feat-num">01</div>
         <div class="yh-feat-title">裝置藝術</div>
         <div class="yh-feat-desc">鹽埕埕區中展示一系列由中山大學「跨領域創新專選（一）」課程學生與藝術家所創作之光影裝置藝術作品，共同點亮鹽埕夜夜。</div>
       </div>
-      <div class="yh-feat-card dark-red yh-reveal">
+      <div class="yh-feat-card dark-red">
         <img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E5%AD%A4%E6%8C%BA%E8%8A%B1.png" alt="">
         <div class="yh-feat-num">02</div>
         <div class="yh-feat-title">表演藝術</div>
         <div class="yh-feat-desc">邀請高雄在地劇團、樂團等表演團體，在街廊進行演出，沈浸在藝術表演與歷史文化交融出的鹽埕記憶。</div>
       </div>
-      <div class="yh-feat-card white yh-reveal">
+      <div class="yh-feat-card white">
         <img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E5%90%91%E6%97%A5%E8%91%B5.png" alt="">
         <div class="yh-feat-num">03</div>
         <div class="yh-feat-title">特色市集</div>
         <div class="yh-feat-desc">在展期的跨週六，邀請高雄在地商家或是學生創業品牌，配合每年的不同主題企劃，打造出獨一無二的鹽夏特色市集。</div>
       </div>
-      <div class="yh-feat-card primary yh-reveal">
+      <div class="yh-feat-card primary">
         <img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E7%99%BE%E5%90%88.png" alt="">
         <div class="yh-feat-num">04</div>
         <div class="yh-feat-title">周邊活動</div>
