@@ -260,10 +260,10 @@
   <div class="yh-founders-inner">
     <div style="text-align:center;margin-bottom:64px;">
       <div class="yh-section-label">FOUNDERS</div>
-      <h2 class="yh-section-title yh-reveal" style="color:#fff;">鹽夏創始人們｜Founders</h2>
+      <h2 class="yh-section-title" style="color:#fff;">鹽夏創始人們｜Founders</h2>
     </div>
     <div class="yh-founder-grid">
-      <div class="yh-founder-card yh-reveal">
+      <div class="yh-founder-card">
         <div class="yh-founder-avatar" style="background:#C0546C;box-shadow:0 0 0 8px rgba(192,84,108,.2),0 0 48px rgba(192,84,108,.25);">
           <img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E5%AD%A4%E6%8C%BA%E8%8A%B1.png" alt="">
         </div>
@@ -271,7 +271,7 @@
         <div class="yh-founder-role">鹽夏不夜埕 共同創辦人</div>
         <div class="yh-founder-bio">以社會設計為核心，長期深耕鹽埕街區的文化活化與社區共創，致力用藝術讓老街區重新被看見。</div>
       </div>
-      <div class="yh-founder-card yh-reveal" style="animation-delay:.12s">
+      <div class="yh-founder-card" style="animation-delay:.12s">
         <div class="yh-founder-avatar" style="background:#5B7BA6;box-shadow:0 0 0 8px rgba(91,123,166,.2),0 0 48px rgba(91,123,166,.25);">
           <img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E8%97%8D%E7%8E%AB%E7%91%B0.png" alt="">
         </div>
@@ -283,7 +283,7 @@
     <div style="text-align:center;">
       <div class="yh-book-badge"><span>《在街區走著走著》｜設計讀吧</span></div>
     </div>
-    <div class="yh-reveal" style="max-width:800px;margin:0 auto;text-align:center;">
+    <div style="max-width:800px;margin:0 auto;text-align:center;">
       <div class="yh-video-label">FILM</div>
       <h3 class="yh-video-title">創始人介紹影片</h3>
       <div class="yh-video-wrap">
@@ -386,7 +386,7 @@
 ```html
 <section class="yh-founders">
   <div class="yh-about-grid">
-    <div class="yh-reveal">
+    <div>
       <div class="yh-section-label">ABOUT 關於花轟</div>
       <h2 class="yh-section-title" style="color:var(--white);margin-bottom:28px;">什麼是<br>花轟？</h2>
       <p style="font-family:'Noto Sans TC',sans-serif;font-size:16px;line-height:2.1;color:var(--gray);">
@@ -395,7 +395,7 @@
         2026 年，鹽夏不夜埕帶著全新能量回來。開幕式、踩街遊行、裝置藝術、特色市集，用八天的時間把高雄的夏夜染得更鮮豔，更不羈，更屬於你。
       </p>
     </div>
-    <div class="yh-reveal" style="display:flex;justify-content:center;">
+    <div style="display:flex;justify-content:center;">
       <div class="yh-about-badge">
         <img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E8%8A%B1%E8%BD%9F.png" alt="花轟">
       </div>
@@ -412,11 +412,11 @@
 <section class="yh-curatorial">
   <div class="yh-curatorial-inner">
     <div class="yh-section-label">CURATORIAL STATEMENT 策展論述</div>
-    <h2 class="yh-section-title yh-reveal" style="color:var(--white);margin-bottom:28px;">花の宣言</h2>
-    <div class="yh-quote-block yh-reveal">《花轟》以花的綻放，回應情緒的張力與流動。正如花朵終將撐開花萼、露出真實的姿態，情緒的包裝紙在拆封的瞬間被釋放與凝視，以當下最真實的樣貌綻放。</div>
-    <div class="yh-sub-text yh-reveal">鹽埕將化身為一座「花園」，情緒在巷弄間自然生長；觀眾在花園中自由穿梭。透過「呼吸、蔓延、共生」三大面向，體驗情緒從個體到他者，從他者到群體網絡相互影響、轉化與共存的過程。</div>
-    <div class="yh-note-text yh-reveal">1st《花轟》邀請觀眾進入這座花園，靠近那些正在發生的情緒。</div>
-    <div class="yh-trio-grid yh-reveal">
+    <h2 class="yh-section-title" style="color:var(--white);margin-bottom:28px;">花の宣言</h2>
+    <div class="yh-quote-block">《花轟》以花的綻放，回應情緒的張力與流動。正如花朵終將撐開花萼、露出真實的姿態，情緒的包裝紙在拆封的瞬間被釋放與凝視，以當下最真實的樣貌綻放。</div>
+    <div class="yh-sub-text">鹽埕將化身為一座「花園」，情緒在巷弄間自然生長；觀眾在花園中自由穿梭。透過「呼吸、蔓延、共生」三大面向，體驗情緒從個體到他者，從他者到群體網絡相互影響、轉化與共存的過程。</div>
+    <div class="yh-note-text">1st《花轟》邀請觀眾進入這座花園，靠近那些正在發生的情緒。</div>
+    <div class="yh-trio-grid">
       <div class="yh-trio-card" style="background:#C0546C;">
         <div class="yh-trio-title">呼吸</div>
         <div class="yh-trio-en">BREATHE</div>
@@ -443,30 +443,30 @@
 
 ```html
 <section class="yh-features">
-  <div style="text-align:center;margin-bottom:56px;" class="yh-reveal">
+  <div style="text-align:center;margin-bottom:56px;">
     <div class="yh-section-label">FEATURES 四大主要活動</div>
     <h2 class="yh-section-title">今年花轟</h2>
   </div>
   <div class="yh-features-grid">
-    <div class="yh-feat-card white yh-reveal">
+    <div class="yh-feat-card white">
       <img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E8%96%B0%E8%A1%A3%E8%8D%89.png" alt="">
       <div class="yh-feat-num">01</div>
       <div class="yh-feat-title">開幕式</div>
       <div class="yh-feat-desc">5/16（六）17:00–19:00，主舞台。揭開 2026 鹽夏不夜埕序幕，同步頒發高雄高中生科技藝術競賽獎項，邀請觀眾一同感受盛夏慶典的到來。</div>
     </div>
-    <div class="yh-feat-card dark-red yh-reveal">
+    <div class="yh-feat-card dark-red">
       <img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E5%AD%A4%E6%8C%BA%E8%8A%B1.png" alt="">
       <div class="yh-feat-num">02</div>
       <div class="yh-feat-title">踩街遊行</div>
       <div class="yh-feat-desc">5/16（六）19:00–21:00，主舞台 / 整個街廊。結合高中時裝作品展與在地小學社團表演，攜手手工共創藝術，邀請大家一同花行上街！</div>
     </div>
-    <div class="yh-feat-card white yh-reveal">
+    <div class="yh-feat-card white">
       <img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E5%90%91%E6%97%A5%E8%91%B5.png" alt="">
       <div class="yh-feat-num">03</div>
       <div class="yh-feat-title">裝置藝術</div>
       <div class="yh-feat-desc">5/16–5/23，每日 19:30–20:30 作品導覽，服務台出發。中山大學生、高中科技競賽與社區共創，以「呼吸・蔓延・共生」呈現情緒綻放的旅程。</div>
     </div>
-    <div class="yh-feat-card primary yh-reveal">
+    <div class="yh-feat-card primary">
       <img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E7%99%BE%E5%90%88.png" alt="">
       <div class="yh-feat-num">04</div>
       <div class="yh-feat-title">特色市集</div>
@@ -483,11 +483,11 @@
 ```html
 <section class="yh-schedule">
   <div class="yh-schedule-inner">
-    <div style="text-align:center;margin-bottom:56px;" class="yh-reveal">
+    <div style="text-align:center;margin-bottom:56px;">
       <div class="yh-section-label">SCHEDULE 活動時程</div>
       <h2 class="yh-section-title">活動排程</h2>
     </div>
-    <div class="yh-schedule-day yh-reveal">
+    <div class="yh-schedule-day">
       <div class="yh-schedule-day-label">5/16（六）開幕式 × 踩街遊行</div>
       <div class="yh-schedule-row"><div class="yh-schedule-time">17:00</div><div><div class="yh-schedule-name">🎉 開幕式 × 高中科技藝術競賽頒獎</div><div class="yh-schedule-stage">主舞台</div></div></div>
       <div class="yh-schedule-row"><div class="yh-schedule-time">17:00</div><div><div class="yh-schedule-name">特色市集 開市</div><div class="yh-schedule-stage">新樂街大智路口—愛文店口</div></div></div>
@@ -495,17 +495,17 @@
       <div class="yh-schedule-row"><div class="yh-schedule-time">19:30</div><div><div class="yh-schedule-name">裝置藝術 作品導覽</div><div class="yh-schedule-stage">服務台集合出發</div></div></div>
       <div class="yh-schedule-row"><div class="yh-schedule-time">21:00</div><div><div class="yh-schedule-name">踩街收隊 / 市集收攤</div><div class="yh-schedule-stage">新樂街綠廊</div></div></div>
     </div>
-    <div class="yh-schedule-day yh-reveal">
+    <div class="yh-schedule-day">
       <div class="yh-schedule-day-label">5/17（日）— 5/22（五）常態展期</div>
       <div class="yh-schedule-row"><div class="yh-schedule-time">17:00</div><div><div class="yh-schedule-name">特色市集 開市</div><div class="yh-schedule-stage">新樂街大智路口—愛文店口</div></div></div>
       <div class="yh-schedule-row"><div class="yh-schedule-time">19:30</div><div><div class="yh-schedule-name">裝置藝術 作品導覽</div><div class="yh-schedule-stage">服務台集合出發</div></div></div>
       <div class="yh-schedule-row"><div class="yh-schedule-time">21:00</div><div><div class="yh-schedule-name">市集收攤</div><div class="yh-schedule-stage">新樂街綠廊</div></div></div>
     </div>
-    <div class="yh-schedule-day yh-reveal">
+    <div class="yh-schedule-day">
       <div class="yh-schedule-day-label">5/22（五）特別場 × 邀演活動</div>
       <div class="yh-schedule-row"><div class="yh-schedule-time">全日</div><div><div class="yh-schedule-name">邀演活動 × 高雄市中央公園商圈</div><div class="yh-schedule-stage">高雄市中央公園商圈</div></div></div>
     </div>
-    <div class="yh-schedule-day yh-reveal">
+    <div class="yh-schedule-day">
       <div class="yh-schedule-day-label">5/23（六）最終日 × 閉幕</div>
       <div class="yh-schedule-row"><div class="yh-schedule-time">17:00</div><div><div class="yh-schedule-name">特色市集 最終場</div><div class="yh-schedule-stage">新樂街大智路口—愛文店口</div></div></div>
       <div class="yh-schedule-row"><div class="yh-schedule-time">19:30</div><div><div class="yh-schedule-name">裝置藝術 最終導覽</div><div class="yh-schedule-stage">服務台集合出發</div></div></div>
@@ -522,11 +522,11 @@
 ```html
 <section class="yh-event-info">
   <div class="yh-event-info-inner">
-    <div style="text-align:center;margin-bottom:56px;" class="yh-reveal">
+    <div style="text-align:center;margin-bottom:56px;">
       <div class="yh-section-label">EVENT INFO 展覽資訊</div>
       <h2 class="yh-section-title" style="color:var(--white);">活動資訊</h2>
     </div>
-    <div class="yh-info-top yh-reveal">
+    <div class="yh-info-top">
       <div class="yh-info-box">
         <div class="yh-info-box-label">活動時間</div>
         <div class="yh-info-box-value">2026 / 5.16 — 5.23<br><span>每日 17:00 – 21:00</span></div>
@@ -536,7 +536,7 @@
         <div class="yh-info-box-value">新樂街綠廊<br><span>大智路 – 大成街路段</span></div>
       </div>
     </div>
-    <div class="yh-info-bottom yh-reveal">
+    <div class="yh-info-bottom">
       <div style="display:flex;flex-direction:column;gap:16px;">
         <div class="yh-info-card">
           <div class="yh-info-card-label">主辦單位</div>
