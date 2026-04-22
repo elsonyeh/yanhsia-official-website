@@ -316,8 +316,8 @@
 ### 元件 6 — Footer
 
 ```html
-<div class="yh-grass">
-  <img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E5%8F%AF%E6%84%9B%E7%9A%84%E8%8D%89%E5%8F%A2.png" alt="">
+<div class="yh-grass" style="position:relative;overflow:hidden;height:120px;background:#F2D9D0;">
+  <img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E5%8F%AF%E6%84%9B%E7%9A%84%E8%8D%89%E5%8F%A2.png" alt="" style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:100%;min-width:900px;">
 </div>
 <footer>
   <div class="yh-footer-pre">
