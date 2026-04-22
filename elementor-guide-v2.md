@@ -134,7 +134,6 @@
 .yh-info-list-item{font-family:'Noto Sans TC',sans-serif;display:flex;gap:10px;font-size:13px;line-height:1.8;color:var(--white);}
 .yh-info-list-num{color:var(--secondary);flex-shrink:0;}
 .yh-info-plain{font-family:'Noto Sans TC',sans-serif;font-size:13px;line-height:2.2;opacity:.85;color:var(--white);}
-.yh-reveal{opacity:0;}
 .yh-reveal.visible{animation:yh-fadeUp .7s ease forwards;}
 @keyframes yh-floatA{0%,100%{transform:translateY(0) rotate(-4deg);}50%{transform:translateY(-22px) rotate(4deg);}}
 @keyframes yh-floatB{0%,100%{transform:translateY(0) rotate(4deg);}50%{transform:translateY(-18px) rotate(-4deg);}}
