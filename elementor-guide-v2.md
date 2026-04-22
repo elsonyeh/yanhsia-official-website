@@ -23,7 +23,7 @@
 }
 /* ── HERO（banner + 吉祥物，無其他內容） ── */
 .yh-hero{position:relative;width:100%;padding-top:33.33%;min-height:280px;overflow:hidden;}
-.yh-hero-bg{position:absolute;inset:0;background:url('https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8Bbanner%20%E7%84%A1%E5%90%89%E7%A5%A5%E7%89%A9%E7%89%88%E6%9C%AC.jpg')center/cover no-repeat;}
+.yh-hero-bg{position:absolute;inset:0;background:url('https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8Fbanner%20%E7%84%A1%E5%90%89%E7%A5%A5%E7%89%A9%E7%89%88%E6%9C%AC.jpg')center/cover no-repeat;}
 /* 吉祥物 — 位置對應 banner 構圖 */
 .yh-mascot{position:absolute;pointer-events:none;z-index:6;}
 /* 左上 — 對應 banner 左側建築花飾 */
