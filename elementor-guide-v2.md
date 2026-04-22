@@ -24,7 +24,7 @@
 /* ── HERO（banner + 吉祥物，無其他內容） ── */
 .yh-hero{position:relative;width:100%;aspect-ratio:3418/1301;min-height:280px;overflow:hidden;}
 /* Elementor widget container 補丁（移除預設 padding，避免 banner 上下被截） */
-.elementor-widget-html .elementor-widget-container{padding:0!important;line-height:0;}
+.elementor-widget-html .elementor-widget-container{padding:0!important;}
 .yh-hero-bg{position:absolute;inset:0;background:url('https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8Fbanner%20%E7%84%A1%E5%90%89%E7%A5%A5%E7%89%A9%E7%89%88%E6%9C%AC.png')center/cover no-repeat;}
 /* 吉祥物 — 位置對應 banner 構圖 */
 .yh-mascot{position:absolute;pointer-events:none;z-index:6;}
@@ -88,6 +88,10 @@
 .yh-footer-copy{font-family:'Noto Sans TC',sans-serif;font-size:12px;color:var(--gray);letter-spacing:.1em;}
 .yh-grass{position:relative;overflow:hidden;height:100px;background:var(--bg);}
 .yh-grass img{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:100%;min-width:900px;pointer-events:none;}
+/* 花轟關於區塊 */
+.yh-about-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.yh-about-badge{background:var(--bg);border-radius:50%;width:280px;height:280px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 12px rgba(242,126,147,.15),0 0 80px rgba(192,84,108,.3);animation:yh-pulse-ring 3s ease-in-out infinite;}
+.yh-about-badge img{width:220px;}
 /* 花轟頁 */
 .yh-page-hero{background:var(--primary);padding:160px 48px 80px;text-align:center;position:relative;overflow:hidden;}
 .yh-page-hero-bg{position:absolute;inset:0;background:url('https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8Fbanner%20%E7%84%A1%E5%90%89%E7%A5%A5%E7%89%A9%E7%89%88%E6%9C%AC.png')center/cover no-repeat;}
@@ -142,11 +146,18 @@
   .yh-founder-grid{grid-template-columns:1fr;}
   .yh-trio-grid{grid-template-columns:1fr;}
   .yh-info-top,.yh-info-bottom{grid-template-columns:1fr;}
+  .yh-about-grid{grid-template-columns:1fr;gap:48px;}
+  .yh-about-badge{width:220px;height:220px;}
+  .yh-about-badge img{width:180px;}
 }
 @media(max-width:560px){
   .yh-features-grid{grid-template-columns:1fr;}
-  /* 手機上隱藏中央小花，保留四角 */
   .yh-m-blue{display:none;}
+  .yh-features,.yh-founders,.yh-curatorial,.yh-schedule,.yh-event-info,.yh-line-cta{padding-left:20px!important;padding-right:20px!important;}
+  .yh-page-hero{padding-left:20px!important;padding-right:20px!important;padding-top:100px!important;}
+  .yh-feat-card{padding:28px 18px;}
+  .yh-about-badge{width:180px;height:180px;}
+  .yh-about-badge img{width:150px;}
 }
 </style>
 
@@ -369,8 +380,8 @@
 ### 元件 2 — 關於花轟
 
 ```html
-<section style="background:var(--primary);color:var(--white);padding:100px 48px;">
-  <div style="max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+<section class="yh-founders">
+  <div class="yh-about-grid">
     <div class="yh-reveal">
       <div class="yh-section-label">ABOUT 關於花轟</div>
       <h2 class="yh-section-title" style="color:var(--white);margin-bottom:28px;">什麼是<br>花轟？</h2>
@@ -381,8 +392,8 @@
       </p>
     </div>
     <div class="yh-reveal" style="display:flex;justify-content:center;">
-      <div style="background:var(--bg);border-radius:50%;width:280px;height:280px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 12px rgba(242,126,147,.15),0 0 80px rgba(192,84,108,.3);animation:yh-pulse-ring 3s ease-in-out infinite;">
-        <img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E8%8A%B1%E8%BD%9F.png" style="width:220px;" alt="花轟">
+      <div class="yh-about-badge">
+        <img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E8%8A%B1%E8%BD%9F.png" alt="花轟">
       </div>
     </div>
   </div>
@@ -427,7 +438,7 @@
 ### 元件 4 — 四大主要活動
 
 ```html
-<section style="background:var(--bg);padding:100px 48px;">
+<section class="yh-features">
   <div style="text-align:center;margin-bottom:56px;" class="yh-reveal">
     <div class="yh-section-label">FEATURES 四大主要活動</div>
     <h2 class="yh-section-title">今年花轟</h2>
