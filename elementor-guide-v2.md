@@ -112,14 +112,22 @@
 .yh-trio-title{font-family:'Noto Serif TC',serif;font-size:28px;font-weight:900;color:var(--gold);margin-bottom:8px;}
 .yh-trio-en{font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:.2em;opacity:.55;margin-bottom:20px;}
 .yh-trio-body{font-family:'Noto Sans TC',sans-serif;font-size:13px;line-height:2.1;opacity:.88;}
-.yh-schedule{background:var(--bg);padding:100px 48px;}
-.yh-schedule-inner{max-width:860px;margin:0 auto;}
-.yh-schedule-day{margin-bottom:48px;}
-.yh-schedule-day-label{font-family:'Noto Serif TC',serif;font-size:22px;font-weight:700;color:var(--secondary);border-bottom:2px solid var(--secondary);padding-bottom:10px;margin-bottom:18px;}
-.yh-schedule-row{display:flex;align-items:center;gap:24px;padding:16px 0;border-bottom:1px solid rgba(51,6,9,.1);}
-.yh-schedule-time{font-family:'Noto Sans TC',sans-serif;font-weight:900;font-size:15px;color:var(--primary);min-width:80px;}
-.yh-schedule-name{font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:16px;color:var(--primary);margin-bottom:3px;}
-.yh-schedule-stage{font-family:'Noto Sans TC',sans-serif;font-size:12px;letter-spacing:.12em;color:var(--secondary);}
+.yh-schedule{background:var(--primary);padding:100px 48px;}
+.yh-schedule-inner{max-width:900px;margin:0 auto;}
+.yh-schedule-img{display:block;width:100%;border-radius:20px;box-shadow:0 16px 64px rgba(0,0,0,.35);}
+.yh-xp{background:var(--bg);padding:100px 48px;}
+.yh-xp-inner{max-width:900px;margin:0 auto;}
+.yh-xp-card{background:var(--white);border-radius:20px;padding:32px 36px;display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start;margin-bottom:20px;}
+.yh-xp-meta{flex-shrink:0;min-width:160px;}
+.yh-xp-title{font-family:'Noto Serif TC',serif;font-size:20px;font-weight:700;color:var(--primary);margin-bottom:8px;}
+.yh-xp-date{font-family:'Noto Sans TC',sans-serif;font-size:11px;font-weight:700;color:var(--white);background:var(--secondary);border-radius:50px;padding:3px 12px;display:inline-block;margin-bottom:8px;}
+.yh-xp-where{font-family:'Noto Sans TC',sans-serif;font-size:12px;color:#999;line-height:1.9;}
+.yh-xp-body{flex:1;min-width:200px;font-family:'Noto Sans TC',sans-serif;font-size:14px;line-height:2.1;color:#555;}
+.yh-xp-perf{background:var(--secondary);border-radius:20px;padding:40px;margin-top:16px;}
+.yh-xp-perf-row{display:flex;align-items:flex-start;gap:20px;padding:16px 20px;background:rgba(255,255,255,.12);border-radius:12px;margin-bottom:12px;}
+.yh-xp-perf-time{font-family:'Noto Sans TC',sans-serif;font-weight:900;font-size:14px;color:var(--gold);min-width:110px;flex-shrink:0;padding-top:2px;}
+.yh-xp-perf-name{font-family:'Noto Serif TC',serif;font-size:17px;font-weight:700;color:var(--white);margin-bottom:4px;}
+.yh-xp-perf-desc{font-family:'Noto Sans TC',sans-serif;font-size:13px;color:rgba(255,255,255,.75);}
 .yh-event-info{background:var(--primary);color:var(--white);padding:100px 48px;}
 .yh-event-info-inner{max-width:1080px;margin:0 auto;}
 .yh-info-top{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px;}
@@ -157,7 +165,8 @@
   .yh-m-lily{top:50%;width:8%;min-width:0;}
   .yh-m-lav{top:58%;width:10%;min-width:0;}
   .yh-m-blue{width:10%;min-width:0;}
-  .yh-features,.yh-founders,.yh-curatorial,.yh-schedule,.yh-event-info,.yh-line-cta{padding-left:20px!important;padding-right:20px!important;}
+  .yh-features,.yh-founders,.yh-curatorial,.yh-schedule,.yh-xp,.yh-event-info,.yh-line-cta{padding-left:20px!important;padding-right:20px!important;}
+  .yh-xp-card{gap:16px;}.yh-xp-meta{min-width:100%;}
   .yh-page-hero{padding-left:20px!important;padding-right:20px!important;padding-top:100px!important;}
   .yh-feat-card{padding:28px 18px;}
   .yh-about-badge{width:180px;height:180px;}
@@ -578,40 +587,121 @@
 
 ### 元件 7 — 活動排程
 
+> 背景改為深色 `var(--primary)`，內容只顯示活動排程圖 + 標題。
+
 ```html
 <section class="yh-schedule">
   <div class="yh-schedule-inner">
+    <div style="text-align:center;margin-bottom:48px;">
+      <div class="yh-section-label" style="color:var(--gold);">SCHEDULE 活動時程</div>
+      <h2 class="yh-section-title" style="color:var(--white);">活動排程</h2>
+    </div>
+    <img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8F%E6%B4%BB%E5%8B%95%E6%8E%92%E7%A8%8B.png" alt="活動排程" class="yh-schedule-img">
+  </div>
+</section>
+```
+
+---
+
+### 元件 7b — 鹽夏專屬體驗
+
+> 背景 `var(--bg)`，列出所有專屬活動卡片 + 表演活動區塊。
+
+```html
+<section class="yh-xp">
+  <div class="yh-xp-inner">
     <div style="text-align:center;margin-bottom:56px;">
-      <div class="yh-section-label">SCHEDULE 活動時程</div>
-      <h2 class="yh-section-title">活動排程</h2>
+      <div class="yh-section-label">EXCLUSIVE EXPERIENCE</div>
+      <h2 class="yh-section-title">鹽夏專屬體驗</h2>
     </div>
-    <div class="yh-schedule-day">
-      <div class="yh-schedule-day-label">5/16（六）開幕式 × 踩街遊行</div>
-      <div class="yh-schedule-row"><div class="yh-schedule-time">17:00</div><div><div class="yh-schedule-name">🎉 開幕式 × 高中科技藝術競賽頒獎</div><div class="yh-schedule-stage">主舞台</div></div></div>
-      <div class="yh-schedule-row"><div class="yh-schedule-time">17:00</div><div><div class="yh-schedule-name">特色市集 開市</div><div class="yh-schedule-stage">新樂街大智路口—愛文店口</div></div></div>
-      <div class="yh-schedule-row"><div class="yh-schedule-time">19:00</div><div><div class="yh-schedule-name">🌸 踩街遊行 ── 花行上街！</div><div class="yh-schedule-stage">主舞台出發 / 新樂街全廊</div></div></div>
-      <div class="yh-schedule-row"><div class="yh-schedule-time">19:30</div><div><div class="yh-schedule-name">裝置藝術 作品導覽</div><div class="yh-schedule-stage">服務台集合出發</div></div></div>
-      <div class="yh-schedule-row"><div class="yh-schedule-time">21:00</div><div><div class="yh-schedule-name">踩街收隊 / 市集收攤</div><div class="yh-schedule-stage">新樂街綠廊</div></div></div>
+
+    <div class="yh-xp-card">
+      <div class="yh-xp-meta">
+        <div class="yh-xp-title">情緒花粉投遞站</div>
+        <div class="yh-xp-date">5/16 · 17</div>
+        <div class="yh-xp-where">17:00–21:00<br>5/16 服務台<br>5/17 主舞台<br>移動式投遞站</div>
+      </div>
+      <div class="yh-xp-body">不只是分享，還能被演出來？透過情緒花粉投遞站把想分享的事、想大喊的話，傳達出去吧！投遞的回覆將成為《開港來花轟》喜劇演出題材！</div>
     </div>
-    <div class="yh-schedule-day">
-      <div class="yh-schedule-day-label">5/17（日）— 5/22（五）常態展期</div>
-      <div class="yh-schedule-row"><div class="yh-schedule-time">17:00</div><div><div class="yh-schedule-name">特色市集 開市</div><div class="yh-schedule-stage">新樂街大智路口—愛文店口</div></div></div>
-      <div class="yh-schedule-row"><div class="yh-schedule-time">19:30</div><div><div class="yh-schedule-name">裝置藝術 作品導覽</div><div class="yh-schedule-stage">服務台集合出發</div></div></div>
-      <div class="yh-schedule-row"><div class="yh-schedule-time">21:00</div><div><div class="yh-schedule-name">市集收攤</div><div class="yh-schedule-stage">新樂街綠廊</div></div></div>
+
+    <div class="yh-xp-card">
+      <div class="yh-xp-meta">
+        <div class="yh-xp-title">花舞之際</div>
+        <div class="yh-xp-date">5/16</div>
+        <div class="yh-xp-where">17:00–17:30<br>主舞台</div>
+      </div>
+      <div class="yh-xp-body">現場舉辦呼啦舞互動演出！本活動與「快樂藝術空間」合作，帶領「鹽埕老人活動站」長輩舞動鹽埕活力。</div>
     </div>
-    <div class="yh-schedule-day">
-      <div class="yh-schedule-day-label">5/22（五）特別場 × 邀演活動</div>
-      <div class="yh-schedule-row"><div class="yh-schedule-time">全日</div><div><div class="yh-schedule-name">邀演活動 × 高雄市中央公園商圈</div><div class="yh-schedule-stage">高雄市中央公園商圈</div></div></div>
+
+    <div class="yh-xp-card">
+      <div class="yh-xp-meta">
+        <div class="yh-xp-title">花轟時裝秀</div>
+        <div class="yh-xp-date">5/16</div>
+        <div class="yh-xp-where">18:40–19:00<br>主舞台</div>
+      </div>
+      <div class="yh-xp-body">小學生模特兒雲集！鹽埕國小與國立中山大學劇藝系服裝設計組學生共同創作服飾，並在時裝秀中由小學生走上秀台，展示共創服飾！</div>
     </div>
-    <div class="yh-schedule-day">
-      <div class="yh-schedule-day-label">5/23（六）最終日 × 閉幕</div>
-      <div class="yh-schedule-row"><div class="yh-schedule-time">17:00</div><div><div class="yh-schedule-name">特色市集 最終場</div><div class="yh-schedule-stage">新樂街大智路口—愛文店口</div></div></div>
-      <div class="yh-schedule-row"><div class="yh-schedule-time">19:30</div><div><div class="yh-schedule-name">裝置藝術 最終導覽</div><div class="yh-schedule-stage">服務台集合出發</div></div></div>
-      <div class="yh-schedule-row"><div class="yh-schedule-time">21:00</div><div><div class="yh-schedule-name">花轟閉幕 · 花朵歸巢</div><div class="yh-schedule-stage">新樂街綠廊</div></div></div>
+
+    <div class="yh-xp-card">
+      <div class="yh-xp-meta">
+        <div class="yh-xp-title">開港來花轟</div>
+        <div class="yh-xp-date">5/17</div>
+        <div class="yh-xp-where">17:00–18:30<br>19:30–21:00<br>主舞台</div>
+      </div>
+      <div class="yh-xp-body">高雄在地喜劇品牌——喜劇開港，透過觀眾互動創作即興喜劇，帶來充滿驚喜的《花轟》演出！</div>
+    </div>
+
+    <div class="yh-xp-card">
+      <div class="yh-xp-meta">
+        <div class="yh-xp-title">聽！花兒在說什麼？</div>
+        <div class="yh-xp-date">5/17</div>
+        <div class="yh-xp-where">18:30–19:30<br>鹽埕國中大會議室</div>
+      </div>
+      <div class="yh-xp-body">以鋼琴三重奏與弦樂重奏，將指尖音符化作初夏花語。共賞一場細膩優雅、如花綻放的室內樂饗宴。</div>
+    </div>
+
+    <div class="yh-xp-card">
+      <div class="yh-xp-meta">
+        <div class="yh-xp-title">花聚共感餐桌<br><span style="font-size:12px;color:var(--secondary);">邀請制</span></div>
+        <div class="yh-xp-date">5/23</div>
+        <div class="yh-xp-where">17:00–19:30<br>市集互動區</div>
+      </div>
+      <div class="yh-xp-body">以食物為入口、故事為情感、情緒為核心，青銀共食的體驗活動。邀請翰品酒店、在地店家、民眾一同享用暖心美食。</div>
+    </div>
+
+    <div class="yh-xp-card">
+      <div class="yh-xp-meta">
+        <div class="yh-xp-title">從手機至 AI：數位時代鹽埕長輩的情緒故事</div>
+        <div class="yh-xp-date">5/16 · 17 · 23</div>
+        <div class="yh-xp-where">17:00–21:00<br>克朗德美術館</div>
+      </div>
+      <div class="yh-xp-body">本展覽由中山大學《數位文化與人類學：理論與實踐》課程同學策劃：透過訪談與工作坊，深入鹽埕區老人活動站實地調查，探討手機等數位設備如何影響了在地長輩們的日常生活與社交活動，進而成為牽動情緒的重要載體，也將探討長輩面對 AI 發展的複雜情緒與隱藏期待。</div>
+    </div>
+
+    <div class="yh-xp-perf">
+      <div style="margin-bottom:28px;">
+        <div style="font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:.4em;color:rgba(255,255,255,.6);margin-bottom:6px;">LIVE PERFORMANCE 表演活動</div>
+        <div style="font-family:'Noto Serif TC',serif;font-size:26px;font-weight:700;color:var(--white);">表演活動</div>
+        <div style="font-family:'Noto Sans TC',sans-serif;font-size:13px;color:rgba(255,255,255,.75);margin-top:6px;">5/23・鹽埕國中大門口前廣場</div>
+      </div>
+      <div class="yh-xp-perf-row">
+        <div class="yh-xp-perf-time">17:30–18:30</div>
+        <div><div class="yh-xp-perf-name">魚皮</div><div class="yh-xp-perf-desc">用音樂與大家交流情感，唱出動人旋律。</div></div>
+      </div>
+      <div class="yh-xp-perf-row">
+        <div class="yh-xp-perf-time">18:45–19:45</div>
+        <div><div class="yh-xp-perf-name">小丑呀咪</div><div class="yh-xp-perf-desc">來自小丑島的呀咪，帶你拋開憂愁大笑。</div></div>
+      </div>
+      <div class="yh-xp-perf-row">
+        <div class="yh-xp-perf-time">20:00–21:00</div>
+        <div><div class="yh-xp-perf-name">WiKi</div><div class="yh-xp-perf-desc">Wiki 以吉他與合唱，唱出動人故事。</div></div>
+      </div>
     </div>
   </div>
 </section>
 ```
+
+> **Elementor 步驟：** 在元件 7 下方新增一個 HTML 元件，貼上上方程式碼。
 
 ---
 
