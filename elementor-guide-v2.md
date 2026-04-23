@@ -112,9 +112,8 @@
 .yh-trio-title{font-family:'Noto Serif TC',serif;font-size:28px;font-weight:900;color:var(--gold);margin-bottom:8px;}
 .yh-trio-en{font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:.2em;opacity:.55;margin-bottom:20px;}
 .yh-trio-body{font-family:'Noto Sans TC',sans-serif;font-size:13px;line-height:2.1;opacity:.88;}
-.yh-schedule{background:var(--primary);padding:100px 48px;}
-.yh-schedule-inner{max-width:900px;margin:0 auto;}
-.yh-schedule-img{display:block;width:100%;border-radius:20px;box-shadow:0 16px 64px rgba(0,0,0,.35);}
+.yh-schedule{background:var(--primary);padding:0;line-height:0;}
+.yh-schedule-img{display:block;width:100%;}
 .yh-xp{background:var(--bg);padding:100px 48px;}
 .yh-xp-inner{max-width:900px;margin:0 auto;}
 .yh-xp-card{background:var(--white);border-radius:20px;padding:32px 36px;display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start;margin-bottom:20px;}
@@ -591,13 +590,7 @@
 
 ```html
 <section class="yh-schedule">
-  <div class="yh-schedule-inner">
-    <div style="text-align:center;margin-bottom:48px;">
-      <div class="yh-section-label" style="color:var(--gold);">SCHEDULE 活動時程</div>
-      <h2 class="yh-section-title" style="color:var(--white);">活動排程</h2>
-    </div>
-    <img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8F%E6%B4%BB%E5%8B%95%E6%8E%92%E7%A8%8B.png" alt="活動排程" class="yh-schedule-img">
-  </div>
+  <img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8F%E6%B4%BB%E5%8B%95%E6%8E%92%E7%A8%8B.png" alt="活動排程" class="yh-schedule-img">
 </section>
 ```
 

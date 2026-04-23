@@ -79,10 +79,8 @@
     @media(max-width:560px){.features-grid{grid-template-columns:1fr;}}
 
     /* SCHEDULE */
-    .schedule{background:var(--primary);padding:100px 48px;}
-    .schedule-inner{max-width:900px;margin:0 auto;}
-    .schedule-header{text-align:center;margin-bottom:48px;}
-    .schedule-img{display:block;width:100%;border-radius:20px;box-shadow:0 16px 64px rgba(0,0,0,.35);}
+    .schedule{background:var(--primary);padding:0;line-height:0;}
+    .schedule-img{display:block;width:100%;}
     /* EXCLUSIVE EXPERIENCE */
     .xp-section{background:var(--bg);padding:100px 48px;}
     .xp-inner{max-width:900px;margin:0 auto;}
@@ -98,7 +96,7 @@
     .xp-perf-time{font-weight:900;font-size:14px;color:var(--gold);min-width:110px;flex-shrink:0;padding-top:2px;}
     .xp-perf-name{font-family:'Noto Serif TC',serif;font-size:17px;font-weight:700;color:var(--white);margin-bottom:4px;}
     .xp-perf-desc{font-size:13px;color:rgba(255,255,255,.75);}
-    @media(max-width:600px){.xp-card{gap:16px;}.xp-card-meta{min-width:100%;}.xp-section{padding:72px 24px;}.schedule{padding:80px 24px;}}
+    @media(max-width:600px){.xp-card{gap:16px;}.xp-card-meta{min-width:100%;}.xp-section{padding:72px 24px;}}
 
     /* EVENT INFO */
     .event-info{background:var(--primary);color:var(--white);padding:100px 48px;}
@@ -260,15 +258,7 @@
 
 <!-- SCHEDULE -->
 <section class="schedule">
-  <div class="schedule-inner">
-    <div class="schedule-header reveal">
-      <div class="section-label" style="color:var(--gold);">SCHEDULE 活動時程</div>
-      <h2 class="section-title" style="color:var(--white);">活動排程</h2>
-    </div>
-    <div class="reveal">
-      <img src="./鹽夏活動排程.png" alt="活動排程" class="schedule-img">
-    </div>
-  </div>
+  <img src="./鹽夏活動排程.png" alt="活動排程" class="schedule-img">
 </section>
 
 <!-- EXCLUSIVE EXPERIENCE -->
