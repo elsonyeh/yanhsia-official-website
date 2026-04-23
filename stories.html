@@ -88,6 +88,18 @@
     .observer-loc{margin-top:14px;font-size:12px;opacity:.65;letter-spacing:.05em;}
     @media(max-width:700px){.observer-grid{grid-template-columns:1fr;}}
 
+    /* OBSERVER ARTICLE */
+    .observer-article{background:var(--white);border-radius:20px;padding:40px;margin-bottom:32px;display:grid;grid-template-columns:180px 1fr;gap:36px;align-items:start;}
+    .observer-article-cover{width:180px;aspect-ratio:3/4;border-radius:12px;background:var(--bg);overflow:hidden;display:flex;align-items:center;justify-content:center;}
+    .observer-article-cover img{width:90px;opacity:.35;}
+    .observer-article-tag{background:var(--secondary);color:var(--white);font-size:11px;padding:4px 14px;border-radius:50px;letter-spacing:.08em;display:inline-block;margin-bottom:10px;}
+    .observer-article-date{font-size:12px;color:var(--secondary);letter-spacing:.1em;margin-bottom:10px;}
+    .observer-article-title{font-family:'Noto Serif TC',serif;font-size:26px;font-weight:700;margin-bottom:14px;color:var(--primary);}
+    .observer-article-body{font-size:15px;line-height:2.1;color:#555;margin-bottom:20px;}
+    .observer-article-link{color:var(--secondary);font-size:14px;text-decoration:none;font-weight:700;letter-spacing:.05em;}
+    .observer-article-link:hover{opacity:.75;}
+    @media(max-width:700px){.observer-article{grid-template-columns:1fr;}.observer-article-cover{width:100%;aspect-ratio:16/7;}}
+
     /* TRAVEL CARDS */
     .travel-section{padding:80px 48px;max-width:1080px;margin:0 auto;}
     .travel-intro{font-size:16px;line-height:2.1;color:#555;max-width:700px;margin-bottom:56px;}
@@ -200,6 +212,20 @@
     <div class="section-label">OBSERVER 小埕觀察家</div>
     <h2 class="section-title">停下來，觀察<br>正在發生的事</h2>
     <p class="observer-intro reveal">鹽埕每天都在發生各種大小事。小埕觀察家邀請你放慢腳步，用好奇的眼睛觀察這個街區正在經歷的一切——花朵、人群、情緒、記憶。</p>
+
+    <div class="observer-article reveal">
+      <div class="observer-article-cover">
+        <img src="./點綴物/孤挺花.png" alt="">
+      </div>
+      <div>
+        <span class="observer-article-tag">活動側寫</span>
+        <div class="observer-article-date">2026.03.21</div>
+        <div class="observer-article-title">鹽埕國小親子日</div>
+        <div class="observer-article-body">三月二十一日，鹽埕國小迎來一年一度的親子日。校園裡笑聲與喧嘩交織，家長與孩子一起在這座老街區裡停留、參與、共創記憶。這一天的鹽埕，比平日更熱鬧，也更溫柔——每一個家庭帶來的情緒，在操場上交融成一幅屬於鹽埕的獨特風景。</div>
+        <a href="./2026.3.21 鹽埕國小親子日 活動側寫.pdf" target="_blank" class="observer-article-link">閱讀完整活動側寫 →</a>
+      </div>
+    </div>
+
     <div class="observer-grid">
       <div class="observer-card reveal">
         <div class="observer-icon">🌸</div>
