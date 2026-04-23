@@ -118,7 +118,7 @@
 .yh-schedule-day-label{font-family:'Noto Serif TC',serif;font-size:22px;font-weight:700;color:var(--secondary);border-bottom:2px solid var(--secondary);padding-bottom:10px;margin-bottom:18px;}
 .yh-schedule-row{display:flex;align-items:center;gap:24px;padding:16px 0;border-bottom:1px solid rgba(51,6,9,.1);}
 .yh-schedule-time{font-family:'Noto Sans TC',sans-serif;font-weight:900;font-size:15px;color:var(--primary);min-width:80px;}
-.yh-schedule-name{font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:16px;margin-bottom:3px;}
+.yh-schedule-name{font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:16px;color:var(--primary);margin-bottom:3px;}
 .yh-schedule-stage{font-family:'Noto Sans TC',sans-serif;font-size:12px;letter-spacing:.12em;color:var(--secondary);}
 .yh-event-info{background:var(--primary);color:var(--white);padding:100px 48px;}
 .yh-event-info-inner{max-width:1080px;margin:0 auto;}
@@ -316,9 +316,7 @@
 ### 元件 6 — Footer
 
 ```html
-<div class="yh-grass" style="position:relative;overflow:hidden;height:120px;background:#F2D9D0;">
-  <img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E5%8F%AF%E6%84%9B%E7%9A%84%E8%8D%89%E5%8F%A2.png" alt="" style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:100%;min-width:900px;">
-</div>
+<div style="height:120px;background:#F2D9D0 url('https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E5%8F%AF%E6%84%9B%E7%9A%84%E8%8D%89%E5%8F%A2.png') center bottom/auto 100% no-repeat;"></div>
 <footer>
   <div class="yh-footer-pre">
     <div class="yh-footer-pre-title">2026 鹽夏不夜埕 × 花轟<br>5/16—5/23 新樂街綠廊見！</div>
@@ -479,7 +477,106 @@
 
 ---
 
-### 元件 5 — 活動排程
+### 元件 5 — 數位體驗
+
+```html
+<section style="background:var(--primary);padding:80px 48px;">
+  <div style="max-width:1080px;margin:0 auto;">
+    <div style="display:flex;flex-wrap:wrap;gap:48px;align-items:center;justify-content:space-between;">
+      <div style="flex:1;min-width:260px;">
+        <div style="font-size:11px;letter-spacing:.45em;color:var(--gold);margin-bottom:12px;font-family:'Noto Sans TC',sans-serif;font-weight:700;">DIGITAL EXPERIENCE 數位體驗</div>
+        <h2 style="font-family:'Noto Serif TC',serif;font-size:clamp(24px,3vw,38px);font-weight:900;color:var(--white);margin-bottom:24px;line-height:1.35;">埕花｜情緒解籤 × 花語體驗</h2>
+        <p style="font-family:'Noto Sans TC',sans-serif;font-size:15px;line-height:2.2;color:rgba(255,255,255,.75);margin:0;">不知從何逛起？網站透過面部識別，即時捕捉你的表情並解讀情緒，轉化為專屬花語祝福卡，點擊花攤獲得路線指引。每張花卡都承載祝福與鹽夏故事，邀請你與埕花一同探索街區。花語卡中還藏有鹽夏的神秘小驚喜，等你來發現屬於自己的花朵緣分。</p>
+        <a href="https://drawing-flower-fortunes.vercel.app/" target="_blank" style="display:inline-block;margin-top:28px;padding:12px 36px;background:var(--secondary);color:#fff;text-decoration:none;font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:14px;border-radius:50px;letter-spacing:.06em;">立即體驗 →</a>
+      </div>
+      <div style="flex-shrink:0;text-align:center;">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https%3A%2F%2Fdrawing-flower-fortunes.vercel.app%2F" alt="埕花 QR Code" style="width:160px;height:160px;border-radius:12px;padding:8px;background:#fff;display:block;box-shadow:0 4px 20px rgba(0,0,0,.3);">
+        <div style="font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.45);margin-top:8px;">掃碼體驗</div>
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+---
+
+### 元件 6 — 展覽資訊
+
+```html
+<section class="yh-event-info" style="position:relative;overflow:hidden;">
+  <div style="position:absolute;right:-80px;bottom:40px;opacity:.06;pointer-events:none;z-index:0;transform:rotate(-15deg);">
+    <img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E8%8A%B1%E8%BD%9F.png" alt="" style="width:380px;">
+  </div>
+  <div class="yh-event-info-inner" style="position:relative;z-index:1;">
+    <div style="text-align:center;margin-bottom:56px;">
+      <div class="yh-section-label">EVENT INFO 展覽資訊</div>
+      <h2 class="yh-section-title" style="color:var(--white);">活動資訊</h2>
+      <div style="width:40px;height:3px;background:var(--gold);margin:20px auto 0;border-radius:2px;"></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-bottom:20px;">
+      <div class="yh-info-box">
+        <div class="yh-info-box-label">活動時間</div>
+        <div class="yh-info-box-value">2026 / 5.16 — 5.23<br><span>每日 17:00 – 21:00</span></div>
+      </div>
+      <div class="yh-info-box">
+        <div class="yh-info-box-label">活動地點</div>
+        <div class="yh-info-box-value">新樂街綠廊<br><span>大智路 – 大成街路段</span></div>
+      </div>
+      <div class="yh-info-box" style="background:rgba(242,190,92,.18);border-color:rgba(242,190,92,.6);">
+        <div class="yh-info-box-label">入場費用</div>
+        <div class="yh-info-box-value" style="color:var(--gold);">全程免費<br><span style="color:rgba(255,255,255,.7);">Free Admission</span></div>
+      </div>
+    </div>
+    <div class="yh-info-bottom">
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div class="yh-info-card">
+          <div class="yh-info-card-label">主辦單位</div>
+          <div class="yh-info-list">
+            <div class="yh-info-list-item"><span class="yh-info-list-num">①</span>中山大學 USR「鹽埕創意街區實驗室計畫」計畫</div>
+            <div class="yh-info-list-item"><span class="yh-info-list-num">②</span>高教深耕「以社會設計、社會策展與跨域創新打造幸福鹽埕」計畫</div>
+            <div class="yh-info-list-item"><span class="yh-info-list-num">③</span>人文暨科技跨領域學士學位學程</div>
+          </div>
+        </div>
+        <div class="yh-info-card">
+          <div class="yh-info-card-label">共同主辦</div>
+          <div class="yh-info-plain">鹽埕區公所</div>
+        </div>
+        <div class="yh-info-card">
+          <div class="yh-info-card-label">協辦單位</div>
+          <div class="yh-info-plain">育仁里里長辦公室・光明里里長辦公室・南端里里長辦公室・沙地里里長辦公室<br>鹽埕國中・鹽埕國小・光榮國小・忠孝國小<br>揚帆主婦社・微熟成文創有限公司</div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div class="yh-info-card">
+          <div class="yh-info-card-label">贊助單位</div>
+          <div class="yh-info-list">
+            <div class="yh-info-list-item"><span class="yh-info-list-num">①</span>財團法人瑞儀教育基金會</div>
+            <div class="yh-info-list-item"><span class="yh-info-list-num">②</span>翰品酒店 高雄</div>
+            <div class="yh-info-list-item"><span class="yh-info-list-num">③</span>福容大飯店 高雄</div>
+            <div class="yh-info-list-item"><span class="yh-info-list-num">④</span>台灣福興工業股份有限公司</div>
+            <div class="yh-info-list-item"><span class="yh-info-list-num">⑤</span>南區社會情緒學習與教育創新中心</div>
+          </div>
+        </div>
+        <div class="yh-info-card">
+          <div class="yh-info-card-label">交通資訊</div>
+          <div class="yh-info-list">
+            <div class="yh-info-list-item"><span class="yh-info-list-num" style="background:var(--blue);">捷</span>捷運鹽埕埔站（R9）步行約 5 分鐘</div>
+            <div class="yh-info-list-item"><span class="yh-info-list-num" style="background:var(--lavender);">公</span>公車 新樂街站、鹽埕區公所站</div>
+            <div class="yh-info-list-item"><span class="yh-info-list-num" style="background:var(--rose);color:var(--primary);">停</span>鹽埕地下停車場、哈瑪星停車場</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:44px;">
+      <a href="https://maps.google.com/?q=高雄市鹽埕區新樂街" target="_blank" style="display:inline-block;padding:13px 40px;border:1px solid rgba(242,190,92,.45);color:var(--gold);text-decoration:none;font-family:'Noto Sans TC',sans-serif;font-size:14px;letter-spacing:.1em;border-radius:50px;">📍 查看活動地圖</a>
+    </div>
+  </div>
+</section>
+```
+
+---
+
+### 元件 7 — 活動排程
 
 ```html
 <section class="yh-schedule">
@@ -518,66 +615,18 @@
 
 ---
 
-### 元件 6 — 展覽資訊 + Footer
+### 元件 8 — Footer
 
 ```html
-<section class="yh-event-info">
-  <div class="yh-event-info-inner">
-    <div style="text-align:center;margin-bottom:56px;">
-      <div class="yh-section-label">EVENT INFO 展覽資訊</div>
-      <h2 class="yh-section-title" style="color:var(--white);">活動資訊</h2>
-    </div>
-    <div class="yh-info-top">
-      <div class="yh-info-box">
-        <div class="yh-info-box-label">活動時間</div>
-        <div class="yh-info-box-value">2026 / 5.16 — 5.23<br><span>每日 17:00 – 21:00</span></div>
-      </div>
-      <div class="yh-info-box">
-        <div class="yh-info-box-label">活動地點</div>
-        <div class="yh-info-box-value">新樂街綠廊<br><span>大智路 – 大成街路段</span></div>
-      </div>
-    </div>
-    <div class="yh-info-bottom">
-      <div style="display:flex;flex-direction:column;gap:16px;">
-        <div class="yh-info-card">
-          <div class="yh-info-card-label">主辦單位</div>
-          <div class="yh-info-list">
-            <div class="yh-info-list-item"><span class="yh-info-list-num">①</span>中山大學 USR「鹽埕創意街區實驗室計畫」計畫</div>
-            <div class="yh-info-list-item"><span class="yh-info-list-num">②</span>高教深耕「以社會設計、社會策展與跨域創新打造幸福鹽埕」計畫</div>
-            <div class="yh-info-list-item"><span class="yh-info-list-num">③</span>人文暨科技跨領域學士學位學程</div>
-          </div>
-        </div>
-        <div class="yh-info-card">
-          <div class="yh-info-card-label">共同主辦</div>
-          <div class="yh-info-plain">鹽埕區公所</div>
-        </div>
-        <div class="yh-info-card">
-          <div class="yh-info-card-label">協辦單位</div>
-          <div class="yh-info-plain">育仁里里長辦公室・光明里里長辦公室・南端里里長辦公室・沙地里里長辦公室<br>鹽埕國中・鹽埕國小・光榮國小・忠孝國小<br>揚帆主婦社・微熟成文創有限公司</div>
-        </div>
-      </div>
-      <div class="yh-info-card">
-        <div class="yh-info-card-label">贊助單位</div>
-        <div class="yh-info-list">
-          <div class="yh-info-list-item"><span class="yh-info-list-num">①</span>財團法人瑞儀教育基金會</div>
-          <div class="yh-info-list-item"><span class="yh-info-list-num">②</span>翰品酒店 高雄</div>
-          <div class="yh-info-list-item"><span class="yh-info-list-num">③</span>福容大飯店 高雄</div>
-          <div class="yh-info-list-item"><span class="yh-info-list-num">④</span>台灣福興工業股份有限公司</div>
-          <div class="yh-info-list-item"><span class="yh-info-list-num">⑤</span>南區社會情緒學習與教育創新中心</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <footer>
-  <div class="yh-footer-pre">
-    <div class="yh-footer-pre-title">2026 鹽夏不夜埕 × 花轟<br>5/16—5/23 新樂街綠廊見！</div>
-    <div class="yh-footer-pre-sub">開幕式・踩街遊行・裝置藝術・特色市集　免費入場</div>
-    <a href="/stories" class="yh-footer-pre-btn">埕中大小事 →</a>
-  </div>
-  <div class="yh-footer-city">
-    <img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E5%8F%AF%E6%84%9B%E7%9A%84%E8%A1%97%E5%8D%80.png" alt="">
+  <div class="yh-footer-city" style="background:var(--bg);padding:56px 48px 48px;">
+    <div style="max-width:860px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:24px;">
+        <div style="font-size:11px;letter-spacing:.45em;color:var(--secondary);margin-bottom:8px;font-family:'Noto Sans TC',sans-serif;font-weight:700;">MAP 活動地圖</div>
+        <h2 style="font-family:'Noto Serif TC',serif;font-size:clamp(24px,3vw,36px);font-weight:900;color:var(--primary);line-height:1.2;">花轟 × 鹽埕地圖</h2>
+      </div>
+      <img src="https://elsonyeh.github.io/yanhsia-official-website/map.png" alt="活動地圖" style="display:block;width:100%;box-shadow:0 8px 40px rgba(51,6,9,.12);">
+    </div>
   </div>
   <div class="yh-footer-bottom">
     <div class="yh-footer-logo">
