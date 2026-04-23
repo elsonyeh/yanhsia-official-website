@@ -114,8 +114,11 @@
 .yh-trio-body{font-family:'Noto Sans TC',sans-serif;font-size:13px;line-height:2.1;opacity:.88;}
 .yh-schedule{background:var(--primary);padding:0;line-height:0;}
 .yh-schedule-img{display:block;width:100%;}
-.yh-xp{background:var(--bg);padding:100px 48px;}
-.yh-xp-inner{max-width:900px;margin:0 auto;}
+.yh-xp{background:var(--white);padding:100px 48px;position:relative;overflow:hidden;}
+.yh-xp-inner{max-width:900px;margin:0 auto;position:relative;z-index:2;}
+.yh-xp-deco{position:absolute;pointer-events:none;z-index:1;}
+@keyframes yh-xp-float{0%,100%{transform:translateY(0);}50%{transform:translateY(-14px);}}
+@keyframes yh-xp-float-r{0%,100%{transform:translateY(0) rotate(4deg);}50%{transform:translateY(-12px) rotate(-3deg);}}
 .yh-xp-card{background:var(--white);border-radius:20px;padding:32px 36px;display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start;margin-bottom:20px;}
 .yh-xp-meta{flex-shrink:0;min-width:160px;}
 .yh-xp-title{font-family:'Noto Serif TC',serif;font-size:20px;font-weight:700;color:var(--primary);margin-bottom:8px;}
@@ -602,6 +605,14 @@
 
 ```html
 <section class="yh-xp">
+  <img class="yh-xp-deco" src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9%E5%80%91-20260416T013420Z-3-001/%E9%BB%9E%E7%B6%B4%E7%89%A9%E5%80%91/%E8%B3%87%E7%94%A2%20114.png" alt="" style="inset:0;width:100%;height:100%;object-fit:cover;opacity:.09;">
+  <img class="yh-xp-deco" src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9%E5%80%91-20260416T013420Z-3-001/%E9%BB%9E%E7%B6%B4%E7%89%A9%E5%80%91/%E8%B3%87%E7%94%A2%2096.png" alt="" style="top:56px;left:28px;width:72px;opacity:.7;animation:yh-xp-float-r 3.6s ease-in-out infinite;">
+  <img class="yh-xp-deco" src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9%E5%80%91-20260416T013420Z-3-001/%E9%BB%9E%E7%B6%B4%E7%89%A9%E5%80%91/%E8%B3%87%E7%94%A2%20105.png" alt="" style="top:48px;right:36px;width:64px;opacity:.75;animation:yh-xp-float 4s ease-in-out infinite .5s;">
+  <img class="yh-xp-deco" src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9%E5%80%91-20260416T013420Z-3-001/%E9%BB%9E%E7%B6%B4%E7%89%A9%E5%80%91/%E8%B3%87%E7%94%A2%20109.png" alt="" style="top:156px;right:62px;width:44px;opacity:.6;animation:yh-xp-float-r 3s ease-in-out infinite 1.2s;">
+  <img class="yh-xp-deco" src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9%E5%80%91-20260416T013420Z-3-001/%E9%BB%9E%E7%B6%B4%E7%89%A9%E5%80%91/%E8%B3%87%E7%94%A2%20101.png" alt="" style="top:42%;left:12px;width:62px;opacity:.55;animation:yh-xp-float 4.2s ease-in-out infinite .3s;">
+  <img class="yh-xp-deco" src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9%E5%80%91-20260416T013420Z-3-001/%E9%BB%9E%E7%B6%B4%E7%89%A9%E5%80%91/%E8%B3%87%E7%94%A2%20113.png" alt="" style="top:48%;right:10px;width:72px;opacity:.6;animation:yh-xp-float-r 3.8s ease-in-out infinite .8s;">
+  <img class="yh-xp-deco" src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E5%AD%A4%E6%8C%BA%E8%8A%B1.png" alt="" style="bottom:-24px;left:-16px;width:148px;opacity:.45;">
+  <img class="yh-xp-deco" src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E5%90%91%E6%97%A5%E8%91%B5.png" alt="" style="bottom:-8px;right:-8px;width:128px;opacity:.4;transform:scaleX(-1);">
   <div class="yh-xp-inner">
     <div style="text-align:center;margin-bottom:56px;">
       <div class="yh-section-label">EXCLUSIVE EXPERIENCE</div>

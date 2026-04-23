@@ -82,8 +82,11 @@
     .schedule{background:var(--primary);padding:0;line-height:0;}
     .schedule-img{display:block;width:100%;}
     /* EXCLUSIVE EXPERIENCE */
-    .xp-section{background:var(--bg);padding:100px 48px;}
-    .xp-inner{max-width:900px;margin:0 auto;}
+    .xp-section{background:var(--white);padding:100px 48px;position:relative;overflow:hidden;}
+    .xp-inner{max-width:900px;margin:0 auto;position:relative;z-index:2;}
+    .xp-deco{position:absolute;pointer-events:none;z-index:1;}
+    @keyframes xp-float{0%,100%{transform:translateY(0);}50%{transform:translateY(-14px);}}
+    @keyframes xp-float-r{0%,100%{transform:translateY(0) rotate(4deg);}50%{transform:translateY(-12px) rotate(-3deg);}}
     .xp-card{background:var(--white);border-radius:20px;padding:32px 36px;display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start;margin-bottom:20px;}
     .xp-card-meta{flex-shrink:0;min-width:160px;}
     .xp-card-title{font-family:'Noto Serif TC',serif;font-size:20px;font-weight:700;color:var(--primary);margin-bottom:8px;}
@@ -263,6 +266,22 @@
 
 <!-- EXCLUSIVE EXPERIENCE -->
 <section class="xp-section">
+  <!-- 背景碎紙花紋 -->
+  <img class="xp-deco" src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%20114.png" alt="" style="inset:0;width:100%;height:100%;object-fit:cover;opacity:.09;">
+  <!-- 左上 wand -->
+  <img class="xp-deco" src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%2096.png" alt="" style="top:56px;left:28px;width:72px;opacity:.7;animation:xp-float-r 3.6s ease-in-out infinite;">
+  <!-- 右上 flower -->
+  <img class="xp-deco" src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%20105.png" alt="" style="top:48px;right:36px;width:64px;opacity:.75;animation:xp-float 4s ease-in-out infinite .5s;">
+  <!-- 右上 star -->
+  <img class="xp-deco" src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%20109.png" alt="" style="top:156px;right:62px;width:44px;opacity:.6;animation:xp-float-r 3s ease-in-out infinite 1.2s;">
+  <!-- 左中 guitar -->
+  <img class="xp-deco" src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%20101.png" alt="" style="top:42%;left:12px;width:62px;opacity:.55;animation:xp-float 4.2s ease-in-out infinite .3s;">
+  <!-- 右中 flower+star cluster -->
+  <img class="xp-deco" src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%20113.png" alt="" style="top:48%;right:10px;width:72px;opacity:.6;animation:xp-float-r 3.8s ease-in-out infinite .8s;">
+  <!-- 左下 孤挺花 mascot peeking -->
+  <img class="xp-deco" src="./點綴物/孤挺花.png" alt="" style="bottom:-24px;left:-16px;width:148px;opacity:.45;">
+  <!-- 右下 向日葵 mascot peeking -->
+  <img class="xp-deco" src="./點綴物/向日葵.png" alt="" style="bottom:-8px;right:-8px;width:128px;opacity:.4;transform:scaleX(-1);">
   <div class="xp-inner">
     <div class="schedule-header reveal">
       <div class="section-label">EXCLUSIVE EXPERIENCE</div>
