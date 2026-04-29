@@ -10,16 +10,15 @@
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     :root{
-      --primary:#330609;--secondary:#C0546C;--bg:#F2D9D0;
+      --primary:#243554;--secondary:#C0546C;--bg:#F2D9D0;
       --gold:#F2BE5C;--peach:#F2A488;--blue:#5B7BA6;
-      --pink:#F27E93;--red:#CB5661;--lavender:#C7A4C3;
       --gray:#CFC9CC;--rose:#E9ABAB;--white:#FFFFFF;
     }
     html{scroll-behavior:smooth;}
     body{font-family:'Noto Sans TC',sans-serif;background:var(--bg);color:var(--primary);overflow-x:hidden;}
 
     /* NAV */
-    nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:14px 48px;background:rgba(51,6,9,.93);backdrop-filter:blur(12px);border-bottom:1px solid rgba(242,190,92,.18);}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:14px 48px;background:rgba(36,53,84,.93);backdrop-filter:blur(12px);border-bottom:1px solid rgba(242,190,92,.18);}
     .nav-logo a{display:block;}.nav-logo img{height:36px;filter:invert(1);mix-blend-mode:screen;}
     .nav-links{display:flex;gap:36px;list-style:none;}
     .nav-links a{color:var(--rose);text-decoration:none;font-size:13px;letter-spacing:.14em;transition:color .2s;}
@@ -28,25 +27,62 @@
     @media(max-width:900px){nav{padding:12px 20px;}.nav-links{display:none;}}
 
     /* PAGE HERO */
-    .page-hero{background:var(--secondary);padding:160px 48px 80px;text-align:center;position:relative;overflow:hidden;}
+    .page-hero{background:var(--secondary);padding:110px 48px 56px;text-align:center;position:relative;overflow:hidden;}
     .page-hero-bg{position:absolute;inset:0;background:url('./點綴物/可愛的草叢.png')bottom/cover no-repeat;opacity:.15;pointer-events:none;}
     .page-hero-inner{position:relative;z-index:2;}
     .page-eyebrow{font-size:11px;letter-spacing:.5em;color:rgba(255,255,255,.6);margin-bottom:12px;}
-    .page-title{font-family:'Noto Serif TC',serif;font-size:clamp(48px,7vw,88px);font-weight:900;color:var(--white);line-height:1;}
-    .page-sub{margin-top:14px;font-size:15px;color:rgba(255,255,255,.7);letter-spacing:.15em;}
-    .hero-mascots{display:flex;justify-content:center;gap:32px;margin-top:40px;}
-    .hero-mascots img{width:80px;animation:floatA 3.5s ease-in-out infinite;}
-    .hero-mascots img:nth-child(2){animation-delay:.5s;}
-    .hero-mascots img:nth-child(3){animation-delay:1s;}
+    .page-title{font-family:'Noto Serif TC',serif;font-size:clamp(40px,6vw,72px);font-weight:900;color:var(--white);line-height:1;}
+    .page-sub{margin-top:12px;font-size:14px;color:rgba(255,255,255,.65);letter-spacing:.15em;}
+    .hero-divider{width:40px;height:1px;background:rgba(255,255,255,.35);margin:24px auto 20px;}
+    .hero-intro{max-width:680px;margin:0 auto;text-align:left;}
+    .hero-intro p{font-family:'Noto Serif TC',serif;font-size:14px;line-height:2.3;color:rgba(255,255,255,.78);margin-bottom:16px;}
+    .hero-intro p:last-child{margin-bottom:0;}
+    .hero-deco{position:absolute;bottom:0;display:flex;align-items:flex-end;gap:4px;pointer-events:none;z-index:3;}
+    .hero-deco-l{left:32px;}
+    .hero-deco-r{right:32px;}
+    .hero-deco img{width:68px;animation:floatA 3.5s ease-in-out infinite;}
+    .hero-deco img:nth-child(2){animation-delay:.65s;}
+    @media(max-width:900px){.hero-deco{display:none;}}
+    @media(max-width:700px){.page-hero{padding:90px 24px 44px;}.hero-intro p{font-size:13px;line-height:2.1;}}
+
+
+    /* HISTORY / TIMELINE */
+    .history-section{background:var(--bg);padding:64px 48px 80px;text-align:center;}
+    .history-eyebrow{font-size:11px;letter-spacing:.45em;color:var(--gold);margin-bottom:16px;text-transform:uppercase;}
+    .history-main-title{font-family:'Noto Serif TC',serif;font-size:clamp(22px,3vw,34px);font-weight:900;margin-bottom:52px;color:var(--primary);}
+    .history-main-title em{font-style:normal;color:var(--secondary);}
+    .timeline-wrap{max-width:800px;margin:0 auto;text-align:left;}
+    .timeline-item{display:grid;grid-template-columns:120px 28px 1fr;gap:0;}
+    .tl-left{text-align:right;padding-top:3px;}
+    .tl-era{font-family:'Noto Serif TC',serif;font-size:14px;font-weight:700;color:var(--secondary);line-height:1.5;}
+    .tl-era-sub{font-size:10px;color:var(--secondary);opacity:.65;letter-spacing:.06em;margin-top:3px;}
+    .tl-track{display:flex;flex-direction:column;align-items:center;}
+    .tl-dot{width:14px;height:14px;border-radius:50%;background:var(--secondary);border:3px solid var(--bg);box-shadow:0 0 0 2px var(--secondary);flex-shrink:0;margin-top:5px;}
+    .tl-line{flex:1;width:2px;background:rgba(192,84,108,.22);margin-top:6px;min-height:32px;}
+    .timeline-item:last-child .tl-line{display:none;}
+    .tl-right{padding:0 0 44px 20px;}
+    .timeline-item:last-child .tl-right{padding-bottom:0;}
+    .tl-wave{font-size:10px;letter-spacing:.18em;color:var(--secondary);font-weight:700;margin-bottom:6px;text-transform:uppercase;}
+    .tl-industry{font-family:'Noto Serif TC',serif;font-size:19px;font-weight:700;color:var(--primary);margin-bottom:12px;line-height:1.4;}
+    .tl-body{font-size:14px;line-height:2.1;color:#666;}
+    .tl-sub-list{display:flex;flex-direction:column;gap:16px;margin-top:14px;}
+    .tl-sub-label{display:inline-block;background:rgba(192,84,108,.1);color:var(--secondary);font-size:11px;font-weight:700;padding:2px 10px;border-radius:50px;margin-bottom:6px;letter-spacing:.04em;}
+    @media(max-width:700px){
+      .history-section{padding:48px 24px;}
+      .timeline-item{grid-template-columns:80px 24px 1fr;}
+      .tl-era{font-size:12px;}
+      .tl-industry{font-size:16px;}
+      .tl-right{padding:0 0 36px 12px;}
+    }
 
     /* TAB NAV */
-    .tab-nav{background:var(--primary);position:sticky;top:65px;z-index:100;display:flex;justify-content:center;gap:0;border-bottom:2px solid rgba(242,190,92,.2);}
-    .tab-btn{padding:18px 48px;background:none;border:none;color:var(--gray);font-family:'Noto Serif TC',serif;font-size:16px;font-weight:700;cursor:pointer;transition:color .2s,background .2s;letter-spacing:.08em;position:relative;}
+    .tab-nav{background:var(--primary);position:sticky;top:65px;z-index:100;display:flex;justify-content:center;border-bottom:2px solid rgba(242,190,92,.2);}
+    .tab-btn{padding:18px 48px;background:none;border:none;color:var(--gray);font-family:'Noto Serif TC',serif;font-size:16px;font-weight:700;cursor:pointer;transition:color .2s;letter-spacing:.08em;position:relative;}
     .tab-btn::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transition:transform .3s;}
     .tab-btn:hover{color:var(--rose);}
     .tab-btn.active{color:var(--gold);}
     .tab-btn.active::after{transform:scaleX(1);}
-    @media(max-width:600px){.tab-btn{padding:14px 20px;font-size:14px;}}
+    @media(max-width:600px){.tab-btn{padding:14px 18px;font-size:13px;}}
 
     /* TAB CONTENT */
     .tab-panel{display:none;animation:fadeUp .5s ease;}
@@ -54,64 +90,76 @@
 
     /* SECTION BASE */
     .section-label{font-size:11px;letter-spacing:.45em;color:var(--gold);margin-bottom:12px;text-transform:uppercase;}
-    .section-title{font-family:'Noto Serif TC',serif;font-size:clamp(32px,4vw,52px);font-weight:900;line-height:1.15;margin-bottom:24px;}
+    .section-title{font-family:'Noto Serif TC',serif;font-size:clamp(32px,4vw,52px);font-weight:900;line-height:1.15;margin-bottom:32px;}
 
-    /* STORY CARDS */
+    /* INTERVIEW (小埕故事 內) */
     .stories-section{padding:80px 48px;max-width:1080px;margin:0 auto;}
-    .story-card{display:grid;grid-template-columns:1fr 2fr;gap:48px;align-items:start;padding:48px 0;border-bottom:1px solid rgba(51,6,9,.12);}
-    .story-card:last-child{border-bottom:none;}
-    .story-card:nth-child(even){grid-template-columns:2fr 1fr;}
-    .story-card:nth-child(even) .story-img{order:2;}
-    .story-img{border-radius:20px;overflow:hidden;background:var(--white);display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;}
-    .story-img img{width:100%;height:100%;object-fit:contain;padding:20px;}
-    .story-meta{display:flex;gap:12px;align-items:center;margin-bottom:14px;flex-wrap:wrap;}
-    .story-tag{background:var(--secondary);color:var(--white);font-size:11px;padding:4px 12px;border-radius:50px;letter-spacing:.08em;}
-    .story-time{font-size:12px;color:var(--secondary);letter-spacing:.08em;}
-    .story-title{font-family:'Noto Serif TC',serif;font-size:24px;font-weight:700;margin-bottom:12px;}
-    .story-body{font-size:15px;line-height:2.1;color:#555;}
-    .story-location{margin-top:14px;font-size:13px;color:var(--blue);letter-spacing:.05em;}
-    .story-location::before{content:'📍 ';}
-    @media(max-width:700px){.story-card,.story-card:nth-child(even){grid-template-columns:1fr;}.story-card:nth-child(even) .story-img{order:0;}}
+    .stories-intro{font-size:16px;line-height:2.2;color:#555;max-width:720px;margin-bottom:52px;}
+    .interview-heading{font-family:'Noto Serif TC',serif;font-size:clamp(20px,2.5vw,28px);font-weight:700;text-align:center;margin-bottom:40px;letter-spacing:.04em;}
+    .interview-heading em{font-style:normal;color:var(--secondary);}
+    .interview-list{display:flex;flex-direction:column;gap:20px;}
+    .interview-card{display:grid;grid-template-columns:260px 1fr;align-items:stretch;border-radius:14px;overflow:hidden;background:var(--white);text-decoration:none;color:inherit;transition:transform .3s,box-shadow .3s;}
+    .interview-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(36,53,84,.1);}
+    .interview-img-slot{background:#e8ddd8;min-height:210px;display:flex;align-items:center;justify-content:center;}
+    .interview-img-slot span{font-size:10px;letter-spacing:.25em;color:rgba(36,53,84,.2);text-transform:uppercase;}
+    .interview-content{padding:26px 28px;display:flex;flex-direction:column;justify-content:center;}
+    .interview-badges{display:flex;gap:8px;align-items:center;margin-bottom:10px;flex-wrap:wrap;}
+    .interview-cat{background:var(--secondary);color:var(--white);font-size:10px;padding:3px 10px;border-radius:50px;letter-spacing:.08em;}
+    .interview-ep-no{font-size:11px;color:var(--secondary);letter-spacing:.2em;font-weight:700;}
+    .interview-card-title{font-family:'Noto Serif TC',serif;font-size:17px;font-weight:700;margin-bottom:5px;color:var(--primary);line-height:1.45;}
+    .interview-hook{font-size:13px;color:#999;line-height:1.8;margin-bottom:8px;}
+    .interview-date{font-size:11px;color:var(--secondary);letter-spacing:.1em;margin-bottom:10px;}
+    .interview-excerpt{font-size:13px;line-height:2;color:#666;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+    .interview-read{display:inline-block;margin-top:12px;font-size:12px;color:var(--secondary);font-weight:700;letter-spacing:.05em;}
+    @media(max-width:700px){
+      .stories-section{padding:56px 24px;}
+      .interview-card{grid-template-columns:1fr;}
+      .interview-img-slot{min-height:180px;}
+      .interview-content{padding:18px 20px;}
+    }
 
-    /* OBSERVER CARD */
+    /* OBSERVER */
     .observer-section{padding:80px 48px;max-width:1080px;margin:0 auto;}
-    .observer-intro{font-size:16px;line-height:2.1;color:#555;max-width:700px;margin-bottom:56px;}
-    .observer-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;}
-    .observer-card{background:var(--white);border-radius:20px;padding:36px 28px;transition:transform .3s,box-shadow .3s;}
-    .observer-card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(51,6,9,.1);}
-    .observer-card:nth-child(1){background:var(--secondary);color:var(--white);}
-    .observer-icon{font-size:36px;margin-bottom:16px;}
-    .observer-time{font-size:12px;color:var(--secondary);letter-spacing:.1em;margin-bottom:8px;}
-    .observer-card:nth-child(1) .observer-time{color:rgba(255,255,255,.7);}
-    .observer-title{font-family:'Noto Serif TC',serif;font-size:22px;font-weight:700;margin-bottom:12px;}
-    .observer-body{font-size:14px;line-height:2;opacity:.8;}
-    .observer-loc{margin-top:14px;font-size:12px;opacity:.65;letter-spacing:.05em;}
-    @media(max-width:700px){.observer-grid{grid-template-columns:1fr;}}
+    .observer-section-intro{font-size:16px;line-height:2.1;color:#555;max-width:700px;margin-bottom:56px;}
 
-    /* OBSERVER ARTICLE */
-    .observer-article{background:var(--white);border-radius:20px;padding:40px;margin-bottom:32px;display:grid;grid-template-columns:180px 1fr;gap:36px;align-items:start;}
-    .observer-article-cover{width:180px;aspect-ratio:3/4;border-radius:12px;background:var(--bg);overflow:hidden;display:flex;align-items:center;justify-content:center;}
-    .observer-article-cover img{width:90px;opacity:.35;}
-    .observer-article-tag{background:var(--secondary);color:var(--white);font-size:11px;padding:4px 14px;border-radius:50px;letter-spacing:.08em;display:inline-block;margin-bottom:10px;}
-    .observer-article-date{font-size:12px;color:var(--secondary);letter-spacing:.1em;margin-bottom:10px;}
-    .observer-article-title{font-family:'Noto Serif TC',serif;font-size:26px;font-weight:700;margin-bottom:14px;color:var(--primary);}
-    .observer-article-body{font-size:15px;line-height:2.1;color:#555;margin-bottom:20px;}
-    .observer-article-link{color:var(--secondary);font-size:14px;text-decoration:none;font-weight:700;letter-spacing:.05em;}
-    .observer-article-link:hover{opacity:.75;}
-    @media(max-width:700px){.observer-article{grid-template-columns:1fr;}.observer-article-cover{width:100%;aspect-ratio:16/7;}}
+    /* OBSERVER ARTICLE — reusable per article */
+    .obs-article{background:var(--white);border-radius:20px;overflow:hidden;margin-bottom:48px;}
+    .obs-article:last-child{margin-bottom:0;}
+    .obs-article-header{padding:36px 44px 28px;}
+    .obs-article-meta{display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap;}
+    .obs-tag{background:var(--secondary);color:var(--white);font-size:11px;padding:3px 12px;border-radius:50px;letter-spacing:.08em;}
+    .obs-date{font-size:12px;color:var(--secondary);letter-spacing:.1em;}
+    .obs-article-title{font-family:'Noto Serif TC',serif;font-size:clamp(20px,2.8vw,30px);font-weight:900;color:var(--primary);margin-bottom:10px;line-height:1.35;}
+    .obs-article-hook{font-size:14px;color:#999;line-height:1.9;}
+    .obs-hero{width:100%;overflow:hidden;height:480px;}
+    .obs-hero img{width:100%;height:100%;object-fit:cover;display:block;}
+    .obs-body{padding:28px 44px;}
+    .obs-body p{font-size:15px;line-height:2.3;color:#444;margin-bottom:20px;}
+    .obs-body p:last-child{margin-bottom:0;}
+    .obs-quote{font-family:'Noto Serif TC',serif;font-size:17px!important;color:var(--secondary)!important;padding-left:18px;border-left:3px solid var(--secondary);font-weight:700;}
+    .obs-section-label{font-size:11px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:8px;}
+    .obs-photo-pair{display:grid;grid-template-columns:1fr 1fr;gap:3px;}
+    .obs-photo-pair img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;}
+    .obs-photo-quad{display:grid;grid-template-columns:1fr 1fr;gap:3px;}
+    .obs-photo-quad img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;}
+    @media(max-width:700px){
+      .observer-section{padding:56px 24px;}
+      .obs-article-header,.obs-body,.obs-article-footer{padding-left:20px;padding-right:20px;}
+      .obs-photo-pair,.obs-photo-quad{grid-template-columns:1fr;}
+    }
 
-    /* TRAVEL CARDS */
+    /* TRAVEL SECTION */
     .travel-section{padding:80px 48px;max-width:1080px;margin:0 auto;}
-    .travel-intro{font-size:16px;line-height:2.1;color:#555;max-width:700px;margin-bottom:56px;}
+    .travel-intro{font-size:16px;line-height:2.1;color:#555;max-width:700px;margin-bottom:48px;}
     .travel-list{display:flex;flex-direction:column;gap:24px;}
     .travel-item{background:var(--white);border-radius:16px;padding:32px 36px;display:flex;gap:28px;align-items:flex-start;transition:transform .3s,box-shadow .3s;}
-    .travel-item:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(51,6,9,.08);}
+    .travel-item:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(36,53,84,.08);}
     .travel-num{font-family:'Noto Serif TC',serif;font-size:40px;font-weight:900;color:var(--gold);line-height:1;flex-shrink:0;min-width:48px;}
-    .travel-content{}
     .travel-title{font-family:'Noto Serif TC',serif;font-size:22px;font-weight:700;margin-bottom:8px;}
     .travel-time{font-size:12px;color:var(--secondary);letter-spacing:.1em;margin-bottom:10px;}
     .travel-body{font-size:14px;line-height:2;color:#555;}
     .travel-loc{margin-top:10px;font-size:13px;color:var(--blue);}
+    @media(max-width:700px){.travel-section{padding:56px 24px;}}
 
     /* FOOTER */
     .footer-pre{background:var(--secondary);padding:72px 48px;text-align:center;color:var(--white);}
@@ -150,14 +198,102 @@
 <section class="page-hero">
   <div class="page-hero-bg"></div>
   <div class="page-hero-inner">
-    <div class="page-eyebrow">2026 YANHSIA NIGHT × 埕中大小事</div>
+    <div class="page-eyebrow">ABOUT YANCHENG · 鹽埕誌</div>
     <div class="page-title">埕中大小事</div>
     <div class="page-sub">小埕故事・小埕觀察家・小埕遊記</div>
-    <div class="hero-mascots">
-      <img src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%2096.png" alt="">
-      <img src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%20105.png" alt="">
-      <img src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%20111.png" alt="">
+    <div class="hero-divider"></div>
+    <div class="hero-intro">
+      <p>鹽埕，在字典中是曬鹽的海岸，但對於許多人來說，鹽埕背後的歷史發展猶如一本人物傳記，經歷各種興衰，讓人意猶未盡。</p>
+      <p>在三百多年前，位於愛河口的鹽埕區，是河流匯入海所形成的一片沼澤濕地。雖然無法耕作，但也尋找到了屬於鹽埕區的價值模式與經濟效益，那就是人類飲食不可或缺的——鹽，因此鹽埕區開始製鹽產業的發展。其地名也是因充滿鹽田以及沼澤而得名，而早期接近鼓岩一帶被稱為鹽埕埔，後來將鹽埕、鹽埕埔通稱為鹽埕區。</p>
     </div>
+  </div>
+  <div class="hero-deco hero-deco-l">
+    <img src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%2096.png" alt="">
+  </div>
+  <div class="hero-deco hero-deco-r">
+    <img src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%20105.png" alt="">
+    <img src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%20111.png" alt="">
+  </div>
+</section>
+
+<!-- 鹽埕產業發展史 時間線 -->
+<section class="history-section">
+  <div class="history-eyebrow">INDUSTRY HISTORY</div>
+  <div class="history-main-title">鹽埕產業發展史｜<em>Industry History</em></div>
+
+  <div class="timeline-wrap">
+
+    <!-- 清朝 -->
+    <div class="timeline-item reveal">
+      <div class="tl-left">
+        <div class="tl-era">清朝</div>
+        <div class="tl-era-sub">最開始</div>
+      </div>
+      <div class="tl-track">
+        <div class="tl-dot"></div>
+        <div class="tl-line"></div>
+      </div>
+      <div class="tl-right">
+        <div class="tl-industry">製鹽產業</div>
+        <p class="tl-body">「鹽埔曉鷺」曾是傳說中的打狗八景。一百多年以前的鹽埕，清晨時的朝陽照映著鹽田閃閃發光，還有許多白鷺鷥飛翔其上。這樣的景象，一直到十九世紀末都沒有太大的改變，當時瀨南鹽場的產量佔全臺灣最大，甚至供過於求。</p>
+      </div>
+    </div>
+
+    <!-- 日治時期 -->
+    <div class="timeline-item reveal">
+      <div class="tl-left">
+        <div class="tl-era">日治時期</div>
+      </div>
+      <div class="tl-track">
+        <div class="tl-dot"></div>
+        <div class="tl-line"></div>
+      </div>
+      <div class="tl-right">
+        <div class="tl-wave">第一波繁榮</div>
+        <div class="tl-industry">輕工業・商場百貨業</div>
+        <div class="tl-sub-list">
+          <div>
+            <div class="tl-sub-label">輕工業</div>
+            <p class="tl-body">日治時代，鹽埕就因港口運輸之便，陸陸續續有輕工業設立於此，如化學廠、油漆廠、機械廠。</p>
+          </div>
+          <div>
+            <div class="tl-sub-label">商場百貨業</div>
+            <p class="tl-body">高雄第一間百貨公司也在鹽埕誕生，樓高五層的吉井百貨店俗稱「五層樓仔」，1938 年開幕時是臺灣建坪面積最大的百貨公司。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 美軍來台 -->
+    <div class="timeline-item reveal">
+      <div class="tl-left">
+        <div class="tl-era">美軍來台</div>
+      </div>
+      <div class="tl-track">
+        <div class="tl-dot"></div>
+        <div class="tl-line"></div>
+      </div>
+      <div class="tl-right">
+        <div class="tl-wave">第二波繁榮</div>
+        <div class="tl-industry">美式飲食產業（酒吧・西餐廳）</div>
+        <p class="tl-body">1950 年韓戰爆發之際，大批美軍艦隊以高雄港為補給據點。美軍為鹽埕帶來另一波繁榮，鹽埕因此誕生很多美式西餐廳、酒吧等娛樂場所。沿街開設的酒吧全盛時期有近六十家業者，陪酒的吧女數量更居全臺之冠，造就鹽埕繁榮的高峰，開放的風氣還曾譜出不少異國戀曲。</p>
+      </div>
+    </div>
+
+    <!-- 戰後時期 -->
+    <div class="timeline-item reveal">
+      <div class="tl-left">
+        <div class="tl-era">戰後時期</div>
+      </div>
+      <div class="tl-track">
+        <div class="tl-dot"></div>
+        <div class="tl-line"></div>
+      </div>
+      <div class="tl-right">
+        <div class="tl-industry">各種產業專業街出現</div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -168,40 +304,172 @@
   <button class="tab-btn" data-tab="travel">小埕遊記</button>
 </div>
 
-<!-- ── 小埕故事 ── -->
+<!-- ── 小埕故事（人物專訪） ── -->
 <div id="tab-story" class="tab-panel active" style="background:var(--bg);">
   <div class="stories-section">
     <div class="section-label">STORIES 小埕故事</div>
-    <h2 class="section-title">在鹽埕發生的<br>每一個故事</h2>
+    <h2 class="section-title">鹽埕的人與故事</h2>
+    <p class="stories-intro reveal">人，是一個地方的回憶傳遞者，藉由人的口耳相傳將地方的故事一代一代地傳承下來，鹽埕作為高雄最早發展的區域，歷經繁華盛衰，但依然有一群人選擇留下，同時新的人決定加入，為鹽埕注入新的氣息，小埕故事集結在鹽埕深耕的各式職人，透過他們的故事，用新的角度認識鹽埕舊城區。</p>
 
-    <div class="story-card reveal">
-      <div class="story-img">
-        <img src="./點綴物/花轟.png" alt="情緒花程街遊線">
-      </div>
-      <div class="story-content">
-        <div class="story-meta">
-          <span class="story-tag">街區體驗</span>
-          <span class="story-time">5/16 – 5/17　17:00 – 21:00</span>
-        </div>
-        <div class="story-title">情緒花程街遊線</div>
-        <div class="story-body">沿著新樂街的花程路線漫步，感受每個角落藏著的情緒能量。這條由策展團隊精心規劃的街區路線，帶你用全新的眼光重新認識鹽埕，在花香與裝置藝術之間，找到屬於你的那朵花。</div>
-        <div class="story-location">新樂街綠廊全線</div>
-      </div>
-    </div>
+    <div class="interview-heading">人物專訪｜<em>Interview</em></div>
+    <div class="interview-list">
 
-    <div class="story-card reveal">
-      <div class="story-img">
-        <img src="./點綴物/孤挺花.png" alt="花轟精緻新">
-      </div>
-      <div class="story-content">
-        <div class="story-meta">
-          <span class="story-tag">鹽夏專屬</span>
-          <span class="story-time">5/16 – 5/17　17:00 – 21:00</span>
+      <a href="https://yenhsiapuyehchen.com/%e5%b0%8f%e5%9f%95%e6%95%85%e4%ba%8b%ef%bc%bf%e5%bc%b5%e5%ae%b6%e8%88%96%e4%ba%ba%e7%89%a9%e5%b0%88%e6%ac%8420230307/" target="_blank" class="interview-card reveal">
+        <div class="interview-img-slot"><span>photo</span></div>
+        <div class="interview-content">
+          <div class="interview-badges"><span class="interview-cat">人物專訪</span><span class="interview-ep-no">EP.1</span></div>
+          <div class="interview-card-title">古物 Mix 咖啡・不一般的咖啡廳</div>
+          <div class="interview-hook">在一杯咖啡的時間裡 駐足腳步也收穫了故事</div>
+          <div class="interview-date">— 2023.03.07</div>
+          <div class="interview-excerpt">走在鹽埕的府北路上，你會發現，一家被植物圍繞的店面，望眼過去，老闆娘正悠閒地一邊製作咖啡，一邊和客人聊天。店內洋溢著慵懶隨和的氣息和老闆娘精選的老物，這就是「張家鋪老物咖啡」的日常……</div>
+          <span class="interview-read">閱讀全文 →</span>
         </div>
-        <div class="story-title">花轟精緻新</div>
-        <div class="story-body">以最精緻的視角重新詮釋這個夏夜的花轟體驗。精選在地職人品牌與藝術創作者共同策劃的限定展演，在新樂街的每個轉角，都有一個等待你發現的驚喜故事。</div>
-        <div class="story-location">新樂街綠廊指定攤位</div>
-      </div>
+      </a>
+
+      <a href="https://yenhsiapuyehchen.com/%e5%b0%8f%e5%9f%95%e6%95%85%e4%ba%8b-ep-2/" target="_blank" class="interview-card reveal">
+        <div class="interview-img-slot"><span>photo</span></div>
+        <div class="interview-content">
+          <div class="interview-badges"><span class="interview-cat">人物專訪</span><span class="interview-ep-no">EP.2</span></div>
+          <div class="interview-card-title">咖啡Ｘ印度奶茶 ⁍ 巷弄裡的特色咖啡店</div>
+          <div class="interview-hook">用一杯鍋煮奶茶的時間，打擾你的生活步調</div>
+          <div class="interview-date">— 2023.03.12</div>
+          <div class="interview-excerpt">說到巷弄咖啡店，或許你會立刻聯想到台南。但其實在鹽埕沙多宮旁的巷弄裡，有一家充滿獨特風格的咖啡店，它是——「咖啡打擾了茶」。當你走進店裡，就會被淡淡的印度香料香氣包圍……</div>
+          <span class="interview-read">閱讀全文 →</span>
+        </div>
+      </a>
+
+      <a href="https://yenhsiapuyehchen.com/%e5%b0%8f%e5%9f%95%e6%95%85%e4%ba%8b-ep-3/" target="_blank" class="interview-card reveal">
+        <div class="interview-img-slot"><span>photo</span></div>
+        <div class="interview-content">
+          <div class="interview-badges"><span class="interview-cat">人物專訪</span><span class="interview-ep-no">EP.3</span></div>
+          <div class="interview-card-title">美式煙燻烤肉Ｘ團聚 ⁍ 愛河畔的特色餐廳</div>
+          <div class="interview-hook">和喜歡的人一起做喜歡的事，到 HotBox 感受相聚氛圍</div>
+          <div class="interview-date">— 2023.04.11</div>
+          <div class="interview-excerpt">漫步在河畔的步道上，帶著香味四溢的煙燻烤肉的氣息，再搭配上一杯清涼的啤酒，簡直是人生一大享受。這樣的體驗現在可以在 Hot Box 實現……</div>
+          <span class="interview-read">閱讀全文 →</span>
+        </div>
+      </a>
+
+      <a href="https://yenhsiapuyehchen.com/%e5%b0%8f%e5%9f%95%e6%95%85%e4%ba%8b-ep-2-2/" target="_blank" class="interview-card reveal">
+        <div class="interview-img-slot"><span>photo</span></div>
+        <div class="interview-content">
+          <div class="interview-badges"><span class="interview-cat">人物專訪</span><span class="interview-ep-no">EP.4</span></div>
+          <div class="interview-card-title">油飯。兒時舌尖記憶</div>
+          <div class="interview-hook">一碗手工油飯，憶起傳統滋味</div>
+          <div class="interview-date">— 2023.04.17</div>
+          <div class="interview-excerpt">隱藏在鹽埕街的巷弄裡，文青風的招牌、小巧的店面，不時飄來陣陣的油飯香。店內，老闆娘正專注的分裝油飯，後頭的廚房也正忙碌著，沒有太多花俏的裝潢和宣傳……</div>
+          <span class="interview-read">閱讀全文 →</span>
+        </div>
+      </a>
+
+      <a href="https://yenhsiapuyehchen.com/%e5%b0%8f%e5%9f%95%e6%95%85%e4%ba%8bep-5/" target="_blank" class="interview-card reveal">
+        <div class="interview-img-slot"><span>photo</span></div>
+        <div class="interview-content">
+          <div class="interview-badges"><span class="interview-cat">人物專訪</span><span class="interview-ep-no">EP.5</span></div>
+          <div class="interview-card-title">皮革與回憶 ❖ 從興趣到專業</div>
+          <div class="interview-hook">只做喜歡的事，只走自己的路</div>
+          <div class="interview-date">— 2023.04.25</div>
+          <div class="interview-excerpt">皮革在大眾的印象裡，常常與文青、手作劃上等號，但今天當我們把皮革與回憶做結合，一塊冰冷的皮革似乎就多了點溫度，夢想鞄製所就是這一類的手作皮革店……</div>
+          <span class="interview-read">閱讀全文 →</span>
+        </div>
+      </a>
+
+      <a href="https://yenhsiapuyehchen.com/%E5%B0%8F%E5%9F%95%E6%95%85%E4%BA%8B-ep-6/" target="_blank" class="interview-card reveal">
+        <div class="interview-img-slot"><span>photo</span></div>
+        <div class="interview-content">
+          <div class="interview-badges"><span class="interview-cat">百工百事</span><span class="interview-ep-no">EP.6</span></div>
+          <div class="interview-card-title">百工百事｜葉大哥</div>
+          <div class="interview-hook">一位府北居民的凝望與告白</div>
+          <div class="interview-date">— 2023.04.28</div>
+          <div class="interview-excerpt">在駁二、網路媒體時代等因素的影響下，鹽埕儼然是大眾熟悉的老城區，但很多人其實並不熟悉在高雄歷史博物館後方的「府北里」。這裡曾經是著名的風化區……</div>
+          <span class="interview-read">閱讀全文 →</span>
+        </div>
+      </a>
+
+      <a href="https://yenhsiapuyehchen.com/%e5%b0%8f%e5%9f%95%e6%95%85%e4%ba%8b-ep-7/" target="_blank" class="interview-card reveal">
+        <div class="interview-img-slot"><span>photo</span></div>
+        <div class="interview-content">
+          <div class="interview-badges"><span class="interview-cat">百工百事</span><span class="interview-ep-no">EP.7</span></div>
+          <div class="interview-card-title">百工百事｜阿桃姐</div>
+          <div class="interview-hook">府北在地商家的真情流露</div>
+          <div class="interview-date">— 2023.05.05</div>
+          <div class="interview-excerpt">再美的花，都會有凋謝的一天；這是人生百態，是萬物運行的規則。鹽埕商圈也是如此，府北曾經的繁榮，是每個在地商家的驕傲，然而，故事完結、曲終人散後，他們的處境又是如何呢？</div>
+          <span class="interview-read">閱讀全文 →</span>
+        </div>
+      </a>
+
+      <a href="https://yenhsiapuyehchen.com/%e5%b0%8f%e5%9f%95%e6%95%85%e4%ba%8b-ep8/" target="_blank" class="interview-card reveal">
+        <div class="interview-img-slot"><span>photo</span></div>
+        <div class="interview-content">
+          <div class="interview-badges"><span class="interview-cat">百工百事</span><span class="interview-ep-no">EP.8</span></div>
+          <div class="interview-card-title">百工百事｜施大哥</div>
+          <div class="interview-hook">七福商場與跑單幫的興衰</div>
+          <div class="interview-date">— 2024.05.27</div>
+          <div class="interview-excerpt">七福商場（又稱七福商店街）是鹽埕全盛時期重要的舶來品交易所，店家老闆常常出國帶回許多「外國貨」，並在這裡販售。然而，隨著商圈的沒落、自由貿易開放後……</div>
+          <span class="interview-read">閱讀全文 →</span>
+        </div>
+      </a>
+
+      <a href="https://yenhsiapuyehchen.com/%E5%B0%8F%E5%9F%95%E6%95%85%E4%BA%8B-ep-9/" target="_blank" class="interview-card reveal">
+        <div class="interview-img-slot"><span>photo</span></div>
+        <div class="interview-content">
+          <div class="interview-badges"><span class="interview-cat">百工百事</span><span class="interview-ep-no">EP.9</span></div>
+          <div class="interview-card-title">百工百事｜李大哥</div>
+          <div class="interview-hook">被淹沒在時間洪流的人</div>
+          <div class="interview-date">— 2024.06.11</div>
+          <div class="interview-excerpt">這次的訪談中，我們找到了曾經在外漂泊數十年，歷經風風雨雨，最終落腳在鹽埕這塊土地的人。鹽埕對於他的意義從陌生、毫無關聯，轉為感激這片土地以及擁有深厚的感情而決定留下……</div>
+          <span class="interview-read">閱讀全文 →</span>
+        </div>
+      </a>
+
+      <a href="https://yenhsiapuyehchen.com/%E5%B0%8F%E5%9F%95%E6%95%85%E4%BA%8B-ep-10/" target="_blank" class="interview-card reveal">
+        <div class="interview-img-slot"><span>photo</span></div>
+        <div class="interview-content">
+          <div class="interview-badges"><span class="interview-cat">店鋪故事</span><span class="interview-ep-no">EP.10</span></div>
+          <div class="interview-card-title">店鋪故事｜Cosmos of Liam 連恩宇宙</div>
+          <div class="interview-hook">一杯咖啡沖出來的夢</div>
+          <div class="interview-date">— 2025.05.28</div>
+          <div class="interview-excerpt">走在鹽埕的街頭，一不小心就會錯過街角那間不起眼的小咖啡店。沒有引人注目的招牌牆、沒有打卡點，甚至在 Google Map 上都找不到，只因為老闆 Liam 從不主動登記地標……</div>
+          <span class="interview-read">閱讀全文 →</span>
+        </div>
+      </a>
+
+      <a href="https://yenhsiapuyehchen.com/%E5%B0%8F%E5%9F%95%E6%95%85%E4%BA%8B-ep-11/" target="_blank" class="interview-card reveal">
+        <div class="interview-img-slot"><span>photo</span></div>
+        <div class="interview-content">
+          <div class="interview-badges"><span class="interview-cat">店鋪故事</span><span class="interview-ep-no">EP.11</span></div>
+          <div class="interview-card-title">店鋪故事｜柒菓煎餅菓子</div>
+          <div class="interview-hook">一口熟悉，一份心意</div>
+          <div class="interview-date">— 2025.05.28</div>
+          <div class="interview-excerpt">走在鹽埕的鹽埕街上，一不小心就會錯過街角那台低調的小餐車。沒有醒目的招牌，卻總是有陣陣香味在空氣中飄散，引來路過的人們駐足……</div>
+          <span class="interview-read">閱讀全文 →</span>
+        </div>
+      </a>
+
+      <a href="https://yenhsiapuyehchen.com/%E5%B0%8F%E5%9F%95%E6%95%85%E4%BA%8B-ep-12/" target="_blank" class="interview-card reveal">
+        <div class="interview-img-slot"><span>photo</span></div>
+        <div class="interview-content">
+          <div class="interview-badges"><span class="interview-cat">店鋪故事</span><span class="interview-ep-no">EP.12</span></div>
+          <div class="interview-card-title">店鋪故事｜肉粽泰 Thai</div>
+          <div class="interview-hook">一顆粽子，一條回家的路</div>
+          <div class="interview-date">— 2025.05.28</div>
+          <div class="interview-excerpt">鹽埕區的街頭，有間肉粽老店，香氣伴著這座城市走過六、七十個年頭，陪著無數人從童年走到成家立業，再到含飴弄孫……</div>
+          <span class="interview-read">閱讀全文 →</span>
+        </div>
+      </a>
+
+      <a href="https://yenhsiapuyehchen.com/%E5%B0%8F%E5%9F%95%E6%95%85%E4%BA%8B-ep-13/" target="_blank" class="interview-card reveal">
+        <div class="interview-img-slot"><span>photo</span></div>
+        <div class="interview-content">
+          <div class="interview-badges"><span class="interview-cat">店鋪故事</span><span class="interview-ep-no">EP.13</span></div>
+          <div class="interview-card-title">店鋪故事｜時光商行</div>
+          <div class="interview-hook">四個年輕人的夢想交匯</div>
+          <div class="interview-date">— 2025.05.28</div>
+          <div class="interview-excerpt">故事的開端來自四個年輕人的心聲，雖然他們來自不同的背景，卻因為對創業的熱情和對未來的憧憬走到了一起，決定共同開啟這段充滿挑戰與機會的旅程……</div>
+          <span class="interview-read">閱讀全文 →</span>
+        </div>
+      </a>
+
     </div>
   </div>
 </div>
@@ -211,37 +479,76 @@
   <div class="observer-section">
     <div class="section-label">OBSERVER 小埕觀察家</div>
     <h2 class="section-title">停下來，觀察<br>正在發生的事</h2>
-    <p class="observer-intro reveal">鹽埕每天都在發生各種大小事。小埕觀察家邀請你放慢腳步，用好奇的眼睛觀察這個街區正在經歷的一切——花朵、人群、情緒、記憶。</p>
+    <p class="observer-section-intro reveal">鹽埕每天都在發生各種大小事。小埕觀察家記錄鹽夏走進這座城市的每一個瞬間——活動、現場、情緒、人群，讓那些正在發生的事，被好好地留下來。</p>
 
-    <div class="observer-article reveal">
-      <div class="observer-article-cover">
-        <img src="./點綴物/孤挺花.png" alt="">
-      </div>
-      <div>
-        <span class="observer-article-tag">活動側寫</span>
-        <div class="observer-article-date">2026.03.21</div>
-        <div class="observer-article-title">鹽埕國小親子日</div>
-        <div class="observer-article-body">三月二十一日，鹽埕國小迎來一年一度的親子日。校園裡笑聲與喧嘩交織，家長與孩子一起在這座老街區裡停留、參與、共創記憶。這一天的鹽埕，比平日更熱鬧，也更溫柔——每一個家庭帶來的情緒，在操場上交融成一幅屬於鹽埕的獨特風景。</div>
-        <a href="./2026.3.21 鹽埕國小親子日 活動側寫.pdf" target="_blank" class="observer-article-link">閱讀完整活動側寫 →</a>
-      </div>
-    </div>
+    <!-- ── 文章：鹽埕國小親子日 ── -->
+    <article class="obs-article reveal">
 
-    <div class="observer-grid">
-      <div class="observer-card reveal">
-        <div class="observer-icon">🌸</div>
-        <div class="observer-time">5/17（日）　17:00 – 18:30</div>
-        <div class="observer-title">你！先生有什麼</div>
-        <div class="observer-body">一場輕鬆的街頭互動展演，邀請路過的你停下來和我們的「先生」說說話。關於情緒、關於夏天、關於此刻的鹽埕，每一個回答都是這座城市最真實的聲音。</div>
-        <div class="observer-loc">📍 大智路口新樂街口</div>
+      <div class="obs-article-header">
+        <div class="obs-article-meta">
+          <span class="obs-tag">活動側寫</span>
+          <span class="obs-date">2026.03.21</span>
+        </div>
+        <h3 class="obs-article-title">鹽埕國小親子日《花葉印布》</h3>
+        <p class="obs-article-hook">用校園的繁花落葉，拓印出 150 幅關於情緒的棲息方式</p>
       </div>
-      <div class="observer-card reveal" style="animation-delay:.1s">
-        <div class="observer-icon">🌺</div>
-        <div class="observer-time">5/16 – 5/23　全天開放</div>
-        <div class="observer-title">你！花兒在說什麼？</div>
-        <div class="observer-body">每一朵花都有話說。透過互動裝置，讓街上的花兒成為你情緒的出口——把說不出口的話、藏在心裡的感受，交給這朵花，讓它替你說出來。</div>
-        <div class="observer-loc">📍 新樂街綠廊裝置藝術區</div>
+
+      <!-- 開場：學校正面 -->
+      <div class="obs-hero">
+        <img src="./鹽埕國小親子日活動照/1.jpg" alt="高雄市鹽埕國民小學" style="object-position:center 50%;">
       </div>
-    </div>
+
+      <!-- 引言 -->
+      <div class="obs-body">
+        <p class="obs-quote">「我等一下要做出一隻超大的怪獸！！！！」</p>
+        <p>鹽夏不夜埕這次來到位在鹽埕街上的「高雄市鹽埕國民小學」，與學校在週六舉辦的親子共學日聯合，籌辦了一場動輒約 150 名學生的拓印手作工作坊《花葉印布》，結合了社會情緒學習（SEL）框架中的自我覺察，以及 2026 年鹽夏不夜埕主題花轟中的子線主題「呼吸」，帶領家長與小朋友們，一起用校園裡的繁花落葉，拓印成一幅幅自我情緒延伸的畫作。</p>
+      </div>
+
+      <!-- 情緒引導課 -->
+      <div class="obs-photo-pair">
+        <img src="./鹽埕國小親子日活動照/2-1.JPG" alt="情緒故事引導課堂">
+        <img src="./鹽埕國小親子日活動照/2-2.JPG" alt="親子互動現場">
+      </div>
+      <div class="obs-body">
+        <div class="obs-section-label">情緒引導</div>
+        <p>在拓印手作開始之前，我們一起透過了三個小故事，想像了自己在事件中會有什麼樣的情緒反應與感受，在情緒出現時，我們又該如何表達。例如在玩具被可惡的同學無情破壞後，許多同學都馬上舉手，甚至脫口而出的回答「會超級生氣！！！」「我會想暴打那個人！」，在情緒之外，也有許多同學表示雖然會非常憤怒，可是應該要慢下來的表達自己的感受，不能衝動行事傷害同學。</p>
+      </div>
+
+      <!-- 蒐集落葉 -->
+      <div class="obs-photo-pair">
+        <img src="./鹽埕國小親子日活動照/3-1.JPG" alt="戶外蒐集落葉">
+        <img src="./鹽埕國小親子日活動照/3-2.JPG" alt="孩子們專注挑選落葉">
+      </div>
+      <div class="obs-body">
+        <div class="obs-section-label">蒐集材料</div>
+        <p>在經過想像後，我們安排了小朋友們一起到戶外「蒐集材料」，也就是自己挑選適合、喜歡的落葉來進行拓印。在過程中大家為了蒐集到一定的數量非常專注且投入地在「端詳」平時根本不會注意到的落葉，然後紛紛手捧著滿滿的戰利品，沾沾自喜地回來向我們炫耀自己挑選出的完美落葉。</p>
+      </div>
+
+      <!-- 拓印製作 4 張 -->
+      <div class="obs-photo-quad">
+        <img src="./鹽埕國小親子日活動照/4-1.JPG" alt="拓印製作過程">
+        <img src="./鹽埕國小親子日活動照/4-2.JPG" alt="親子共同創作">
+        <img src="./鹽埕國小親子日活動照/4-3.JPG" alt="顏料上色">
+        <img src="./鹽埕國小親子日活動照/4-4.JPG" alt="完成拓印">
+      </div>
+      <div class="obs-body">
+        <div class="obs-section-label">花葉印布</div>
+        <p>接著就開始一步一步，細節的練習如何好好的將落葉塗上壓克力顏料，並在紙上印出漂亮勻稱的落葉拓。因為是親子日的關係，原本在旁蓄勢待坊的家長們，在練習的時候蜂擁而上的到自己的孩子桌邊協助，尤其是年紀較小的孩子們，除了我們和老師們協助，還會圍繞著一手來一手去的家長，七嘴八舌的對於顏料、力道的控制與孩子們一起完成了最後的成品。</p>
+        <p>看著這一幅幅色彩斑斕、甚至有些「狂野」的拓印布片，其實正是今年《鹽夏不夜埕》主題《花轟》的最佳體現，也是鹽夏不夜埕走入校園中希望能夠看見的。我們僅僅是提供給小朋友們，一個拓印的方法、一段創作的時間與一塊布，收穫的不只是最後 150 片的展品，更是在這段時間中小朋友們從親手發現完美的葉片，到透過控制、敲打手中的材料來表達自己不論是開心、憤怒、難過的情緒，之間深刻的體驗與學習。</p>
+      </div>
+
+      <!-- 成果展示 -->
+      <div class="obs-photo-pair">
+        <img src="./鹽埕國小親子日活動照/5-1.JPG" alt="成果展示大合照">
+        <img src="./鹽埕國小親子日活動照/5-2.JPG" alt="親子成品展示">
+      </div>
+      <div class="obs-body">
+        <p>最終，這群孩子們所創作的布片成品將交由鹽夏不夜埕團隊進行轉化，展示在 2026 鹽夏不夜埕《花轟》的展區中，就讓我們在今年的 5/16 至 5/23，到鹽埕東區尋找孩子們的《關於情緒的棲息方式》，感受花轟的情緒綻放。</p>
+      </div>
+
+
+    </article>
+
   </div>
 </div>
 
@@ -250,36 +557,6 @@
   <div class="travel-section">
     <div class="section-label">TRAVEL DIARY 小埕遊記</div>
     <h2 class="section-title">在鹽埕漫遊<br>留下你的足跡</h2>
-    <p class="travel-intro reveal">把新樂街當成你的遊樂場。從餐桌到街道，從市集到裝置，每一個停留都是值得記錄的遊記片段。</p>
-    <div class="travel-list">
-      <div class="travel-item reveal">
-        <div class="travel-num">01</div>
-        <div class="travel-content">
-          <div class="travel-title">花轟友善餐桌</div>
-          <div class="travel-time">5/16 – 5/23　17:00 – 21:00　（消費折扣優惠）</div>
-          <div class="travel-body">花轟期間，新樂街周邊特約餐廳與攤商提供專屬折扣優惠。出示花轟活動集章或打卡截圖，即可享有友善用餐優惠，讓你邊逛街邊吃好料，飽飽感受鹽埕的夏夜滋味。</div>
-          <div class="travel-loc">📍 新樂街綠廊周邊特約店家</div>
-        </div>
-      </div>
-      <div class="travel-item reveal">
-        <div class="travel-num">02</div>
-        <div class="travel-content">
-          <div class="travel-title">使手機裡 AI：散步路</div>
-          <div class="travel-time">5/16 – 5/23　17:00 – 21:00</div>
-          <div class="travel-body">拿起你的手機，讓 AI 成為你的鹽埕導遊！透過專屬 QR Code 啟動 AI 散步路服務，根據你當下的情緒狀態，AI 將為你推薦最適合的街區路線、裝置藝術作品與市集攤位，讓每次散步都是獨一無二的花轟體驗。</div>
-          <div class="travel-loc">📍 服務台掃碼啟動</div>
-        </div>
-      </div>
-      <div class="travel-item reveal">
-        <div class="travel-num">03</div>
-        <div class="travel-content">
-          <div class="travel-title">表演活動 × 邀演特別場</div>
-          <div class="travel-time">5/23（六）　整個街區 / 中央公園商圈</div>
-          <div class="travel-body">花轟最終日，表演能量不停歇！除了新樂街的閉幕演出，花轟也受邀前往高雄市中央公園商圈進行特別場演出，把花轟的精神帶向更大的城市舞台。</div>
-          <div class="travel-loc">📍 新樂街綠廊 + 高雄市中央公園商圈</div>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -290,32 +567,43 @@
     <div class="footer-pre-sub">5/16—5/23 新樂街綠廊　每日 17:00–21:00</div>
     <a href="./hanabomb.html" class="footer-pre-btn">回到花轟 →</a>
   </div>
-  <div class="footer-city-band"><img src="./點綴物/可愛的街區.png" alt=""></div>
   <div class="footer-bottom">
     <div class="footer-logo"><img src="./鹽夏logo們-20260416T013432Z-3-001/鹽夏logo們/資產%202.png" alt="鹽夏不夜埕"></div>
-    <div class="footer-social"><a href="https://www.facebook.com/dontsleepinyancheng">Facebook</a><a href="https://www.instagram.com/dont_sleep_in_yancheng/">Instagram</a><a href="https://line.me/R/ti/p/@235chemh">LINE 官方帳號</a><a href="mailto:dont.sleep.in.yancheng@gmail.com">Mail</a></div>
+    <div class="footer-social">
+      <a href="https://www.facebook.com/dontsleepinyancheng">Facebook</a>
+      <a href="https://www.instagram.com/dont_sleep_in_yancheng/">Instagram</a>
+      <a href="https://line.me/R/ti/p/@235chemh">LINE 官方帳號</a>
+      <a href="mailto:dont.sleep.in.yancheng@gmail.com">Mail</a>
+    </div>
     <div class="footer-copy">© 2026 鹽夏不夜埕 All Rights Reserved</div>
   </div>
 </footer>
 
 <script>
-  // Tabs
+  const revealObs = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        revealObs.unobserve(entry.target);
+      }
+    });
+  },{threshold:.05});
+
+  function triggerReveals(){
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el=>revealObs.observe(el));
+  }
+
+  setTimeout(triggerReveals, 200);
+
   document.querySelectorAll('.tab-btn').forEach(btn=>{
     btn.addEventListener('click',()=>{
       document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
       document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
       btn.classList.add('active');
       document.getElementById('tab-'+btn.dataset.tab).classList.add('active');
-      // re-trigger reveals in new tab
-      setTimeout(()=>triggerReveals(),50);
+      setTimeout(triggerReveals, 50);
     });
   });
-  // Scroll reveal
-  function triggerReveals(){
-    const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target);}}),{threshold:.08});
-    document.querySelectorAll('.reveal:not(.visible)').forEach(el=>obs.observe(el));
-  }
-  triggerReveals();
 </script>
 </body>
 </html>
