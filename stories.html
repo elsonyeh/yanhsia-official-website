@@ -10,7 +10,7 @@
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     :root{
-      --primary:#243554;--secondary:#C0546C;--bg:#F2D9D0;
+      --primary:#1A2640;--surface:#374E7E;--secondary:#C0546C;--bg:#F2D9D0;
       --gold:#F2BE5C;--peach:#F2A488;--blue:#5B7BA6;
       --gray:#CFC9CC;--rose:#E9ABAB;--white:#FFFFFF;
     }
@@ -18,7 +18,7 @@
     body{font-family:'Noto Sans TC',sans-serif;background:var(--bg);color:var(--primary);overflow-x:hidden;}
 
     /* NAV */
-    nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:14px 48px;background:rgba(36,53,84,.93);backdrop-filter:blur(12px);border-bottom:1px solid rgba(242,190,92,.18);}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:14px 48px;background:rgba(26,38,64,.93);backdrop-filter:blur(12px);border-bottom:1px solid rgba(242,190,92,.18);}
     .nav-logo a{display:block;}.nav-logo img{height:36px;filter:invert(1);mix-blend-mode:screen;}
     .nav-links{display:flex;gap:36px;list-style:none;}
     .nav-links a{color:var(--rose);text-decoration:none;font-size:13px;letter-spacing:.14em;transition:color .2s;}
@@ -76,7 +76,7 @@
     }
 
     /* TAB NAV */
-    .tab-nav{background:var(--primary);position:sticky;top:65px;z-index:100;display:flex;justify-content:center;border-bottom:2px solid rgba(242,190,92,.2);}
+    .tab-nav{background:var(--surface);position:sticky;top:65px;z-index:100;display:flex;justify-content:center;border-bottom:2px solid rgba(242,190,92,.2);}
     .tab-btn{padding:18px 48px;background:none;border:none;color:var(--gray);font-family:'Noto Serif TC',serif;font-size:16px;font-weight:700;cursor:pointer;transition:color .2s;letter-spacing:.08em;position:relative;}
     .tab-btn::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transition:transform .3s;}
     .tab-btn:hover{color:var(--rose);}
@@ -99,9 +99,9 @@
     .interview-heading em{font-style:normal;color:var(--secondary);}
     .interview-list{display:flex;flex-direction:column;gap:20px;}
     .interview-card{display:grid;grid-template-columns:260px 1fr;align-items:stretch;border-radius:14px;overflow:hidden;background:var(--white);text-decoration:none;color:inherit;transition:transform .3s,box-shadow .3s;}
-    .interview-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(36,53,84,.1);}
+    .interview-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(26,38,64,.1);}
     .interview-img-slot{background:#e8ddd8;min-height:210px;display:flex;align-items:center;justify-content:center;}
-    .interview-img-slot span{font-size:10px;letter-spacing:.25em;color:rgba(36,53,84,.2);text-transform:uppercase;}
+    .interview-img-slot span{font-size:10px;letter-spacing:.25em;color:rgba(26,38,64,.2);text-transform:uppercase;}
     .interview-content{padding:26px 28px;display:flex;flex-direction:column;justify-content:center;}
     .interview-badges{display:flex;gap:8px;align-items:center;margin-bottom:10px;flex-wrap:wrap;}
     .interview-cat{background:var(--secondary);color:var(--white);font-size:10px;padding:3px 10px;border-radius:50px;letter-spacing:.08em;}
@@ -153,7 +153,7 @@
     .travel-intro{font-size:16px;line-height:2.1;color:#555;max-width:700px;margin-bottom:48px;}
     .travel-list{display:flex;flex-direction:column;gap:24px;}
     .travel-item{background:var(--white);border-radius:16px;padding:32px 36px;display:flex;gap:28px;align-items:flex-start;transition:transform .3s,box-shadow .3s;}
-    .travel-item:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(36,53,84,.08);}
+    .travel-item:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(26,38,64,.08);}
     .travel-num{font-family:'Noto Serif TC',serif;font-size:40px;font-weight:900;color:var(--gold);line-height:1;flex-shrink:0;min-width:48px;}
     .travel-title{font-family:'Noto Serif TC',serif;font-size:22px;font-weight:700;margin-bottom:8px;}
     .travel-time{font-size:12px;color:var(--secondary);letter-spacing:.1em;margin-bottom:10px;}
@@ -169,7 +169,7 @@
     .footer-pre-btn:hover{transform:translateY(-3px);}
     .footer-city-band{background:var(--bg);line-height:0;}
     .footer-city-band img{width:100%;display:block;}
-    .footer-bottom{background:var(--primary);color:var(--white);padding:40px 48px 28px;display:flex;flex-direction:column;align-items:center;gap:16px;}
+    .footer-bottom{background:var(--surface);color:var(--white);padding:40px 48px 28px;display:flex;flex-direction:column;align-items:center;gap:16px;}
     .footer-logo img{height:34px;filter:invert(1);mix-blend-mode:screen;}
     .footer-social{display:flex;gap:22px;}
     .footer-social a{color:var(--gold);text-decoration:none;font-size:13px;letter-spacing:.1em;}
@@ -178,6 +178,22 @@
     @keyframes floatA{0%,100%{transform:translateY(0) rotate(-3deg);}50%{transform:translateY(-16px) rotate(3deg);}}
     @keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
     .reveal{opacity:0;}.reveal.visible{animation:fadeUp .6s ease forwards;}
+
+    /* COLLAPSIBLE OBSERVER ARTICLES */
+    .obs-article-preview{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;height:130px;overflow:hidden;}
+    .obs-article-preview img{width:100%;height:100%;object-fit:cover;display:block;}
+    .obs-article.obs-open .obs-article-preview{display:none;}
+    .obs-article-body{overflow:hidden;max-height:0;}
+    .obs-toggle{display:flex;align-items:center;justify-content:space-between;padding:14px 44px;cursor:pointer;background:none;border:none;border-top:1px solid rgba(26,38,64,.08);font-family:'Noto Sans TC',sans-serif;font-size:13px;letter-spacing:.12em;color:var(--secondary);font-weight:700;width:100%;transition:background .2s;}
+    .obs-toggle:hover{background:rgba(192,84,108,.06);}
+    .obs-toggle-arrow{font-size:15px;transition:transform .4s ease;display:inline-block;line-height:1;}
+    .obs-article.obs-open .obs-toggle-arrow{transform:rotate(180deg);}
+    .obs-close-btn{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;padding:14px;background:none;border:none;border-top:1px solid rgba(26,38,64,.08);font-family:'Noto Sans TC',sans-serif;font-size:12px;letter-spacing:.12em;color:rgba(26,38,64,.4);cursor:pointer;transition:background .2s,color .2s;}
+    .obs-close-btn:hover{background:rgba(192,84,108,.06);color:var(--secondary);}
+    @media(max-width:700px){
+      .obs-toggle{padding:12px 20px;}
+      .obs-article-preview{height:100px;}
+    }
   </style>
 </head>
 <body>
@@ -481,9 +497,62 @@
     <h2 class="section-title">停下來，觀察<br>正在發生的事</h2>
     <p class="observer-section-intro reveal">鹽埕每天都在發生各種大小事。小埕觀察家記錄鹽夏走進這座城市的每一個瞬間——活動、現場、情緒、人群，讓那些正在發生的事，被好好地留下來。</p>
 
-    <!-- ── 文章：鹽埕國小親子日 ── -->
+    <!-- ── 文章 1：花落成流 工作坊（最新） ── -->
     <article class="obs-article reveal">
+      <div class="obs-article-header">
+        <div class="obs-article-meta">
+          <span class="obs-tag">活動側寫</span>
+          <span class="obs-date">2026.04.02</span>
+        </div>
+        <h3 class="obs-article-title">揚帆主婦社《花落成流》毛線花工作坊</h3>
+        <p class="obs-article-hook">用一朵朵毛線花，把對鹽埕的記憶與情感，織進即將盛開的《花轟》裝置</p>
+      </div>
+      <div class="obs-article-preview">
+        <img src="./小埕觀察家/花落成流工作坊/照片/DSC_4280.JPG" alt="">
+        <img src="./小埕觀察家/花落成流工作坊/照片/DSC_4303.JPG" alt="">
+        <img src="./小埕觀察家/花落成流工作坊/照片/DSC_4399.JPG" alt="">
+      </div>
+      <button class="obs-toggle" onclick="obsToggle(this)">
+        <span class="obs-toggle-label">展開閱讀</span>
+        <span class="obs-toggle-arrow">↓</span>
+      </button>
+      <div class="obs-article-body">
+        <div class="obs-hero">
+          <img src="./小埕觀察家/花落成流工作坊/照片/DSC_4280.JPG" alt="揚帆主婦社花落成流毛線花工作坊" style="object-position:center 40%;">
+        </div>
+        <div class="obs-body">
+          <p>揚帆主婦社一直是《鹽夏不夜埕》重要的合作夥伴之一。從去年的《二十四節氣》到今年的《花落成流》，姐姐們每一年都帶給我們不一樣的非凡面貌，展現出極具韌性與溫柔的在地女性力量。2026 年 4 月 2 日，策展團隊來到位於鹽埕區新興街的揚帆主婦社據點，將整個下午的時光交給姐姐們，合作辦理了兩場《花落成流》毛線花製作工作坊。此次工作坊以毛線花為載體，試圖引導大家透過編織，將那些平時無法言說的心情，轉化為具象的實體。</p>
+        </div>
+        <div class="obs-photo-pair">
+          <img src="./小埕觀察家/花落成流工作坊/照片/DSC_4303.JPG" alt="工作坊現場">
+          <img src="./小埕觀察家/花落成流工作坊/照片/DSC_4321.JPG" alt="主婦社成員一起製作毛線花">
+        </div>
+        <div class="obs-body">
+          <div class="obs-section-label">毛線花工作坊</div>
+          <p>活動一開始，我們與揚帆主婦社一同回顧了去年合作的感動，並分享今年鹽夏的主題《花轟》——以花的綻放，回應情緒的張力與流動。接著便進入重頭戲：毛線花製作教學。我們特別邀請到手作編織品牌《Solemates》的創辦人司于老師擔任講師。司于老師認為：「線，不只是材料本身，更象徵文化、情感與創作之間的連結。」在這次的工作坊中，老師也期盼能透過一條條毛線，串起主婦社成員們的情感展現，以及對鹽埕在地文化的深刻記憶。</p>
+          <p>老師首先請大家拿好五條素色的毛線，將其綁好串起，作為毛線花的花蕊；接著讓大家自由挑選喜歡的顏色來製作花瓣。在這個環節中，姐姐們的獨特風格展露無遺：有些人偏愛素淨的單色，有些人則喜歡大膽的雙色拼接。無數條顏色各異的毛線，在成員們的手中交織，編織出專屬於自己風格的毛線花。</p>
+        </div>
+        <div class="obs-photo-pair">
+          <img src="./小埕觀察家/花落成流工作坊/照片/DSC_4399.JPG" alt="毛線花製作過程">
+          <img src="./小埕觀察家/花落成流工作坊/照片/IMG_9790.JPG" alt="成員互動情誼">
+        </div>
+        <div class="obs-body">
+          <div class="obs-section-label">情感交織</div>
+          <p>而在動手做的過程中，更能看見成員間深厚的情誼——她們熱絡地分享挑選顏色的原因、互相研究編織手法，先學會的姐妹甚至主動當起小老師，手把手教導剛抵達的同伴。短短一個半小時的工作坊，伴隨著悠揚的背景音樂與姐姐們的歡聲笑語，氛圍無比輕鬆溫馨。</p>
+        </div>
+        <div class="obs-hero" style="height:320px;">
+          <img src="./小埕觀察家/花落成流工作坊/照片/IMG_9791.JPG" alt="毛線花成果" style="object-position:center;">
+        </div>
+        <div class="obs-body">
+          <p>工作坊尾聲，我們將大家親手編織的毛線花一一收集，鄭重交棒給司于老師。司于老師穩穩接住每位姐妹的「落花」後，在這一個多月的時間裡，將把它們細心整理、匯聚成一件大型裝置藝術。這件承載著社區共創力量的作品，即將在 2026 鹽夏不夜埕《花轟》中展示。</p>
+          <p class="obs-quote">今年 5/16 到 5/23，誠摯邀請大家漫步至鹽埕東區，尋找由揚帆主婦社共同織就的《花落成流》，細細感受鹽埕女性力量最溫柔的情緒綻放！</p>
+        </div>
+        <button class="obs-close-btn" onclick="obsClose(this)">收合 ↑</button>
+      </div>
+    </article>
 
+    <!-- ── 文章 2：鹽埕國小親子日 ── -->
+    <article class="obs-article reveal">
       <div class="obs-article-header">
         <div class="obs-article-meta">
           <span class="obs-tag">活動側寫</span>
@@ -492,61 +561,59 @@
         <h3 class="obs-article-title">鹽埕國小親子日《花葉印布》</h3>
         <p class="obs-article-hook">用校園的繁花落葉，拓印出 150 幅關於情緒的棲息方式</p>
       </div>
-
-      <!-- 開場：學校正面 -->
-      <div class="obs-hero">
-        <img src="./鹽埕國小親子日活動照/1.jpg" alt="高雄市鹽埕國民小學" style="object-position:center 50%;">
+      <div class="obs-article-preview">
+        <img src="./小埕觀察家/鹽埕國小親子日_花葉印布/照片/1.jpg" alt="">
+        <img src="./小埕觀察家/鹽埕國小親子日_花葉印布/照片/3-1.JPG" alt="">
+        <img src="./小埕觀察家/鹽埕國小親子日_花葉印布/照片/4-1.JPG" alt="">
       </div>
-
-      <!-- 引言 -->
-      <div class="obs-body">
-        <p class="obs-quote">「我等一下要做出一隻超大的怪獸！！！！」</p>
-        <p>鹽夏不夜埕這次來到位在鹽埕街上的「高雄市鹽埕國民小學」，與學校在週六舉辦的親子共學日聯合，籌辦了一場動輒約 150 名學生的拓印手作工作坊《花葉印布》，結合了社會情緒學習（SEL）框架中的自我覺察，以及 2026 年鹽夏不夜埕主題花轟中的子線主題「呼吸」，帶領家長與小朋友們，一起用校園裡的繁花落葉，拓印成一幅幅自我情緒延伸的畫作。</p>
+      <button class="obs-toggle" onclick="obsToggle(this)">
+        <span class="obs-toggle-label">展開閱讀</span>
+        <span class="obs-toggle-arrow">↓</span>
+      </button>
+      <div class="obs-article-body">
+        <div class="obs-hero">
+          <img src="./小埕觀察家/鹽埕國小親子日_花葉印布/照片/1.jpg" alt="高雄市鹽埕國民小學" style="object-position:center 50%;">
+        </div>
+        <div class="obs-body">
+          <p class="obs-quote">「我等一下要做出一隻超大的怪獸！！！！」</p>
+          <p>鹽夏不夜埕這次來到位在鹽埕街上的「高雄市鹽埕國民小學」，與學校在週六舉辦的親子共學日聯合，籌辦了一場動輒約 150 名學生的拓印手作工作坊《花葉印布》，結合了社會情緒學習（SEL）框架中的自我覺察，以及 2026 年鹽夏不夜埕主題花轟中的子線主題「呼吸」，帶領家長與小朋友們，一起用校園裡的繁花落葉，拓印成一幅幅自我情緒延伸的畫作。</p>
+        </div>
+        <div class="obs-photo-pair">
+          <img src="./小埕觀察家/鹽埕國小親子日_花葉印布/照片/2-1.JPG" alt="情緒故事引導課堂">
+          <img src="./小埕觀察家/鹽埕國小親子日_花葉印布/照片/2-2.JPG" alt="親子互動現場">
+        </div>
+        <div class="obs-body">
+          <div class="obs-section-label">情緒引導</div>
+          <p>在拓印手作開始之前，我們一起透過了三個小故事，想像了自己在事件中會有什麼樣的情緒反應與感受，在情緒出現時，我們又該如何表達。例如在玩具被可惡的同學無情破壞後，許多同學都馬上舉手，甚至脫口而出的回答「會超級生氣！！！」「我會想暴打那個人！」，在情緒之外，也有許多同學表示雖然會非常憤怒，可是應該要慢下來的表達自己的感受，不能衝動行事傷害同學。</p>
+        </div>
+        <div class="obs-photo-pair">
+          <img src="./小埕觀察家/鹽埕國小親子日_花葉印布/照片/3-1.JPG" alt="戶外蒐集落葉">
+          <img src="./小埕觀察家/鹽埕國小親子日_花葉印布/照片/3-2.JPG" alt="孩子們專注挑選落葉">
+        </div>
+        <div class="obs-body">
+          <div class="obs-section-label">蒐集材料</div>
+          <p>在經過想像後，我們安排了小朋友們一起到戶外「蒐集材料」，也就是自己挑選適合、喜歡的落葉來進行拓印。在過程中大家為了蒐集到一定的數量非常專注且投入地在「端詳」平時根本不會注意到的落葉，然後紛紛手捧著滿滿的戰利品，沾沾自喜地回來向我們炫耀自己挑選出的完美落葉。</p>
+        </div>
+        <div class="obs-photo-quad">
+          <img src="./小埕觀察家/鹽埕國小親子日_花葉印布/照片/4-1.JPG" alt="拓印製作過程">
+          <img src="./小埕觀察家/鹽埕國小親子日_花葉印布/照片/4-2.JPG" alt="親子共同創作">
+          <img src="./小埕觀察家/鹽埕國小親子日_花葉印布/照片/4-3.JPG" alt="顏料上色">
+          <img src="./小埕觀察家/鹽埕國小親子日_花葉印布/照片/4-4.JPG" alt="完成拓印">
+        </div>
+        <div class="obs-body">
+          <div class="obs-section-label">花葉印布</div>
+          <p>接著就開始一步一步，細節的練習如何好好的將落葉塗上壓克力顏料，並在紙上印出漂亮勻稱的落葉拓。因為是親子日的關係，原本在旁蓄勢待坊的家長們，在練習的時候蜂擁而上的到自己的孩子桌邊協助，尤其是年紀較小的孩子們，除了我們和老師們協助，還會圍繞著一手來一手去的家長，七嘴八舌的對於顏料、力道的控制與孩子們一起完成了最後的成品。</p>
+          <p>看著這一幅幅色彩斑斕、甚至有些「狂野」的拓印布片，其實正是今年《鹽夏不夜埕》主題《花轟》的最佳體現，也是鹽夏不夜埕走入校園中希望能夠看見的。我們僅僅是提供給小朋友們，一個拓印的方法、一段創作的時間與一塊布，收穫的不只是最後 150 片的展品，更是在這段時間中小朋友們從親手發現完美的葉片，到透過控制、敲打手中的材料來表達自己不論是開心、憤怒、難過的情緒，之間深刻的體驗與學習。</p>
+        </div>
+        <div class="obs-photo-pair">
+          <img src="./小埕觀察家/鹽埕國小親子日_花葉印布/照片/5-1.JPG" alt="成果展示大合照">
+          <img src="./小埕觀察家/鹽埕國小親子日_花葉印布/照片/5-2.JPG" alt="親子成品展示">
+        </div>
+        <div class="obs-body">
+          <p>最終，這群孩子們所創作的布片成品將交由鹽夏不夜埕團隊進行轉化，展示在 2026 鹽夏不夜埕《花轟》的展區中，就讓我們在今年的 5/16 至 5/23，到鹽埕東區尋找孩子們的《關於情緒的棲息方式》，感受花轟的情緒綻放。</p>
+        </div>
+        <button class="obs-close-btn" onclick="obsClose(this)">收合 ↑</button>
       </div>
-
-      <!-- 情緒引導課 -->
-      <div class="obs-photo-pair">
-        <img src="./鹽埕國小親子日活動照/2-1.JPG" alt="情緒故事引導課堂">
-        <img src="./鹽埕國小親子日活動照/2-2.JPG" alt="親子互動現場">
-      </div>
-      <div class="obs-body">
-        <div class="obs-section-label">情緒引導</div>
-        <p>在拓印手作開始之前，我們一起透過了三個小故事，想像了自己在事件中會有什麼樣的情緒反應與感受，在情緒出現時，我們又該如何表達。例如在玩具被可惡的同學無情破壞後，許多同學都馬上舉手，甚至脫口而出的回答「會超級生氣！！！」「我會想暴打那個人！」，在情緒之外，也有許多同學表示雖然會非常憤怒，可是應該要慢下來的表達自己的感受，不能衝動行事傷害同學。</p>
-      </div>
-
-      <!-- 蒐集落葉 -->
-      <div class="obs-photo-pair">
-        <img src="./鹽埕國小親子日活動照/3-1.JPG" alt="戶外蒐集落葉">
-        <img src="./鹽埕國小親子日活動照/3-2.JPG" alt="孩子們專注挑選落葉">
-      </div>
-      <div class="obs-body">
-        <div class="obs-section-label">蒐集材料</div>
-        <p>在經過想像後，我們安排了小朋友們一起到戶外「蒐集材料」，也就是自己挑選適合、喜歡的落葉來進行拓印。在過程中大家為了蒐集到一定的數量非常專注且投入地在「端詳」平時根本不會注意到的落葉，然後紛紛手捧著滿滿的戰利品，沾沾自喜地回來向我們炫耀自己挑選出的完美落葉。</p>
-      </div>
-
-      <!-- 拓印製作 4 張 -->
-      <div class="obs-photo-quad">
-        <img src="./鹽埕國小親子日活動照/4-1.JPG" alt="拓印製作過程">
-        <img src="./鹽埕國小親子日活動照/4-2.JPG" alt="親子共同創作">
-        <img src="./鹽埕國小親子日活動照/4-3.JPG" alt="顏料上色">
-        <img src="./鹽埕國小親子日活動照/4-4.JPG" alt="完成拓印">
-      </div>
-      <div class="obs-body">
-        <div class="obs-section-label">花葉印布</div>
-        <p>接著就開始一步一步，細節的練習如何好好的將落葉塗上壓克力顏料，並在紙上印出漂亮勻稱的落葉拓。因為是親子日的關係，原本在旁蓄勢待坊的家長們，在練習的時候蜂擁而上的到自己的孩子桌邊協助，尤其是年紀較小的孩子們，除了我們和老師們協助，還會圍繞著一手來一手去的家長，七嘴八舌的對於顏料、力道的控制與孩子們一起完成了最後的成品。</p>
-        <p>看著這一幅幅色彩斑斕、甚至有些「狂野」的拓印布片，其實正是今年《鹽夏不夜埕》主題《花轟》的最佳體現，也是鹽夏不夜埕走入校園中希望能夠看見的。我們僅僅是提供給小朋友們，一個拓印的方法、一段創作的時間與一塊布，收穫的不只是最後 150 片的展品，更是在這段時間中小朋友們從親手發現完美的葉片，到透過控制、敲打手中的材料來表達自己不論是開心、憤怒、難過的情緒，之間深刻的體驗與學習。</p>
-      </div>
-
-      <!-- 成果展示 -->
-      <div class="obs-photo-pair">
-        <img src="./鹽埕國小親子日活動照/5-1.JPG" alt="成果展示大合照">
-        <img src="./鹽埕國小親子日活動照/5-2.JPG" alt="親子成品展示">
-      </div>
-      <div class="obs-body">
-        <p>最終，這群孩子們所創作的布片成品將交由鹽夏不夜埕團隊進行轉化，展示在 2026 鹽夏不夜埕《花轟》的展區中，就讓我們在今年的 5/16 至 5/23，到鹽埕東區尋找孩子們的《關於情緒的棲息方式》，感受花轟的情緒綻放。</p>
-      </div>
-
-
     </article>
 
   </div>
@@ -604,6 +671,41 @@
       setTimeout(triggerReveals, 50);
     });
   });
+
+  // Accordion toggle for observer articles
+  function obsToggle(btn){
+    const article = btn.closest('.obs-article');
+    const body = article.querySelector('.obs-article-body');
+    const label = btn.querySelector('.obs-toggle-label');
+    const isOpen = article.classList.contains('obs-open');
+
+    if(isOpen){
+      // Close
+      body.style.maxHeight = body.scrollHeight + 'px';
+      body.style.transition = 'max-height .5s ease';
+      requestAnimationFrame(()=>requestAnimationFrame(()=>{body.style.maxHeight='0';}));
+      article.classList.remove('obs-open');
+      if(label) label.textContent = '展開閱讀';
+    } else {
+      // Open
+      article.classList.add('obs-open');
+      body.style.transition = 'max-height .55s ease';
+      body.style.maxHeight = body.scrollHeight + 'px';
+      body.addEventListener('transitionend', function handler(){
+        if(article.classList.contains('obs-open')) body.style.maxHeight = 'none';
+        body.removeEventListener('transitionend', handler);
+      });
+      if(label) label.textContent = '收合';
+      setTimeout(()=>article.scrollIntoView({behavior:'smooth',block:'start'}), 50);
+    }
+  }
+
+  function obsClose(btn){
+    const article = btn.closest('.obs-article');
+    const toggle = article.querySelector('.obs-toggle');
+    obsToggle(toggle);
+    setTimeout(()=>article.scrollIntoView({behavior:'smooth',block:'start'}), 80);
+  }
 </script>
 </body>
 </html>

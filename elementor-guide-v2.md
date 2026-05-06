@@ -16,7 +16,8 @@
   @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;700;900&display=swap");
 
   :root {
-    --primary: #243554;
+    --primary: #1a2640;
+    --surface: #374e7e;
     --secondary: #c0546c;
     --bg: #f2d9d0;
     --gold: #f2be5c;
@@ -153,7 +154,7 @@
   }
   .yh-feat-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 16px 40px rgba(51, 6, 9, 0.12);
+    box-shadow: 0 16px 40px rgba(55,78,126, 0.12);
   }
   .yh-feat-card.white {
     background: var(--white);
@@ -164,7 +165,7 @@
     color: var(--white);
   }
   .yh-feat-card.primary {
-    background: var(--primary);
+    background: var(--surface);
     color: var(--white);
   }
   .yh-feat-card img {
@@ -209,7 +210,7 @@
   }
   .yh-cta-link:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(51, 6, 9, 0.2);
+    box-shadow: 0 8px 24px rgba(55,78,126, 0.2);
   }
   .yh-hana-teaser-grid {
     display: grid;
@@ -292,14 +293,14 @@
     border-radius: 28px;
     padding: 48px 52px;
     box-shadow:
-      0 12px 60px rgba(51, 6, 9, 0.12),
+      0 12px 60px rgba(55,78,126, 0.12),
       0 0 0 1px rgba(192, 84, 108, 0.1);
   }
   .yh-digital-xp-btn {
     display: inline-block;
     margin-top: 28px;
     padding: 13px 40px;
-    background: var(--primary);
+    background: var(--surface);
     color: #fff;
     text-decoration: none;
     font-family: "Noto Sans TC", sans-serif;
@@ -310,14 +311,14 @@
     transition:
       transform 0.2s,
       box-shadow 0.2s;
-    box-shadow: 0 4px 20px rgba(51, 6, 9, 0.22);
+    box-shadow: 0 4px 20px rgba(55,78,126, 0.22);
   }
   .yh-digital-xp-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 28px rgba(51, 6, 9, 0.3);
+    box-shadow: 0 8px 28px rgba(55,78,126, 0.3);
   }
   .yh-founders {
-    background: var(--primary);
+    background: var(--surface);
     color: var(--white);
     padding: 100px 48px;
     position: relative;
@@ -369,7 +370,7 @@
     font-family: "Noto Sans TC", sans-serif;
     font-size: 15px;
     line-height: 2;
-    color: rgba(51, 6, 9, 0.68);
+    color: rgba(55,78,126, 0.68);
     margin-bottom: 32px;
     text-wrap: balance;
   }
@@ -417,7 +418,7 @@
     display: block;
   }
   .yh-footer-bottom {
-    background: var(--primary);
+    background: var(--surface);
     color: var(--white);
     padding: 48px 48px 36px;
     display: flex;
@@ -462,72 +463,27 @@
     min-width: 900px;
     pointer-events: none;
   }
-  /* 花轟頁 */
-  .yh-page-hero {
-    background: var(--primary);
-    padding: 160px 48px 80px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .yh-page-hero-bg {
-    position: absolute;
-    inset: 0;
-    background: url("https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8Fbanner%20%E7%84%A1%E5%90%89%E7%A5%A5%E7%89%A9%E7%89%88%E6%9C%AC.png")
-      center/cover no-repeat;
-  }
-  .yh-page-hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(
-      ellipse 70% 60% at 50% 40%,
-      rgba(192, 84, 108, 0.2) 0%,
-      rgba(51, 6, 9, 0.8) 70%
-    );
-  }
-  .yh-page-hero-inner {
-    position: relative;
-    z-index: 2;
-  }
-  .yh-page-eyebrow {
-    font-family: "Noto Sans TC", sans-serif;
-    font-size: 11px;
-    letter-spacing: 0.5em;
-    color: var(--gold);
-    margin-bottom: 16px;
-  }
-  .yh-page-title {
-    font-family: "Noto Serif TC", serif;
-    font-size: clamp(48px, 7vw, 96px);
-    font-weight: 900;
-    color: var(--white);
-    line-height: 1;
-  }
-  .yh-page-sub {
-    font-family: "Noto Sans TC", sans-serif;
-    margin-top: 16px;
-    font-size: 15px;
-    color: var(--rose);
-    letter-spacing: 0.2em;
-  }
-  .yh-hero-badge {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--bg);
-    border-radius: 50%;
-    width: 160px;
-    height: 160px;
-    margin: 32px auto 0;
-    box-shadow:
-      0 0 0 10px rgba(242, 126, 147, 0.2),
-      0 0 60px rgba(192, 84, 108, 0.35);
-  }
-  .yh-hero-badge img {
-    width: 130px;
-  }
+  /* 花轟頁 Hero */
+  .yh-page-hero{min-height:100vh;display:flex;align-items:center;padding:0 48px;position:relative;overflow:hidden;}
+  .yh-page-hero-bg{position:absolute;inset:0;background:url("https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8Fbanner%20%E7%84%A1%E5%90%89%E7%A5%A5%E7%89%A9%E7%89%88%E6%9C%AC.png")center/cover no-repeat;}
+  .yh-page-hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(26,38,64,.92) 0%,rgba(26,38,64,.65) 50%,rgba(26,38,64,.1) 100%);}
+  .yh-page-hero-inner{position:relative;z-index:2;max-width:1080px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;padding-top:80px;}
+  .yh-page-eyebrow{font-size:10px;letter-spacing:.6em;color:var(--gold);margin-bottom:32px;display:flex;align-items:center;gap:14px;}
+  .yh-page-eyebrow::before{content:'';display:block;width:36px;height:1px;background:var(--gold);flex-shrink:0;}
+  .yh-page-title{font-family:'Noto Serif TC',serif;font-size:clamp(72px,11vw,148px);font-weight:900;color:var(--white);line-height:.95;letter-spacing:-.02em;margin-bottom:12px;}
+  .yh-hero-title-en{font-size:clamp(13px,1.8vw,18px);letter-spacing:.55em;color:var(--gold);margin-bottom:36px;text-transform:uppercase;}
+  .yh-hero-rule{width:56px;height:2px;background:var(--secondary);margin-bottom:28px;}
+  .yh-page-sub{font-size:15px;color:rgba(242,217,208,.9);line-height:2;letter-spacing:.06em;margin-bottom:40px;}
+  .yh-hero-meta{display:flex;gap:18px;align-items:center;font-size:11px;letter-spacing:.3em;color:var(--rose);}
+  .yh-hero-meta-sep{color:var(--secondary);font-size:16px;}
+  .yh-hero-mascot{position:relative;z-index:2;display:flex;justify-content:flex-end;align-items:center;}
+  .yh-hero-mascot img{width:clamp(200px,34vw,460px);filter:drop-shadow(0 0 60px rgba(192,84,108,.5));animation:yh-float-mascot 4s ease-in-out infinite;}
+  .yh-hero-deco-char{position:absolute;font-family:'Noto Serif TC',serif;font-size:clamp(280px,38vw,560px);font-weight:900;color:rgba(255,255,255,.03);line-height:1;right:-40px;top:50%;transform:translateY(-50%);user-select:none;pointer-events:none;z-index:1;}
+  .yh-hero-scroll{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:2;font-size:10px;letter-spacing:.4em;color:rgba(242,217,208,.45);animation:yh-fade-bob 2.2s ease-in-out infinite;}
+  @keyframes yh-float-mascot{0%,100%{transform:translateY(0);}50%{transform:translateY(-18px);}}
+  @keyframes yh-fade-bob{0%,100%{opacity:.45;transform:translateX(-50%) translateY(0);}50%{opacity:.9;transform:translateX(-50%) translateY(7px);}}
   .yh-curatorial {
-    background: var(--primary);
+    background: var(--surface);
     color: var(--white);
     padding: 100px 48px;
   }
@@ -593,18 +549,18 @@
   /* 裝置藝術 */
   .yh-install-section{background:#F8F4EF;padding:100px 48px;}
   .yh-install-inner{max-width:1080px;margin:0 auto;}
-  .yh-install-tabs{display:flex;gap:0;border-bottom:1px solid rgba(36,53,84,.15);margin-bottom:36px;}
-  .yh-install-tab-btn{flex:1;text-align:center;background:none;border:none;color:rgba(36,53,84,.4);font-family:'Noto Sans TC',sans-serif;font-size:12px;letter-spacing:.22em;padding:12px 16px;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:color .2s,border-color .2s;}
+  .yh-install-tabs{display:flex;gap:0;border-bottom:1px solid rgba(26,38,64,.15);margin-bottom:36px;}
+  .yh-install-tab-btn{flex:1;text-align:center;background:none;border:none;color:rgba(26,38,64,.4);font-family:'Noto Sans TC',sans-serif;font-size:12px;letter-spacing:.22em;padding:12px 16px;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:color .2s,border-color .2s;}
   .yh-install-tab-btn.active{color:var(--secondary);border-bottom-color:var(--secondary);}
   .yh-install-tab-btn:hover{color:var(--primary);}
   .yh-install-pane{display:none;}
   .yh-install-pane.active{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-  .yh-install-card{background:var(--bg);border:1px solid rgba(36,53,84,.08);border-radius:16px;padding:28px 24px;transition:background .25s;}
+  .yh-install-card{background:var(--bg);border:1px solid rgba(26,38,64,.08);border-radius:16px;padding:28px 24px;transition:background .25s;}
   .yh-install-card:hover{background:#EDD0C6;}
   .yh-install-num{font-size:10px;letter-spacing:.35em;color:var(--secondary);margin-bottom:10px;font-weight:700;}
   .yh-install-title{font-family:'Noto Serif TC',serif;font-size:17px;font-weight:700;color:var(--primary);line-height:1.45;margin-bottom:14px;}
-  .yh-install-school{font-size:11px;letter-spacing:.08em;color:rgba(36,53,84,.5);margin-bottom:6px;}
-  .yh-install-location{font-size:12px;color:rgba(36,53,84,.65);line-height:1.6;}
+  .yh-install-school{font-size:11px;letter-spacing:.08em;color:rgba(26,38,64,.5);margin-bottom:6px;}
+  .yh-install-location{font-size:12px;color:rgba(26,38,64,.65);line-height:1.6;}
   @media(max-width:768px){
     .yh-install-section{padding:80px 24px;}
     .yh-install-pane.active{display:flex;overflow-x:auto;gap:14px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:14px;}
@@ -622,7 +578,7 @@
     max-width: 1080px;
     margin: 0 auto;
     border-radius: 20px;
-    box-shadow: 0 8px 48px rgba(51, 6, 9, 0.14);
+    box-shadow: 0 8px 48px rgba(55,78,126, 0.14);
   }
   /* Lightbox */
   [data-lb] {
@@ -809,7 +765,7 @@
     color: rgba(255, 255, 255, 0.75);
   }
   .yh-event-info {
-    background: var(--primary);
+    background: var(--surface);
     color: var(--white);
     padding: 100px 48px;
   }
@@ -1028,11 +984,11 @@
     .yh-xp-meta {
       min-width: 100%;
     }
-    .yh-page-hero {
-      padding-left: 20px !important;
-      padding-right: 20px !important;
-      padding-top: 100px !important;
-    }
+    .yh-page-hero{min-height:100svh;padding:0 24px;}
+    .yh-page-hero-overlay{background:linear-gradient(180deg,rgba(26,38,64,.85) 0%,rgba(26,38,64,.5) 60%,rgba(26,38,64,.2) 100%);}
+    .yh-page-hero-inner{grid-template-columns:1fr;padding-top:110px;padding-bottom:40px;}
+    .yh-hero-mascot{justify-content:center;margin-top:8px;}
+    .yh-hero-mascot img{width:clamp(160px,55vw,240px);}
     .yh-feat-card {
       padding: 28px 18px;
     }
@@ -1134,7 +1090,7 @@
 
 ```html
 <section
-  style="background:var(--primary);padding:90px 48px;position:relative;overflow:hidden;"
+  style="background:var(--surface);padding:90px 48px;position:relative;overflow:hidden;"
 >
   <div
     style="position:absolute;inset:0;background:url('https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9%E5%80%91-20260416T013420Z-3-001/%E9%BB%9E%E7%B6%B4%E7%89%A9%E5%80%91/%E8%B3%87%E7%94%A2%20114.png')center/cover;opacity:.05;pointer-events:none;"
@@ -1278,7 +1234,7 @@
 ```html
 <section class="yh-line-cta">
   <div style="max-width:600px;margin:0 auto;">
-    <div class="yh-section-label" style="color:rgba(28,43,74,.55);">
+    <div class="yh-section-label" style="color:rgba(55,78,126,.55);">
       OFFICIAL LINE
     </div>
     <h2 class="yh-line-title">加入【鹽夏不夜埕】<br />官方 LINE 好友</h2>
@@ -1334,7 +1290,7 @@
       <img
         src="https://elsonyeh.github.io/yanhsia-official-website/map.png"
         alt="活動地圖"
-        style="display:block;width:100%;box-shadow:0 8px 40px rgba(28,43,74,.12);"
+        style="display:block;width:100%;box-shadow:0 8px 40px rgba(55,78,126,.12);"
         data-lb
       />
     </div>
@@ -1416,17 +1372,33 @@
 <section class="yh-page-hero">
   <div class="yh-page-hero-bg"></div>
   <div class="yh-page-hero-overlay"></div>
+  <div class="yh-hero-deco-char">花</div>
+
   <div class="yh-page-hero-inner">
-    <div class="yh-page-eyebrow">2026 YANHSIA NIGHT × HANABOMB</div>
-    <div class="yh-page-title">花轟</div>
-    <div class="yh-page-sub">以花的綻放，回應情緒的張力與流動</div>
-    <div class="yh-hero-badge">
+    <!-- 左：文字 -->
+    <div>
+      <div class="yh-page-eyebrow">2026 YANHSIA NIGHT × HANABOMB</div>
+      <div class="yh-page-title">花轟</div>
+      <div class="yh-hero-title-en">Hanabomb</div>
+      <div class="yh-hero-rule"></div>
+      <div class="yh-page-sub">以花的綻放<br>回應情緒的張力與流動</div>
+      <div class="yh-hero-meta">
+        <span>5.16 &thinsp;/&thinsp; 5.17 &thinsp;/&thinsp; 5.23</span>
+        <span class="yh-hero-meta-sep">·</span>
+        <span>高雄 鹽埕</span>
+      </div>
+    </div>
+
+    <!-- 右：吉祥物 -->
+    <div class="yh-hero-mascot">
       <img
         src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E8%8A%B1%E8%BD%9F.png"
         alt="花轟"
       />
     </div>
   </div>
+
+  <div class="yh-hero-scroll">SCROLL &darr;</div>
 </section>
 
 <script>
@@ -1676,7 +1648,7 @@
           埕花｜情緒解籤 × 花語體驗
         </h2>
         <p
-          style="font-family:'Noto Sans TC',sans-serif;font-size:15px;line-height:2.1;color:rgba(28,43,74,.65);"
+          style="font-family:'Noto Sans TC',sans-serif;font-size:15px;line-height:2.1;color:rgba(55,78,126,.65);"
         >
           不知從何逛起？網站透過面部識別，即時捕捉你的表情並解讀情緒，轉化為專屬花語祝福卡，點擊花攤獲得路線指引。花語卡中還藏有鹽夏的神秘小驚喜，等你來發現屬於自己的花朵緣分。
         </p>
@@ -2070,16 +2042,22 @@
 ```html
 <!-- STAMP RALLY -->
 <style>
-  .yh-stamp-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;align-items:start;margin-bottom:60px;}
-  .yh-stamp-col{padding:0;}
-  .yh-stamp-redeem{display:flex;align-items:center;gap:48px;border-radius:24px;padding:40px 48px;background:var(--primary);}
-  .yh-stamp-redeem-text{flex:1;min-width:220px;}
-  .yh-stamp-redeem-prize{flex-shrink:0;text-align:center;}
+  .yh-stamp-layout{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
+  .yh-stamp-cols{display:flex;flex-direction:column;gap:36px;}
+  .yh-stamp-col{display:flex;align-items:flex-start;gap:20px;padding:0;}
+  .yh-stamp-col-body{flex:1;}
+  .yh-stamp-redeem{display:flex;flex-direction:column;gap:28px;}
+  .yh-stamp-redeem-prize{width:100%;}
+  .yh-stamp-redeem-label{font-size:16px;letter-spacing:.3em;color:var(--secondary);margin-bottom:12px;font-weight:700;}
+  .yh-stamp-prize-text{font-family:'Noto Serif TC',serif;font-size:clamp(18px,2vw,24px);font-weight:900;color:var(--primary);line-height:1.5;text-align:center;margin:0 !important;padding:0;}
   @media(max-width:768px){
-    .yh-stamp-cols{grid-template-columns:1fr;gap:36px;}
-    .yh-stamp-col{padding:0 !important;}
-    .yh-stamp-redeem{flex-direction:column;gap:28px;padding:32px 28px;}
+    .yh-stamp-layout{display:block;}
+    .yh-stamp-cols{gap:36px;margin-bottom:48px;}
+    .yh-stamp-col{flex-direction:column;}
+    .yh-stamp-redeem{gap:28px;}
     .yh-stamp-redeem-prize{width:100%;}
+    .yh-stamp-prize-text{font-size:16px;}
+    .yh-stamp-redeem-label{font-size:13px;}
   }
 </style>
 <section style="background:linear-gradient(145deg,#F2D9D0 0%,#E9ABAB 50%,#C7A4C3 100%);padding:100px 48px;position:relative;overflow:hidden;">
@@ -2091,61 +2069,71 @@
     <div class="reveal" style="margin-bottom:64px;">
       <div style="display:flex;align-items:center;gap:20px;margin-bottom:20px;">
         <div class="yh-section-label" style="color:var(--primary);opacity:.6;white-space:nowrap;">STAMP RALLY</div>
-        <div style="flex:1;height:1px;background:rgba(28,43,74,.15);"></div>
+        <div style="flex:1;height:1px;background:rgba(55,78,126,.15);"></div>
       </div>
       <h2 style="font-family:'Noto Serif TC',serif;font-size:clamp(36px,5vw,60px);font-weight:900;color:var(--primary);line-height:1.1;margin-bottom:16px;">集章活動 <span style="font-size:clamp(14px,1.8vw,20px);font-weight:400;letter-spacing:.2em;color:var(--secondary);border:1px solid var(--secondary);border-radius:4px;padding:3px 10px;vertical-align:middle;font-family:'Noto Sans TC',sans-serif;">服務台</span></h2>
       <p style="font-size:14px;color:var(--primary);opacity:.7;line-height:2;">手冊地圖頁設有 <strong>5 個貼紙空位</strong>，透過以下 3 種方式蒐集貼紙</p>
     </div>
 
-    <!-- 三種集章方式 -->
-    <div class="yh-stamp-cols reveal">
+    <!-- 左右佈局 -->
+    <div class="yh-stamp-layout">
 
-      <div class="yh-stamp-col">
-        <svg viewBox="0 0 80 80" width="80" height="80" style="display:block;margin-bottom:24px;">
-          <circle cx="40" cy="40" r="36" fill="rgba(255,255,255,.7)" stroke="#C0546C" stroke-width="2" stroke-dasharray="6 3"/>
-          <text x="40" y="46" text-anchor="middle" font-family="Noto Serif TC,serif" font-size="20" font-weight="900" fill="#C0546C">01</text>
-        </svg>
-        <div style="font-family:'Noto Serif TC',serif;font-size:17px;font-weight:700;color:var(--primary);margin-bottom:12px;line-height:1.4;">裝置藝術展區</div>
-        <p style="font-size:13px;line-height:2.1;color:var(--primary);opacity:.75;">前往「呼吸」「蔓延」「共生」三大展區指定裝置藝術區 <strong style="opacity:1;">A2、B3、C4</strong>，各獲得 <mark style="background:rgba(242,190,92,.6);padding:1px 5px;border-radius:3px;">1 張展區貼紙</mark></p>
-      </div>
+      <!-- 左：三種集章方式（垂直） -->
+      <div class="yh-stamp-cols reveal">
 
-      <div class="yh-stamp-col">
-        <svg viewBox="0 0 80 80" width="80" height="80" style="display:block;margin-bottom:24px;">
-          <circle cx="40" cy="40" r="36" fill="rgba(255,255,255,.7)" stroke="#F2A488" stroke-width="2" stroke-dasharray="6 3"/>
-          <text x="40" y="46" text-anchor="middle" font-family="Noto Serif TC,serif" font-size="20" font-weight="900" fill="#F2A488">02</text>
-        </svg>
-        <div style="font-family:'Noto Serif TC',serif;font-size:17px;font-weight:700;color:var(--primary);margin-bottom:12px;line-height:1.4;">特色市集</div>
-        <p style="font-size:13px;line-height:2.1;color:var(--primary);opacity:.75;">於市集任一攤位消費，獲得 <mark style="background:rgba(242,190,92,.6);padding:1px 5px;border-radius:3px;">1 張貼紙</mark></p>
-      </div>
-
-      <div class="yh-stamp-col">
-        <svg viewBox="0 0 80 80" width="80" height="80" style="display:block;margin-bottom:24px;">
-          <circle cx="40" cy="40" r="36" fill="rgba(255,255,255,.7)" stroke="#C7A4C3" stroke-width="2" stroke-dasharray="6 3"/>
-          <text x="40" y="46" text-anchor="middle" font-family="Noto Serif TC,serif" font-size="20" font-weight="900" fill="#C7A4C3">03</text>
-        </svg>
-        <div style="font-family:'Noto Serif TC',serif;font-size:17px;font-weight:700;color:var(--primary);margin-bottom:12px;line-height:1.4;">數位體驗〈埕花〉</div>
-        <p style="font-size:13px;line-height:2.1;color:var(--primary);opacity:.75;">參與〈埕花〉數位體驗並出示，獲得 <mark style="background:rgba(242,190,92,.6);padding:1px 5px;border-radius:3px;">1 張貼紙</mark></p>
-      </div>
-
-    </div>
-
-    <!-- 兌換規則 -->
-    <div class="yh-stamp-redeem reveal">
-      <div class="yh-stamp-redeem-text">
-        <p style="font-size:11px;letter-spacing:.3em;color:var(--rose);margin-bottom:12px;">集滿 5 張後</p>
-        <p style="font-size:15px;color:var(--white);line-height:2;">
-          於 Instagram、Threads、Facebook<br>任一平台打卡<br>
-          至服務台出示手冊及打卡頁面，即可兌換
-        </p>
-      </div>
-      <div class="yh-stamp-redeem-prize">
-        <div style="background:var(--gold);border-radius:16px;padding:18px 32px;margin-bottom:14px;">
-          <p style="font-family:'Noto Serif TC',serif;font-size:16px;font-weight:900;color:var(--primary);line-height:1.7;">🎉 鹽夏不夜埕專屬環保吸管杯 乙個 🎉</p>
+        <div class="yh-stamp-col">
+          <svg viewBox="0 0 80 80" width="64" height="64" style="flex-shrink:0;">
+            <circle cx="40" cy="40" r="36" fill="rgba(255,255,255,.7)" stroke="#C0546C" stroke-width="2" stroke-dasharray="6 3"/>
+            <text x="40" y="46" text-anchor="middle" font-family="Noto Serif TC,serif" font-size="20" font-weight="900" fill="#C0546C">01</text>
+          </svg>
+          <div class="yh-stamp-col-body">
+            <div style="font-family:'Noto Serif TC',serif;font-size:17px;font-weight:700;color:var(--primary);margin-bottom:10px;line-height:1.4;">裝置藝術展區</div>
+            <p style="font-size:13px;line-height:2.1;color:var(--primary);opacity:.75;">前往「呼吸」「蔓延」「共生」三大展區指定裝置藝術區 <strong style="opacity:1;">A2、B3、C4</strong>，各獲得 <mark style="background:rgba(242,190,92,.6);padding:1px 5px;border-radius:3px;">1 張展區貼紙</mark></p>
+          </div>
         </div>
-        <p style="font-size:11px;color:rgba(255,255,255,.45);line-height:2;letter-spacing:.05em;">
-          ※ 於 5/16、5/17、5/23 發送<br>每日限量 60 份，每人限換一份，送完為止
-        </p>
+
+        <div class="yh-stamp-col">
+          <svg viewBox="0 0 80 80" width="64" height="64" style="flex-shrink:0;">
+            <circle cx="40" cy="40" r="36" fill="rgba(255,255,255,.7)" stroke="#F2A488" stroke-width="2" stroke-dasharray="6 3"/>
+            <text x="40" y="46" text-anchor="middle" font-family="Noto Serif TC,serif" font-size="20" font-weight="900" fill="#F2A488">02</text>
+          </svg>
+          <div class="yh-stamp-col-body">
+            <div style="font-family:'Noto Serif TC',serif;font-size:17px;font-weight:700;color:var(--primary);margin-bottom:10px;line-height:1.4;">特色市集</div>
+            <p style="font-size:13px;line-height:2.1;color:var(--primary);opacity:.75;">於市集任一攤位消費，獲得 <mark style="background:rgba(242,190,92,.6);padding:1px 5px;border-radius:3px;">1 張貼紙</mark></p>
+          </div>
+        </div>
+
+        <div class="yh-stamp-col">
+          <svg viewBox="0 0 80 80" width="64" height="64" style="flex-shrink:0;">
+            <circle cx="40" cy="40" r="36" fill="rgba(255,255,255,.7)" stroke="#C7A4C3" stroke-width="2" stroke-dasharray="6 3"/>
+            <text x="40" y="46" text-anchor="middle" font-family="Noto Serif TC,serif" font-size="20" font-weight="900" fill="#C7A4C3">03</text>
+          </svg>
+          <div class="yh-stamp-col-body">
+            <div style="font-family:'Noto Serif TC',serif;font-size:17px;font-weight:700;color:var(--primary);margin-bottom:10px;line-height:1.4;">數位體驗〈埕花〉</div>
+            <p style="font-size:13px;line-height:2.1;color:var(--primary);opacity:.75;">參與〈埕花〉數位體驗並出示，獲得 <mark style="background:rgba(242,190,92,.6);padding:1px 5px;border-radius:3px;">1 張貼紙</mark></p>
+          </div>
+        </div>
+
       </div>
+
+      <!-- 右：兌換規則 -->
+      <div class="yh-stamp-redeem reveal">
+        <div class="yh-stamp-redeem-text">
+          <p class="yh-stamp-redeem-label">集滿 5 張後</p>
+          <p style="font-size:15px;color:var(--primary);line-height:2;">
+            於 Instagram、Threads、Facebook 任一平台打卡，至服務台出示手冊及打卡頁面，即可兌換
+          </p>
+        </div>
+        <div class="yh-stamp-redeem-prize">
+          <div style="background:var(--gold);border-radius:20px;padding:36px 40px;margin-bottom:14px;display:flex;align-items:center;justify-content:center;min-height:100px;">
+            <p class="yh-stamp-prize-text">🎉 鹽夏不夜埕<br>專屬環保吸管杯 乙個 🎉</p>
+          </div>
+          <p style="font-size:11px;color:rgba(26,38,64,.55);line-height:2;letter-spacing:.05em;">
+            ※ 於 5/16、5/17、5/23 發送，每日限量 60 份，每人限換一份，送完為止
+          </p>
+        </div>
+      </div>
+
     </div>
 
   </div>
@@ -2182,7 +2170,7 @@
       <img
         src="https://elsonyeh.github.io/yanhsia-official-website/map.png"
         alt="活動地圖"
-        style="display:block;width:100%;box-shadow:0 8px 40px rgba(28,43,74,.12);"
+        style="display:block;width:100%;box-shadow:0 8px 40px rgba(55,78,126,.12);"
         data-lb
       />
     </div>
