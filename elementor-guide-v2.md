@@ -45,7 +45,7 @@
   .yh-hero-bg {
     position: absolute;
     inset: 0;
-    background: url("https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8Fbanner%20%E7%84%A1%E5%90%89%E7%A5%A5%E7%89%A9%E7%89%88%E6%9C%AC.png")
+    background: url("https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8Fbanner%20%E7%84%A1%E5%90%89%E7%A5%A5%E7%89%A9%E7%89%88%E6%9C%AC.jpg")
       center/cover no-repeat;
   }
   /* 吉祥物 — 位置對應 banner 構圖 */
@@ -465,7 +465,7 @@
   }
   /* 花轟頁 Hero */
   .yh-page-hero{min-height:100vh;display:flex;align-items:center;padding:0 48px;position:relative;overflow:hidden;}
-  .yh-page-hero-bg{position:absolute;inset:0;background:url("https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8Fbanner%20%E7%84%A1%E5%90%89%E7%A5%A5%E7%89%A9%E7%89%88%E6%9C%AC.png")center/cover no-repeat;}
+  .yh-page-hero-bg{position:absolute;inset:0;background:url("https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8Fbanner%20%E7%84%A1%E5%90%89%E7%A5%A5%E7%89%A9%E7%89%88%E6%9C%AC.jpg")center/cover no-repeat;}
   .yh-page-hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(26,38,64,.92) 0%,rgba(26,38,64,.65) 50%,rgba(26,38,64,.1) 100%);}
   .yh-page-hero-inner{position:relative;z-index:2;max-width:1080px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;padding-top:80px;}
   .yh-page-eyebrow{font-size:10px;letter-spacing:.6em;color:var(--gold);margin-bottom:32px;display:flex;align-items:center;gap:14px;}
