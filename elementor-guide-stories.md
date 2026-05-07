@@ -598,7 +598,7 @@ function yhsObsClose(btn){
         </div>
         <div class="yh-s-obs-body">
           <p class="yh-s-obs-quote">鹽東雖然在高雄文史上並不顯赫有名，但其商業、休憩之功能不能被忽略。2020 年後，伴隨著市府對於愛河出海口段的規劃整治、輕軌通車、高雄流行音樂中心開幕、各項在真愛碼頭區舉辦的活動，促成了觀光遊客數量快速成長，鹽東的重要性值得被看見。</p>
-          <p style="font-size:13px;color:#999;margin-top:8px;">文：宋世祥｜國立中山大學人文暨科技跨領域學士學位學程副教授</p>
+          <p style="font-size:13px;color:#999;margin-top:8px;">文：宋世祥｜國立中山大學人文暨科技跨領域學士學位學程主任 專任副教授</p>
         </div>
         <button class="yh-s-obs-close" onclick="yhsObsClose(this)">收合 ↑</button>
       </div>
