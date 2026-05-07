@@ -113,6 +113,16 @@
   .yh-s-nav-fixed{position:fixed!important;top:0!important;left:0!important;right:0!important;z-index:9999!important;box-shadow:0 2px 12px rgba(26,38,64,.18);}
   .yh-s-nav-placeholder{display:none;}
   .yh-s-nav-placeholder.active{display:block;}
+  .yh-s-tab-nav{background:var(--surface);display:flex;justify-content:center;border-bottom:2px solid rgba(242,190,92,.2);}
+  .yh-s-tab-btn{padding:18px 48px;background:none;border:none;outline:none;color:var(--gray);font-family:'Noto Serif TC',serif;font-size:16px;font-weight:700;cursor:pointer;transition:color .2s;letter-spacing:.08em;position:relative;}
+  .yh-s-tab-btn::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transition:transform .3s;}
+  .yh-s-tab-btn:hover{color:var(--rose);}
+  .yh-s-tab-btn:focus,.yh-s-tab-btn:focus-visible{outline:none;background:none;}
+  .yh-s-tab-btn.active{color:var(--gold);}
+  .yh-s-tab-btn.active::after{transform:scaleX(1);}
+  .yh-s-tab-panel{display:none;}
+  .yh-s-tab-panel.active{display:block;}
+  @media(max-width:600px){.yh-s-tab-btn{padding:14px 18px;font-size:13px;}}
 </style>
 
 <div class="yh-s-nav-placeholder"></div>
