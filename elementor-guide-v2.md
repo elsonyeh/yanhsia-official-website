@@ -649,7 +649,7 @@
   }
   .yh-xp {
     background: #F8F4EF;
-    padding: 100px 48px;
+    padding: 60px 48px;
     position: relative;
     overflow: hidden;
   }
@@ -685,12 +685,12 @@
   .yh-xp-card {
     background: var(--white);
     border-radius: 20px;
-    padding: 32px 36px;
+    padding: 20px 28px;
     display: flex;
     flex-wrap: wrap;
-    gap: 28px;
+    gap: 20px;
     align-items: flex-start;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
   }
   .yh-xp-meta {
     flex-shrink: 0;
@@ -2141,6 +2141,163 @@
 ```
 
 > **Elementor 步驟：** 在元件 7b 下方新增一個 HTML 元件，貼上上方程式碼。
+
+---
+
+### 元件 7d — 花轟團隊成員
+
+> **注意：** 照片使用 GitHub CDN，需先將 `鹽夏成員照片/` 資料夾推送至 GitHub repository 才能顯示。
+
+```html
+<style>
+  .yh-team{background:var(--surface);padding:80px 48px;position:relative;overflow:hidden;}
+  .yh-team-header{text-align:center;margin-bottom:52px;position:relative;z-index:2;}
+  .yh-team-grid{display:grid;grid-template-columns:210px 1fr 1fr;max-width:1060px;margin:0 auto;position:relative;z-index:2;}
+  .yh-team-col{padding:0 36px;}
+  .yh-team-col:first-child{padding-left:0;border-right:1px solid rgba(255,255,255,.09);}
+  .yh-team-col:nth-child(2){border-right:1px solid rgba(255,255,255,.09);}
+  .yh-team-col:last-child{padding-right:0;}
+  .yh-team-col-label{font-size:10px;letter-spacing:.38em;color:rgba(255,255,255,.38);text-transform:uppercase;margin-bottom:24px;font-weight:700;}
+  .yh-pm-wrap{display:flex;flex-direction:column;gap:28px;}
+  .yh-pm-card{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;}
+  .yh-pm-ring{border-radius:50%;padding:3px;background:linear-gradient(135deg,var(--gold),var(--secondary));display:inline-block;box-shadow:0 4px 24px rgba(0,0,0,.25);}
+  .yh-pm-ring img{display:block;width:124px;height:124px;border-radius:50%;border:2px solid var(--surface);object-fit:cover;object-position:center 25%;}
+  .yh-pm-name{font-family:'Noto Serif TC',serif;font-size:16px;font-weight:900;color:var(--white);}
+  .yh-pm-role{display:inline-block;background:rgba(255,255,255,.12);color:rgba(255,255,255,.65);font-size:10px;letter-spacing:.12em;padding:3px 12px;border-radius:50px;border:1px solid rgba(255,255,255,.18);}
+  .yh-tm-groups{display:flex;flex-direction:column;gap:24px;}
+  .yh-tm-group-label{font-size:10px;letter-spacing:.25em;color:var(--gold);font-weight:700;margin-bottom:12px;text-transform:uppercase;}
+  .yh-tm-members{display:flex;flex-wrap:wrap;gap:14px 12px;}
+  .yh-tm-member{display:flex;flex-direction:column;align-items:center;gap:6px;width:100px;}
+  .yh-tm-ring{border-radius:50%;padding:2px;background:linear-gradient(135deg,var(--gold),var(--secondary));display:inline-block;}
+  .yh-tm-ring img{display:block;width:96px;height:96px;border-radius:50%;border:2px solid var(--surface);object-fit:cover;object-position:center 25%;}
+  .yh-tm-name{font-family:'Noto Serif TC',serif;font-size:12px;font-weight:700;color:var(--white);text-align:center;line-height:1.3;}
+  @media(max-width:900px){
+    .yh-team{padding:72px 24px;}
+    .yh-team-grid{grid-template-columns:1fr;}
+    .yh-team-col{padding:0;border:none!important;margin-bottom:44px;}
+    .yh-team-col:last-child{margin-bottom:0;}
+    .yh-team-col-label{margin-bottom:18px;}
+    .yh-pm-wrap{flex-direction:row;justify-content:center;flex-wrap:wrap;gap:24px 36px;}
+    .yh-tm-groups{flex-direction:row;flex-wrap:wrap;gap:20px 36px;}
+  }
+  @media(max-width:480px){
+    .yh-team{padding:60px 20px;}
+    .yh-tm-groups{flex-direction:column;}
+    .yh-tm-members{gap:10px 8px;}
+    .yh-tm-member{width:88px;}
+    .yh-tm-ring img{width:84px;height:84px;}
+  }
+</style>
+
+<section class="yh-team">
+  <img style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.07;pointer-events:none;z-index:1;" src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9%E5%80%91-20260416T013420Z-3-001/%E9%BB%9E%E7%B6%B4%E7%89%A9%E5%80%91/%E8%B3%87%E7%94%A2%20114.png" alt="">
+  <img style="position:absolute;top:56px;left:20px;width:54px;opacity:.45;animation:yh-xp-float-r 3.6s ease-in-out infinite;pointer-events:none;z-index:3;" src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9%E5%80%91-20260416T013420Z-3-001/%E9%BB%9E%E7%B6%B4%E7%89%A9%E5%80%91/%E8%B3%87%E7%94%A2%2096.png" alt="">
+  <img style="position:absolute;top:56px;right:20px;width:54px;opacity:.45;animation:yh-xp-float 4s ease-in-out infinite .5s;pointer-events:none;z-index:3;" src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9%E5%80%91-20260416T013420Z-3-001/%E9%BB%9E%E7%B6%B4%E7%89%A9%E5%80%91/%E8%B3%87%E7%94%A2%20105.png" alt="">
+  <img style="position:absolute;bottom:0;left:-8px;width:110px;opacity:.55;animation:yh-xp-float-r 4.2s ease-in-out infinite .8s;pointer-events:none;z-index:3;" src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E8%97%8D%E7%8E%AB%E7%91%B0.png" alt="">
+  <img style="position:absolute;bottom:0;right:-8px;width:100px;opacity:.5;animation:yh-xp-float 3.8s ease-in-out infinite .3s;pointer-events:none;z-index:3;" src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E8%96%B0%E8%A1%A3%E8%8D%89.png" alt="">
+
+  <div class="yh-team-header">
+    <div class="yh-section-label">OUR TEAM</div>
+    <h2 class="yh-section-title" style="color:var(--white);">認識鹽夏團隊</h2>
+  </div>
+
+  <div class="yh-team-grid">
+
+    <!-- ── PM ── -->
+    <div class="yh-team-col">
+      <div class="yh-team-col-label">Project Manager</div>
+      <div class="yh-pm-wrap">
+        <div class="yh-pm-card">
+          <div class="yh-pm-ring"><img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8F%E6%88%90%E5%93%A1%E7%85%A7%E7%89%87/PM/%E8%A8%AD%E8%A8%88%E8%A1%8C%E9%8A%B7_%E9%BB%83%E5%86%A0%E8%87%BB.JPG" alt="黃冠臻"></div>
+          <div class="yh-pm-name">黃冠臻</div>
+          <div class="yh-pm-role">設計行銷 PM</div>
+        </div>
+        <div class="yh-pm-card">
+          <div class="yh-pm-ring"><img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8F%E6%88%90%E5%93%A1%E7%85%A7%E7%89%87/PM/%E9%AB%94%E9%A9%97%E8%A6%8F%E5%8A%83_%E9%99%B3%E5%93%81%E8%93%81.JPG" alt="陳品蓁"></div>
+          <div class="yh-pm-name">陳品蓁</div>
+          <div class="yh-pm-role">體驗規劃 PM</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 設計行銷 ── -->
+    <div class="yh-team-col">
+      <div class="yh-team-col-label">Design &amp; Marketing</div>
+      <div class="yh-tm-groups">
+        <div class="yh-tm-group">
+          <div class="yh-tm-group-label">公關志工</div>
+          <div class="yh-tm-members">
+            <div class="yh-tm-member"><div class="yh-tm-ring"><img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8F%E6%88%90%E5%93%A1%E7%85%A7%E7%89%87/%E8%A8%AD%E8%A8%88%E8%A1%8C%E9%8A%B7/%E5%85%AC%E9%97%9C%E5%BF%97%E5%B7%A5/%E7%B4%80%E6%BD%94.png" alt="紀潔"></div><div class="yh-tm-name">紀潔</div></div>
+            <div class="yh-tm-member"><div class="yh-tm-ring"><img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8F%E6%88%90%E5%93%A1%E7%85%A7%E7%89%87/%E8%A8%AD%E8%A8%88%E8%A1%8C%E9%8A%B7/%E5%85%AC%E9%97%9C%E5%BF%97%E5%B7%A5/%E9%BB%83%E7%91%80%E5%BD%A4.JPG" alt="黃瑀彤"></div><div class="yh-tm-name">黃瑀彤</div></div>
+          </div>
+        </div>
+        <div class="yh-tm-group">
+          <div class="yh-tm-group-label">平面設計</div>
+          <div class="yh-tm-members">
+            <div class="yh-tm-member"><div class="yh-tm-ring"><img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8F%E6%88%90%E5%93%A1%E7%85%A7%E7%89%87/%E8%A8%AD%E8%A8%88%E8%A1%8C%E9%8A%B7/%E5%B9%B3%E9%9D%A2%E8%A8%AD%E8%A8%88/%E6%9D%8E%E5%AE%A3%E5%A6%AE.JPG" alt="李宣妮"></div><div class="yh-tm-name">李宣妮</div></div>
+            <div class="yh-tm-member"><div class="yh-tm-ring"><img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8F%E6%88%90%E5%93%A1%E7%85%A7%E7%89%87/%E8%A8%AD%E8%A8%88%E8%A1%8C%E9%8A%B7/%E5%B9%B3%E9%9D%A2%E8%A8%AD%E8%A8%88/%E9%82%B1%E6%B8%9D%E6%B6%B5.png" alt="邱渝涵"></div><div class="yh-tm-name">邱渝涵</div></div>
+          </div>
+        </div>
+        <div class="yh-tm-group">
+          <div class="yh-tm-group-label">電媒行銷</div>
+          <div class="yh-tm-members">
+            <div class="yh-tm-member"><div class="yh-tm-ring"><img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8F%E6%88%90%E5%93%A1%E7%85%A7%E7%89%87/%E8%A8%AD%E8%A8%88%E8%A1%8C%E9%8A%B7/%E9%9B%BB%E5%AA%92%E8%A1%8C%E9%8A%B7/%E7%BF%81%E5%9C%93%E8%88%92.JPG" alt="翁圓舒"></div><div class="yh-tm-name">翁圓舒</div></div>
+            <div class="yh-tm-member"><div class="yh-tm-ring"><img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8F%E6%88%90%E5%93%A1%E7%85%A7%E7%89%87/%E8%A8%AD%E8%A8%88%E8%A1%8C%E9%8A%B7/%E9%9B%BB%E5%AA%92%E8%A1%8C%E9%8A%B7/%E8%91%89%E6%98%B1%E8%BE%B0.JPG" alt="葉昱辰"></div><div class="yh-tm-name">葉昱辰</div></div>
+          </div>
+        </div>
+        <div class="yh-tm-group">
+          <div class="yh-tm-group-label">攝影影音</div>
+          <div class="yh-tm-members">
+            <div class="yh-tm-member"><div class="yh-tm-ring"><img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8F%E6%88%90%E5%93%A1%E7%85%A7%E7%89%87/%E8%A8%AD%E8%A8%88%E8%A1%8C%E9%8A%B7/%E6%94%9D%E5%BD%B1%E5%BD%B1%E9%9F%B3/%E6%9E%97%E8%81%B2%E7%80%9A.JPG" alt="林聲瀚"></div><div class="yh-tm-name">林聲瀚</div></div>
+            <div class="yh-tm-member"><div class="yh-tm-ring"><img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8F%E6%88%90%E5%93%A1%E7%85%A7%E7%89%87/%E8%A8%AD%E8%A8%88%E8%A1%8C%E9%8A%B7/%E6%94%9D%E5%BD%B1%E5%BD%B1%E9%9F%B3/%E9%AB%98%E6%A5%B7%E9%BE%8D.JPG" alt="高楷龍"></div><div class="yh-tm-name">高楷龍</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 體驗規劃 ── -->
+    <div class="yh-team-col">
+      <div class="yh-team-col-label">Experience Planning</div>
+      <div class="yh-tm-groups">
+        <div class="yh-tm-group">
+          <div class="yh-tm-group-label">市集</div>
+          <div class="yh-tm-members">
+            <div class="yh-tm-member"><div class="yh-tm-ring"><img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8F%E6%88%90%E5%93%A1%E7%85%A7%E7%89%87/%E9%AB%94%E9%A9%97%E8%A6%8F%E5%8A%83/%E5%B8%82%E9%9B%86/%E6%9D%8E%E7%9B%88%E8%90%B1.png" alt="李盈萱"></div><div class="yh-tm-name">李盈萱</div></div>
+            <div class="yh-tm-member"><div class="yh-tm-ring"><img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8F%E6%88%90%E5%93%A1%E7%85%A7%E7%89%87/%E9%AB%94%E9%A9%97%E8%A6%8F%E5%8A%83/%E5%B8%82%E9%9B%86/%E6%9E%97%E6%AF%85%E4%BF%A1.JPG" alt="林毅信"></div><div class="yh-tm-name">林毅信</div></div>
+            <div class="yh-tm-member"><div class="yh-tm-ring"><img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8F%E6%88%90%E5%93%A1%E7%85%A7%E7%89%87/%E9%AB%94%E9%A9%97%E8%A6%8F%E5%8A%83/%E5%B8%82%E9%9B%86/%E6%B4%AA%E5%BF%83%E6%82%85.JPG" alt="洪心悅"></div><div class="yh-tm-name">洪心悅</div></div>
+            <div class="yh-tm-member"><div class="yh-tm-ring"><img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8F%E6%88%90%E5%93%A1%E7%85%A7%E7%89%87/%E9%AB%94%E9%A9%97%E8%A6%8F%E5%8A%83/%E5%B8%82%E9%9B%86/%E9%9F%93%E6%A2%93%E8%8C%9C.JPG" alt="韓梓茜"></div><div class="yh-tm-name">韓梓茜</div></div>
+          </div>
+        </div>
+        <div class="yh-tm-group">
+          <div class="yh-tm-group-label">表演藝術</div>
+          <div class="yh-tm-members">
+            <div class="yh-tm-member"><div class="yh-tm-ring"><img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8F%E6%88%90%E5%93%A1%E7%85%A7%E7%89%87/%E9%AB%94%E9%A9%97%E8%A6%8F%E5%8A%83/%E8%A1%A8%E6%BC%94%E8%97%9D%E8%A1%93/%E6%9E%97%E5%A5%95%E6%99%B4.JPG" alt="林奕晴"></div><div class="yh-tm-name">林奕晴</div></div>
+            <div class="yh-tm-member"><div class="yh-tm-ring"><img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8F%E6%88%90%E5%93%A1%E7%85%A7%E7%89%87/%E9%AB%94%E9%A9%97%E8%A6%8F%E5%8A%83/%E8%A1%A8%E6%BC%94%E8%97%9D%E8%A1%93/%E9%BB%83%E6%98%9F%E6%9B%9C.JPG" alt="黃星曜"></div><div class="yh-tm-name">黃星曜</div></div>
+            <div class="yh-tm-member"><div class="yh-tm-ring"><img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8F%E6%88%90%E5%93%A1%E7%85%A7%E7%89%87/%E9%AB%94%E9%A9%97%E8%A6%8F%E5%8A%83/%E8%A1%A8%E6%BC%94%E8%97%9D%E8%A1%93/%E8%91%89%E7%80%9E%E6%A3%8B.jpg" alt="葉瀞棋"></div><div class="yh-tm-name">葉瀞棋</div></div>
+          </div>
+        </div>
+        <div class="yh-tm-group">
+          <div class="yh-tm-group-label">推廣開幕</div>
+          <div class="yh-tm-members">
+            <div class="yh-tm-member"><div class="yh-tm-ring"><img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8F%E6%88%90%E5%93%A1%E7%85%A7%E7%89%87/%E9%AB%94%E9%A9%97%E8%A6%8F%E5%8A%83/%E6%8E%A8%E5%BB%A3%E9%96%8B%E5%B9%95/%E4%BB%B2%E6%84%9B.JPG" alt="仲愛"></div><div class="yh-tm-name">仲愛</div></div>
+            <div class="yh-tm-member"><div class="yh-tm-ring"><img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8F%E6%88%90%E5%93%A1%E7%85%A7%E7%89%87/%E9%AB%94%E9%A9%97%E8%A6%8F%E5%8A%83/%E6%8E%A8%E5%BB%A3%E9%96%8B%E5%B9%95/%E9%80%A3%E6%A2%93%E6%99%B0.JPG" alt="連梓晰"></div><div class="yh-tm-name">連梓晰</div></div>
+          </div>
+        </div>
+        <div class="yh-tm-group">
+          <div class="yh-tm-group-label">裝置藝術</div>
+          <div class="yh-tm-members">
+            <div class="yh-tm-member"><div class="yh-tm-ring"><img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8F%E6%88%90%E5%93%A1%E7%85%A7%E7%89%87/%E9%AB%94%E9%A9%97%E8%A6%8F%E5%8A%83/%E8%A3%9D%E7%BD%AE%E8%97%9D%E8%A1%93/%E6%9D%8E%E5%AE%9C%E5%BA%AD.JPG" alt="李宜庭"></div><div class="yh-tm-name">李宜庭</div></div>
+            <div class="yh-tm-member"><div class="yh-tm-ring"><img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8F%E6%88%90%E5%93%A1%E7%85%A7%E7%89%87/%E9%AB%94%E9%A9%97%E8%A6%8F%E5%8A%83/%E8%A3%9D%E7%BD%AE%E8%97%9D%E8%A1%93/%E6%9D%8E%E7%A5%90%E5%AE%89.JPG" alt="李祐安"></div><div class="yh-tm-name">李祐安</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+```
+
+> **Elementor 步驟：** 在元件 7c（集章活動）下方新增一個 HTML 元件，貼上上方程式碼。
 
 ---
 
