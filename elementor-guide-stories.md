@@ -536,19 +536,79 @@ function yhsObsClose(btn){
 
 ---
 
-## 元件 6 — 小埕遊記（預留）
+## 元件 6 — 小埕遊記
+
+> **⚠️ 圖片前置：** 照片推上 GitHub Pages 後，CDN 路徑如下：
+> - 走入鹽東：`https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E9%81%8A%E8%A8%98/%E8%B7%9F%E8%91%97%E9%B9%BD%E5%A4%8F%E8%B5%B0%E5%85%A5%E9%B9%BD%E6%9D%B1/%E7%85%A7%E7%89%87/`
+
+> **設計說明：** 採用與小埕觀察家相同的折疊式文章設計，CSS 已在元件 5 定義，直接使用相同 class。
 
 ```html
 <div id="yh-s-tab-travel" class="yh-s-tab-panel" style="background:var(--bg);">
-  <div class="yh-s-travel">
+  <div class="yh-s-observer">
     <div class="yh-s-label">TRAVEL DIARY 小埕遊記</div>
     <h2 class="yh-s-section-title">在鹽埕漫遊<br>留下你的足跡</h2>
-    <p class="yh-s-travel-intro">內容即將登場，敬請期待。</p>
+    <p class="yh-s-observer-intro yh-s-reveal">跟著鹽夏的腳步，走進這座城市的肌理。小埕遊記記錄鹽埕的歷史脈絡、街區風景與在地故事，讓每一次漫步都成為一場有溫度的相遇。</p>
+
+    <!-- ── 文章：走入鹽東 ── -->
+    <article class="yh-s-article yh-s-reveal">
+      <div class="yh-s-article-header">
+        <div class="yh-s-article-meta">
+          <span class="yh-s-obs-tag">街區誌</span>
+          <span class="yh-s-obs-date">2026.05</span>
+        </div>
+        <h3 class="yh-s-article-title">跟著鹽夏一起花轟，一起走入「鹽東」</h3>
+        <p class="yh-s-article-hook">從日治時代的榮町到今日的福容大飯店，鹽東的每條街道都藏著高雄最濃縮的城市記憶</p>
+      </div>
+      <div class="yh-s-article-preview">
+        <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E9%81%8A%E8%A8%98/%E8%B7%9F%E8%91%97%E9%B9%BD%E5%A4%8F%E8%B5%B0%E5%85%A5%E9%B9%BD%E6%9D%B1/%E7%85%A7%E7%89%87/1.jpg" alt="">
+        <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E9%81%8A%E8%A8%98/%E8%B7%9F%E8%91%97%E9%B9%BD%E5%A4%8F%E8%B5%B0%E5%85%A5%E9%B9%BD%E6%9D%B1/%E7%85%A7%E7%89%87/2.jpg" alt="">
+        <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E9%81%8A%E8%A8%98/%E8%B7%9F%E8%91%97%E9%B9%BD%E5%A4%8F%E8%B5%B0%E5%85%A5%E9%B9%BD%E6%9D%B1/%E7%85%A7%E7%89%87/1.jpg" alt="" style="object-position:right center;">
+      </div>
+      <button class="yh-s-obs-toggle" onclick="yhsObsToggle(this)">
+        <span class="yh-s-obs-toggle-label">展開閱讀</span>
+        <span class="yh-s-obs-toggle-arrow">↓</span>
+      </button>
+      <div class="yh-s-article-body">
+        <div class="yh-s-obs-hero">
+          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E9%81%8A%E8%A8%98/%E8%B7%9F%E8%91%97%E9%B9%BD%E5%A4%8F%E8%B5%B0%E5%85%A5%E9%B9%BD%E6%9D%B1/%E7%85%A7%E7%89%87/1.jpg" alt="鹽東街景" style="object-position:center 40%;">
+        </div>
+        <div class="yh-s-obs-body">
+          <p>本屆「鹽夏不夜埕」選擇了鹽埕東側（後文稱「鹽東」）作為舉辦地，以育仁里、沙地里、南端里為我們的主要場域，希望帶領民眾更加認識該區域。</p>
+        </div>
+        <div class="yh-s-obs-body">
+          <div class="yh-s-obs-label">日治時期的鹽東</div>
+          <p>鹽東最早開發的階段可追溯自日治時期，今日的育仁里當時稱「榮町」，為當時日本人居住之地區，並有良好的商業機能，甚至亦有蓬勃的風化區（遊廓），那時的貸座敷主要是由旗后遷移過來。沙地里與南端里早年為荒涼的海沙埔，俗稱沙仔地，日治時期命名為「入船町」。根據日日新報記載，1933 年這裡曾有跑馬場舉辦當時的賽馬活動。綜合來講，「鹽東」可以說從日治時期就已經是當時高雄人重要的休憩中心。</p>
+        </div>
+        <div class="yh-s-photo-pair">
+          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E9%81%8A%E8%A8%98/%E8%B7%9F%E8%91%97%E9%B9%BD%E5%A4%8F%E8%B5%B0%E5%85%A5%E9%B9%BD%E6%9D%B1/%E7%85%A7%E7%89%87/1.jpg" alt="鹽東街景一">
+          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E9%81%8A%E8%A8%98/%E8%B7%9F%E8%91%97%E9%B9%BD%E5%A4%8F%E8%B5%B0%E5%85%A5%E9%B9%BD%E6%9D%B1/%E7%85%A7%E7%89%87/2.jpg" alt="鹽東街景二">
+        </div>
+        <div class="yh-s-obs-body">
+          <div class="yh-s-obs-label">光復後的街區轉型</div>
+          <p>國民政府來台後，曾經的遊廓區被拆除，1957 年今日鹽埕國中的位置上改建起圓山大飯店，並於 1970 年停止營運移至澄清湖畔。今日的新樂街綠廊過去是從 1940 年代即存在的「竹仔市」，以竹籬笆蓋起的印象至今仍為當地人所記得。該市場在 1951 年改建成為大智公有市場，成為當地人重要的購物餐飲空間，但於 2008 年因為市容整頓而拆除。相較於鹽埕區其他區域，今日鹽東的連棟式建築多建於 1960 年代之後，反映了當時建築觀念與技術的變化，強調理性、效率的風格成為這裡的景觀基調。五福路南側靠近公園路段，則保留了船舶五金產業，連結了入船町的歷史。</p>
+        </div>
+        <div class="yh-s-obs-body">
+          <div class="yh-s-obs-label">五福四路的商業脈動</div>
+          <p>受到越戰與美援的影響，五福四路上許多知名商業空間在 1960 年代開幕，見證了當時該區域的快速變化。1967 年新統一牛排館開幕，自此成為高雄民眾享受美式高端餐飲的新選擇。1968 年華王大飯店開幕，其建築見證了鹽埕區的輝煌歷史，也成為高雄民眾結婚、宴客的重要空間。1970 年代開業的瑞士大飯店，雖然名稱洋氣，但多以中式餐點為主，其中的芋頭香酥鴨至今仍為許多老饕所懷念。華王大飯店雖在 2019 年停業拆除，但 2010 年從「城市毒瘤」宜民大樓搖身一變的福容大飯店，則成為在地最重要的景觀地標之一。</p>
+        </div>
+        <div class="yh-s-obs-body">
+          <div class="yh-s-obs-label">飲品文化</div>
+          <p>五福四路上的飲品文化也非常值得體驗。已經營業 45 年的友加友咖啡，可能是高雄最早開始自烘咖啡豆的咖啡店，其飲品也成為高雄咖啡愛好者的共同回憶。在七賢路酒吧沒落之後，該區成為酒吧最密集的區段，貓頭鷹酒館、流浪者酒館、牛津啤酒屋 Oxford 等，均是今日高雄酒吧文化的重要代表與推手。</p>
+        </div>
+        <div class="yh-s-obs-body">
+          <p class="yh-s-obs-quote">鹽東雖然在高雄文史上並不顯赫有名，但其商業、休憩之功能不能被忽略。2020 年後，伴隨著市府對於愛河出海口段的規劃整治、輕軌通車、高雄流行音樂中心開幕、各項在真愛碼頭區舉辦的活動，促成了觀光遊客數量快速成長，鹽東的重要性值得被看見。</p>
+          <p style="font-size:13px;color:#999;margin-top:8px;">文：宋世祥｜國立中山大學人文暨科技跨領域學士學位學程副教授</p>
+        </div>
+        <button class="yh-s-obs-close" onclick="yhsObsClose(this)">收合 ↑</button>
+      </div>
+    </article>
+
   </div>
 </div>
 ```
 
-> **Elementor 步驟：** 預設隱藏，點擊「小埕遊記」tab 時顯示。有內容後直接在此新增 `.yh-s-travel-list` 項目。
+> **Elementor 步驟：** 預設隱藏，點擊「小埕遊記」tab 時顯示。新增文章時，複製 `<article>` 區塊，更新標題、日期、CDN 圖片 URL 及文字即可；最新文章放在最上面。JS 函式 `yhsObsToggle` / `yhsObsClose` 已在元件 5 定義，無需重複加入。
 
 ---
 
