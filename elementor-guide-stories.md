@@ -116,7 +116,7 @@
   .yh-s-tab-nav{background:var(--surface);display:flex;justify-content:center;border-bottom:2px solid rgba(242,190,92,.2);}
   .yh-s-tab-btn{padding:18px 48px;background:none;border:none;outline:none;color:var(--gray);font-family:'Noto Serif TC',serif;font-size:16px;font-weight:700;cursor:pointer;transition:color .2s;letter-spacing:.08em;position:relative;}
   .yh-s-tab-btn::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transition:transform .3s;}
-  .yh-s-tab-btn:hover{color:var(--rose);}
+  .yh-s-tab-btn:hover{color:var(--rose);background:none;}
   .yh-s-tab-btn:focus,.yh-s-tab-btn:focus-visible{outline:none;background:none;}
   .yh-s-tab-btn.active{color:var(--gold);}
   .yh-s-tab-btn.active::after{transform:scaleX(1);}

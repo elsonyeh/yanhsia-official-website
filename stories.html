@@ -79,7 +79,8 @@
     .tab-nav{background:var(--surface);position:sticky;top:65px;z-index:100;display:flex;justify-content:center;border-bottom:2px solid rgba(242,190,92,.2);}
     .tab-btn{padding:18px 48px;background:none;border:none;color:var(--gray);font-family:'Noto Serif TC',serif;font-size:16px;font-weight:700;cursor:pointer;transition:color .2s;letter-spacing:.08em;position:relative;}
     .tab-btn::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transition:transform .3s;}
-    .tab-btn:hover{color:var(--rose);}
+    .tab-btn:hover{color:var(--rose);background:none;}
+    .tab-btn:focus,.tab-btn:focus-visible{outline:none;background:none;}
     .tab-btn.active{color:var(--gold);}
     .tab-btn.active::after{transform:scaleX(1);}
     @media(max-width:600px){.tab-btn{padding:14px 18px;font-size:13px;}}
