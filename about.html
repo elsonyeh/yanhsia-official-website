@@ -9,7 +9,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;700;900&display=swap" rel="stylesheet">
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-    :root{--primary:#1A2640;--surface:#374E7E;--secondary:#C0546C;--bg:#F2D9D0;--gold:#F2BE5C;--peach:#F2A488;--gray:#CFC9CC;--rose:#E9ABAB;--white:#FFFFFF;}
+    :root{
+      --primary:#1A2640;--surface:#374E7E;--secondary:#C0546C;--bg:#F2D9D0;
+      --gold:#F2BE5C;--peach:#F2A488;--blue:#5B7BA6;
+      --gray:#CFC9CC;--rose:#E9ABAB;--white:#FFFFFF;
+    }
     html{scroll-behavior:smooth;}
     body{font-family:'Noto Sans TC',sans-serif;background:var(--bg);color:var(--primary);overflow-x:hidden;}
 
@@ -22,67 +26,79 @@
     .nav-active{border-bottom:1px solid var(--gold);padding-bottom:2px;}
     @media(max-width:900px){nav{padding:12px 20px;}.nav-links{display:none;}}
 
-    /* PAGE HERO */
-    .page-hero{background:var(--secondary);padding:110px 48px 56px;text-align:center;position:relative;overflow:hidden;}
-    .page-hero-bg{position:absolute;inset:0;background:url('./點綴物/可愛的草叢.png')bottom/cover no-repeat;opacity:.15;pointer-events:none;}
-    .page-hero-inner{position:relative;z-index:2;}
-    .page-eyebrow{font-size:11px;letter-spacing:.5em;color:rgba(255,255,255,.6);margin-bottom:12px;}
-    .page-title{font-family:'Noto Serif TC',serif;font-size:clamp(40px,6vw,72px);font-weight:900;color:var(--white);line-height:1;}
-    .page-sub{margin-top:12px;font-size:14px;color:rgba(255,255,255,.65);letter-spacing:.15em;}
-    .hero-deco{position:absolute;bottom:0;display:flex;align-items:flex-end;gap:4px;pointer-events:none;z-index:3;}
-    .hero-deco-l{left:32px;}.hero-deco-r{right:32px;}
-    .hero-deco img{width:68px;animation:floatA 3.5s ease-in-out infinite;}
-    .hero-deco img:nth-child(2){animation-delay:.65s;}
-    @media(max-width:900px){.hero-deco{display:none;}}
+    /* ── HERO ── */
+    .team-hero{background:var(--surface);min-height:72vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:110px 48px 80px;}
+    .t-texture{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.07;pointer-events:none;z-index:1;}
+    .t-deco{position:absolute;pointer-events:none;z-index:3;}
+    .team-hero-inner{position:relative;z-index:2;text-align:center;max-width:640px;}
+    .hero-eyebrow{font-size:10px;letter-spacing:.6em;color:var(--gold);margin-bottom:28px;display:flex;align-items:center;justify-content:center;gap:14px;}
+    .hero-eyebrow::before,.hero-eyebrow::after{content:'';display:block;width:32px;height:1px;background:var(--gold);flex-shrink:0;}
+    .team-hero-title{font-family:'Noto Serif TC',serif;font-size:clamp(48px,8vw,96px);font-weight:900;color:var(--white);line-height:1;letter-spacing:-.02em;margin-bottom:20px;}
+    .team-hero-rule{width:48px;height:2px;background:var(--secondary);margin:0 auto 20px;}
+    .team-hero-sub{font-size:15px;color:rgba(242,217,208,.75);letter-spacing:.1em;line-height:1.9;}
+    /* Giant ghost character */
+    .hero-ghost{position:absolute;font-family:'Noto Serif TC',serif;font-size:clamp(280px,42vw,580px);font-weight:900;color:rgba(255,255,255,.025);line-height:1;top:50%;left:50%;transform:translate(-50%,-50%);user-select:none;pointer-events:none;z-index:1;white-space:nowrap;}
+    @media(max-width:700px){.team-hero{min-height:60vh;padding:100px 24px 64px;}}
 
-    /* SECTION BASE */
-    .section-label{font-size:11px;letter-spacing:.45em;color:var(--gold);margin-bottom:12px;text-transform:uppercase;}
-    .section-title{font-family:'Noto Serif TC',serif;font-size:clamp(28px,3.5vw,46px);font-weight:900;line-height:1.2;color:var(--primary);}
+    /* ── PM ── */
+    .pm-section{background:var(--secondary);padding:110px 48px;position:relative;overflow:hidden;text-align:center;}
+    .pm-section .t-texture{opacity:.05;}
+    .pm-label{font-size:11px;letter-spacing:.5em;color:rgba(255,255,255,.55);margin-bottom:12px;}
+    .pm-title{font-family:'Noto Serif TC',serif;font-size:clamp(28px,4vw,48px);font-weight:900;color:var(--white);margin-bottom:56px;line-height:1.2;}
+    .pm-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;max-width:520px;margin:0 auto;position:relative;z-index:2;}
+    .pm-card{text-align:center;}
+    .pm-ring{display:inline-block;border-radius:50%;padding:4px;background:linear-gradient(135deg,var(--gold),rgba(255,255,255,.6));box-shadow:0 0 0 6px rgba(255,255,255,.12),0 8px 40px rgba(0,0,0,.2);margin-bottom:20px;}
+    .pm-ring img{display:block;width:144px;height:144px;border-radius:50%;border:3px solid var(--secondary);object-fit:cover;object-position:center top;}
+    .pm-name{font-family:'Noto Serif TC',serif;font-size:22px;font-weight:900;color:var(--white);margin-bottom:10px;}
+    .pm-role{display:inline-block;background:rgba(255,255,255,.18);color:var(--white);font-size:11px;letter-spacing:.18em;padding:5px 18px;border-radius:50px;font-weight:700;border:1px solid rgba(255,255,255,.3);}
+    @media(max-width:600px){.pm-section{padding:72px 24px;}.pm-grid{grid-template-columns:1fr;max-width:220px;}}
 
-    /* PM SECTION */
-    .pm-section{background:var(--bg);padding:100px 48px;text-align:center;}
-    .pm-header{margin-bottom:60px;}
-    .pm-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;max-width:560px;margin:0 auto;}
-    .pm-card{background:var(--white);border-radius:24px;padding:44px 32px;text-align:center;transition:transform .3s,box-shadow .3s;}
-    .pm-card:hover{transform:translateY(-8px);box-shadow:0 16px 48px rgba(26,38,64,.1);}
-    .pm-photo{width:120px;height:120px;border-radius:50%;object-fit:cover;object-position:center top;margin:0 auto 20px;display:block;border:4px solid var(--peach);}
-    .pm-name{font-family:'Noto Serif TC',serif;font-size:22px;font-weight:900;margin-bottom:8px;color:var(--primary);}
-    .pm-role{display:inline-block;background:var(--secondary);color:var(--white);font-size:11px;letter-spacing:.1em;padding:4px 14px;border-radius:50px;font-weight:700;}
-    @media(max-width:600px){.pm-section{padding:64px 24px;}.pm-grid{grid-template-columns:1fr;max-width:240px;}}
+    /* ── DEPT BASE ── */
+    .dept-section{padding:110px 48px;position:relative;overflow:hidden;}
+    .dept-section.on-bg{background:var(--bg);}
+    .dept-section.on-dark{background:var(--surface);}
+    .dept-header{text-align:center;margin-bottom:80px;position:relative;z-index:2;}
+    .dept-label{font-size:11px;letter-spacing:.45em;margin-bottom:12px;text-transform:uppercase;}
+    .on-dark .dept-label{color:var(--gold);}
+    .on-bg .dept-label{color:var(--secondary);}
+    .dept-title{font-family:'Noto Serif TC',serif;font-size:clamp(28px,4vw,50px);font-weight:900;line-height:1.15;}
+    .on-dark .dept-title{color:var(--white);}
+    .on-bg .dept-title{color:var(--primary);}
 
-    /* DEPT SECTION */
-    .dept-section{padding:100px 48px;}
-    .dept-section.dark{background:var(--surface);}
-    .dept-section.light{background:var(--bg);}
-    .dept-section.dark .section-label{color:var(--gold);}
-    .dept-section.light .section-label{color:var(--secondary);}
-    .dept-section.dark .section-title{color:var(--white);}
-    .dept-header{text-align:center;margin-bottom:72px;}
-    .subgroup-wrap{max-width:900px;margin:0 auto;}
-    .subgroup{margin-bottom:56px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,.08);}
-    .dept-section.light .subgroup{border-bottom-color:rgba(26,38,64,.07);}
-    .subgroup:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
-    .subgroup-label{display:inline-block;font-size:11px;letter-spacing:.3em;font-weight:700;padding:5px 18px;border-radius:50px;margin-bottom:28px;text-transform:uppercase;}
-    .dept-section.dark .subgroup-label{background:rgba(255,255,255,.12);color:rgba(255,255,255,.75);}
-    .dept-section.light .subgroup-label{background:rgba(192,84,108,.1);color:var(--secondary);}
-    .member-grid{display:flex;flex-wrap:wrap;gap:32px 36px;}
+    /* ── SUBGROUP LAYOUT ── */
+    .subgroups-inner{max-width:960px;margin:0 auto;position:relative;z-index:2;}
+    .subgroup-row{display:flex;flex-wrap:wrap;gap:56px 80px;margin-bottom:60px;}
+    .subgroup-row:last-child{margin-bottom:0;}
+    .subgroup{}
+    .sg-label{display:inline-block;font-size:10px;letter-spacing:.32em;font-weight:700;padding:4px 16px;border-radius:50px;margin-bottom:22px;text-transform:uppercase;}
+    .on-dark .sg-label{background:rgba(255,255,255,.12);color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.15);}
+    .on-bg .sg-label{background:rgba(192,84,108,.1);color:var(--secondary);border:1px solid rgba(192,84,108,.18);}
+    .member-flex{display:flex;flex-wrap:wrap;gap:24px 28px;}
 
-    /* MEMBER CARD */
-    .member-card{display:flex;flex-direction:column;align-items:center;gap:8px;width:88px;}
-    .member-photo{width:88px;height:88px;border-radius:50%;object-fit:cover;object-position:center top;display:block;flex-shrink:0;}
-    .dept-section.dark .member-photo{border:3px solid rgba(255,255,255,.18);}
-    .dept-section.light .member-photo{border:3px solid rgba(192,84,108,.15);}
-    .member-name{font-size:14px;font-weight:700;text-align:center;letter-spacing:.04em;line-height:1.4;}
-    .dept-section.dark .member-name{color:var(--white);}
-    .dept-section.light .member-name{color:var(--primary);}
+    /* ── MEMBER CARD ── */
+    .member-card{display:flex;flex-direction:column;align-items:center;gap:9px;width:92px;}
+    .m-ring{display:inline-block;border-radius:50%;padding:3px;margin-bottom:0;}
+    .on-dark .m-ring{background:linear-gradient(135deg,var(--gold),var(--secondary));}
+    .on-bg .m-ring{background:linear-gradient(135deg,var(--secondary),var(--gold));}
+    .m-ring img{display:block;width:86px;height:86px;border-radius:50%;object-fit:cover;object-position:center top;}
+    .on-dark .m-ring img{border:2px solid var(--surface);}
+    .on-bg .m-ring img{border:2px solid var(--bg);}
+    .m-name{font-family:'Noto Serif TC',serif;font-size:14px;font-weight:700;text-align:center;line-height:1.4;}
+    .on-dark .m-name{color:var(--white);}
+    .on-bg .m-name{color:var(--primary);}
     @media(max-width:700px){
-      .dept-section{padding:64px 24px;}
-      .member-grid{gap:24px 28px;}
-      .member-card{width:76px;}
-      .member-photo{width:76px;height:76px;}
+      .dept-section{padding:72px 24px;}
+      .subgroup-row{gap:40px 48px;}
+      .member-flex{gap:18px 22px;}
+      .member-card{width:78px;}
+      .m-ring img{width:72px;height:72px;}
     }
 
-    /* FOOTER */
+    /* ── DIVIDER STRIP ── */
+    .flower-strip{background:var(--gold);padding:0;line-height:0;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:0;}
+    .flower-strip img{width:72px;height:auto;filter:saturate(0) brightness(.55);opacity:.55;}
+
+    /* ── FOOTER ── */
     .footer-pre{background:var(--secondary);padding:72px 48px;text-align:center;color:var(--white);}
     .footer-pre-title{font-family:'Noto Serif TC',serif;font-size:clamp(22px,3vw,38px);font-weight:900;margin-bottom:14px;}
     .footer-pre-sub{font-size:14px;opacity:.8;margin-bottom:24px;}
@@ -91,12 +107,15 @@
     .footer-bottom{background:var(--surface);color:var(--white);padding:40px 48px 28px;display:flex;flex-direction:column;align-items:center;gap:16px;}
     .footer-logo img{height:34px;filter:invert(1);mix-blend-mode:screen;}
     .footer-social{display:flex;gap:22px;}
-    .footer-social a{color:var(--gold);text-decoration:none;font-size:13px;letter-spacing:.1em;}
+    .footer-social a{color:var(--gold);text-decoration:none;font-size:13px;letter-spacing:.1em;transition:opacity .2s;}
+    .footer-social a:hover{opacity:.7;}
     .footer-copy{font-size:12px;color:var(--gray);}
 
+    /* ── ANIMATIONS ── */
     @keyframes floatA{0%,100%{transform:translateY(0) rotate(-3deg);}50%{transform:translateY(-16px) rotate(3deg);}}
-    @keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
-    .reveal{opacity:0;}.reveal.visible{animation:fadeUp .6s ease forwards;}
+    @keyframes floatB{0%,100%{transform:translateY(0) rotate(4deg);}50%{transform:translateY(-14px) rotate(-3deg);}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
+    .reveal{opacity:0;}.reveal.visible{animation:fadeUp .65s ease forwards;}
   </style>
 </head>
 <body>
@@ -113,190 +132,227 @@
   </ul>
 </nav>
 
-<!-- PAGE HERO -->
-<section class="page-hero">
-  <div class="page-hero-bg"></div>
-  <div class="page-hero-inner">
-    <div class="page-eyebrow">ABOUT US 關於我們</div>
-    <div class="page-title">認識鹽夏團隊</div>
-    <div class="page-sub">每一場節慶的背後，都有一群用心的人</div>
-  </div>
-  <div class="hero-deco hero-deco-l">
-    <img src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%2096.png" alt="">
-  </div>
-  <div class="hero-deco hero-deco-r">
-    <img src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%20105.png" alt="">
-    <img src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%20111.png" alt="">
+<!-- ── HERO ── -->
+<section class="team-hero">
+  <img class="t-texture" src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%20114.png" alt="">
+  <div class="hero-ghost">花</div>
+  <!-- corner flowers -->
+  <img class="t-deco" src="./點綴物/孤挺花.png" alt="" style="top:48px;left:3%;width:82px;opacity:.9;animation:floatA 3.8s ease-in-out infinite;">
+  <img class="t-deco" src="./點綴物/薰衣草.png" alt="" style="top:36px;right:3%;width:74px;opacity:.85;animation:floatB 4.2s ease-in-out infinite .4s;">
+  <img class="t-deco" src="./點綴物/百合.png" alt="" style="bottom:0;left:1%;width:118px;opacity:.8;animation:floatA 4s ease-in-out infinite .8s;">
+  <img class="t-deco" src="./點綴物/向日葵.png" alt="" style="bottom:0;right:1%;width:104px;opacity:.8;animation:floatB 3.5s ease-in-out infinite .2s;">
+  <!-- side mini decos -->
+  <img class="t-deco" src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%2096.png" alt="" style="top:40%;left:1.2%;width:52px;opacity:.55;animation:floatA 3.3s ease-in-out infinite 1.1s;">
+  <img class="t-deco" src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%20105.png" alt="" style="top:38%;right:1%;width:48px;opacity:.55;animation:floatB 3.7s ease-in-out infinite .6s;">
+  <img class="t-deco" src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%20109.png" alt="" style="bottom:100px;left:8%;width:36px;opacity:.45;animation:floatA 2.9s ease-in-out infinite 1.5s;">
+  <img class="t-deco" src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%20113.png" alt="" style="bottom:80px;right:7%;width:42px;opacity:.45;animation:floatB 3.2s ease-in-out infinite .9s;">
+  <div class="team-hero-inner reveal">
+    <div class="hero-eyebrow">ABOUT US 關於我們</div>
+    <h1 class="team-hero-title">認識鹽夏團隊</h1>
+    <div class="team-hero-rule"></div>
+    <p class="team-hero-sub">每一場節慶的背後<br>都有一群用心的人</p>
   </div>
 </section>
 
-<!-- PM -->
+<!-- ── PM ── -->
 <section class="pm-section">
-  <div class="pm-header reveal">
-    <div class="section-label">PROJECT MANAGER</div>
-    <h2 class="section-title">負責人</h2>
-  </div>
-  <div class="pm-grid">
-    <div class="pm-card reveal">
-      <img class="pm-photo" src="./鹽夏成員照片/PM/設計行銷_黃冠臻.JPG" alt="黃冠臻">
-      <div class="pm-name">黃冠臻</div>
-      <div class="pm-role">設計行銷 PM</div>
-    </div>
-    <div class="pm-card reveal" style="animation-delay:.1s;">
-      <img class="pm-photo" src="./鹽夏成員照片/PM/體驗規劃_陳品蓁.JPG" alt="陳品蓁">
-      <div class="pm-name">陳品蓁</div>
-      <div class="pm-role">體驗規劃 PM</div>
+  <img class="t-texture" src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%20114.png" alt="">
+  <!-- corner flowers -->
+  <img src="./點綴物/孤挺花.png" alt="" style="position:absolute;top:-8px;left:4%;width:100px;opacity:.7;animation:floatB 3.8s ease-in-out infinite;pointer-events:none;z-index:1;">
+  <img src="./點綴物/向日葵.png" alt="" style="position:absolute;top:-12px;right:3%;width:96px;opacity:.65;animation:floatA 4s ease-in-out infinite .4s;pointer-events:none;z-index:1;">
+  <img src="./點綴物/百合.png" alt="" style="position:absolute;bottom:-4px;left:6%;width:112px;opacity:.7;animation:floatA 4.2s ease-in-out infinite .7s;pointer-events:none;z-index:1;">
+  <img src="./點綴物/薰衣草.png" alt="" style="position:absolute;bottom:-8px;right:5%;width:100px;opacity:.65;animation:floatB 3.6s ease-in-out infinite 1s;pointer-events:none;z-index:1;">
+  <!-- watermark -->
+  <img src="./點綴物/花轟.png" alt="" style="position:absolute;right:-20px;bottom:-20px;width:340px;opacity:.06;pointer-events:none;z-index:1;">
+  <div style="position:relative;z-index:2;">
+    <div class="pm-label reveal">PROJECT MANAGER</div>
+    <h2 class="pm-title reveal">負責人</h2>
+    <div class="pm-grid">
+      <div class="pm-card reveal">
+        <div class="pm-ring">
+          <img src="./鹽夏成員照片/PM/設計行銷_黃冠臻.JPG" alt="黃冠臻">
+        </div>
+        <div class="pm-name">黃冠臻</div>
+        <div class="pm-role">設計行銷 PM</div>
+      </div>
+      <div class="pm-card reveal" style="animation-delay:.12s;">
+        <div class="pm-ring">
+          <img src="./鹽夏成員照片/PM/體驗規劃_陳品蓁.JPG" alt="陳品蓁">
+        </div>
+        <div class="pm-name">陳品蓁</div>
+        <div class="pm-role">體驗規劃 PM</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 設計行銷 -->
-<section class="dept-section dark">
+<!-- ── 設計行銷 ── -->
+<section class="dept-section on-bg">
+  <!-- floating side decos -->
+  <img src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%2096.png" alt="" style="position:absolute;top:64px;left:20px;width:60px;opacity:.5;animation:floatA 3.6s ease-in-out infinite;pointer-events:none;z-index:1;">
+  <img src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%20101.png" alt="" style="position:absolute;top:38%;left:12px;width:54px;opacity:.45;animation:floatB 4s ease-in-out infinite .7s;pointer-events:none;z-index:1;">
+  <img src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%20105.png" alt="" style="position:absolute;top:56px;right:18px;width:56px;opacity:.5;animation:floatB 3.4s ease-in-out infinite .3s;pointer-events:none;z-index:1;">
+  <img src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%20112.png" alt="" style="position:absolute;top:40%;right:14px;width:52px;opacity:.4;animation:floatA 3.9s ease-in-out infinite 1s;pointer-events:none;z-index:1;">
+  <!-- bottom grass strip -->
+  <img src="./點綴物/可愛的草叢.png" alt="" style="position:absolute;bottom:0;left:0;right:0;width:100%;object-fit:cover;opacity:.1;pointer-events:none;z-index:1;">
+
   <div class="dept-header reveal">
-    <div class="section-label">DESIGN &amp; MARKETING</div>
-    <h2 class="section-title">設計行銷</h2>
+    <div class="dept-label">DESIGN &amp; MARKETING</div>
+    <h2 class="dept-title">設計行銷</h2>
   </div>
-  <div class="subgroup-wrap">
 
-    <div class="subgroup reveal">
-      <div class="subgroup-label">公關志工</div>
-      <div class="member-grid">
-        <div class="member-card">
-          <img class="member-photo" src="./鹽夏成員照片/設計行銷/公關志工/紀潔.png" alt="紀潔">
-          <div class="member-name">紀潔</div>
+  <div class="subgroups-inner">
+    <!-- 4 subgroups in a row -->
+    <div class="subgroup-row">
+      <div class="subgroup reveal">
+        <div class="sg-label">公關志工</div>
+        <div class="member-flex">
+          <div class="member-card">
+            <div class="m-ring"><img src="./鹽夏成員照片/設計行銷/公關志工/紀潔.png" alt="紀潔"></div>
+            <div class="m-name">紀潔</div>
+          </div>
+          <div class="member-card">
+            <div class="m-ring"><img src="./鹽夏成員照片/設計行銷/公關志工/黃瑀彤.JPG" alt="黃瑀彤"></div>
+            <div class="m-name">黃瑀彤</div>
+          </div>
         </div>
-        <div class="member-card">
-          <img class="member-photo" src="./鹽夏成員照片/設計行銷/公關志工/黃瑀彤.JPG" alt="黃瑀彤">
-          <div class="member-name">黃瑀彤</div>
+      </div>
+      <div class="subgroup reveal" style="animation-delay:.1s;">
+        <div class="sg-label">平面設計</div>
+        <div class="member-flex">
+          <div class="member-card">
+            <div class="m-ring"><img src="./鹽夏成員照片/設計行銷/平面設計/李宣妮.JPG" alt="李宣妮"></div>
+            <div class="m-name">李宣妮</div>
+          </div>
+          <div class="member-card">
+            <div class="m-ring"><img src="./鹽夏成員照片/設計行銷/平面設計/邱渝涵.png" alt="邱渝涵"></div>
+            <div class="m-name">邱渝涵</div>
+          </div>
+        </div>
+      </div>
+      <div class="subgroup reveal" style="animation-delay:.2s;">
+        <div class="sg-label">電媒行銷</div>
+        <div class="member-flex">
+          <div class="member-card">
+            <div class="m-ring"><img src="./鹽夏成員照片/設計行銷/電媒行銷/翁圓舒.JPG" alt="翁圓舒"></div>
+            <div class="m-name">翁圓舒</div>
+          </div>
+          <div class="member-card">
+            <div class="m-ring"><img src="./鹽夏成員照片/設計行銷/電媒行銷/葉昱辰.JPG" alt="葉昱辰"></div>
+            <div class="m-name">葉昱辰</div>
+          </div>
+        </div>
+      </div>
+      <div class="subgroup reveal" style="animation-delay:.3s;">
+        <div class="sg-label">攝影影音</div>
+        <div class="member-flex">
+          <div class="member-card">
+            <div class="m-ring"><img src="./鹽夏成員照片/設計行銷/攝影影音/林聲瀚.JPG" alt="林聲瀚"></div>
+            <div class="m-name">林聲瀚</div>
+          </div>
+          <div class="member-card">
+            <div class="m-ring"><img src="./鹽夏成員照片/設計行銷/攝影影音/高楷龍.JPG" alt="高楷龍"></div>
+            <div class="m-name">高楷龍</div>
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="subgroup reveal">
-      <div class="subgroup-label">平面設計</div>
-      <div class="member-grid">
-        <div class="member-card">
-          <img class="member-photo" src="./鹽夏成員照片/設計行銷/平面設計/李宣妮.JPG" alt="李宣妮">
-          <div class="member-name">李宣妮</div>
-        </div>
-        <div class="member-card">
-          <img class="member-photo" src="./鹽夏成員照片/設計行銷/平面設計/邱渝涵.png" alt="邱渝涵">
-          <div class="member-name">邱渝涵</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="subgroup reveal">
-      <div class="subgroup-label">電媒行銷</div>
-      <div class="member-grid">
-        <div class="member-card">
-          <img class="member-photo" src="./鹽夏成員照片/設計行銷/電媒行銷/翁圓舒.JPG" alt="翁圓舒">
-          <div class="member-name">翁圓舒</div>
-        </div>
-        <div class="member-card">
-          <img class="member-photo" src="./鹽夏成員照片/設計行銷/電媒行銷/葉昱辰.JPG" alt="葉昱辰">
-          <div class="member-name">葉昱辰</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="subgroup reveal">
-      <div class="subgroup-label">攝影影音</div>
-      <div class="member-grid">
-        <div class="member-card">
-          <img class="member-photo" src="./鹽夏成員照片/設計行銷/攝影影音/林聲瀚.JPG" alt="林聲瀚">
-          <div class="member-name">林聲瀚</div>
-        </div>
-        <div class="member-card">
-          <img class="member-photo" src="./鹽夏成員照片/設計行銷/攝影影音/高楷龍.JPG" alt="高楷龍">
-          <div class="member-name">高楷龍</div>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>
 
-<!-- 體驗規劃 -->
-<section class="dept-section light">
+<!-- ── 體驗規劃 ── -->
+<section class="dept-section on-dark">
+  <img class="t-texture" src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%20114.png" alt="">
+  <!-- floating decos -->
+  <img src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%2097.png" alt="" style="position:absolute;top:60px;left:20px;width:58px;opacity:.5;animation:floatB 3.7s ease-in-out infinite;pointer-events:none;z-index:3;">
+  <img src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%20108.png" alt="" style="position:absolute;top:36%;left:10px;width:52px;opacity:.45;animation:floatA 4.1s ease-in-out infinite .6s;pointer-events:none;z-index:3;">
+  <img src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%20104.png" alt="" style="position:absolute;top:52px;right:16px;width:60px;opacity:.5;animation:floatA 3.5s ease-in-out infinite .2s;pointer-events:none;z-index:3;">
+  <img src="./點綴物們-20260416T013420Z-3-001/點綴物們/資產%20115.png" alt="" style="position:absolute;top:42%;right:12px;width:54px;opacity:.4;animation:floatB 4s ease-in-out infinite 1.2s;pointer-events:none;z-index:3;">
+  <!-- corner flowers -->
+  <img src="./點綴物/藍玫瑰.png" alt="" style="position:absolute;bottom:0;left:-10px;width:130px;opacity:.65;animation:floatA 4.2s ease-in-out infinite .5s;pointer-events:none;z-index:3;">
+  <img src="./點綴物/孤挺花.png" alt="" style="position:absolute;bottom:0;right:-8px;width:120px;opacity:.6;animation:floatB 3.8s ease-in-out infinite .9s;pointer-events:none;z-index:3;">
+
   <div class="dept-header reveal">
-    <div class="section-label" style="color:var(--secondary);">EXPERIENCE PLANNING</div>
-    <h2 class="section-title">體驗規劃</h2>
+    <div class="dept-label">EXPERIENCE PLANNING</div>
+    <h2 class="dept-title">體驗規劃</h2>
   </div>
-  <div class="subgroup-wrap">
 
-    <div class="subgroup reveal">
-      <div class="subgroup-label">市集</div>
-      <div class="member-grid">
-        <div class="member-card">
-          <img class="member-photo" src="./鹽夏成員照片/體驗規劃/市集/李盈萱.png" alt="李盈萱">
-          <div class="member-name">李盈萱</div>
+  <div class="subgroups-inner">
+    <!-- 市集 (4人) -->
+    <div class="subgroup-row">
+      <div class="subgroup reveal">
+        <div class="sg-label">市集</div>
+        <div class="member-flex">
+          <div class="member-card">
+            <div class="m-ring"><img src="./鹽夏成員照片/體驗規劃/市集/李盈萱.png" alt="李盈萱"></div>
+            <div class="m-name">李盈萱</div>
+          </div>
+          <div class="member-card">
+            <div class="m-ring"><img src="./鹽夏成員照片/體驗規劃/市集/林毅信.JPG" alt="林毅信"></div>
+            <div class="m-name">林毅信</div>
+          </div>
+          <div class="member-card">
+            <div class="m-ring"><img src="./鹽夏成員照片/體驗規劃/市集/洪心悅.JPG" alt="洪心悅"></div>
+            <div class="m-name">洪心悅</div>
+          </div>
+          <div class="member-card">
+            <div class="m-ring"><img src="./鹽夏成員照片/體驗規劃/市集/韓梓茜.JPG" alt="韓梓茜"></div>
+            <div class="m-name">韓梓茜</div>
+          </div>
         </div>
-        <div class="member-card">
-          <img class="member-photo" src="./鹽夏成員照片/體驗規劃/市集/林毅信.JPG" alt="林毅信">
-          <div class="member-name">林毅信</div>
-        </div>
-        <div class="member-card">
-          <img class="member-photo" src="./鹽夏成員照片/體驗規劃/市集/洪心悅.JPG" alt="洪心悅">
-          <div class="member-name">洪心悅</div>
-        </div>
-        <div class="member-card">
-          <img class="member-photo" src="./鹽夏成員照片/體驗規劃/市集/韓梓茜.JPG" alt="韓梓茜">
-          <div class="member-name">韓梓茜</div>
+      </div>
+      <!-- 表演藝術 (3人) -->
+      <div class="subgroup reveal" style="animation-delay:.12s;">
+        <div class="sg-label">表演藝術</div>
+        <div class="member-flex">
+          <div class="member-card">
+            <div class="m-ring"><img src="./鹽夏成員照片/體驗規劃/表演藝術/林奕晴.JPG" alt="林奕晴"></div>
+            <div class="m-name">林奕晴</div>
+          </div>
+          <div class="member-card">
+            <div class="m-ring"><img src="./鹽夏成員照片/體驗規劃/表演藝術/黃星曜.JPG" alt="黃星曜"></div>
+            <div class="m-name">黃星曜</div>
+          </div>
+          <div class="member-card">
+            <div class="m-ring"><img src="./鹽夏成員照片/體驗規劃/表演藝術/葉瀞棋.jpg" alt="葉瀞棋"></div>
+            <div class="m-name">葉瀞棋</div>
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="subgroup reveal">
-      <div class="subgroup-label">表演藝術</div>
-      <div class="member-grid">
-        <div class="member-card">
-          <img class="member-photo" src="./鹽夏成員照片/體驗規劃/表演藝術/林奕晴.JPG" alt="林奕晴">
-          <div class="member-name">林奕晴</div>
+    <!-- 推廣開幕 + 裝置藝術 -->
+    <div class="subgroup-row">
+      <div class="subgroup reveal" style="animation-delay:.08s;">
+        <div class="sg-label">推廣開幕</div>
+        <div class="member-flex">
+          <div class="member-card">
+            <div class="m-ring"><img src="./鹽夏成員照片/體驗規劃/推廣開幕/仲愛.JPG" alt="仲愛"></div>
+            <div class="m-name">仲愛</div>
+          </div>
+          <div class="member-card">
+            <div class="m-ring"><img src="./鹽夏成員照片/體驗規劃/推廣開幕/連梓晰.JPG" alt="連梓晰"></div>
+            <div class="m-name">連梓晰</div>
+          </div>
         </div>
-        <div class="member-card">
-          <img class="member-photo" src="./鹽夏成員照片/體驗規劃/表演藝術/黃星曜.JPG" alt="黃星曜">
-          <div class="member-name">黃星曜</div>
-        </div>
-        <div class="member-card">
-          <img class="member-photo" src="./鹽夏成員照片/體驗規劃/表演藝術/葉瀞棋.jpg" alt="葉瀞棋">
-          <div class="member-name">葉瀞棋</div>
+      </div>
+      <div class="subgroup reveal" style="animation-delay:.2s;">
+        <div class="sg-label">裝置藝術</div>
+        <div class="member-flex">
+          <div class="member-card">
+            <div class="m-ring"><img src="./鹽夏成員照片/體驗規劃/裝置藝術/李宜庭.JPG" alt="李宜庭"></div>
+            <div class="m-name">李宜庭</div>
+          </div>
+          <div class="member-card">
+            <div class="m-ring"><img src="./鹽夏成員照片/體驗規劃/裝置藝術/李祐安.JPG" alt="李祐安"></div>
+            <div class="m-name">李祐安</div>
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="subgroup reveal">
-      <div class="subgroup-label">推廣開幕</div>
-      <div class="member-grid">
-        <div class="member-card">
-          <img class="member-photo" src="./鹽夏成員照片/體驗規劃/推廣開幕/仲愛.JPG" alt="仲愛">
-          <div class="member-name">仲愛</div>
-        </div>
-        <div class="member-card">
-          <img class="member-photo" src="./鹽夏成員照片/體驗規劃/推廣開幕/連梓晰.JPG" alt="連梓晰">
-          <div class="member-name">連梓晰</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="subgroup reveal">
-      <div class="subgroup-label">裝置藝術</div>
-      <div class="member-grid">
-        <div class="member-card">
-          <img class="member-photo" src="./鹽夏成員照片/體驗規劃/裝置藝術/李宜庭.JPG" alt="李宜庭">
-          <div class="member-name">李宜庭</div>
-        </div>
-        <div class="member-card">
-          <img class="member-photo" src="./鹽夏成員照片/體驗規劃/裝置藝術/李祐安.JPG" alt="李祐安">
-          <div class="member-name">李祐安</div>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ── FOOTER ── -->
 <footer>
   <div class="footer-pre">
     <div class="footer-pre-title">走進花轟現場<br>感受鹽埕的脈動</div>
