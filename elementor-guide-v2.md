@@ -1229,6 +1229,53 @@
 
 ---
 
+### 元件 5b — 首頁團隊 Teaser
+
+```html
+<style>
+  .yh-idx-team{background:var(--bg);padding:110px 48px;}
+  .yh-idx-team-header{text-align:center;margin-bottom:64px;}
+  .yh-idx-team-grid{max-width:560px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:32px;}
+  .yh-idx-team-card{background:var(--white);border-radius:20px;padding:40px 28px;text-align:center;transition:transform .3s;}
+  .yh-idx-team-card:hover{transform:translateY(-8px);}
+  .yh-idx-team-avatar{width:80px;height:80px;border-radius:50%;margin:0 auto 16px;overflow:hidden;border:3px solid var(--peach);}
+  .yh-idx-team-avatar img{width:100%;height:100%;object-fit:cover;object-position:center 25%;display:block;}
+  .yh-idx-team-name{font-family:'Noto Serif TC',serif;font-size:20px;font-weight:700;margin-bottom:8px;}
+  .yh-idx-team-role{font-size:13px;color:var(--secondary);letter-spacing:.1em;}
+</style>
+
+<section class="yh-idx-team">
+  <div class="yh-idx-team-header">
+    <div class="yh-section-label" style="color:var(--secondary);">OUR TEAM</div>
+    <h2 style="font-family:'Noto Serif TC',serif;font-size:clamp(24px,3.5vw,40px);font-weight:900;color:var(--primary);margin-bottom:12px;">認識鹽夏團隊</h2>
+    <p style="font-size:14px;color:#888;letter-spacing:.04em;">每一場節慶的背後，都有一群用心的人</p>
+  </div>
+  <div class="yh-idx-team-grid">
+    <div class="yh-idx-team-card">
+      <div class="yh-idx-team-avatar">
+        <img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8F%E6%88%90%E5%93%A1%E7%85%A7%E7%89%87/PM/%E8%A8%AD%E8%A8%88%E8%A1%8C%E9%8A%B7_%E9%BB%83%E5%86%A0%E8%87%BB.JPG" alt="黃冠臻">
+      </div>
+      <div class="yh-idx-team-name">黃冠臻</div>
+      <div class="yh-idx-team-role">設計行銷 PM</div>
+    </div>
+    <div class="yh-idx-team-card">
+      <div class="yh-idx-team-avatar">
+        <img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8F%E6%88%90%E5%93%A1%E7%85%A7%E7%89%87/PM/%E9%AB%94%E9%A9%97%E8%A6%8F%E5%8A%83_%E9%99%B3%E5%93%81%E8%93%81.JPG" alt="陳品蓁">
+      </div>
+      <div class="yh-idx-team-name">陳品蓁</div>
+      <div class="yh-idx-team-role">體驗規劃 PM</div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:40px;">
+    <a href="/about" style="display:inline-block;padding:12px 44px;background:var(--surface);color:var(--white);text-decoration:none;font-weight:700;font-size:14px;border-radius:50px;letter-spacing:.08em;transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform=''">認識完整團隊 →</a>
+  </div>
+</section>
+```
+
+> **Elementor 步驟：** 在元件 5（介紹影片）下方新增一個 HTML 元件，貼上上方程式碼。
+
+---
+
 ### 元件 6 — LINE CTA
 
 ```html
