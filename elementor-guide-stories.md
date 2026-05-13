@@ -405,9 +405,9 @@
         <p class="yh-s-article-hook">用花藝表達情緒、以 NFC 傳遞心聲，鹽埕國中資優班同學打造了一件會「說話」的科技藝術展品</p>
       </div>
       <div class="yh-s-article-preview">
-        <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_1.png" alt="">
-        <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_3.png" alt="">
-        <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_7.png" alt="">
+        <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_4.jpg" alt="">
+        <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_6.jpg" alt="">
+        <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_7.jpg" alt="">
       </div>
       <button class="yh-s-obs-toggle" onclick="yhsObsToggle(this)">
         <span class="yh-s-obs-toggle-label">展開閱讀</span>
@@ -415,53 +415,56 @@
       </button>
       <div class="yh-s-article-body">
         <div class="yh-s-obs-hero">
-          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_1.png" alt="鹽埕國中花藝融入SEL教育工作坊" style="object-fit:contain;background:#f5ede4;object-position:center;">
+          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E5%B0%81%E9%9D%A2.jpg" alt="鹽夏心浪：花語成歌 EMOTIONS" style="object-fit:cover;object-position:center;">
         </div>
         <div class="yh-s-obs-body">
           <p class="yh-s-obs-quote">「你聽到哪些歌的時候，會有『天吶！這完全就是我的心情寫照』呢？」</p>
           <p>鹽夏不夜埕團隊今年與位於新樂街、也是我們主要展區內的高雄市立鹽埕國民中學合作，鹽埕國中資優班的導師為 20 餘位同學設計了一系列的花藝融入 SEL 教育工作坊，希望可以透過結合 SEL 社會情緒學習框架中的五大核心能力，以及 2026 年鹽夏不夜埕主題《花轟》中的子線主題「蔓延」，讓他們透過花藝作品展現自己的情緒覺察，並且學習使用 NFC 貼紙，共同設計出一項互動式科技藝術展品。課程希望學生理解：情緒不需要被壓抑，而是能被照顧、被理解，並慢慢長成屬於自己的模樣。這個計畫也受到了高雄師範大學 SHINE CENTER 以及南區社會情緒學習與教育創新中心的指導與支持。</p>
         </div>
-        <div class="yh-s-obs-hero">
-          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_3.png" alt="同學們參與情緒探索" style="object-fit:contain;background:#1e1e2e;">
-        </div>
         <div class="yh-s-obs-body">
           <div class="yh-s-obs-label">情緒深度探索</div>
           <p>在花藝創作正式開始前，鹽埕國中的同學們進行了一場關於「情緒」的深度探索，除了簡單了解冰山理論等心理學知識背景，也透過心理測驗、心情歌單，從了解情緒背後的架構開始。資優班董老師表示：「學生們透過情緒歌單、冰山理論與心理測驗，開始辨識自己情緒背後的需求與狀態，學習理解情緒如何影響人際互動與表達方式，這也是 SEL 社會情緒學習中『自我覺察』與『社會覺察』的重要歷程。」</p>
         </div>
+        <div class="yh-s-obs-hero" style="height:320px;">
+          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_1.jpg" alt="學習目標投影片" style="object-fit:contain;background:#f5ede4;">
+        </div>
         <div class="yh-s-photo-pair-natural">
-          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_4.png" alt="心情歌單討論">
-          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_5.png" alt="情緒冰山理論課程">
+          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_2.jpg" alt="SEL社會覺察核心內容" style="object-fit:contain;background:#f5ede4;">
+          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_3.jpg" alt="快速互動情緒討論" style="object-fit:contain;background:#f5ede4;">
         </div>
         <div class="yh-s-obs-body">
           <div class="yh-s-obs-label">花藝展品創作</div>
           <p>帶著線上課累積的情緒覺察與靈感，同學們也馬不停蹄地投入展品創作。學生使用繽紛的花材、黏土與隨手可得的紙板，將每個人情緒盛開的樣子與色彩具象化。作品以帶有擬生感的小型情緒角色為靈感，讓情緒不再只是抽象概念，而是能被觀看、陪伴與理解的存在。他們也在自己的花藝作品上，寫上了對自己的期許、為國三考生的祈福等等，就像是將自己的心情與祝福，透過不只是語言的方式綻放與蔓延至其他人。</p>
         </div>
-        <div class="yh-s-photo-triple">
-          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_7.png" alt="同學動手製作">
-          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_8.png" alt="情緒花藝作品">
-          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_9.png" alt="完成的花藝作品">
+        <div class="yh-s-photo-pair">
+          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_4.jpg" alt="課堂互動情形">
+          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_5.jpg" alt="花藝材料示範">
+        </div>
+        <div class="yh-s-photo-pair-natural">
+          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_6.jpg" alt="同學專注製作花藝">
+          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/S__336191524_0.jpg" alt="花藝作品與祝福語">
+        </div>
+        <div class="yh-s-obs-hero" style="height:360px;">
+          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_8.jpg" alt="黏土情緒人偶特寫" style="object-fit:cover;object-position:center 60%;">
         </div>
         <div class="yh-s-obs-body">
           <div class="yh-s-obs-label">NFC × 3D 列印科技融合</div>
           <p>在做完花藝展品之後，鹽埕國中資優班更是主動提出要加入科技互動輔助，以提高展品與觀眾的互動性。資優班選擇使用 NFC 貼紙作為科技互動的媒介，工作坊更有幸邀請到了來自「三分之一創意工作坊」的曾張義老師，帶領同學們製作 3D 列印建模，以利印製出 NFC 貼紙的載體。活動日為 05/01 勞動節放假第一天，同學們一大早便來到鹽埕國中進行學習。在曾老師的細心指導下，這群充滿好奇心的孩子們迅速掌握了 3D 建模的基礎邏輯，親手為自己的情緒花藝設計了專屬的 3D 列印載體結構。</p>
         </div>
         <div class="yh-s-photo-pair">
-          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_10.png" alt="3D列印建模學習">
-          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_11.png" alt="NFC標籤寫入">
+          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_9.jpg" alt="老師指導3D建模操作">
+          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_11.jpg" alt="NFC電腦教室現場">
+        </div>
+        <div class="yh-s-obs-hero" style="height:360px;">
+          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_10.jpg" alt="同學圍桌操作NFC貼紙">
         </div>
         <div class="yh-s-obs-body">
           <p>接著便是科技魔法的重頭戲——NFC 標籤的寫入。學生們將那些平時難以直接說出口的情緒，化為一首首歌與一句句話語，透過 NFC 技術藏進作品中。當觀展者拿起手機輕觸作品，也能藉此短暫走進鹽埕少男少女的內心小宇宙。</p>
-        </div>
-        <div class="yh-s-photo-pair">
-          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_12.png" alt="展品完成合影">
-          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_13.png" alt="同學與作品合照">
-        </div>
-        <div class="yh-s-obs-body">
           <p>看著實體的繽紛花材與數位的互動晶片完美結合，原本靜止的花藝作品，瞬間擁有了會「說話」、會「唱歌」的靈魂。這不僅僅是技術的學習，更是同學們將隱性的「自我覺察」轉化為顯性的「社會對話」的美好過程。隨著作品一件件誕生，這場融合了 SEL 社會情緒學習、花藝美學以及 Maker 創客精神的跨界工作坊雖然告一段落，但這股溫柔的能量才正要開始「蔓延」。</p>
           <p class="yh-s-obs-quote">只要你漫步來到展區，拿出手機輕輕感應這些盛開的「情緒之花」，或許就能聽見一首精準接住你當下疲憊的歌，又或者是讀到一段來自青春期最純粹、真摯的祝福。</p>
         </div>
-        <div class="yh-s-obs-hero" style="height:320px;">
-          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_14.png" alt="鹽埕國中情緒花藝展品全覽" style="object-position:center;">
+        <div class="yh-s-obs-hero" style="height:380px;">
+          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_7.jpg" alt="情緒花藝展品全覽" style="object-fit:cover;object-position:center 40%;">
         </div>
         <div class="yh-s-obs-body">
           <p>在 5 月 16 日至 5 月 23 日登場的「2026 鹽夏不夜埕」中，這群鹽埕國中的同學們將帶著他們的心血結晶，正式走入充滿底蘊的新樂街區。屆時，他們不僅是展品的創作者，更將化身為第一線的「情緒導覽員」，引領大眾與作品互動。我們期待每一位來到鹽埕的旅人與在地居民，都能親自體驗這場由科技與情感交織而成的綻放，感受這份跨越世代與空間的溫暖共鳴！而這些來自鹽埕少年們的情緒與祝福，也將隨著花朵一起，在新樂街的夜色與人群之間慢慢蔓延。</p>
