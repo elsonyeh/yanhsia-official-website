@@ -479,7 +479,7 @@
           <span class="yh-s-obs-tag">活動側寫</span>
           <span class="yh-s-obs-date">2026.04</span>
         </div>
-        <h3 class="yh-s-article-title">《花框留映》工作坊</h3>
+        <h3 class="yh-s-article-title">鹽埕在地店家《花框留映》工作坊</h3>
         <p class="yh-s-article-hook">八間老街店家、十三件作品，把鹽埕的日常與記憶，封存在方寸之框</p>
       </div>
       <button class="yh-s-obs-toggle" onclick="yhsObsToggle(this)">
