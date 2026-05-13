@@ -1358,6 +1358,201 @@
 
 ---
 
+### 元件 — LINE 加好友彈窗（所有頁面通用，貼在最後一個 HTML 元件底部）
+
+> 頁面載入 **3 秒**後自動彈出。  
+> 點「不再顯示」後 **24 小時**內不再出現；點 ✕ 或點遮罩只關閉本次。  
+> 可加在任何頁面的最後一個 HTML 元件底部。
+
+```html
+<style>
+  .yh-lp-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9000;
+    background: rgba(26, 38, 64, 0.72);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .yh-lp-overlay.open { display: flex; }
+  .yh-lp-card {
+    background: #fff;
+    border-radius: 28px;
+    padding: 48px 40px 36px;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 32px 80px rgba(26, 38, 64, 0.3);
+    animation: yh-lp-in 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    overflow: visible;
+  }
+  .yh-lp-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #f2d9d0;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    color: #1a2640;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+  .yh-lp-close:hover { background: #e9abab; }
+  .yh-lp-deco { position: absolute; pointer-events: none; }
+  .yh-lp-icon {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: #06c755;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 8px 24px rgba(6, 199, 85, 0.35);
+  }
+  .yh-lp-gold {
+    display: block;
+    width: 48px;
+    height: 4px;
+    background: #f2be5c;
+    border-radius: 2px;
+    margin: 0 auto 24px;
+  }
+  .yh-lp-title {
+    font-family: "Noto Serif TC", serif;
+    font-size: 22px;
+    font-weight: 900;
+    color: #1a2640;
+    margin-bottom: 12px;
+    line-height: 1.45;
+  }
+  .yh-lp-body {
+    font-size: 14px;
+    line-height: 2;
+    color: #888;
+    margin-bottom: 28px;
+  }
+  .yh-lp-btn {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    background: #06c755;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 16px;
+    border-radius: 50px;
+    letter-spacing: 0.06em;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 20px rgba(6, 199, 85, 0.35);
+  }
+  .yh-lp-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(6, 199, 85, 0.45);
+    background: #05a846;
+    color: #fff;
+  }
+  .yh-lp-dismiss {
+    font-size: 12px;
+    color: #bbb;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+    background: none;
+    border: none;
+    padding: 4px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s;
+  }
+  .yh-lp-dismiss:hover { color: #374e7e; }
+  @keyframes yh-lp-in {
+    from { opacity: 0; transform: scale(0.85) translateY(20px); }
+    to   { opacity: 1; transform: scale(1)   translateY(0);     }
+  }
+</style>
+
+<div class="yh-lp-overlay" id="yhLinePopup">
+  <div class="yh-lp-card">
+    <button class="yh-lp-close" id="yhLpClose" aria-label="關閉">✕</button>
+    <img
+      src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E5%90%91%E6%97%A5%E8%91%B5.png"
+      class="yh-lp-deco"
+      style="top:-24px;right:-16px;width:60px;animation:yh-floatB 3.5s ease-in-out infinite;"
+      alt=""
+    />
+    <img
+      src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E8%96%B0%E8%A1%A3%E8%8D%89.png"
+      class="yh-lp-deco"
+      style="bottom:-16px;left:-16px;width:50px;animation:yh-floatA 4s ease-in-out infinite 0.5s;"
+      alt=""
+    />
+    <div class="yh-lp-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" fill="white">
+        <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.070 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+      </svg>
+    </div>
+    <span class="yh-lp-gold"></span>
+    <div class="yh-lp-title">加入鹽夏官方 LINE<br>第一手掌握活動資訊！</div>
+    <div class="yh-lp-body">集點趣・限定通知・活動資訊<br>加入好友，一起把高雄的夜染得更鮮豔</div>
+    <a
+      href="https://line.me/R/ti/p/@235chemh"
+      class="yh-lp-btn"
+      target="_blank"
+      rel="noopener"
+    >加入 LINE 好友</a>
+    <button class="yh-lp-dismiss" id="yhLpDismiss">不再顯示</button>
+  </div>
+</div>
+<script>
+  (function () {
+    var KEY = "linePopupDismissed";
+    var TTL = 24 * 60 * 60 * 1000;
+    var stored = localStorage.getItem(KEY);
+    var suppressed = stored && Date.now() - parseInt(stored) < TTL;
+    if (!suppressed) {
+      setTimeout(function () {
+        var el = document.getElementById("yhLinePopup");
+        if (el) el.classList.add("open");
+      }, 3000);
+    }
+    function closePopup() {
+      var el = document.getElementById("yhLinePopup");
+      if (el) el.classList.remove("open");
+    }
+    var closeBtn = document.getElementById("yhLpClose");
+    var dismissBtn = document.getElementById("yhLpDismiss");
+    var overlay = document.getElementById("yhLinePopup");
+    if (closeBtn) closeBtn.addEventListener("click", closePopup);
+    if (dismissBtn)
+      dismissBtn.addEventListener("click", function () {
+        localStorage.setItem(KEY, Date.now().toString());
+        closePopup();
+      });
+    if (overlay)
+      overlay.addEventListener("click", function (e) {
+        if (e.target === this) closePopup();
+      });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closePopup();
+    });
+  })();
+</script>
+```
+
+---
+
 ## 花轟頁（hanabomb）
 
 > **注意：** 花轟頁的元件 1 同樣包含完整 CSS，如果首頁已載入過（同網站），CSS 已在 DOM 中，可省略 `<style>` 區塊只保留 HTML。但若是獨立頁面，請保留完整元件 1。
@@ -1584,7 +1779,7 @@
       <div class="yh-feat-title">特色市集</div>
       <div class="yh-feat-desc">
         5/16–5/23，每日
-        17:00–21:00，新樂街大智路口至愛文店口路段。花圃般的創意市集，飲食、手作、花香一次擁有。
+        17:00–21:00，新樂街大智路口至大成街路段。花圃般的創意市集，飲食、手作、花香一次擁有。
       </div>
     </div>
   </div>
@@ -2236,7 +2431,7 @@
           <div class="yh-tm-members">
             <div class="yh-tm-member"><div class="yh-tm-ring"><img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8F%E6%88%90%E5%93%A1%E7%85%A7%E7%89%87/%E8%A8%AD%E8%A8%88%E8%A1%8C%E9%8A%B7/%E5%B9%B3%E9%9D%A2%E8%A8%AD%E8%A8%88/%E6%9D%8E%E5%AE%A3%E5%A6%AE.JPG" alt="李宣妮"></div><div class="yh-tm-name">李宣妮</div></div>
             <div class="yh-tm-member"><div class="yh-tm-ring"><img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%B9%BD%E5%A4%8F%E6%88%90%E5%93%A1%E7%85%A7%E7%89%87/%E8%A8%AD%E8%A8%88%E8%A1%8C%E9%8A%B7/%E5%B9%B3%E9%9D%A2%E8%A8%AD%E8%A8%88/%E9%82%B1%E6%B8%9D%E6%B6%B5.png" alt="邱渝涵"></div><div class="yh-tm-name">邱渝涵</div></div>
-          </div>
+          </div> 
         </div>
         <div class="yh-tm-group">
           <div class="yh-tm-group-label">電媒行銷</div>

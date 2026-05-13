@@ -141,12 +141,14 @@
     .obs-section-label{font-size:11px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:8px;}
     .obs-photo-pair{display:grid;grid-template-columns:1fr 1fr;gap:3px;}
     .obs-photo-pair img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;}
+    .obs-photo-pair-natural{display:grid;grid-template-columns:1fr 1fr;gap:3px;}
+    .obs-photo-pair-natural img{width:100%;height:auto;display:block;}
     .obs-photo-quad{display:grid;grid-template-columns:1fr 1fr;gap:3px;}
     .obs-photo-quad img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;}
     @media(max-width:700px){
       .observer-section{padding:56px 24px;}
       .obs-article-header,.obs-body,.obs-article-footer{padding-left:20px;padding-right:20px;}
-      .obs-photo-pair,.obs-photo-quad{grid-template-columns:1fr;}
+      .obs-photo-pair,.obs-photo-quad,.obs-photo-pair-natural{grid-template-columns:1fr;}
     }
 
     /* TRAVEL SECTION */
@@ -498,7 +500,120 @@
     <h2 class="section-title">停下來，觀察<br>正在發生的事</h2>
     <p class="observer-section-intro reveal">鹽埕每天都在發生各種大小事。小埕觀察家記錄鹽夏走進這座城市的每一個瞬間——活動、現場、情緒、人群，讓那些正在發生的事，被好好地留下來。</p>
 
-    <!-- ── 文章 1：花落成流 工作坊（最新） ── -->
+    <!-- ── 文章 0：鹽埕國中花藝融入SEL教育工作坊（最新） ── -->
+    <article class="obs-article reveal">
+      <div class="obs-article-header">
+        <div class="obs-article-meta">
+          <span class="obs-tag">活動側寫</span>
+          <span class="obs-date">2026.04</span>
+        </div>
+        <h3 class="obs-article-title">鹽埕國中《花藝融入 SEL 教育》工作坊</h3>
+        <p class="obs-article-hook">用花藝表達情緒、以 NFC 傳遞心聲，鹽埕國中資優班同學打造了一件會「說話」的科技藝術展品</p>
+      </div>
+      <div class="obs-article-preview">
+        <img src="./小埕觀察家/鹽埕國中花藝融入SEL教育工作坊/照片/鹽埕國中花藝融入SEL教育工作坊_1.png" alt="">
+        <img src="./小埕觀察家/鹽埕國中花藝融入SEL教育工作坊/照片/鹽埕國中花藝融入SEL教育工作坊_3.png" alt="">
+        <img src="./小埕觀察家/鹽埕國中花藝融入SEL教育工作坊/照片/鹽埕國中花藝融入SEL教育工作坊_6.png" alt="">
+      </div>
+      <button class="obs-toggle" onclick="obsToggle(this)">
+        <span class="obs-toggle-label">展開閱讀</span>
+        <span class="obs-toggle-arrow">↓</span>
+      </button>
+      <div class="obs-article-body">
+        <div class="obs-hero">
+          <img src="./小埕觀察家/鹽埕國中花藝融入SEL教育工作坊/照片/鹽埕國中花藝融入SEL教育工作坊_1.png" alt="鹽埕國中花藝融入SEL教育工作坊" style="object-fit:contain;background:#f5ede4;object-position:center;">
+        </div>
+        <div class="obs-body">
+          <p class="obs-quote">「你聽到哪些歌的時候，會有『天吶！這完全就是我的心情寫照』呢？」</p>
+          <p>鹽夏不夜埕團隊今年與位於新樂街、也是我們主要展區內的高雄市立鹽埕國民中學合作，鹽埕國中資優班的導師為 20 餘位同學設計了一系列的花藝融入 SEL 教育工作坊，希望可以透過結合 SEL 社會情緒學習框架中的五大核心能力，以及 2026 年鹽夏不夜埕主題《花轟》中的子線主題「蔓延」，讓他們透過花藝作品展現自己的情緒覺察，並且學習使用 NFC 貼紙，共同設計出一項互動式科技藝術展品。課程希望學生理解：情緒不需要被壓抑，而是能被照顧、被理解，並慢慢長成屬於自己的模樣。這個計畫也受到了高雄師範大學 SHINE CENTER 以及南區社會情緒學習與教育創新中心的指導與支持。</p>
+        </div>
+        <div class="obs-photo-pair">
+          <img src="./小埕觀察家/鹽埕國中花藝融入SEL教育工作坊/照片/鹽埕國中花藝融入SEL教育工作坊_2.png" alt="SEL工作坊課堂情形" style="object-fit:contain;background:#1e1e2e;">
+          <img src="./小埕觀察家/鹽埕國中花藝融入SEL教育工作坊/照片/鹽埕國中花藝融入SEL教育工作坊_3.png" alt="同學們參與情緒探索" style="object-fit:contain;background:#1e1e2e;">
+        </div>
+        <div class="obs-body">
+          <div class="obs-section-label">情緒深度探索</div>
+          <p>在花藝創作正式開始前，鹽埕國中的同學們進行了一場關於「情緒」的深度探索，除了簡單了解冰山理論等心理學知識背景，也透過心理測驗、心情歌單，從了解情緒背後的架構開始。資優班董老師表示：「學生們透過情緒歌單、冰山理論與心理測驗，開始辨識自己情緒背後的需求與狀態，學習理解情緒如何影響人際互動與表達方式，這也是 SEL 社會情緒學習中『自我覺察』與『社會覺察』的重要歷程。」</p>
+        </div>
+        <div class="obs-photo-pair-natural">
+          <img src="./小埕觀察家/鹽埕國中花藝融入SEL教育工作坊/照片/鹽埕國中花藝融入SEL教育工作坊_4.png" alt="心情歌單討論">
+          <img src="./小埕觀察家/鹽埕國中花藝融入SEL教育工作坊/照片/鹽埕國中花藝融入SEL教育工作坊_5.png" alt="情緒冰山理論課程">
+        </div>
+        <div class="obs-body">
+          <div class="obs-section-label">花藝展品創作</div>
+          <p>帶著線上課累積的情緒覺察與靈感，同學們也馬不停蹄地投入展品創作。學生使用繽紛的花材、黏土與隨手可得的紙板，將每個人情緒盛開的樣子與色彩具象化。作品以帶有擬生感的小型情緒角色為靈感，讓情緒不再只是抽象概念，而是能被觀看、陪伴與理解的存在。他們也在自己的花藝作品上，寫上了對自己的期許、為國三考生的祈福等等，就像是將自己的心情與祝福，透過不只是語言的方式綻放與蔓延至其他人。</p>
+        </div>
+        <div class="obs-photo-quad">
+          <img src="./小埕觀察家/鹽埕國中花藝融入SEL教育工作坊/照片/鹽埕國中花藝融入SEL教育工作坊_6.png" alt="花藝創作過程" style="object-position:left center;">
+          <img src="./小埕觀察家/鹽埕國中花藝融入SEL教育工作坊/照片/鹽埕國中花藝融入SEL教育工作坊_7.png" alt="同學動手製作">
+          <img src="./小埕觀察家/鹽埕國中花藝融入SEL教育工作坊/照片/鹽埕國中花藝融入SEL教育工作坊_8.png" alt="情緒花藝作品">
+          <img src="./小埕觀察家/鹽埕國中花藝融入SEL教育工作坊/照片/鹽埕國中花藝融入SEL教育工作坊_9.png" alt="完成的花藝作品">
+        </div>
+        <div class="obs-body">
+          <div class="obs-section-label">NFC × 3D 列印科技融合</div>
+          <p>在做完花藝展品之後，鹽埕國中資優班更是主動提出要加入科技互動輔助，以提高展品與觀眾的互動性。資優班選擇使用 NFC 貼紙作為科技互動的媒介，工作坊更有幸邀請到了來自「三分之一創意工作坊」的曾張義老師，帶領同學們製作 3D 列印建模，以利印製出 NFC 貼紙的載體。活動日為 05/01 勞動節放假第一天，同學們一大早便來到鹽埕國中進行學習。在曾老師的細心指導下，這群充滿好奇心的孩子們迅速掌握了 3D 建模的基礎邏輯，親手為自己的情緒花藝設計了專屬的 3D 列印載體結構。</p>
+        </div>
+        <div class="obs-photo-pair">
+          <img src="./小埕觀察家/鹽埕國中花藝融入SEL教育工作坊/照片/鹽埕國中花藝融入SEL教育工作坊_10.png" alt="3D列印建模學習">
+          <img src="./小埕觀察家/鹽埕國中花藝融入SEL教育工作坊/照片/鹽埕國中花藝融入SEL教育工作坊_11.png" alt="NFC標籤寫入">
+        </div>
+        <div class="obs-body">
+          <p>接著便是科技魔法的重頭戲——NFC 標籤的寫入。學生們將那些平時難以直接說出口的情緒，化為一首首歌與一句句話語，透過 NFC 技術藏進作品中。當觀展者拿起手機輕觸作品，也能藉此短暫走進鹽埕少男少女的內心小宇宙。</p>
+        </div>
+        <div class="obs-photo-pair">
+          <img src="./小埕觀察家/鹽埕國中花藝融入SEL教育工作坊/照片/鹽埕國中花藝融入SEL教育工作坊_12.png" alt="展品完成合影">
+          <img src="./小埕觀察家/鹽埕國中花藝融入SEL教育工作坊/照片/鹽埕國中花藝融入SEL教育工作坊_13.png" alt="同學與作品合照">
+        </div>
+        <div class="obs-body">
+          <p>看著實體的繽紛花材與數位的互動晶片完美結合，原本靜止的花藝作品，瞬間擁有了會「說話」、會「唱歌」的靈魂。這不僅僅是技術的學習，更是同學們將隱性的「自我覺察」轉化為顯性的「社會對話」的美好過程。隨著作品一件件誕生，這場融合了 SEL 社會情緒學習、花藝美學以及 Maker 創客精神的跨界工作坊雖然告一段落，但這股溫柔的能量才正要開始「蔓延」。</p>
+          <p class="obs-quote">只要你漫步來到展區，拿出手機輕輕感應這些盛開的「情緒之花」，或許就能聽見一首精準接住你當下疲憊的歌，又或者是讀到一段來自青春期最純粹、真摯的祝福。</p>
+        </div>
+        <div class="obs-hero" style="height:320px;">
+          <img src="./小埕觀察家/鹽埕國中花藝融入SEL教育工作坊/照片/鹽埕國中花藝融入SEL教育工作坊_14.png" alt="鹽埕國中情緒花藝展品全覽" style="object-position:center;">
+        </div>
+        <div class="obs-body">
+          <p>在 5 月 16 日至 5 月 23 日登場的「2026 鹽夏不夜埕」中，這群鹽埕國中的同學們將帶著他們的心血結晶，正式走入充滿底蘊的新樂街區。屆時，他們不僅是展品的創作者，更將化身為第一線的「情緒導覽員」，引領大眾與作品互動。我們期待每一位來到鹽埕的旅人與在地居民，都能親自體驗這場由科技與情感交織而成的綻放，感受這份跨越世代與空間的溫暖共鳴！而這些來自鹽埕少年們的情緒與祝福，也將隨著花朵一起，在新樂街的夜色與人群之間慢慢蔓延。</p>
+        </div>
+        <button class="obs-close-btn" onclick="obsClose(this)">收合 ↑</button>
+      </div>
+    </article>
+
+    <!-- ── 文章 1：花框留映 工作坊 ── -->
+    <article class="obs-article reveal">
+      <div class="obs-article-header">
+        <div class="obs-article-meta">
+          <span class="obs-tag">活動側寫</span>
+          <span class="obs-date">2026.04</span>
+        </div>
+        <h3 class="obs-article-title">《花框留映》工作坊</h3>
+        <p class="obs-article-hook">八間老街店家、十三件作品，把鹽埕的日常與記憶，封存在方寸之框</p>
+      </div>
+      <button class="obs-toggle" onclick="obsToggle(this)">
+        <span class="obs-toggle-label">展開閱讀</span>
+        <span class="obs-toggle-arrow">↓</span>
+      </button>
+      <div class="obs-article-body">
+        <div class="obs-body">
+          <p>當工作坊走出教室，整座鹽埕老街區，就成了我們共同創作的田野現場。在 2026《鹽夏不夜埕》的企劃中，《花框留映》以「框」作為情緒與記憶的容器，試圖將個人與地方的情感凝結成可被觀看的片段。這場行動最動人的起點，並非發生在手作的當下，而是推廣組走入街區的那些漫長午後。夥伴們打破了傳統招生活動的單向傳遞，化身為地方的紀錄者，穿梭在新樂街與舊堀江的巷弄間。發送傳單只是開啟對話的契機，真正珍貴的是停下腳步的「傾聽」——從三代鹽埕人的家族記憶到斜槓創業的熱血，團隊用心記錄下這些在地的生命故事，並邀請店家們加入專屬的群組，為花框創作累積了最深厚的情感素材。</p>
+        </div>
+        <div class="obs-body">
+          <div class="obs-section-label">走進生活節奏</div>
+          <p>然而在面對老城區真實的呼吸節奏時，也就是店家營業時間的限制，團隊意識到必須將工作坊轉化為更貼近地氣的行動。我們將原訂於週四下午的實體工作坊，更改為專屬的「花框材料包」與理念說明單，親手遞送給店家。為了彌補無法現場教學的缺憾，團隊更親自拍攝了製作影片、撰寫詳細的注意事項，讓店家能在打烊後的深夜、或顧店的空檔中，用自己的節奏進行創作。我們將活動的形式改變，將時間與空間的自主權全權交還給創作者，試圖接住在地生活脈絡的節奏。</p>
+        </div>
+        <div class="obs-body">
+          <div class="obs-section-label">八間店家・十三件作品</div>
+          <p>經過一週的醞釀，最後共有 8 個店家熱情參與，孕育出 13 件完美描繪出自身故事的靈魂之作。深耕高雄近 20 年的「黃金起司燒」帶來了《職人精神》與《記憶座標》，將勞動的專注與跨越世代的情感化為永恆。「領事小隊共學團」透過《旅行印記》、《蝴蝶與感動》與《手作方寸》三件作品，生動紀錄了學童的童年探險，將走讀足跡、賞蝶悸動與手作烘焙的純粹時光溫柔封存。「紅撲撲手感創作」的《電影》與《紀實》，分別記錄了國際女高音漢娜奇蹟造訪的瞬間，以及大溝頂小店中來自各方旅人的溫暖身影。</p>
+          <p>「欣樂書局」的《LIFE》將 30 餘年的家族記憶向觀眾展示，相框中男孩的成長軌跡恰巧與書店的店齡重疊，凝鍊成一段動人的生活史。「餽咻」以《笑容、貓咪和咖啡》與《貓咪、書道和咖啡》兩件作品，巧妙揉合了貓咪的鬍鬚、咖啡渣與霓虹光譜，訴說著與客人的溫暖交會及店貓的長情陪伴。隱身舊堀江的「珣手作布丁」透過《旅程》，在金色邊框內盛裝了老屋的時代更迭，以及老闆浪漫跨界創業的層次滋味。「小聲點酒館」的《拼圖》以繽紛琉璃珠與已逝摯友、愛犬的定格影像，溫柔宣告著在鹽埕唯有「愛」是生命得以延續的唯一解答。最後，「銀絲 Chill」的同名作品將進口服飾的古董鈕扣鑲嵌於珠光邊框，把四間店面的流轉與客人鮮活的日常互動，化作最真實的街區風景。</p>
+        </div>
+        <div class="obs-body">
+          <p class="obs-quote">這 13 個花框不只是被私自收藏的物件，而是成為了街區情感的一部分。</p>
+          <p>最終，這些作品將被重新放回街區的脈絡中，展示於 2026《鹽夏不夜埕》的 C5〈日常的封存〉展區。透過《鹽夏不夜埕》的展演，這些乘載著鹽埕百態的故事空間將正式亮相，邀請大眾走進新樂街區，在這些封存的日常切片裡，見證情感在這座老城區裡最真實的綻放與蔓延。</p>
+        </div>
+        <button class="obs-close-btn" onclick="obsClose(this)">收合 ↑</button>
+      </div>
+    </article>
+
+    <!-- ── 文章 2：花落成流 工作坊 ── -->
     <article class="obs-article reveal">
       <div class="obs-article-header">
         <div class="obs-article-meta">
