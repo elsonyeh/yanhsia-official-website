@@ -440,9 +440,8 @@
           <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_4.jpg" alt="課堂互動情形">
           <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_5.jpg" alt="花藝材料示範">
         </div>
-        <div class="yh-s-photo-pair-natural">
+        <div class="yh-s-obs-hero" style="height:360px;">
           <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_6.jpg" alt="同學專注製作花藝">
-          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/S__336191524_0.jpg" alt="花藝作品與祝福語">
         </div>
         <div class="yh-s-obs-hero" style="height:360px;">
           <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_8.jpg" alt="黏土情緒人偶特寫" style="object-fit:cover;object-position:center 60%;">
