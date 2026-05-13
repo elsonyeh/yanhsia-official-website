@@ -383,6 +383,9 @@
   .yh-s-photo-pair-natural{display:grid;grid-template-columns:1fr 1fr;gap:3px;}
   .yh-s-photo-pair-natural img{width:100%;height:auto;display:block;}
   @media(max-width:700px){.yh-s-photo-pair-natural{grid-template-columns:1fr;}}
+  .yh-s-photo-triple{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;}
+  .yh-s-photo-triple img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;}
+  @media(max-width:700px){.yh-s-photo-triple{grid-template-columns:1fr;}}
 </style>
 
 <div id="yh-s-tab-observer" class="yh-s-tab-panel" style="background:var(--bg);">
@@ -404,7 +407,7 @@
       <div class="yh-s-article-preview">
         <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_1.png" alt="">
         <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_3.png" alt="">
-        <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_6.png" alt="">
+        <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_7.png" alt="">
       </div>
       <button class="yh-s-obs-toggle" onclick="yhsObsToggle(this)">
         <span class="yh-s-obs-toggle-label">展開閱讀</span>
@@ -418,8 +421,7 @@
           <p class="yh-s-obs-quote">「你聽到哪些歌的時候，會有『天吶！這完全就是我的心情寫照』呢？」</p>
           <p>鹽夏不夜埕團隊今年與位於新樂街、也是我們主要展區內的高雄市立鹽埕國民中學合作，鹽埕國中資優班的導師為 20 餘位同學設計了一系列的花藝融入 SEL 教育工作坊，希望可以透過結合 SEL 社會情緒學習框架中的五大核心能力，以及 2026 年鹽夏不夜埕主題《花轟》中的子線主題「蔓延」，讓他們透過花藝作品展現自己的情緒覺察，並且學習使用 NFC 貼紙，共同設計出一項互動式科技藝術展品。課程希望學生理解：情緒不需要被壓抑，而是能被照顧、被理解，並慢慢長成屬於自己的模樣。這個計畫也受到了高雄師範大學 SHINE CENTER 以及南區社會情緒學習與教育創新中心的指導與支持。</p>
         </div>
-        <div class="yh-s-photo-pair">
-          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_2.png" alt="SEL工作坊課堂情形" style="object-fit:contain;background:#1e1e2e;">
+        <div class="yh-s-obs-hero">
           <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_3.png" alt="同學們參與情緒探索" style="object-fit:contain;background:#1e1e2e;">
         </div>
         <div class="yh-s-obs-body">
@@ -434,8 +436,7 @@
           <div class="yh-s-obs-label">花藝展品創作</div>
           <p>帶著線上課累積的情緒覺察與靈感，同學們也馬不停蹄地投入展品創作。學生使用繽紛的花材、黏土與隨手可得的紙板，將每個人情緒盛開的樣子與色彩具象化。作品以帶有擬生感的小型情緒角色為靈感，讓情緒不再只是抽象概念，而是能被觀看、陪伴與理解的存在。他們也在自己的花藝作品上，寫上了對自己的期許、為國三考生的祈福等等，就像是將自己的心情與祝福，透過不只是語言的方式綻放與蔓延至其他人。</p>
         </div>
-        <div class="yh-s-photo-quad">
-          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_6.png" alt="花藝創作過程" style="object-position:left center;">
+        <div class="yh-s-photo-triple">
           <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_7.png" alt="同學動手製作">
           <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_8.png" alt="情緒花藝作品">
           <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A_9.png" alt="完成的花藝作品">
