@@ -317,6 +317,48 @@
     transform: translateY(-3px);
     box-shadow: 0 8px 28px rgba(55,78,126, 0.3);
   }
+  .yh-digital-xp-card-inner {
+    display: grid;
+    grid-template-columns: 1fr 180px;
+    gap: 32px;
+    align-items: center;
+  }
+  .yh-digital-xp-secret {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .yh-digital-xp-secret-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .yh-digital-xp-secret-frame img {
+    width: 168px;
+    filter: brightness(0);
+  }
+  .yh-digital-xp-secret-qs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Noto Serif TC', serif;
+    font-size: 52px;
+    font-weight: 900;
+    color: var(--gold);
+    text-shadow: 0 2px 12px rgba(242,190,92,.4);
+    pointer-events: none;
+  }
+  .yh-digital-xp-secret-tag {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 10px;
+    letter-spacing: .35em;
+    color: var(--gold);
+    font-weight: 700;
+    opacity: .85;
+  }
   .yh-founders {
     background: var(--surface);
     color: var(--white);
@@ -928,6 +970,14 @@
     .yh-digital-xp-card {
       padding: 88px 28px 44px;
       text-align: center;
+    }
+    .yh-digital-xp-card-inner {
+      display: block;
+    }
+    .yh-digital-xp-secret {
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 28px;
     }
     .yh-trio-grid {
       grid-template-columns: 1fr;
@@ -1832,27 +1882,41 @@
 
       <!-- 右（電腦）/ 下（手機）：白色卡片 -->
       <div class="yh-digital-xp-card">
-        <div
-          style="font-size:11px;letter-spacing:.45em;color:var(--secondary);margin-bottom:12px;font-family:'Noto Sans TC',sans-serif;font-weight:700;"
-        >
-          DIGITAL EXPERIENCE 數位體驗
+        <div class="yh-digital-xp-card-inner">
+          <div class="yh-digital-xp-card-text">
+            <div
+              style="font-size:11px;letter-spacing:.45em;color:var(--secondary);margin-bottom:12px;font-family:'Noto Sans TC',sans-serif;font-weight:700;"
+            >
+              DIGITAL EXPERIENCE 數位體驗
+            </div>
+            <h2
+              style="font-family:'Noto Serif TC',serif;font-size:clamp(24px,3vw,36px);font-weight:900;color:var(--primary);margin-bottom:16px;line-height:1.2;"
+            >
+              埕花｜情緒解籤 × 花語體驗
+            </h2>
+            <p
+              style="font-family:'Noto Sans TC',sans-serif;font-size:15px;line-height:2.1;color:rgba(55,78,126,.65);"
+            >
+              透過面部識別，網站即時捕捉你的表情並解讀情緒，轉化為專屬花語祝福卡。漫步展區欣賞裝置藝術、蒐集花朵卡牌，同時完成集章任務！掃描裝置藝術旁的 QR Code 即可抽卡——隱藏版花朵正等著你來解鎖，集齊全部更能兌換限量神秘小禮物！
+            </p>
+            <a
+              href="https://drawing-flower-fortunes.vercel.app/"
+              target="_blank"
+              class="yh-digital-xp-btn"
+              >立即體驗 →</a
+            >
+          </div>
+          <div class="yh-digital-xp-secret">
+            <div class="yh-digital-xp-secret-frame">
+              <img
+                src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E8%8A%B1%E6%9C%B5-%E9%9A%B1%E8%97%8F%E7%89%88.png"
+                alt="隱藏版花朵"
+              />
+              <span class="yh-digital-xp-secret-qs">?</span>
+            </div>
+            <div class="yh-digital-xp-secret-tag">✦ 隱藏版 ✦</div>
+          </div>
         </div>
-        <h2
-          style="font-family:'Noto Serif TC',serif;font-size:clamp(24px,3vw,36px);font-weight:900;color:var(--primary);margin-bottom:16px;line-height:1.2;"
-        >
-          埕花｜情緒解籤 × 花語體驗
-        </h2>
-        <p
-          style="font-family:'Noto Sans TC',sans-serif;font-size:15px;line-height:2.1;color:rgba(55,78,126,.65);"
-        >
-          不知從何逛起？網站透過面部識別，即時捕捉你的表情並解讀情緒，轉化為專屬花語祝福卡，點擊花攤獲得路線指引。花語卡中還藏有鹽夏的神秘小驚喜，等你來發現屬於自己的花朵緣分。
-        </p>
-        <a
-          href="https://drawing-flower-fortunes.vercel.app/"
-          target="_blank"
-          class="yh-digital-xp-btn"
-          >立即體驗 →</a
-        >
       </div>
     </div>
   </div>
