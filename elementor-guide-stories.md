@@ -622,6 +622,9 @@
         <div class="yh-s-obs-body">
           <p>最終，這群孩子們所創作的布片成品將交由鹽夏不夜埕團隊進行轉化，展示在 2026 鹽夏不夜埕《花轟》的展區中，就讓我們在今年的 5/16 至 5/23，到鹽埕東區尋找孩子們的《關於情緒的棲息方式》，感受花轟的情緒綻放。</p>
         </div>
+        <div class="yh-s-obs-hero" style="height:360px;overflow:hidden;">
+          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E5%B0%8F%E8%A6%AA%E5%AD%90%E6%97%A5_%E8%8A%B1%E8%91%89%E5%8D%B0%E5%B8%83/%E7%85%A7%E7%89%87/%E6%88%90%E6%9E%9C.jpg" alt="150件成果展示" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
         <button class="yh-s-obs-close" onclick="yhsObsClose(this)">收合 ↑</button>
       </div>
     </article>
