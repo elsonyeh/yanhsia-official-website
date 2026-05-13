@@ -105,11 +105,20 @@
     .digital-xp-card{background:#fff;border-radius:28px;padding:48px 52px;box-shadow:0 12px 60px rgba(55,78,126,.12),0 0 0 1px rgba(192,84,108,.1);}
     .digital-xp-btn{display:inline-block;margin-top:28px;padding:13px 40px;background:var(--surface);color:#fff;text-decoration:none;font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:14px;border-radius:50px;letter-spacing:.06em;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 20px rgba(55,78,126,.22);}
     .digital-xp-btn:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(55,78,126,.3);}
+    .digital-xp-card-inner{display:grid;grid-template-columns:1fr 152px;gap:40px;align-items:center;}
+    .digital-xp-secret{display:flex;flex-direction:column;align-items:center;gap:10px;}
+    .digital-xp-secret-frame{width:136px;height:160px;background:linear-gradient(160deg,#0d1526 0%,#1b0e38 100%);border-radius:16px;border:1.5px solid rgba(242,190,92,.38);display:flex;align-items:center;justify-content:center;box-shadow:0 0 28px rgba(242,190,92,.1),0 8px 32px rgba(0,0,0,.35);position:relative;overflow:hidden;}
+    .digital-xp-secret-frame::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 15%,rgba(242,190,92,.1) 0%,transparent 60%);}
+    .digital-xp-secret-frame img{width:104px;filter:brightness(0) invert(1);opacity:.7;position:relative;z-index:1;}
+    .digital-xp-secret-qs{font-size:13px;color:var(--secondary);letter-spacing:.2em;font-weight:700;}
+    .digital-xp-secret-tag{font-family:'Noto Sans TC',sans-serif;font-size:10px;letter-spacing:.3em;background:var(--primary);color:var(--gold);padding:4px 14px;border-radius:50px;font-weight:700;border:1px solid rgba(242,190,92,.3);}
     @media(max-width:680px){
       .digital-xp{padding:80px 20px;}
       .digital-xp-layout{display:block;}
       .digital-xp-badge-wrap{justify-content:center;margin-bottom:-64px;position:relative;z-index:3;}
       .digital-xp-card{padding:88px 28px 44px;text-align:center;}
+      .digital-xp-card-inner{display:block;}
+      .digital-xp-secret{flex-direction:row;justify-content:center;margin-top:28px;}
     }
 
     /* SCHEDULE */
@@ -489,10 +498,21 @@
 
       <!-- 右（電腦）/ 下（手機）：白色卡片 -->
       <div class="digital-xp-card">
-        <div style="font-size:11px;letter-spacing:.45em;color:var(--secondary);margin-bottom:12px;font-family:'Noto Sans TC',sans-serif;font-weight:700;">DIGITAL EXPERIENCE 數位體驗</div>
-        <h2 style="font-family:'Noto Serif TC',serif;font-size:clamp(24px,3vw,36px);font-weight:900;color:var(--primary);margin-bottom:16px;line-height:1.2;">埕花｜情緒解籤 × 花語體驗</h2>
-        <p style="font-family:'Noto Sans TC',sans-serif;font-size:15px;line-height:2.1;color:rgba(55,78,126,.65);">不知從何逛起？網站透過面部識別，即時捕捉你的表情並解讀情緒，轉化為專屬花語祝福卡，點擊花攤獲得路線指引。花語卡中還藏有鹽夏的神秘小驚喜，等你來發現屬於自己的花朵緣分。</p>
-        <a href="https://drawing-flower-fortunes.vercel.app/" target="_blank" class="digital-xp-btn">立即體驗 →</a>
+        <div class="digital-xp-card-inner">
+          <div class="digital-xp-card-text">
+            <div style="font-size:11px;letter-spacing:.45em;color:var(--secondary);margin-bottom:12px;font-family:'Noto Sans TC',sans-serif;font-weight:700;">DIGITAL EXPERIENCE 數位體驗</div>
+            <h2 style="font-family:'Noto Serif TC',serif;font-size:clamp(24px,3vw,36px);font-weight:900;color:var(--primary);margin-bottom:16px;line-height:1.2;">埕花｜情緒解籤 × 花語體驗</h2>
+            <p style="font-family:'Noto Sans TC',sans-serif;font-size:15px;line-height:2.1;color:rgba(55,78,126,.65);">透過面部識別，網站即時捕捉你的表情並解讀情緒，轉化為專屬花語祝福卡，點擊花攤獲得路線指引。掃描展區裝置藝術旁的 QR Code 獲得抽卡機會，來抽一張屬於你的花朵卡牌吧！隱藏版花朵正等著你來解鎖——集齊全部花朵，更能兌換限量神秘小禮物！</p>
+            <a href="https://drawing-flower-fortunes.vercel.app/" target="_blank" class="digital-xp-btn">立即體驗 →</a>
+          </div>
+          <div class="digital-xp-secret">
+            <div class="digital-xp-secret-frame">
+              <img src="./點綴物/花朵-隱藏版.png" alt="隱藏版花朵">
+            </div>
+            <div class="digital-xp-secret-qs">? ? ?</div>
+            <div class="digital-xp-secret-tag">隱藏版</div>
+          </div>
+        </div>
       </div>
 
     </div>
