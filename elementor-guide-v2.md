@@ -645,10 +645,12 @@
   .yh-lb-inner {
     min-height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 60px 16px 40px;
     box-sizing: border-box;
+    gap: 16px;
   }
   .yh-lb-overlay .yh-lb-img {
     display: block;
@@ -662,16 +664,19 @@
     position: fixed;
     top: 14px;
     right: 14px;
-    width: 44px;
-    height: 44px;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
     background: rgba(255, 255, 255, 0.18);
     border: none;
-    border-radius: 50%;
+    border-radius: 50% !important;
     color: #fff;
     font-size: 20px;
     cursor: pointer;
     z-index: 10000;
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(4px);
@@ -680,16 +685,13 @@
     background: rgba(255, 255, 255, 0.3);
   }
   .yh-lb-hint {
-    position: fixed;
-    bottom: 18px;
-    left: 50%;
-    transform: translateX(-50%);
     color: rgba(255, 255, 255, 0.45);
     font-size: 11px;
     letter-spacing: 0.14em;
     white-space: nowrap;
     pointer-events: none;
     font-family: "Noto Sans TC", sans-serif;
+    text-align: center;
   }
   .yh-xp {
     background: #F8F4EF;
@@ -1376,8 +1378,8 @@
   <button class="yh-lb-close" id="yh-lb-close">✕</button>
   <div class="yh-lb-inner">
     <img class="yh-lb-img" id="yh-lb-img" src="" alt="" />
+    <div class="yh-lb-hint">雙指縮放・點擊空白處關閉</div>
   </div>
-  <div class="yh-lb-hint">雙指縮放・點擊空白處關閉</div>
 </div>
 <script>
   (function () {
@@ -1447,15 +1449,18 @@
     position: absolute;
     top: 14px;
     right: 14px;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
     background: #f2d9d0;
     border: none;
     cursor: pointer;
     font-size: 15px;
     color: #1a2640;
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     transition: background 0.2s;
