@@ -363,6 +363,7 @@
 > - 花葉印布：`https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E5%B0%8F%E8%A6%AA%E5%AD%90%E6%97%A5_%E8%8A%B1%E8%91%89%E5%8D%B0%E5%B8%83/%E7%85%A7%E7%89%87/`
 > - 花落成流：`https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E8%8A%B1%E8%90%BD%E6%88%90%E6%B5%81%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/`
 > - SEL 工作坊：`https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/`（檔名格式：`鹽埕國中花藝融入SEL教育工作坊_N.png`）
+> - 花框留映：`https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E3%80%8A%E8%8A%B1%E6%A1%86%E7%95%99%E6%98%A0%E3%80%8B%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/`（檔名：`花框留映_1.jpg`、`花框留映_2.jpg`）
 
 > **設計說明：** 各篇文章預設**收合**（只顯示標題、日期、摘要、3 張縮圖預覽），點擊「展開閱讀」才展開全文。新增文章時照下方格式複製貼上即可。
 
