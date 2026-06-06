@@ -7,9 +7,128 @@
 ## 元件 1 — CSS 全域樣式 + Page Hero（必須第一個放）
 
 ```html
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;700;900&display=swap");
+  :root{--primary:#1A2640;--surface:#374E7E;--secondary:#C0546C;--bg:#F2D9D0;--gold:#F2BE5C;--peach:#F2A488;--blue:#5B7BA6;--gray:#CFC9CC;--rose:#E9ABAB;--white:#FFFFFF;}
+  .elementor-widget-html .elementor-widget-container{padding:0!important;}
+
+  /* PAGE HERO */
+  .yh-s-page-hero{background:var(--secondary);padding:80px 48px 56px;text-align:center;position:relative;overflow:hidden;}
+  .yh-s-page-hero-bg{position:absolute;inset:0;background:url('https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9/%E5%8F%AF%E6%84%9B%E7%9A%84%E8%8D%89%E5%8F%A2.png')bottom/cover no-repeat;opacity:.15;pointer-events:none;}
+  .yh-s-page-hero-inner{position:relative;z-index:2;}
+  .yh-s-page-eyebrow{font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:.5em;color:rgba(255,255,255,.6);margin-bottom:12px;}
+  .yh-s-page-title{font-family:'Noto Serif TC',serif;font-size:clamp(40px,6vw,72px);font-weight:900;color:var(--white);line-height:1;}
+  .yh-s-page-sub{margin-top:12px;font-family:'Noto Sans TC',sans-serif;font-size:14px;color:rgba(255,255,255,.65);letter-spacing:.15em;}
+  .yh-s-hero-divider{width:40px;height:1px;background:rgba(255,255,255,.35);margin:24px auto 20px;}
+  .yh-s-hero-intro{max-width:680px;margin:0 auto;text-align:left;}
+  .yh-s-hero-intro p{font-family:'Noto Serif TC',serif;font-size:14px;line-height:2.3;color:rgba(255,255,255,.78);margin-bottom:16px;}
+  .yh-s-hero-intro p:last-child{margin-bottom:0;}
+  .yh-s-hero-deco{position:absolute;bottom:0;display:flex;align-items:flex-end;gap:4px;pointer-events:none;z-index:3;}
+  .yh-s-hero-deco-l{left:32px;}.yh-s-hero-deco-r{right:32px;}
+  .yh-s-hero-deco img{width:68px;animation:yh-s-floatA 3.5s ease-in-out infinite;}
+  .yh-s-hero-deco img:nth-child(2){animation-delay:.65s;}
+  @media(max-width:900px){.yh-s-hero-deco{display:none;}}
+  @media(max-width:700px){.yh-s-page-hero{padding:72px 24px 44px;}.yh-s-hero-intro p{font-size:13px;line-height:2.1;}}
+
+  /* HISTORY / TIMELINE */
+  .yh-s-history{background:var(--bg);padding:64px 48px 80px;text-align:center;}
+  .yh-s-history-eyebrow{font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:.45em;color:var(--gold);margin-bottom:16px;text-transform:uppercase;}
+  .yh-s-history-title{font-family:'Noto Serif TC',serif;font-size:clamp(22px,3vw,34px);font-weight:900;margin-bottom:52px;color:var(--primary);}
+  .yh-s-history-title em{font-style:normal;color:var(--secondary);}
+  .yh-s-tl-wrap{max-width:800px;margin:0 auto;text-align:left;}
+  .yh-s-tl-item{display:grid;grid-template-columns:120px 28px 1fr;gap:0;}
+  .yh-s-tl-left{text-align:right;padding-top:3px;}
+  .yh-s-tl-era{font-family:'Noto Serif TC',serif;font-size:14px;font-weight:700;color:var(--secondary);line-height:1.5;}
+  .yh-s-tl-era-sub{font-size:10px;color:var(--secondary);opacity:.65;letter-spacing:.06em;margin-top:3px;}
+  .yh-s-tl-track{display:flex;flex-direction:column;align-items:center;}
+  .yh-s-tl-dot{width:14px;height:14px;border-radius:50%;background:var(--secondary);border:3px solid var(--bg);box-shadow:0 0 0 2px var(--secondary);flex-shrink:0;margin-top:5px;}
+  .yh-s-tl-line{flex:1;width:2px;background:rgba(192,84,108,.22);margin-top:6px;min-height:32px;}
+  .yh-s-tl-item:last-child .yh-s-tl-line{display:none;}
+  .yh-s-tl-right{padding:0 0 44px 20px;}
+  .yh-s-tl-item:last-child .yh-s-tl-right{padding-bottom:0;}
+  .yh-s-tl-wave{font-size:10px;letter-spacing:.18em;color:var(--secondary);font-weight:700;margin-bottom:6px;text-transform:uppercase;}
+  .yh-s-tl-industry{font-family:'Noto Serif TC',serif;font-size:19px;font-weight:700;color:var(--primary);margin-bottom:12px;line-height:1.4;}
+  .yh-s-tl-body{font-family:'Noto Sans TC',sans-serif;font-size:14px;line-height:2.1;color:#666;}
+  .yh-s-tl-sub-list{display:flex;flex-direction:column;gap:16px;margin-top:14px;}
+  .yh-s-tl-sub-label{display:inline-block;background:rgba(192,84,108,.1);color:var(--secondary);font-size:11px;font-weight:700;padding:2px 10px;border-radius:50px;margin-bottom:6px;letter-spacing:.04em;}
+  @media(max-width:700px){
+    .yh-s-history{padding:48px 24px;}
+    .yh-s-tl-item{grid-template-columns:80px 24px 1fr;}
+    .yh-s-tl-era{font-size:12px;}.yh-s-tl-industry{font-size:16px;}.yh-s-tl-right{padding:0 0 36px 12px;}
+  }
+
+  /* 小埕故事（人物專訪）*/
+  .yh-s-stories{padding:80px 48px;max-width:1080px;margin:0 auto;}
+  .yh-s-label{font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:.45em;color:var(--gold);margin-bottom:12px;text-transform:uppercase;}
+  .yh-s-section-title{font-family:'Noto Serif TC',serif;font-size:clamp(32px,4vw,52px);font-weight:900;line-height:1.15;margin-bottom:32px;}
+  .yh-s-stories-intro{font-family:'Noto Sans TC',sans-serif;font-size:16px;line-height:2.2;color:#555;max-width:720px;margin-bottom:52px;}
+  .yh-s-interview-heading{font-family:'Noto Serif TC',serif;font-size:clamp(20px,2.5vw,28px);font-weight:700;text-align:center;margin-bottom:40px;letter-spacing:.04em;}
+  .yh-s-interview-heading em{font-style:normal;color:var(--secondary);}
+  .yh-s-interview-list{display:flex;flex-direction:column;gap:20px;}
+  .yh-s-card{display:grid;grid-template-columns:260px 1fr;align-items:stretch;border-radius:14px;overflow:hidden;background:var(--white);text-decoration:none;color:inherit;transition:transform .3s,box-shadow .3s;}
+  .yh-s-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(26,38,64,.1);}
+  .yh-s-card-img{width:100%;min-height:210px;object-fit:cover;display:block;}
+  .yh-s-card-body{padding:26px 28px;display:flex;flex-direction:column;justify-content:center;}
+  .yh-s-badges{display:flex;gap:8px;align-items:center;margin-bottom:10px;flex-wrap:wrap;}
+  .yh-s-cat{background:var(--secondary);color:var(--white);font-size:10px;padding:3px 10px;border-radius:50px;letter-spacing:.08em;font-family:'Noto Sans TC',sans-serif;}
+  .yh-s-ep{font-size:11px;color:var(--secondary);letter-spacing:.2em;font-weight:700;font-family:'Noto Sans TC',sans-serif;}
+  .yh-s-card-title{font-family:'Noto Serif TC',serif;font-size:17px;font-weight:700;margin-bottom:5px;color:var(--primary);line-height:1.45;}
+  .yh-s-hook{font-family:'Noto Sans TC',sans-serif;font-size:13px;color:#999;line-height:1.8;margin-bottom:8px;}
+  .yh-s-date{font-family:'Noto Sans TC',sans-serif;font-size:11px;color:var(--secondary);letter-spacing:.1em;margin-bottom:10px;}
+  .yh-s-excerpt{font-family:'Noto Sans TC',sans-serif;font-size:13px;line-height:2;color:#666;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+  .yh-s-read{display:inline-block;margin-top:12px;font-size:12px;color:var(--secondary);font-weight:700;letter-spacing:.05em;font-family:'Noto Sans TC',sans-serif;}
+  @media(max-width:700px){
+    .yh-s-stories{padding:56px 24px;}
+    .yh-s-card{grid-template-columns:1fr;}
+    .yh-s-card-img{min-height:180px;}
+    .yh-s-card-body{padding:18px 20px;}
+  }
+
+  /* Reveal 動畫（三個 tab 共用）*/
+  .yh-s-reveal{opacity:0;}
+  .yh-s-reveal.visible{animation:yh-s-fadeUp .6s ease forwards;}
+  @keyframes yh-s-fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+  @keyframes yh-s-floatA{0%,100%{transform:translateY(0) rotate(-3deg);}50%{transform:translateY(-16px) rotate(3deg);}}
+</style>
+
+<section class="yh-s-page-hero">
+  <div class="yh-s-page-hero-bg"></div>
+  <div class="yh-s-page-hero-inner">
+    <div class="yh-s-page-eyebrow">ABOUT YANCHENG · 鹽埕誌</div>
+    <div class="yh-s-page-title">埕中大小事</div>
+    <div class="yh-s-page-sub">小埕故事・小埕觀察家・小埕遊記</div>
+    <div class="yh-s-hero-divider"></div>
+    <div class="yh-s-hero-intro">
+      <p>鹽埕，在字典中是曬鹽的海岸，但對於許多人來說，鹽埕背後的歷史發展猶如一本人物傳記，經歷各種興衰，讓人意猶未盡。</p>
+      <p>在三百多年前，位於愛河口的鹽埕區，是河流匯入海所形成的一片沼澤濕地。雖然無法耕作，但也尋找到了屬於鹽埕區的價值模式與經濟效益，那就是人類飲食不可或缺的——鹽，因此鹽埕區開始製鹽產業的發展。其地名也是因充滿鹽田以及沼澤而得名，而早期接近鼓岩一帶被稱為鹽埕埔，後來將鹽埕、鹽埕埔通稱為鹽埕區。</p>
+    </div>
+  </div>
+  <div class="yh-s-hero-deco yh-s-hero-deco-l">
+    <img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9%E5%80%91-20260416T013420Z-3-001/%E9%BB%9E%E7%B6%B4%E7%89%A9%E5%80%91/%E8%B3%87%E7%94%A2%2096.png" alt="">
+  </div>
+  <div class="yh-s-hero-deco yh-s-hero-deco-r">
+    <img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9%E5%80%91-20260416T013420Z-3-001/%E9%BB%9E%E7%B6%B4%E7%89%A9%E5%80%91/%E8%B3%87%E7%94%A2%20105.png" alt="">
+    <img src="https://elsonyeh.github.io/yanhsia-official-website/%E9%BB%9E%E7%B6%B4%E7%89%A9%E5%80%91-20260416T013420Z-3-001/%E9%BB%9E%E7%B6%B4%E7%89%A9%E5%80%91/%E8%B3%87%E7%94%A2%20111.png" alt="">
+  </div>
+</section>
+
+<script>
+(function(){
+  var revObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('visible');revObs.unobserve(e.target);}
+    });
+  },{threshold:.08});
+  function initReveals(){
+    document.querySelectorAll('.yh-s-reveal:not(.visible)').forEach(function(el){revObs.observe(el);});
+  }
+  window._yhSInitReveals = initReveals;
+  setTimeout(initReveals, 300);
+})();
+</script>
 ```
 
-> **Elementor 步驟：** 此為第一個 HTML 元件，包含全頁 CSS + Hero。
+> **Elementor 步驟：** 此為第一個 HTML 元件，包含全頁 CSS + Hero。必須放在所有其他元件之前。
 
 ---
 
@@ -365,64 +484,30 @@
 > - SEL 工作坊：`https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E4%B8%AD%E8%8A%B1%E8%97%9D%E8%9E%8D%E5%85%A5SEL%E6%95%99%E8%82%B2%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/`（檔名格式：`鹽埕國中花藝融入SEL教育工作坊_N.jpg`、`封面.jpg` → `%E5%B0%81%E9%9D%A2.jpg`）
 > - 花框留映：`https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E3%80%8A%E8%8A%B1%E6%A1%86%E7%95%99%E6%98%A0%E3%80%8B%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/`（檔名：`花框留映_1.jpg` → `%E8%8A%B1%E6%A1%86%E7%95%99%E6%98%A0_1.jpg`）
 
-> **設計說明：** 各篇文章預設**收合**（只顯示標題、日期、摘要、3 張縮圖預覽），點擊「展開閱讀」才展開全文。新增文章時照下方格式複製貼上即可。CSS、JS 均定義在此元件，元件 6 沿用相同 class，無需重複加入。
+> **設計說明：** 各篇文章預設**收合**（只顯示標題、日期、摘要、3 張縮圖預覽），點擊「展開閱讀」才展開全文。新增文章時照下方格式複製貼上即可。
 
 ```html
 <style>
-  /* ══ 小埕觀察家 ／ 小埕遊記 — 共用樣式（元件 6 直接沿用，無需重複定義） ══ */
-  .yh-s-observer{padding:80px 48px;max-width:1080px;margin:0 auto;}
-  .yh-s-section-title{font-family:'Noto Serif TC',serif;font-size:clamp(28px,4vw,48px);font-weight:900;line-height:1.2;color:var(--primary);margin-bottom:20px;}
-  .yh-s-label{font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:.45em;color:var(--gold);margin-bottom:14px;text-transform:uppercase;}
-  .yh-s-observer-intro{font-family:'Noto Sans TC',sans-serif;font-size:16px;line-height:2.1;color:#555;max-width:700px;margin-bottom:56px;}
-  /* 折疊式文章卡片 */
-  .yh-s-article{background:#fff;border-radius:20px;overflow:hidden;margin-bottom:48px;}
-  .yh-s-article:last-child{margin-bottom:0;}
-  .yh-s-article-header{padding:36px 44px 28px;}
-  .yh-s-article-meta{display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap;}
-  .yh-s-obs-tag{background:var(--secondary);color:#fff;font-size:11px;padding:3px 12px;border-radius:50px;letter-spacing:.08em;font-family:'Noto Sans TC',sans-serif;}
-  .yh-s-obs-date{font-size:12px;color:var(--secondary);letter-spacing:.1em;font-family:'Noto Sans TC',sans-serif;}
-  .yh-s-article-title{font-family:'Noto Serif TC',serif;font-size:clamp(20px,2.8vw,30px);font-weight:900;color:var(--primary);margin-bottom:10px;line-height:1.35;}
-  .yh-s-article-hook{font-size:14px;color:#999;line-height:1.9;font-family:'Noto Sans TC',sans-serif;}
-  /* Preview 縮圖列 */
+  /* 折疊式文章（Accordion）*/
   .yh-s-article-preview{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;height:130px;overflow:hidden;}
   .yh-s-article-preview img{width:100%;height:100%;object-fit:cover;display:block;}
-  .yh-s-obs-open .yh-s-article-preview{display:none;}
-  /* 展開 / 收合按鈕 */
+  .yh-s-article.yh-s-open .yh-s-article-preview{display:none;}
+  .yh-s-article-body{overflow:hidden;max-height:0;}
   .yh-s-obs-toggle{display:flex;align-items:center;justify-content:space-between;padding:14px 44px;cursor:pointer;background:none;border:none;border-top:1px solid rgba(26,38,64,.08);font-family:'Noto Sans TC',sans-serif;font-size:13px;letter-spacing:.12em;color:var(--secondary);font-weight:700;width:100%;transition:background .2s;}
   .yh-s-obs-toggle:hover{background:rgba(192,84,108,.06);}
   .yh-s-obs-toggle-arrow{font-size:15px;transition:transform .4s ease;display:inline-block;line-height:1;}
-  .yh-s-obs-open .yh-s-obs-toggle-arrow{transform:rotate(180deg);}
+  .yh-s-article.yh-s-open .yh-s-obs-toggle-arrow{transform:rotate(180deg);}
   .yh-s-obs-close{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;padding:14px;background:none;border:none;border-top:1px solid rgba(26,38,64,.08);font-family:'Noto Sans TC',sans-serif;font-size:12px;letter-spacing:.12em;color:rgba(26,38,64,.4);cursor:pointer;transition:background .2s,color .2s;}
   .yh-s-obs-close:hover{background:rgba(192,84,108,.06);color:var(--secondary);}
-  /* 文章展開後的內容 */
-  .yh-s-article-body{overflow:hidden;max-height:0;}
-  .yh-s-obs-hero{width:100%;overflow:hidden;height:480px;margin:3px 0;}
-  .yh-s-obs-hero img{width:100%;height:100%;object-fit:cover;display:block;}
-  .yh-s-obs-body{padding:28px 44px;}
-  .yh-s-obs-body p{font-family:'Noto Sans TC',sans-serif;font-size:15px;line-height:2.3;color:#444;margin-bottom:20px;}
-  .yh-s-obs-body p:last-child{margin-bottom:0;}
-  .yh-s-obs-quote{font-family:'Noto Serif TC',serif;font-size:17px!important;color:var(--secondary)!important;padding-left:18px;border-left:3px solid var(--secondary);font-weight:700;}
-  .yh-s-obs-label{font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:8px;font-weight:700;}
-  /* 照片排版 */
-  .yh-s-photo-pair{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:3px 0;}
-  .yh-s-photo-pair img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;}
+  @media(max-width:700px){.yh-s-obs-toggle{padding:12px 20px;}.yh-s-article-preview{height:100px;}}
   .yh-s-photo-pair-natural{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:3px 0;}
   .yh-s-photo-pair-natural img{width:100%;height:auto;display:block;}
-  .yh-s-photo-quad{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:3px 0;}
-  .yh-s-photo-quad img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;}
+  @media(max-width:700px){.yh-s-photo-pair-natural{grid-template-columns:1fr;}}
   .yh-s-photo-triple{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin:3px 0;}
   .yh-s-photo-triple img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;}
-  /* Reveal 入場動畫 */
-  .yh-s-reveal{opacity:0;}
-  .yh-s-reveal.visible{animation:yh-s-fadeUp .6s ease forwards;}
-  @keyframes yh-s-fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
-  @media(max-width:700px){
-    .yh-s-observer{padding:56px 24px;}
-    .yh-s-article-header,.yh-s-obs-body{padding-left:20px;padding-right:20px;}
-    .yh-s-photo-pair,.yh-s-photo-quad,.yh-s-photo-pair-natural,.yh-s-photo-triple{grid-template-columns:1fr;}
-    .yh-s-obs-toggle{padding:12px 20px;}
-    .yh-s-article-preview{height:100px;}
-  }
+  @media(max-width:700px){.yh-s-photo-triple{grid-template-columns:1fr;}}
+  .yh-s-obs-hero{margin:3px 0;}
+  .yh-s-photo-pair{gap:2px;margin:3px 0;}
 </style>
 
 <div id="yh-s-tab-observer" class="yh-s-tab-panel" style="background:var(--bg);">
@@ -431,7 +516,7 @@
     <h2 class="yh-s-section-title">停下來，觀察<br>正在發生的事</h2>
     <p class="yh-s-observer-intro yh-s-reveal">鹽埕每天都在發生各種大小事。小埕觀察家記錄鹽夏走進這座城市的每一個瞬間——活動、現場、情緒、人群，讓那些正在發生的事，被好好地留下來。</p>
 
-    <!-- ── 文章 0：鹽埕國中花藝融入SEL教育工作坊（最新，放最上面） ── -->
+    <!-- ── 文章 1：鹽埕國中花藝融入SEL教育工作坊（最新） ── -->
     <article class="yh-s-article yh-s-reveal">
       <div class="yh-s-article-header">
         <div class="yh-s-article-meta">
@@ -507,7 +592,7 @@
       </div>
     </article>
 
-    <!-- ── 文章 1：鹽埕在地店家《花框留映》工作坊 ── -->
+    <!-- ── 文章 2：花框留映 工作坊 ── -->
     <article class="yh-s-article yh-s-reveal">
       <div class="yh-s-article-header">
         <div class="yh-s-article-meta">
@@ -542,19 +627,19 @@
           <p>經過一週的醞釀，最後共有 8 個店家熱情參與，孕育出 13 件完美描繪出自身故事的靈魂之作。深耕高雄近 20 年的「黃金起司燒」帶來了《職人精神》與《記憶座標》，將勞動的專注與跨越世代的情感化為永恆。「領事小隊共學團」透過《旅行印記》、《蝴蝶與感動》與《手作方寸》三件作品，生動紀錄了學童的童年探險，將走讀足跡、賞蝶悸動與手作烘焙的純粹時光溫柔封存。「紅撲撲手感創作」的《電影》與《紀實》，分別記錄了國際女高音漢娜奇蹟造訪的瞬間，以及大溝頂小店中來自各方旅人的溫暖身影。</p>
           <p>「欣樂書局」的《LIFE》將 30 餘年的家族記憶向觀眾展示，相框中男孩的成長軌跡恰巧與書店的店齡重疊，凝鍊成一段動人的生活史。「餽咻」以《笑容、貓咪和咖啡》與《貓咪、書道和咖啡》兩件作品，巧妙揉合了貓咪的鬍鬚、咖啡渣與霓虹光譜，訴說著與客人的溫暖交會及店貓的長情陪伴。隱身舊堀江的「珣手作布丁」透過《旅程》，在金色邊框內盛裝了老屋的時代更迭，以及老闆浪漫跨界創業的層次滋味。「小聲點酒館」的《拼圖》以繽紛琉璃珠與已逝摯友、愛犬的定格影像，溫柔宣告著在鹽埕唯有「愛」是生命得以延續的唯一解答。最後，「銀絲 Chill」的同名作品將進口服飾的古董鈕扣鑲嵌於珠光邊框，把四間店面的流轉與客人鮮活的日常互動，化作最真實的街區風景。</p>
         </div>
-        <div class="yh-s-photo-pair">
-          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E3%80%8A%E8%8A%B1%E6%A1%86%E7%95%99%E6%98%A0%E3%80%8B%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E8%8A%B1%E6%A1%86%E7%95%99%E6%98%A0_1.jpg" alt="花框留映工作坊現場">
-          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E3%80%8A%E8%8A%B1%E6%A1%86%E7%95%99%E6%98%A0%E3%80%8B%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E8%8A%B1%E6%A1%86%E7%95%99%E6%98%A0_2.jpg" alt="花框留映作品展示">
-        </div>
         <div class="yh-s-obs-body">
           <p class="yh-s-obs-quote">這 13 個花框不只是被私自收藏的物件，而是成為了街區情感的一部分。</p>
           <p>最終，這些作品將被重新放回街區的脈絡中，展示於 2026《鹽夏不夜埕》的 C5〈日常的封存〉展區。透過《鹽夏不夜埕》的展演，這些乘載著鹽埕百態的故事空間將正式亮相，邀請大眾走進新樂街區，在這些封存的日常切片裡，見證情感在這座老城區裡最真實的綻放與蔓延。</p>
+        </div>
+        <div class="yh-s-photo-pair">
+          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E3%80%8A%E8%8A%B1%E6%A1%86%E7%95%99%E6%98%A0%E3%80%8B%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E8%8A%B1%E6%A1%86%E7%95%99%E6%98%A0_1.jpg" alt="花框留映工作坊現場">
+          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E3%80%8A%E8%8A%B1%E6%A1%86%E7%95%99%E6%98%A0%E3%80%8B%E5%B7%A5%E4%BD%9C%E5%9D%8A/%E7%85%A7%E7%89%87/%E8%8A%B1%E6%A1%86%E7%95%99%E6%98%A0_2.jpg" alt="花框留映作品展示">
         </div>
         <button class="yh-s-obs-close" onclick="yhsObsClose(this)">收合 ↑</button>
       </div>
     </article>
 
-    <!-- ── 文章 2：揚帆主婦社《花落成流》毛線花工作坊 ── -->
+    <!-- ── 文章 3：花落成流 工作坊 ── -->
     <article class="yh-s-article yh-s-reveal">
       <div class="yh-s-article-header">
         <div class="yh-s-article-meta">
@@ -608,7 +693,7 @@
       </div>
     </article>
 
-    <!-- ── 文章 3：鹽埕國小親子日《花葉印布》 ── -->
+    <!-- ── 文章 4：鹽埕國小親子日 ── -->
     <article class="yh-s-article yh-s-reveal">
       <div class="yh-s-article-header">
         <div class="yh-s-article-meta">
@@ -669,8 +754,8 @@
         <div class="yh-s-obs-body">
           <p>最終，這群孩子們所創作的布片成品將交由鹽夏不夜埕團隊進行轉化，展示在 2026 鹽夏不夜埕《花轟》的展區中，就讓我們在今年的 5/16 至 5/23，到鹽埕東區尋找孩子們的《關於情緒的棲息方式》，感受花轟的情緒綻放。</p>
         </div>
-        <div class="yh-s-obs-hero" style="height:360px;">
-          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E5%B0%8F%E8%A6%AA%E5%AD%90%E6%97%A5_%E8%8A%B1%E8%91%89%E5%8D%B0%E5%B8%83/%E7%85%A7%E7%89%87/%E6%88%90%E6%9E%9C.jpg" alt="150件成果展示">
+        <div class="yh-s-obs-hero" style="height:360px;overflow:hidden;">
+          <img src="https://elsonyeh.github.io/yanhsia-official-website/%E5%B0%8F%E5%9F%95%E8%A7%80%E5%AF%9F%E5%AE%B6/%E9%B9%BD%E5%9F%95%E5%9C%8B%E5%B0%8F%E8%A6%AA%E5%AD%90%E6%97%A5_%E8%8A%B1%E8%91%89%E5%8D%B0%E5%B8%83/%E7%85%A7%E7%89%87/%E6%88%90%E6%9E%9C.jpg" alt="150件成果展示" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
         <button class="yh-s-obs-close" onclick="yhsObsClose(this)">收合 ↑</button>
       </div>
@@ -680,40 +765,35 @@
 </div>
 
 <script>
-(function () {
-  function yhsObsToggle(btn) {
-    var article = btn.closest('.yh-s-article');
-    var body = article.querySelector('.yh-s-article-body');
-    var label = btn.querySelector('.yh-s-obs-toggle-label');
-    var isOpen = article.classList.contains('yh-s-obs-open');
-    if (isOpen) {
-      body.style.maxHeight = body.scrollHeight + 'px';
-      body.style.transition = 'max-height .5s ease';
-      requestAnimationFrame(function () { requestAnimationFrame(function () { body.style.maxHeight = '0'; }); });
-      article.classList.remove('yh-s-obs-open');
-      if (label) label.textContent = '展開閱讀';
-    } else {
-      article.classList.add('yh-s-obs-open');
-      body.style.transition = 'max-height .55s ease';
-      body.style.maxHeight = body.scrollHeight + 'px';
-      body.addEventListener('transitionend', function handler() {
-        if (article.classList.contains('yh-s-obs-open')) body.style.maxHeight = 'none';
-        body.removeEventListener('transitionend', handler);
-      });
-      if (label) label.textContent = '收合';
-      setTimeout(function () { article.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 50);
-    }
+function yhsObsToggle(btn){
+  var article=btn.closest('.yh-s-article');
+  var body=article.querySelector('.yh-s-article-body');
+  var label=btn.querySelector('.yh-s-obs-toggle-label');
+  var isOpen=article.classList.contains('yh-s-open');
+  if(isOpen){
+    body.style.maxHeight=body.scrollHeight+'px';
+    body.style.transition='max-height .5s ease';
+    requestAnimationFrame(function(){requestAnimationFrame(function(){body.style.maxHeight='0';});});
+    article.classList.remove('yh-s-open');
+    if(label)label.textContent='展開閱讀';
+  } else {
+    article.classList.add('yh-s-open');
+    body.style.transition='max-height .55s ease';
+    body.style.maxHeight=body.scrollHeight+'px';
+    body.addEventListener('transitionend',function h(){
+      if(article.classList.contains('yh-s-open'))body.style.maxHeight='none';
+      body.removeEventListener('transitionend',h);
+    });
+    if(label)label.textContent='收合';
+    setTimeout(function(){article.scrollIntoView({behavior:'smooth',block:'start'});},50);
   }
-  function yhsObsClose(btn) {
-    var article = btn.closest('.yh-s-article');
-    var toggle = article.querySelector('.yh-s-obs-toggle');
-    yhsObsToggle(toggle);
-    setTimeout(function () { article.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 80);
-  }
-  window.yhsObsToggle = yhsObsToggle;
-  window.yhsObsClose = yhsObsClose;
-  setTimeout(function () { if (window._yhSInitReveals) window._yhSInitReveals(); }, 300);
-})();
+}
+function yhsObsClose(btn){
+  var article=btn.closest('.yh-s-article');
+  var toggle=article.querySelector('.yh-s-obs-toggle');
+  yhsObsToggle(toggle);
+  setTimeout(function(){article.scrollIntoView({behavior:'smooth',block:'start'});},80);
+}
 </script>
 ```
 
